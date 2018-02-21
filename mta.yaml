@@ -37,6 +37,7 @@ modules:
    path: Database
    requires:
     - name: OSR_EDW_SOURCE_CRM-container
+    - name: edw-ext-access-grantor    
 
 resources:
 # - name: OSR_EDW_SOURCE_CRM-uaa
@@ -78,4 +79,6 @@ resources:
 #   parameters:
 #      service-name: OSR_EDW_SOURCE_CRM-container
    type: com.sap.xs.hdi-container
-
+ - name: edw-ext-access-grantor
+   type: org.cloudfoundry.existing-service
+   description: edw-ext-access-grantor
