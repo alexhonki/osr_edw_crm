@@ -28,6 +28,25 @@
           "status": "NEUTRAL"
         }
       ]
+    },
+    "3": {
+      "inline": {
+        "type": "activate",
+        "taskGroup": "ndso",
+        "description": "Activate CRMORDERADMI",
+        "parameterValues": [
+          {
+            "id": "dataStoreName",
+            "value": "osr.edw.staging.td.crm::CDS_CRM.CRMD_ORDERADMI"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
     }
   }
 }
