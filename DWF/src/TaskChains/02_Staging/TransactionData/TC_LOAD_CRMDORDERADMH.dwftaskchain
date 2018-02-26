@@ -1,0 +1,33 @@
+{
+  "description": "Load batch Staging CRMD_ORDERADMH",
+  "responsible": {
+    "email": "hanaalerts@gmail.com"
+  },
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeProcedure",
+        "taskGroup": "hanaNative",
+        "description": "Load CRMDORDERADMH",
+        "parameterValues": [
+          {
+            "id": "procName",
+            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_CRMDORDERADMH_SP"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}
