@@ -30,7 +30,7 @@ context CDS_CRM {
     @DataStore.entity.subscribers        : 'subscribers'
     @DataStore.entity.runningOperations  : 'runningOperations'
     @DataStore.entity.idGenerator        : 'idGen'
-    @DataStore.computeChecksum           : true
+    @DataStore.computeChecksum           : false
     @DataStore.snapshotSupport           : false
     /*@@layout{"layoutInfo":{"x":276.865234375,"y":-434}}*/
     context CRMD_ORDERADMI {
@@ -404,7 +404,7 @@ context CDS_CRM {
     @DataStore.entity.subscribers        : 'subscribers'
     @DataStore.entity.runningOperations  : 'runningOperations'
     @DataStore.entity.idGenerator        : 'idGen'
-    @DataStore.computeChecksum           : true
+    @DataStore.computeChecksum           : false
     @DataStore.snapshotSupport           : false
     context CRMD_ORDERADMH {
         @DataStore.entityCategory : #ACTIVE_DATA
@@ -494,7 +494,7 @@ context CDS_CRM {
                 COMP_TX_HEADER   : String(200)    not null;
 
                 @DataStore.aggregation : #NOP
-            key Z_RUN_SEQ_ID     : Integer        not null;
+            key Z_RUN_SEQ_ID     : Integer        not null default 0;
 
                 @DataStore.aggregation : #NOP
                 Z_CURR_FLAG      : String(1)      not null;
@@ -611,7 +611,7 @@ context CDS_CRM {
                 COMP_TX_HEADER      : String(200)            not null;
 
                 @DataStore.aggregation : #MOV
-            key Z_RUN_SEQ_ID        : Integer                not null;
+            key Z_RUN_SEQ_ID        : Integer                not null default 0;
 
                 @DataStore.aggregation : #MOV
                 Z_CURR_FLAG         : String(1)              not null;
@@ -670,7 +670,7 @@ context CDS_CRM {
                 CRM_CHANGED_AT      : Decimal(15, 0)      not null;
                 POSTPROCESS_AT      : Decimal(15, 0)      not null;
                 COMP_TX_HEADER      : String(200)         not null;
-            key Z_RUN_SEQ_ID        : Integer             not null;
+            key Z_RUN_SEQ_ID        : Integer             not null default 0;
                 Z_CURR_FLAG         : String(1)           not null;
                 Z_VALID_FROM        : LocalDate           not null default '1900-01-01';
                 Z_VALID_TO          : LocalDate           not null default '1900-01-01';
