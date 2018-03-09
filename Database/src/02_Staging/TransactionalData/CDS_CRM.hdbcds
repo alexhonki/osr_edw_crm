@@ -139,7 +139,7 @@ context CDS_CRM {
                 REVACC_RELEVANT_TYPE : String(1)      not null;
 
                 @DataStore.aggregation : #NOP
-            key Z_RUN_SEQ_ID         : Integer        not null;
+                Z_RUN_SEQ_ID         : Integer        not null;
 
                 @DataStore.aggregation : #NOP
                 Z_CURR_FLAG          : String(1)      not null;
@@ -494,7 +494,7 @@ context CDS_CRM {
                 COMP_TX_HEADER   : String(200)    not null;
 
                 @DataStore.aggregation : #NOP
-            key Z_RUN_SEQ_ID     : Integer        not null default 0;
+                Z_RUN_SEQ_ID     : Integer        not null default 0;
 
                 @DataStore.aggregation : #NOP
                 Z_CURR_FLAG      : String(1)      not null;
