@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="osr.edw.source.config.rms::CV_SourceObjects" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
-<descriptions defaultDescription="Available Source Objects"/>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="osr.edw.source.config.crm::CV_SourceObjects" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Available Source Objects">
+  <comment text=" "/>
+</descriptions>
 <localVariables/>
 <variableMappings/>
 <dataSources>
@@ -95,13 +97,13 @@ AND TABLE_NAME NOT LIKE '%source%::VT_%'</filter>
       <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="256">
         <formula>'logical-OSR-EDW-SOURCE-CRM-grantor/schema'</formula>
       </keyCalculation>
-      </calculatedAttribute>
+    </calculatedAttribute>
     <calculatedAttribute id="SYNONYM" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SYNONYM"/>
       <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="256">
         <formula>REPLACE(&quot;OBJECT_NAME&quot;, '::', '.synonym::')</formula>
       </keyCalculation>
-      </calculatedAttribute>
+    </calculatedAttribute>
   </calculatedAttributes>
   <baseMeasures/>
   <calculatedMeasures/>
