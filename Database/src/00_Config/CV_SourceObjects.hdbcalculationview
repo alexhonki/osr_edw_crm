@@ -95,13 +95,13 @@ AND TABLE_NAME NOT LIKE '%source%::VT_%'</filter>
       <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="256">
         <formula>'logical-OSR-EDW-SOURCE-CRM-grantor/schema'</formula>
       </keyCalculation>
-      </calculatedAttribute>
+    </calculatedAttribute>
     <calculatedAttribute id="SYNONYM" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SYNONYM"/>
       <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="256">
         <formula>REPLACE(&quot;OBJECT_NAME&quot;, '::', '.synonym::')</formula>
       </keyCalculation>
-      </calculatedAttribute>
+    </calculatedAttribute>
   </calculatedAttributes>
   <baseMeasures/>
   <calculatedMeasures/>
