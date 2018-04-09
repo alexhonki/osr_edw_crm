@@ -1,8 +1,10 @@
 {
-  "description": "Load batch Subs Staging MD CRM LAND",
+  "description": "Load batch Subs Staging TD CRM LAND",
   "responsible": {
     "email": "hanaalerts@gmail.com"
   },
+  "maxParallelExecution": 3,
+  "taskTimeout": 4320000,
   "taskList": {
     "1": {
       "inline": {
