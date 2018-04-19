@@ -1,0 +1,32 @@
+namespace osr.edw.source.md.crm;
+
+context CDS_CRM {
+
+    /*@@layout{"layoutInfo":{"x":417,"y":218.5}}*/
+    context TAB {
+
+        /*@@layout{"layoutInfo":{"x":-14,"y":83.5}}*/
+        entity CRMC_ACTOBJ {
+            key CLIENT        : String(3);
+            key OBJECTIVE     : String(3);
+                Z_CHANGE_TYPE : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+                Z_RUN_ROW_NO  : Integer;
+            key Z_RUN_SEQ_ID  : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{"x":293,"y":110.5}}*/
+        entity CRMC_ACTCATEGOR {
+            key CLIENT        : String(3);
+            key CATEGORY      : String(3);
+                CLASS         : String(1);
+                ICON_NAME     : String(30);
+                Z_CHANGE_TYPE : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+                Z_RUN_ROW_NO  : Integer;
+            key Z_RUN_SEQ_ID  : Integer;
+        };
+    };
+};

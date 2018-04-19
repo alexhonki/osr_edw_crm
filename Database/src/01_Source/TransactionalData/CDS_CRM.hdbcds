@@ -90,5 +90,81 @@ context CDS_CRM {
                 Z_RUN_ROW_NO         : Integer;
                 Z_SOURCE_SYS         : String(5);
         };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity CRMD_PARTNER {
+            key CLIENT           : String(3);
+            key GUID             : Binary(16);
+                CATEGORY         : String(3);
+                PRIORITY         : String(1);
+                OBJECTIVE        : String(3);
+                DIRECTION        : String(1);
+                EXTERN_ACT_ID    : String(20);
+                ADDRESS_ID       : String(10);
+                PRIVATE_FLAG     : String(1);
+                COMPLETION       : String(3);
+                ACT_LOCATION     : String(100);
+                ACTIVITY_H_DUMMY : String(1);
+                ZZSECURE_LEVEL   : String(1);
+                CALENDAR         : String(1);
+                TASK             : String(1);
+                CLASS            : String(1);
+                ZZFLD000087      : String(10);
+                ZZFLD000088      : String(30);
+                ZZFLD00008A      : String(10);
+                ZZFLD00008D      : String(241);
+                ZZFLD00008E      : String(241);
+                ZZFLD00008F      : String(255);
+                Z_CHANGE_TYPE    : String(1);
+                Z_CHANGE_TIME    : UTCTimestamp;
+                Z_SOURCE_SYS     : String(5);
+                Z_RUN_ROW_NO     : Integer;
+            key Z_RUN_SEQ_ID     : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity CRMD_LINK {
+            key CLIENT        : String(3);
+            key GUID_HI       : Binary(16);
+            key GUID_SET      : Binary(16);
+                OBJTYPE_HI    : String(2);
+                OBJTYPE_SET   : String(2);
+                Z_CHANGE_TYPE : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+                Z_RUN_ROW_NO  : Integer;
+            key Z_RUN_SEQ_ID  : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity CRMD_ACTIVITYH {
+            key CLIENT           : String(3);
+            key GUID             : Binary(16);
+                CATEGORY         : String(3);
+                PRIORITY         : String(1);
+                OBJECTIVE        : String(3);
+                DIRECTION        : String(1);
+                EXTERN_ACT_ID    : String(20);
+                ADDRESS_ID       : String(10);
+                PRIVATE_FLAG     : String(1);
+                COMPLETION       : String(3);
+                ACT_LOCATION     : String(100);
+                ACTIVITY_H_DUMMY : String(1);
+                ZZSECURE_LEVEL   : String(1);
+                CALENDAR         : String(1);
+                TASK             : String(1);
+                CLASS            : String(1);
+                ZZFLD000087      : String(10);
+                ZZFLD000088      : String(30);
+                ZZFLD00008A      : String(10);
+                ZZFLD00008D      : String(241);
+                ZZFLD00008E      : String(241);
+                ZZFLD00008F      : String(255);
+                Z_CHANGE_TYPE    : String(1);
+                Z_CHANGE_TIME    : UTCTimestamp;
+                Z_SOURCE_SYS     : String(5);
+                Z_RUN_ROW_NO     : Integer;
+            key Z_RUN_SEQ_ID     : Integer;
+        };
     };
 };
