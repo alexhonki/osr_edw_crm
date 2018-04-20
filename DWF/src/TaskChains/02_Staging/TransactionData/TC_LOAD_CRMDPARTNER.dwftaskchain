@@ -1,10 +1,9 @@
 {
-  "description": "Load batch Subs Staging TD CRM LAND",
+  "description": "Load batch Staging CRMD_PARTNER",
   "responsible": {
     "email": "hanaalerts@gmail.com"
   },
-  "maxParallelExecution": 3,
-  "taskTimeout": 4320000,
+  "taskTimeout": 432000,
   "taskList": {
     "1": {
       "inline": {
@@ -14,13 +13,13 @@
     },
     "2": {
       "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMH",
+        "type": "executeProcedure",
+        "taskGroup": "hanaNative",
+        "description": "Load CRMD_PARTNER",
         "parameterValues": [
           {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDORDERADMH"
+            "id": "procName",
+            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_CRMDPARTNER_SP"
           }
         ]
       },
@@ -33,13 +32,13 @@
     },
     "3": {
       "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMI",
+        "type": "activate",
+        "taskGroup": "ndso",
+        "description": "Activate CRMD_PARTNER",
         "parameterValues": [
           {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDORDERADMI"
+            "id": "dataStoreName",
+            "value": "osr.edw.staging.td.crm::CDS_CRM.DSO.CRMD_PARTNER"
           }
         ]
       },

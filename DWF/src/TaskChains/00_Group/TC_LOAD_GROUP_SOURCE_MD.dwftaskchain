@@ -1,5 +1,5 @@
 {
-  "description": "Load batch Group Staging CRM TD",
+  "description": "Load batch Group Source CRM MD",
   "responsible": {
     "email": "hanaalerts@gmail.com"
   },
@@ -16,11 +16,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD SUBS CRM LAND TD",
+        "description": "TC LOAD SUBS CRM LAND MD",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_SUBS_LAND_TD"
+            "value": "osr.edw.source.md.rms#TC_LOAD_SUBS_LAND_MD"
           }
         ]
       },

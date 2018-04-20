@@ -5,7 +5,7 @@ context CDS_CRM {
     /*@@layout{"layoutInfo":{"x":417,"y":218.5}}*/
     context TAB {
 
-        /*@@layout{"layoutInfo":{"x":-14,"y":83.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity CRMC_ACTOBJ {
             key CLIENT        : String(3);
             key OBJECTIVE     : String(3);
@@ -16,7 +16,7 @@ context CDS_CRM {
             key Z_RUN_SEQ_ID  : Integer;
         };
 
-        /*@@layout{"layoutInfo":{"x":293,"y":110.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity CRMC_ACTCATEGOR {
             key CLIENT        : String(3);
             key CATEGORY      : String(3);
@@ -27,6 +27,75 @@ context CDS_CRM {
                 Z_SOURCE_SYS  : String(5);
                 Z_RUN_ROW_NO  : Integer;
             key Z_RUN_SEQ_ID  : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{"x":274,"y":-106.5}}*/
+        entity CRMC_PROCTYPE {
+            key CLIENT           : String(3);
+            key PROCESS_TYPE     : String(4);
+                PROCESS_BLOCKED  : String(1);
+                NUMBER_RANGE_INT : String(2);
+                NUMBER_RANGE_EXT : String(2);
+                INCR_ITEM_PROC   : String(6);
+                INCR_S_ITEM_PROC : String(6);
+                TEXT_PROCEDURE   : String(8);
+                PART_DETERM_PROC : String(8);
+                USER_STAT_PROC   : String(8);
+                OBJECT_TYPE      : String(10);
+                ORG_PARTNER_PFT  : String(4);
+                ORG_PROFILID     : String(12);
+                EARLY_ORDER_NO   : String(1);
+                NO_CHANGE_DOCS   : String(1);
+                NO_IMPL_CH_DOCS  : String(1);
+                TIMEPROFILE      : String(12);
+                ACTIONPROFILE    : String(30);
+                CANCPROC         : String(4);
+                PON_VALID        : String(1);
+                PON_PRODID_CHECK : String(1);
+                COND_GROUP_NAME  : String(10);
+                CUSTMAT_VALID    : String(1);
+                STATUS_OBJ_TYPE  : String(3);
+                CONTRACT_MESSAGE : String(1);
+                ELIGIBLE_PARTNER : String(1);
+                GTIN_VALID       : String(1);
+                POSTPROCESS_FROM : String(3);
+                ALLOW_PART_PROC  : String(1);
+                COMM_DATE        : String(1);
+                ERR_GRP          : String(4);
+                ALTID_PROFILE    : String(30);
+                PROD_DET_PROC    : String(6);
+                OBJREF_PROF_ID   : String(10);
+                TEMPLATE_TYPE    : String(1);
+                REFERRENCE_DOC   : String(1);
+                QUOTATIO_MESSAGE : String(1);
+                CONTRACT_QUANVAL : String(1);
+                ELIG_HIER_TYPE   : String(2);
+                CAMPAIGN_DETERM  : String(1);
+                ATP_TYPE         : String(1);
+                TEMPLATE_NAME    : String(64);
+                TEMPLATE_PROFILE : String(10);
+                AP_DET_PROC      : String(6);
+                EXT_REF_PROFILE  : String(4);
+                AGREEMENT_MSG    : String(1);
+                CREI_PROFILE     : String(10);
+                SC_VALID         : String(1);
+                EXT_PROD_ALLOWED : String(1);
+                EXT_PROD_ITCATGR : String(4);
+                TERRITORY_CHECK  : String(1);
+                BTX_CLASS        : String(1);
+                APRV_DET_PROC    : String(8);
+                AUTH_DOM         : String(16);
+                CHECKLIST_PROFIL : String(8);
+                OBJ_LINKAGE_PROF : String(8);
+                DEDUP_PROFILE    : String(4);
+                TAX_RELEVANT     : String(1);
+                PROD_DESC_SRCH   : String(1);
+                FOLLOW_WINDOW    : String(1);
+                Z_CHANGE_TYPE    : String(1);
+                Z_SOURCE_SYS     : String(5);
+                Z_RUN_ROW_NO     : Integer;
+            key Z_RUN_SEQ_ID     : Integer;
+                Z_CHANGE_TIME    : UTCTimestamp;
         };
     };
 };

@@ -1,10 +1,9 @@
 {
-  "description": "Load batch Group Staging CRM TD",
+  "description": "Load real time Source CRMCACTCATEGOR",
   "responsible": {
     "email": "hanaalerts@gmail.com"
   },
-  "maxParallelExecution": 3,
-  "taskTimeout": 43200000,
+  "taskTimeout": 4320000,
   "taskList": {
     "1": {
       "inline": {
@@ -14,13 +13,13 @@
     },
     "2": {
       "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD SUBS CRM LAND TD",
+        "type": "executeProcedure",
+        "taskGroup": "hanaNative",
+        "description": "Load CRMCACTCATEGOR",
         "parameterValues": [
           {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_SUBS_LAND_TD"
+            "id": "procName",
+            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMC_ACTCATEGOR_SP"
           }
         ]
       },
