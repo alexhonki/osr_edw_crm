@@ -1,0 +1,53 @@
+{
+  "description": "Load batch Staging CRMCPARTNERPDP",
+  "responsible": {
+    "email": "hanaalerts@gmail.com"
+  },
+  "taskTimeout": 4320000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeProcedure",
+        "taskGroup": "hanaNative",
+        "description": "Load CRMC_PARTNERPDP",
+        "parameterValues": [
+          {
+            "id": "procName",
+            "value": "osr.edw.staging.md.crm::FG_BT_LOAD_CRMC_PARTNERPDP_SP"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    },
+    "3": {
+      "inline": {
+        "type": "activate",
+        "taskGroup": "ndso",
+        "description": "Activate CRMC_PARTNERPDP",
+        "parameterValues": [
+          {
+            "id": "dataStoreName",
+            "value": "osr.edw.staging.md.crm::CDS_CRM.DSO.CRMC_PARTNERPDP"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
+    }
+  }
+}

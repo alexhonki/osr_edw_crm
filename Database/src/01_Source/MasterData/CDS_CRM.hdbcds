@@ -29,7 +29,7 @@ context CDS_CRM {
             key Z_RUN_SEQ_ID  : Integer;
         };
 
-        /*@@layout{"layoutInfo":{"x":274,"y":-106.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity CRMC_PROCTYPE {
             key CLIENT           : String(3);
             key PROCESS_TYPE     : String(4);
@@ -96,6 +96,36 @@ context CDS_CRM {
                 Z_RUN_ROW_NO     : Integer;
             key Z_RUN_SEQ_ID     : Integer;
                 Z_CHANGE_TIME    : UTCTimestamp;
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity CRMC_PARTNERPDP {
+            key CLIENT           : String(3);
+            key DETERM_PROC      : String(8);
+            key PARTNER_FCT      : String(8);
+                CHANGEABLE       : String(1);
+                COUNT_LOW        : String(4);
+                COUNT_HIGH       : String(4);
+                COUNT_TO_POPUP   : hana.SMALLINT;
+                CALENDAR         : String(1);
+                ADDR_OPERATION   : String(6);
+                STD_ADDR_ONLY    : String(1);
+                ADDR_CHANGEABLE  : String(1);
+                ADDR_DUPLICATE   : String(1);
+                ACCESS_SEQUENCE  : String(4);
+                POINT_OF_DETERM  : String(1);
+                MANUAL_FUNCTION  : String(1);
+                NO_MANUAL_ENTRY  : String(1);
+                NEW_DETERM       : String(1);
+                REGISTRATOR      : String(12);
+                ATTRIBUTE_GROUP  : String(6);
+                NEW_DET_PART_REP : String(1);
+                TERRITORY_CHECK  : String(1);
+                Z_CHANGE_TYPE    : String(1);
+                Z_CHANGE_TIME    : UTCTimestamp;
+                Z_SOURCE_SYS     : String(5);
+                Z_RUN_ROW_NO     : Integer;
+                Z_RUN_SEQ_ID     : Integer;
         };
     };
 };
