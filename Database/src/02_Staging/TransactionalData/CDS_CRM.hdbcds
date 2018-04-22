@@ -1008,6 +1008,7 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
+        /*@@layout{"layoutInfo":{"x":147.134765625,"y":-435}}*/
         context CRMD_ACTIVITYH {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
@@ -1015,7 +1016,7 @@ context CDS_CRM {
                 key CLIENT           : String(3)    not null;
 
                     @DataStore.aggregation : #NOP
-                key GUID             : Binary(16)   not null;
+                key GUID             : String(200)  not null;
 
                     @DataStore.aggregation : #NOP
                     CATEGORY         : String(3)    not null;
@@ -1105,7 +1106,7 @@ context CDS_CRM {
                 key CLIENT              : String(3)              not null;
 
                     @DataStore.aggregation : #MOV
-                key GUID                : Binary(16)             not null;
+                key GUID                : String(200)            not null;
 
                     @DataStore.aggregation : #MOV
                     CATEGORY            : String(3)              not null;
@@ -1191,7 +1192,7 @@ context CDS_CRM {
                 key technicalKey        : changeLogKey;
                     technicalAttributes : changeLogAttributes not null;
                 key CLIENT              : String(3)           not null;
-                key GUID                : Binary(16)          not null;
+                key GUID                : String(200)         not null;
                     CATEGORY            : String(3)           not null;
                     PRIORITY            : String(1)           not null;
                     OBJECTIVE           : String(3)           not null;
