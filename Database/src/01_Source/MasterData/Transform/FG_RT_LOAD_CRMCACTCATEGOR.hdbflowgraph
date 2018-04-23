@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:version="2.0" xmi:id="372ad5cc97e1d33fa295432ec469f0ef" name="FG_RT_LOAD_CRMCACTCATEGOR" runtimeBehavior="REALTIME_TASK">
+  <annotations key="sap.afm.layout" xmi:id="f420a31461d5e3c26cc734cf7b1d779c">
+    <annotations xmi:id="cb0247ab98895cdc586ab3715f3b94bd" key="x" value="10">
+    </annotations>
+    <annotations xmi:id="3be5f6aff5c6f9dfe8e73938e5508f4c" key="y" value="10">
+    </annotations>
+    <annotations xmi:id="9ff2818c806fbdb78fdfc92e7d9a647f" key="width" value="100">
+    </annotations>
+    <annotations xmi:id="629555450618f35459d62f9aaa0f968b" key="height" value="84">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="6305d261145536060e84408874e435ee" key="sap.afm.palette">
+    <annotations xmi:id="a6254045bd86cccfbe8c5770c8d31bc0" key="additions" value=""/>
+  </annotations>
+  <annotations xmi:id="63fafdd81fefee44290771c634e9092f" key="sap.afm.nodeType" value="ContainerNode">
+  </annotations>
+  <annotations xmi:id="3c2750c64ee28174eba1c25008fb2a7e" key="sap.afm.nodeInputs">
+  </annotations>
+  <annotations xmi:id="9e5f12cb8327d420d7e16744e6180fc1" key="sap.afm.nodeOutputs">
+  </annotations>
+  <annotations xmi:id="d53aaf69b04954c228d6871133268634" key="sap.im.explicitTypeConversion">
+  </annotations>
+  <tableMappings xmi:id="997e0a520f3089a240f2117b582b43d4" source="f7a6a4551fefa15e47f476720f4337b3" target="7a8426f0f6190811666c803d3bda1185">
+    <attributeMappings xmi:id="ea3a37693798e3cd74a1dd328c4d02ac" source="d098a4fecb0e66c8fb961a1d752b9ba4" target="5df61aefe601b507171704779ccd8b79">
+    </attributeMappings>
+    <attributeMappings xmi:id="59f971880e46e4a8e7b26158b2f5d5fd" source="11d80a095c83e04610d155fde30788e0" target="61abe9c486669d41e83418700ec18231">
+    </attributeMappings>
+    <attributeMappings xmi:id="b6fa2b4b7d1e2a55e019e5e4b988dcfd" source="72d62f26ce5346252513fd22541a3e66" target="84775c5d1df976418d4006ad2f03a1d8">
+    </attributeMappings>
+    <attributeMappings xmi:id="4cace432df7e8812cb04fb336ab91186" source="c8cc7d4924e77a47130fe588e0bb5b89" target="c3a73270743e7b79fa94b1ca5da3bbd8">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="cb992612094c6264d26701ffebdf53fe" source="4219481f2e03ed44c9f256ef6af1ec69" target="9ce6ef584b4717523632469df91ada5c">
+    <attributeMappings xmi:id="cabc8877dbbbe80d23ae6a55d82f513f" source="69e439e147094d4088832e9ab6b52c51" target="cdef9419be8a07dfe33269bef3f0da87">
+    </attributeMappings>
+    <attributeMappings xmi:id="14d95334e546fb7ce0dbef098d3d926f" source="7e2100c0d6fba0f5f07e7b7d79572d8a" target="afada97959ed18588218c84e2a591a0c">
+    </attributeMappings>
+    <attributeMappings xmi:id="013ce41694915da28071b4d8c62a4752" source="ed1ac62e3860e04235d9d06431e9614e" target="1cacfc7e8af86e1e1a8c89a2c2bb71f3">
+    </attributeMappings>
+    <attributeMappings xmi:id="5b3f7a8b7f897a2302fa0fcc41088dbe" source="f437e46dccf7cd159ccb6fcb8cb56a18" target="87758e2837f7790b50f255ed80ab5749">
+    </attributeMappings>
+    <attributeMappings xmi:id="173026431ea5de24f2a3a9c09719b8cf" source="3ed380c59ec4462de0fa2e6b449564b0" target="11f5adfe5e489d2bcd63952820d4f1d3">
+    </attributeMappings>
+    <attributeMappings xmi:id="d52fda419672c359c886e908cd08e904" source="8ad13cb3e6bf75617e314406f01ec650" target="eaac34c4a40882ff1f90e79d0313f161">
+    </attributeMappings>
+    <attributeMappings xmi:id="1cd10b276843409867e6d09d9be6260c" source="af39c44d6a516529fd2d90a84bf13bfd" target="d355a3e5de159113809281a6d6c547dc">
+    </attributeMappings>
+    <attributeMappings xmi:id="2f9191e0ae1e949514b7480521936117" source="1d4d4f676ebc8ae253ce326ee9ccbdd3" target="46cc234b43695d2dee0b1a57479dbdb6">
+    </attributeMappings>
+    <attributeMappings xmi:id="2371536f37e8623c6e6b056599a495ae" source="84d6ffc977967770adc82ba2a74dd450" target="8aab898f1772a1b20142663ce1e8b84e">
+    </attributeMappings>
+  </tableMappings>
+  <nodes xmi:id="86d96189fa019128a2342fae225320d4" xsi:type="flowgraph:FilterNode" name="P_DS">
+    <annotations key="sap.afm.layout" xmi:id="f40bed8fc83fa17d7e90a61600f97d44">
+      <annotations xmi:id="874033f1c8627ab0e45b6020f643b5fa" key="x" value="193">
+      </annotations>
+      <annotations xmi:id="a472047f4c19a188e6e605cce6a0e7e7" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="a2c497fff415e5a3b69ece14e304c574" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="934fee7dd72b9fafb4ff7d0d898ebe62" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="7a8426f0f6190811666c803d3bda1185" name="P_DS_IN">
+      <attributes xmi:id="5df61aefe601b507171704779ccd8b79" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="96291e78ad98f5272168fa3ae15dd16b" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="61abe9c486669d41e83418700ec18231" name="CATEGORY" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="acb87e944c8497b1b2a8dd38f1320c2e" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="84775c5d1df976418d4006ad2f03a1d8" name="CLASS" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="c3a73270743e7b79fa94b1ca5da3bbd8" name="ICON_NAME" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="4219481f2e03ed44c9f256ef6af1ec69" name="P_DS_OUT">
+      <attributes xmi:id="69e439e147094d4088832e9ab6b52c51" name="CLIENT" type="NVARCHAR" nullable="true" expression="&quot;CLIENT&quot;" length="3">
+        <annotations xmi:id="42ce59f68a896cdb4aeb20f30da600b8" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="7e2100c0d6fba0f5f07e7b7d79572d8a" name="CATEGORY" type="NVARCHAR" nullable="true" expression="&quot;CATEGORY&quot;" length="3">
+        <annotations xmi:id="aeffe9bd05c8742bc88785d14f2b2b46" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ed1ac62e3860e04235d9d06431e9614e" name="CLASS" type="NVARCHAR" nullable="true" expression="&quot;CLASS&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="f437e46dccf7cd159ccb6fcb8cb56a18" name="ICON_NAME" type="NVARCHAR" nullable="true" expression="&quot;ICON_NAME&quot;" length="30">
+      </attributes>
+      <attributes xmi:id="3ed380c59ec4462de0fa2e6b449564b0" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1" expression="&#x27;&#x27;">
+      </attributes>
+      <attributes xmi:id="8ad13cb3e6bf75617e314406f01ec650" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" expression="&#x27;&#x27;">
+      </attributes>
+      <attributes xmi:id="af39c44d6a516529fd2d90a84bf13bfd" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5" expression="&#x27;CRM&#x27;">
+      </attributes>
+      <attributes xmi:id="1d4d4f676ebc8ae253ce326ee9ccbdd3" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" expression="ROW_NUMBER() over ()">
+      </attributes>
+      <attributes xmi:id="84d6ffc977967770adc82ba2a74dd450" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="true" expression="0">
+        <annotations xmi:id="f7c620f5a9a34568241ca260d22b6922" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="3d72399633386b48b3e1aed41c4a0673" name="DS_VT" catalogObjectName="osr.edw.source.md.crm::VT_CRMC_ACT_CATEGOR" type="VIRTUAL_TABLE" xsi:type="flowgraph:DataNode" dataLayout="ROW">
+    <annotations key="sap.afm.layout" xmi:id="0b5891c86eb88724c1d3e19660e0fea7">
+      <annotations xmi:id="70b74d5e1d8231cf8ac3638ad1156081" key="x" value="12">
+      </annotations>
+      <annotations xmi:id="3f929e60c96fb008d667726a3b829020" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="0d8fe83e4e55a425046b67f3a28b06ec" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="82f083e24cddfe69c44ff2f2d86274e0" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="c6861d405e0cbf27720f9930141b3aac" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="8b7ee086cfdff89edd4a06e23dbcb962" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="cbcebec9e1b45c2dcef8a5eaa788e263" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="7873df673087676730936edcde69aba3" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="c1aa81e8cd0f8cfc61c336edc0f089b5" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="cf1b7120808abd04bfecf6737f56ffb1" key="columns" value="[{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;CATEGORY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;CLASS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;ICON_NAME&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:30,&quot;nullable&quot;:&quot;false&quot;}]">
+    </annotations>
+    <annotations xmi:id="465e71f49393b2a8812514b26fb77cdc" key="sap.im.realtime" value="true">
+    </annotations>
+    <outputs xmi:id="f7a6a4551fefa15e47f476720f4337b3" name="DS_VT">
+      <attributes xmi:id="d098a4fecb0e66c8fb961a1d752b9ba4" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="39a52d3d17110665661fef1d91689eba" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="11d80a095c83e04610d155fde30788e0" name="CATEGORY" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="d153cf36bc14bec233ce8b0ce1bcea74" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="72d62f26ce5346252513fd22541a3e66" name="CLASS" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="c8cc7d4924e77a47130fe588e0bb5b89" name="ICON_NAME" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="ac918ec0765187ba862d1e664bd9c9f9" name="DT_TAB" catalogObjectName="osr.edw.source.md.crm::CDS_CRM.TAB.CRMCACTCATEGOR" type="DATABASE_TABLE" xsi:type="flowgraph:DataNode" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="814121e32494bd2238d8a58da47bbf1b">
+      <annotations xmi:id="f93d32a258a3c85fb2c48673eb8dbd27" key="x" value="374">
+      </annotations>
+      <annotations xmi:id="1867bfc0f36250045cc88b499c34fdfb" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="903ab85d9575945a686c7376f65053d5" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="7249db5e6bcca314848aae7e97ac6e42" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="a96cc65be91fe7851c01da42cc7171c6" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="ecdf2fa35211d43899e17fdcbb169ab2" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="2eb57879e420e66a61be4c18258c28e2" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="a0eb7b6f1fd51db6cfd31d95ffdbe807" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="635e2e72c089b66363767bb198af63b9" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="97a51924d23129184d4cd4d02375b47a" key="columns" value="[{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;CATEGORY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;CLASS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;ICON_NAME&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:30,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TYPE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TIME&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_SOURCE_SYS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_RUN_ROW_NO&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_RUN_SEQ_ID&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true}]">
+    </annotations>
+    <annotations xmi:id="df910eacfca37fee4b2e63bd3cf88152" key="sap.im.writerType" value="insert">
+    </annotations>
+    <annotations xmi:id="9c9382e138fccde320bb1ed499f65dc5" key="sap.im.keyGenerationAttribute" value="Z_RUN_SEQ_ID">
+    </annotations>
+    <annotations xmi:id="3d8861ebc7a43671b23ecb165b5b4438" key="sap.im.sequenceName" value="osr.edw.source.md.crm::SEQ_CRMCACTCATEGOR">
+    </annotations>
+    <annotations xmi:id="2934a46a0354f16ca2d739e92345b387" key="sap.im.changeTypeAttribute" value="Z_CHANGE_TYPE">
+    </annotations>
+    <annotations xmi:id="20348920c2696f2bdc8e6496c993b86f" key="sap.im.changeTimeAttribute" value="Z_CHANGE_TIME">
+    </annotations>
+    <inputs xmi:id="9ce6ef584b4717523632469df91ada5c" name="DT_TAB">
+      <attributes xmi:id="cdef9419be8a07dfe33269bef3f0da87" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="6c3c2dcb1ebf86d788ff8da8ef8c2105" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="afada97959ed18588218c84e2a591a0c" name="CATEGORY" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="a4c4d279f0cdfcba5dcef1a52d709dae" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="1cacfc7e8af86e1e1a8c89a2c2bb71f3" name="CLASS" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="87758e2837f7790b50f255ed80ab5749" name="ICON_NAME" type="NVARCHAR" nullable="true" length="30">
+      </attributes>
+      <attributes xmi:id="11f5adfe5e489d2bcd63952820d4f1d3" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="eaac34c4a40882ff1f90e79d0313f161" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="d355a3e5de159113809281a6d6c547dc" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="46cc234b43695d2dee0b1a57479dbdb6" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="8aab898f1772a1b20142663ce1e8b84e" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="a300eed027e2bb8d072ce7f93fcf6d89" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+</flowgraph:ContainerNode>
