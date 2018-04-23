@@ -1,0 +1,2230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:version="2.0" xmi:id="a761ab914646408355c43623f46c1f05" name="FG_BT_LOAD_CRMCPARTNERPDP" runtimeBehavior="BATCH_TASK">
+  <annotations key="sap.afm.layout" xmi:id="ffdc413486331cc9e358872e2c5ba40d">
+    <annotations xmi:id="451b2629e8ce92e9b10bc8d045da8411" key="x" value="10">
+    </annotations>
+    <annotations xmi:id="a6db5e2dac18158342cf4115aaa8c3e4" key="y" value="10">
+    </annotations>
+    <annotations xmi:id="9891dc302dfd7269ae0db963c728e915" key="width" value="100">
+    </annotations>
+    <annotations xmi:id="fe958a43dcd54895ed8d6e7a9917b8c0" key="height" value="84">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="3c25a57ad83c0dcc650b5a0281095931" key="sap.afm.palette">
+    <annotations xmi:id="38b1443751097c9423f8a20dc8fcb544" key="additions" value=""/>
+  </annotations>
+  <annotations xmi:id="1fd04d063eec501ef5e856f79f13e675" key="sap.afm.nodeType" value="ContainerNode">
+  </annotations>
+  <annotations xmi:id="7ecfed251db4a68bca3065e406e69f6c" key="sap.afm.nodeInputs">
+  </annotations>
+  <annotations xmi:id="815f0a3bc4e0f73fbcd9a1b20840e1c6" key="sap.afm.nodeOutputs">
+  </annotations>
+  <tableMappings xmi:id="f9b77fcf04618dd1f2c8b11567f3a843" source="cfee8fce6f2620d73035742a423e0a38" target="4d8bd75fe7e8b64540ba8a7f778ad3c8">
+    <attributeMappings xmi:id="f3e6182ece8e36877a48905dca693c5f" source="0ef5c95b6effad106478bc7f0f1f82cf" target="58495d2eef3eb5941120f3989fbd6df4">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="2d92b9b04c86900d89ff3f6e5a0acbd8" source="a7a9b91db9e7ce7f167b9d75c2b8e45d" target="31b4d63e8da5e1f652514db555c4cc4c">
+    <attributeMappings xmi:id="9593c7a17ffd6d419643f282c213302a" source="0de987c319664319622c32cdcddbac9a" target="0767726c290e54858295794a3386f025">
+    </attributeMappings>
+    <attributeMappings xmi:id="fdf561386692d0bce04f86f5050208f8" source="6e0fbcad510a44285de0e93cf8bbdb16" target="5cf1ee9cf76106c53de75b7494793742">
+    </attributeMappings>
+    <attributeMappings xmi:id="4932af424f08acd24acfb3d21b253c58" source="e8a6d5f7d4bd488a69023acc2ce6dc01" target="c4004f4287ffb61c27dd838dcd55ac34">
+    </attributeMappings>
+    <attributeMappings xmi:id="778b67650fb076633743ed3c4cee73cc" source="66ea8cdd2547f2bef9134c88084c65b3" target="add9434dc3a04bd776985fa0a77d852f">
+    </attributeMappings>
+    <attributeMappings xmi:id="8eab053595ba909bdccfb13b1ae47bea" source="dfda24cc83cb605d286a4dcbc2bd351d" target="b6ad0ac9e0e822b700e20a6f07010857">
+    </attributeMappings>
+    <attributeMappings xmi:id="16af14946ff4ff52472f0f95e0cd5575" source="183fcc97fb5bb73da7453efa0d7808a5" target="e3b7582fa092483fc17ac0d89f6caa67">
+    </attributeMappings>
+    <attributeMappings xmi:id="d722de62ff9eb82d88a1b2b826e94e50" source="2432874f23662d9d74acf4de24cd1427" target="a56ef643a494fb4d534a06b59f39d572">
+    </attributeMappings>
+    <attributeMappings xmi:id="ddfdaad3f4389b8a52e1d11e4b6b9429" source="864e84b3dc64a6f9de796ddbe369191a" target="b78dd47d408aff79d8fa66c7e87022dc">
+    </attributeMappings>
+    <attributeMappings xmi:id="5fd2daf0646490a87dbfd09a58b6dd3d" source="b3796fe62758909bde155cbad6e5b584" target="1db68b693171f569b2d11b30eb16554c">
+    </attributeMappings>
+    <attributeMappings xmi:id="94330ee234a36e90f67381bedc52d5a7" source="46defcaa17e539554e75e1a7c21258ca" target="0e58f8d654c2a5d5b1a6e3ce1d617830">
+    </attributeMappings>
+    <attributeMappings xmi:id="62cb00028d90a589afcb0b5ff9f0aef0" source="e599eb3c0be5ddb0a698d89d8d4e12c7" target="3d412d4096bd78b9a7f6658b8cf96006">
+    </attributeMappings>
+    <attributeMappings xmi:id="5f2e30081b43e329e46640dcea61fb80" source="86f9f6a72d4b558bff32fffdf48d770b" target="5e20d71204e8e636ea0af73fd4db32a1">
+    </attributeMappings>
+    <attributeMappings xmi:id="361b2a698017dedd44e0dbe5ea742f54" source="49ef00cef6bcd2a3a961c8d937a762d9" target="ea59893e13c2b9ba9d76fc7c9f114ced">
+    </attributeMappings>
+    <attributeMappings xmi:id="ca140034a85638651eb5b1fae6a72cfd" source="42bff8f0e964f148708e4f14d0b0aedd" target="7dec0f0fc219c2c1e0caf68ad39dea42">
+    </attributeMappings>
+    <attributeMappings xmi:id="8fa56d0d2e5d5c46c57034dcf1b3c154" source="f1bcffe51cc34def0f8a429f6c327773" target="64acd798249111a91ceca5fbb40b4392">
+    </attributeMappings>
+    <attributeMappings xmi:id="994d03e82f7da47e86eae4285fdca11e" source="d4237bc11d4bd7804a07b0577a21c3b8" target="7376ba0c0019cc6190d8cf761f70beee">
+    </attributeMappings>
+    <attributeMappings xmi:id="85b43c5552b0fdbd2f3b64230ef8ed2a" source="779faa686f2562bd68d0f150ce3f224e" target="b69dce1bfcddffce6382325aaf9010c3">
+    </attributeMappings>
+    <attributeMappings xmi:id="ef86667afc05b0d1731d64da0d37ab3c" source="3e83b6e23c309f5c27e4c20d0ceafa3b" target="bf092206d7f7ed6495f65288b7863488">
+    </attributeMappings>
+    <attributeMappings xmi:id="7edae9a959d423247d8d1ee83a48fac3" source="1e31a5336ac37437e8cdafa8cf21ba6d" target="2d908649bb45f05885ecd2a64c4c51e6">
+    </attributeMappings>
+    <attributeMappings xmi:id="bdfc15f1123201a014fb3ef66df65a92" source="928380ce835d64f55a6c6d42bc56ab35" target="cec7388fbd1a1a6adab6a59664848654">
+    </attributeMappings>
+    <attributeMappings xmi:id="4a732f72dc8c34a278d4a21b297031ff" source="5cb8b96f06c593eefc70c0967bcab322" target="d95d2b731d7650d7173d3c07c7449c89">
+    </attributeMappings>
+    <attributeMappings xmi:id="1f96136c7898c0aa4229dc3706940ad0" source="f0e152c919ba4083a3a18bc74004445b" target="c8b3773e383b08e23167f7ee416526ea">
+    </attributeMappings>
+    <attributeMappings xmi:id="dd4839f3789ba4678fd6a6845f25fed8" source="6b48a2c404b795047143f7730994ab94" target="cfbfca830253d2631a9560e02d3ffc27">
+    </attributeMappings>
+    <attributeMappings xmi:id="b27691f5f12aabd11db9567deea6d168" source="5cd2669f6540a7c5fa6dcc2a0425bf5a" target="58c01db48f487a82724f93ac82600a36">
+    </attributeMappings>
+    <attributeMappings xmi:id="2e47550a2336a23c8a8841baef13f376" source="7c5031f0b2f83cf19385ebe1aa9f3d8d" target="83d0736161605f46713958368f1d959c">
+    </attributeMappings>
+    <attributeMappings xmi:id="7d82e22ee1ee78b074ac7933330d8bba" source="d18f49aa3aeee972615489ce5b621d8a" target="59c162eaba031a222333bb0fa8f94915">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="c3ef46ea451dc1e5f9f83eb55793ce9b" source="c4bbb771434977520268e0969cc5ec7a" target="9030e592ed1f16e2c22828b8366276b4">
+    <attributeMappings xmi:id="eed12db962ab3268e1cc45779d81563f" source="d16572fe59c57485cb41754181e949e1" target="9721bbf57812b90cd5032d33baf9abaf">
+    </attributeMappings>
+    <attributeMappings xmi:id="b6ffd4b1b07336aeae29297cb92cd897" source="a2ef596eded691da7d82594100d3994d" target="058f612d0fc80e41759126e8c6d17c81">
+    </attributeMappings>
+    <attributeMappings xmi:id="eeea3fe38264ca4fed4db5168ba8cb2a" source="d1e78437e32b69799c20a622a4583a68" target="64a40978bf89537a2d80c50adfc20091">
+    </attributeMappings>
+    <attributeMappings xmi:id="20acee7c4367d846b5d743422b5a99e1" source="e4d2f1f29569d291d538a8e64ec8ad34" target="98a874180af22c0be844eb35d85f34ab">
+    </attributeMappings>
+    <attributeMappings xmi:id="c78872440d2a8059962ceef5a28a06f8" source="b0cae8ad1354010fdea200a1d617c5f7" target="2025d4effbe53a070b97cdefc0ac133a">
+    </attributeMappings>
+    <attributeMappings xmi:id="76a49ff2ae05fe77efd485bce20a18b4" source="7b027128af09117faa9678ee94c0655c" target="54ca1c6dbfd251cfb03a1e22e26baf95">
+    </attributeMappings>
+    <attributeMappings xmi:id="b5ff2dc7dac23b3abfc98ff55b37130e" source="e49cf7774c1174f99ababa28a73e0154" target="8778451fe950842a1c2c457dc11b37d7">
+    </attributeMappings>
+    <attributeMappings xmi:id="eb7c6930a1adfa3e726819ea2a32ab58" source="66a9faff0345be14b9525c11baac4792" target="6042bef5c1221132ab1f57fed1fd4426">
+    </attributeMappings>
+    <attributeMappings xmi:id="75d3a4344df47f8a47a53e7f2ffa96f4" source="b13f4cd820ff233f4a5b4e477aea53ea" target="eba7a21b685b5a5a9e0e94430da579ba">
+    </attributeMappings>
+    <attributeMappings xmi:id="6538185351b4b9a61479080ba8b4513d" source="984fd5acbb07ab187746ca17c99e083f" target="0b50bce6a81ba9050e17b34ebd87b617">
+    </attributeMappings>
+    <attributeMappings xmi:id="6e953ccf3b904640efd66fe43f38d43b" source="e76b26ea04dd35af8ff9d7d9065f3dfa" target="3729b46a63db1176c1103e014e060c87">
+    </attributeMappings>
+    <attributeMappings xmi:id="2cc29c0f3f928e2c5fade67e94601e10" source="4398745e6ef97480008d2acea8cd2199" target="a20834f8a86e132c8e76993c737fae5a">
+    </attributeMappings>
+    <attributeMappings xmi:id="4ca82268393d4601e4867aa01dfbcb78" source="c071727ca4eae4d19634e60f432ef580" target="1a05ae49047342b6c56027e405ea0f92">
+    </attributeMappings>
+    <attributeMappings xmi:id="0b1d86fce5c5fb0bf4e475009adbbd16" source="c71aba80b872f64c651fce1a070f185b" target="340b8660251c4e191156715c8278bf3d">
+    </attributeMappings>
+    <attributeMappings xmi:id="9646cf9731ca0ba77310eb15c1cf67e0" source="043afa72f744d3f1c5ffb1091ce038b4" target="982c67583f5b1addc15e64ce909e3b2b">
+    </attributeMappings>
+    <attributeMappings xmi:id="4893dca164150ea600c43560751a7eaa" source="cdbc1aaf672363345b716228feca05e7" target="b1b807cfbf8d967e354badc9ef206e83">
+    </attributeMappings>
+    <attributeMappings xmi:id="42cd270805f13d0220524efcd1b73dcc" source="183aaaebcf0338663f52c24896962318" target="38b95011ba8c9a63ddc197c88c5309a3">
+    </attributeMappings>
+    <attributeMappings xmi:id="a0d31de1c7998b12936369ab788b6f84" source="9d88e4eb18a4336c9141e52d2df662f5" target="5b1a5dae69db4d8d72df8be10e690b4b">
+    </attributeMappings>
+    <attributeMappings xmi:id="78242c9914ddf8967e82f7f124d99e47" source="94b922bc64037dc3c6c7bddbc08c31f8" target="1dd297c85d84b00eb538593435db0c41">
+    </attributeMappings>
+    <attributeMappings xmi:id="36fece866ca8fa81628f9719a4029bfe" source="3b4ecf50a4898e93d8d6981352f6e46e" target="8f090e982429f0b03eea72da527ed3f5">
+    </attributeMappings>
+    <attributeMappings xmi:id="cb0af59528c047f83decf96aaa1c9723" source="2e81cdfa467a2b0f90b470de6de903c7" target="b3eb42d44d23ecb81ae95380bf883d7c">
+    </attributeMappings>
+    <attributeMappings xmi:id="cf7252023e6270507d3ab595f7f60346" source="63d22f84a70146402c1c24c32ff6bb4e" target="31fec0dc1f6cb774e698b66b18168d2d">
+    </attributeMappings>
+    <attributeMappings xmi:id="1cf039581d7e7ad93f05ed1c63616c83" source="80d95933aa39dda0599f4e93d425a2cb" target="6fd1682de2ad7d41aa655ffa19490c0c">
+    </attributeMappings>
+    <attributeMappings xmi:id="12a262bc08f5cd757e8d58775827ac55" source="9ef1b5096f00623ffd5b7019cf430d3e" target="cb19dba2db0aaf4d3af90ac1fb151c86">
+    </attributeMappings>
+    <attributeMappings xmi:id="b02f4057f8a77277959bf20655c96664" source="332437ce7d2d270ae8a304c2fccfe368" target="92d11674626df57b99f385c69a506582">
+    </attributeMappings>
+    <attributeMappings xmi:id="537a40f3c38c4a0f942eda8f8750a980" source="535191aa25bf796d277987d8187ebbb0" target="eb95c0bb11c140005cd1e68aad3d0cb3">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="3f45270a6067eb1b7fbb02482cebfd5e" source="369e2811b84684175faacf4593854d23" target="a6c07d0d53b7fece06ce60eb6099f6df">
+    <attributeMappings xmi:id="f4ce84a7370d080b2d0b0572a85dac23" source="d77111c2e15f5e84e2fad9d2dba046ad" target="73355f19b7d03bb8f012101f59da8315">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="10c94f3e910812c81619add7002796b8" source="4694c8a113fda83b9c6cba777c981871" target="59170297c1a16ddae724313bbb34302c">
+    <attributeMappings xmi:id="812302a048e3e691871d4236e95443ca" source="6002f269624182e7035731ccad93be2b" target="9ca29ec7d174fd763f24e3c743b04103">
+    </attributeMappings>
+    <attributeMappings xmi:id="6c0e4d13915bb2b8a5e1868a9ac33549" source="b5175f212ca9f63eda11233a1da097dc" target="4f99d0353a7797d360a28bbfde865ff2">
+    </attributeMappings>
+    <attributeMappings xmi:id="07f215b4506319968c98e052c56e7b21" source="579db9c05cb908673ef9fc55f5b3a28d" target="981d42ec3763f3d0ff024aef70461025">
+    </attributeMappings>
+    <attributeMappings xmi:id="11eac1dddd76b956200008b4f93b4044" source="e088c9a9cb2659176af920dd375eaf67" target="4a697df1355d83192517a686444ce623">
+    </attributeMappings>
+    <attributeMappings xmi:id="6b6bc4135775fd3cf9a99cb5b805f85c" source="53a0ce3c90637e3f346cdfa170ece19c" target="79e239fdf26a960831c91a34af802d46">
+    </attributeMappings>
+    <attributeMappings xmi:id="e872e061eeeb51df3d91d5e1a9586c6c" source="3d1198c9a568d729f8acf61164e2b5d9" target="eebb150a588209727d25ccac52b05965">
+    </attributeMappings>
+    <attributeMappings xmi:id="1c7fb7cf3dd82033fb55d3e1e4f72953" source="b54f1903eb0752237bb3658023a4da8b" target="dbf03182b6ccb74f5f055f6cd9784420">
+    </attributeMappings>
+    <attributeMappings xmi:id="c82ec42518639e172339a9be1298cb67" source="e1d6281bc145bfde76dd7eee557e0032" target="4f80f06a2b7dd8807fb9b7a0b408ac78">
+    </attributeMappings>
+    <attributeMappings xmi:id="710047c87ec593f9864c9eabf9a83b84" source="60eb702b71b8824a699c36c99497beb0" target="e8a2e9fa9121d6d745c8a858f21f8344">
+    </attributeMappings>
+    <attributeMappings xmi:id="596bf65ff1c42265053973bba9d06c89" source="73708bb0baea9df39e853131831dc6de" target="ae9076cc9b002c0e9dc72a9ce3413630">
+    </attributeMappings>
+    <attributeMappings xmi:id="7a40cfd29f22fe9f90e1bbc583c1c129" source="83af9ea5caf58b6803d9a140d50dc4b9" target="4190e94fc8a9d2c42e12547a242ed05d">
+    </attributeMappings>
+    <attributeMappings xmi:id="c96fd36dfc426c610775b8d8c1be7bad" source="6c9e9792aa558d2be01894428baf596b" target="31f5c3371a8fb3e6437a939f3145da1e">
+    </attributeMappings>
+    <attributeMappings xmi:id="b043cbad60189182e87bdd5bdef1bbb6" source="1c8cbffd68ffb0ad3af3284f72bd7757" target="291f6ed0b53b80a33a9438c8088e6b5c">
+    </attributeMappings>
+    <attributeMappings xmi:id="cb707745c8158adce9b8fd2978a201a8" source="6cca0799a8d8136647b760e51a331881" target="1b297fb56ab547cf1110b26b73ffcaaa">
+    </attributeMappings>
+    <attributeMappings xmi:id="22a8e1cb33e0afeda1018f747db04ebb" source="bbc9c1875443adaaf4cf0b174b22ca9e" target="e124e9b53ae112b0a753cb4b41a11290">
+    </attributeMappings>
+    <attributeMappings xmi:id="a19c2c8b8897638faf5eae9ec9a5c20a" source="ac3f450ef3f830308e7ecec9099e33a7" target="83331b277609479606c182e3594de2d3">
+    </attributeMappings>
+    <attributeMappings xmi:id="92aef7ae0b152175b7cabd114a5cae6d" source="3784b2faf1310dc7baf6565fe2b4ffe8" target="d44dbf6544eb9706818bd911ac4adcd3">
+    </attributeMappings>
+    <attributeMappings xmi:id="8cd9a7e360e450a2ab71b6338eed6e63" source="40a131092852a16af2846182955dda38" target="c98f64c87c7df16d9974c8eb1a8104c7">
+    </attributeMappings>
+    <attributeMappings xmi:id="6efd0b30530df42eddf1bda5eac626c6" source="b6b8f34bfdc2ead2175a28d0de342e18" target="2608312b236a1b60954cc4d18f252aa0">
+    </attributeMappings>
+    <attributeMappings xmi:id="cd18fb276727b6fcabbe4a33faa9b770" source="2d86122cb72a130de0f095541845272d" target="275f03c7cb8a6cf81690a55c318a8124">
+    </attributeMappings>
+    <attributeMappings xmi:id="041a8709f49af62a465b10fac3280de8" source="6a5027249f466c8fb7d2386ea5662b77" target="f69952f78e34cfb65a2012d8ec9962a2">
+    </attributeMappings>
+    <attributeMappings xmi:id="283e4989a52c5835d4adc4360ff35e40" source="ec6ad8941ede38808e6cf89af1d6e9fe" target="33049b6b4bf46e99d5f47e60865275e7">
+    </attributeMappings>
+    <attributeMappings xmi:id="95e47999550e393fc3ea7fbfcf1e1d6b" source="d1113bd05ce3d72852ce65f12ed2ad7f" target="bfa012b68ffa6a2efc779694346752f6">
+    </attributeMappings>
+    <attributeMappings xmi:id="ae8e0064f70297249e2f5a5cbba5052a" source="987fb9d1e902edb781506c8983ae4f3f" target="46f7822959afd760165f1aa200cde8ce">
+    </attributeMappings>
+    <attributeMappings xmi:id="9d6a491982159fe3e7051842dcf6ced0" source="134bbb1fdabef7e23b76518170b5a41d" target="1ce3db65b5a5a98f3c80b377d6de839a">
+    </attributeMappings>
+    <attributeMappings xmi:id="6f0127666d5781b3828b0fd1a7faed03" source="f4889ea54546b2ba14e150cc70ae1f1a" target="f5233c57a0234de28ba2c61fd3677fba">
+    </attributeMappings>
+    <attributeMappings xmi:id="a8e05bde75b192d730e4cb2ebdb78dd2" source="56cdc541624b16072737eb531f87528b" target="b0479863738f713aa68039de51e9106e">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="6e1a1f14d5b5fa04ab0c9dd1c5a35c67" source="7cad78f1413c9e21a4aa6e38e83ed3fe" target="180b4be33498be1ab624afd981f8b110">
+    <attributeMappings xmi:id="a2ad433892f3e4e6d3f4934ffd03114f" source="3d8201286547bfe54a634e4e9f9b9f14" target="a739fe6f5ee84209d499643b960db2b0">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="f8c2f7aad88ddf05a7c164755fa7c599" source="4c78a91a6f65d78eb3c11d68327c5fd1" target="fac7f7eb7445fc88f70c152e653341ee">
+    <attributeMappings xmi:id="f202ca7e6b7b7d1c9db3383471f405be" source="97133623fefbbc242a55b899743445bf" target="5c451131e14be70dc498c0276fe10400">
+    </attributeMappings>
+    <attributeMappings xmi:id="3fa4847cc41dfdb18cdef47d2d24f30b" source="8753a5e9d8a8eca63b2f578073275ee5" target="1d545f6c729df353c95c200f53fa98ed">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="a258ee955cab36bc4b66c6f238063cf1" source="e8503f43b3441d2df0ff953bdb975ac7" target="af6564afb05c99ed465befecd5d80cee">
+    <attributeMappings xmi:id="de391d9e861544feb25e54c0b9cf66d3" source="3a8ccdc50ca4b0e0f306dc86e2312d13" target="a243da5e4564eca6bec1b66615fb6e4c">
+    </attributeMappings>
+    <attributeMappings xmi:id="e49e39fe02dc864445e74edbf67a373a" source="77e71907db6bd5781820164b447446a1" target="23b0e9d40f6d2d4efe212e8324a60b4c">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="65b3e07233653ced33cdadca2f1e99ff" source="710131e7046cbb378f34d68a48271471" target="3995132317ed6a33dc19ce853b9587cb">
+    <attributeMappings xmi:id="964d263ff2373929709327da768a4083" source="779e95a345c3f4f310eed1ddcab148ff" target="7ec800d708c4451b831800c45fd869b2">
+    </attributeMappings>
+    <attributeMappings xmi:id="85fc82dd0a91bc36479300b64253cffc" source="a16e7c9d17f7ee04379c4c4bf416a728" target="480d540a966d3b116d5c7501a7579eb2">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="3a6cb0daadb8665cd8b1af2e26e82d23" source="4c78a91a6f65d78eb3c11d68327c5fd1" target="33bb022bf02db53d810eeef3ff90cafa">
+    <attributeMappings xmi:id="ca88d171c70f18e66265657f1caa6df9" source="8753a5e9d8a8eca63b2f578073275ee5" target="b7cb7df606bcbc373c29e98eb8dd4fbb">
+    </attributeMappings>
+    <attributeMappings xmi:id="b8d0cda48d1c977b33d594d70443aba6" source="97133623fefbbc242a55b899743445bf" target="6b8c4b4216f6720530007ba02647fa72">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="920b9ce31366071b931f3592b08441f5" source="300999ce9c40e64904177f8d19926ff2" target="876ca71f24a902cc780e773dc23a12cf">
+    <attributeMappings xmi:id="cf830facfe28ab009087d0dda54ce7b0" source="99129a4d73567cbb8bdea717e9b7b752" target="2ebbd6388b5f709fa95540ea21889a53">
+    </attributeMappings>
+    <attributeMappings xmi:id="ecf2fa847945c6899d78d6fc081e5f9a" source="def254fdc76063222628d7f01e73b247" target="b0d070deab982611b7227491f33a7526">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="b9f837f007c353df402ba399fdff18c4" source="cc2bad5025066285ccf08163cd310c3b" target="447c43a32f61148cf07a282e788986cf">
+    <attributeMappings xmi:id="94d1925977ead2032f15f06d6c50e247" source="be2e6219f6830c41decbc358c2949fc0" target="0cb5ea07506ee4e582851c62c2ede387">
+    </attributeMappings>
+    <attributeMappings xmi:id="22a91f2d58c401756d30f87abc70508d" source="6583a9e86028f9ea006f90cd2896ff92" target="c107cb93399811a49f77b1f491212e75">
+    </attributeMappings>
+    <attributeMappings xmi:id="a78b4c88caeb720c4e75197e938d0768" source="19a75c0fee74dc665cd89f3b3e135c36" target="32022e7f60d446d83e7e6959d8645165">
+    </attributeMappings>
+    <attributeMappings xmi:id="b49b7472656eff38bfa9a47496112e7e" source="7f3317683b6a4090aefc143c459188d2" target="da70599de768f1c93003611c00ee29af">
+    </attributeMappings>
+    <attributeMappings xmi:id="dcb10397086259098c884e76792698da" source="445dc8131adf0ee55219553e06889d64" target="9cf8f64c3db6a5e408a5cbcc6af36b0b">
+    </attributeMappings>
+    <attributeMappings xmi:id="288bbdb2b5173b35ae91a708a57fa5e7" source="773c12e24cc704984fd4a3f56d9f5529" target="e69ae60694879ac0f322aacb86e084b4">
+    </attributeMappings>
+    <attributeMappings xmi:id="38c20f5fa8bd870dd035d5b67865a1b1" source="91c4bf99accaafd5216a2e89a424a91c" target="cd0ba9d7786e2d3df561e958c86ded1e">
+    </attributeMappings>
+    <attributeMappings xmi:id="de1fdf1817022588c7c03b893a8db2eb" source="b249bdba6b01aebcc6e97cb45d624684" target="efab79ede23ff9dab673b1e0b4e401fd">
+    </attributeMappings>
+    <attributeMappings xmi:id="6f1aa41157f24d5c19de5dbcbfccb5a0" source="aecce511b596c2adb202dec60aff6029" target="38dcb21dd0e5fc2b2d977b8f183616d9">
+    </attributeMappings>
+    <attributeMappings xmi:id="beea5be7a37bd92503edebe004c88e8d" source="50b1ea3f9115d36ab0fdf9851e257fa1" target="08ac4b0286c36b19c2dd30bfb9479449">
+    </attributeMappings>
+    <attributeMappings xmi:id="9a9a2da16a1a77f8f291c0939835782b" source="056bf095ee2ee5600f5a3592fafcb97c" target="baf89db031afa425388fa17e9ba318ee">
+    </attributeMappings>
+    <attributeMappings xmi:id="59904419e4ea0e13862023d75de2d799" source="cb20d49d167d9df21cd9fc3f9c8da27f" target="9c1a0a20b1918b7cf63697b6b3bb0f3c">
+    </attributeMappings>
+    <attributeMappings xmi:id="aff5dfcbfc74b0a77ba4239e79a000e5" source="b62b50cb84100a52d3a5c2c0a98906af" target="6b9f15fc54283c36a496e780551b6738">
+    </attributeMappings>
+    <attributeMappings xmi:id="73d17c9780e9d1df20aad0708d20bf70" source="be3be04607c86dd06efbb6a2d2b6e367" target="0182c97b86f4c619c129112442cdae2d">
+    </attributeMappings>
+    <attributeMappings xmi:id="f2c2813bd37a5a6cc7beb398e84bafee" source="0e0a5b0ceb052fb5386038d36fd3bfd6" target="d30734ea5b0c691ae45f30a7a70cfff1">
+    </attributeMappings>
+    <attributeMappings xmi:id="e1b55ee1a72c58507606098e6cdc15e5" source="49f879ca58e4efd9a38f972aa63c2389" target="8c05657a1de99ea1073614a2c840171c">
+    </attributeMappings>
+    <attributeMappings xmi:id="61d927e11522d37766907189bc571fcc" source="70ce8ccdaabe3b0035243365176938f8" target="aca68e757fa5f505a81072f85eddbf9d">
+    </attributeMappings>
+    <attributeMappings xmi:id="2600b716838fa0af6499d2667e187de8" source="96ee245c97e3963bdf699ac8d28f1450" target="e348c179f06ebf5044cc2a71dfc79f0d">
+    </attributeMappings>
+    <attributeMappings xmi:id="31f7e7bf8c3345da63774efd24caeb9d" source="e20bb9db4481b89f1893767449d4386c" target="75027516b02f081162dba991e6a56c30">
+    </attributeMappings>
+    <attributeMappings xmi:id="ab641c6c36922617813e660968e392c1" source="e3fcd701b5ef85f65b5eae00fd26e12b" target="63cd01fd1086d05598848dc7185490c4">
+    </attributeMappings>
+    <attributeMappings xmi:id="13e81fb6759c6f584f84ee4b609f676b" source="3d20c0aed75ea4e6134d42e7542dbc7a" target="cf32f4172a8c092ec91756ff8482671d">
+    </attributeMappings>
+    <attributeMappings xmi:id="bdfa1e0c28f9e5d4685dba0120bfe506" source="9c0ac3fee40f59c6a8ce10e4c5e180c3" target="82f3877f315edde5676a72c2106e09e1">
+    </attributeMappings>
+    <attributeMappings xmi:id="4dcc176d459f607de4738bf33e343c45" source="9d22a09d7453b77d3377da420f24037c" target="ac683b8429ffb24aad8cbc0be9637c55">
+    </attributeMappings>
+    <attributeMappings xmi:id="059876ac50c8248fa104ef532d1d0d2c" source="5ccd56289468b481c7c52beb963f731e" target="cf1bc583b1beec89f61fe07e11175468">
+    </attributeMappings>
+    <attributeMappings xmi:id="67a90b6196ac3292dab3016148fc5221" source="41c20053904b85d74b6a13bae9cceb41" target="bdc616dd87bdea7d7a11bf74bafdbcd9">
+    </attributeMappings>
+    <attributeMappings xmi:id="76492001e2bd445c30d6132479fc9cc0" source="619d68de4ee435ae7727bb7ca1349cf3" target="4b4ea279948b15818eee78db0767fabe">
+    </attributeMappings>
+    <attributeMappings xmi:id="3d3a88ffe6f3c3c6b8035b352543c6e6" source="8fe53fdc4562bf51d6cd966d169ed56f" target="a025fc6ff03ab01a99d7f42a8b7c390b">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="9209c0a8119b4b53f84220c0d4751a3e" source="19d81d3184b77b14a5c1a21c6225eee9" target="d5a4406a26cdc2125f037ba09f081eb6">
+    <attributeMappings xmi:id="13da123d2dbe646859ad9c6b71a8fc61" source="af346e2a6588f2e51a0be6c573d7d903" target="69ac70cf64f387ae5de6a3f1115f1d2c">
+    </attributeMappings>
+    <attributeMappings xmi:id="7825ad3a6ee6950afc1e2a29aeb80e0e" source="9f9fca2d158cccbdb668f6d0deba6f97" target="5ee479808b99ca905b7949de71e5dd68">
+    </attributeMappings>
+    <attributeMappings xmi:id="ea17090b69eb9807e49889682d2f5b4b" source="6a60977a88ff90aac2af7b9c8bef61c2" target="738e97e2d60b38b4e264f814d1bff2e2">
+    </attributeMappings>
+    <attributeMappings xmi:id="4db6fdaba0baf52115e24e7671e4bb8d" source="43e3bda638b890583e82e5af275be480" target="a7e9135bf364b6370f35cc6c24393321">
+    </attributeMappings>
+    <attributeMappings xmi:id="fb8bb230d124b0c9daeedcd9927bde8e" source="d9ab361f62a6f995765cc927e2b3027f" target="7a6987c41c77b66663506af181bbf949">
+    </attributeMappings>
+    <attributeMappings xmi:id="31339e5ef12034d1f4e35a4a1f3f5b19" source="36f209ddfa0f914b94f5497a1e2eddfe" target="9b567fd4b0e722dc74de2b453daa7f82">
+    </attributeMappings>
+    <attributeMappings xmi:id="bfb1fad1cb7fcf63082704b28fe71c9b" source="31ef929045970932b9d8e21b57b86707" target="8b61365d23cbeed410e2c78acc82c5ea">
+    </attributeMappings>
+    <attributeMappings xmi:id="167323bb86a9873f25e5632ffe34c43f" source="ea71880c3dc9e6e7644d2e0d3fc6320a" target="5f4381b798d62d3a4586ef0121411ef1">
+    </attributeMappings>
+    <attributeMappings xmi:id="f4f9389f35a6d7a906b67bb73a225ded" source="71672b463802f176c5c3d6be65d2becc" target="3c313471d50f747d145f45698396fd35">
+    </attributeMappings>
+    <attributeMappings xmi:id="97c9ca9d51e67fcb5cc5d2ba51aaf67d" source="e10f75ea7c6e20b80f79996b0aa5e362" target="e8aa409bf742cc91acab8715f8541cb6">
+    </attributeMappings>
+    <attributeMappings xmi:id="6eee6bfdf92076d39b267c931d0ebddc" source="b1b28c5c90216ef99b6a1aa8ee42bad2" target="45f935713e69d6d592e62b3b267af0cb">
+    </attributeMappings>
+    <attributeMappings xmi:id="c522c699492ce5aa296aa30559fd443b" source="adecf73f2698d74ffcb6db4a517c35ba" target="3c7c52f10afdfcb21b25a7c00bc697b8">
+    </attributeMappings>
+    <attributeMappings xmi:id="98395bf17151f5a6f41785430094941b" source="7f3d9929bc38835a3720af36682bc4a4" target="8d92532d0d8fe6691b20ddb1931c5f2a">
+    </attributeMappings>
+    <attributeMappings xmi:id="adf171028c2bdc6e3c7a1ffa61afe568" source="1e0570935ff64bfeffeaf0f07e596e87" target="517dbb546cf79cf445e55def212a186f">
+    </attributeMappings>
+    <attributeMappings xmi:id="4b02e1b0ffbcdaa83df01a534d351d0d" source="6e954f906795c683e6acc33ca7ea26c0" target="7886a3f5a28efd288fa65bd9fe62985c">
+    </attributeMappings>
+    <attributeMappings xmi:id="fe1655d0d36b908a90682272ee804abb" source="7a741c669ffdf653e305f833b12bf7e1" target="858c7caa7080be53e63622edb8034169">
+    </attributeMappings>
+    <attributeMappings xmi:id="e5af75b4a81530c84e30b36e26f25458" source="0089c29515769c307c111029454c494e" target="a355ba535c64be14a0d5141e02b39fbe">
+    </attributeMappings>
+    <attributeMappings xmi:id="1706dc6e4e22be6827cfc147a0dd3db8" source="79838e81ff4cad5667359580a4a94a53" target="f8c9b33cd93f429dcc1781c989d86025">
+    </attributeMappings>
+    <attributeMappings xmi:id="658f01d8b1d5721ed33bf98e5f409cf6" source="b9c955f9fb12eb33c817f7ccc6933d23" target="e0f2058951ccc24ae25565ea30f80277">
+    </attributeMappings>
+    <attributeMappings xmi:id="410009c3250e8c39d35761d8ad9c0719" source="44dfc081500c00694a00f434deacc3f5" target="70846cfcbad3d8f219616cad7600e42d">
+    </attributeMappings>
+    <attributeMappings xmi:id="1ae410bd44d5c7e7a6b463956ad25123" source="98a9bd1dc2e323404f377d86a6720b69" target="6e05f114cfd53d300ce9fff7df411458">
+    </attributeMappings>
+    <attributeMappings xmi:id="9c36c25419d35ef565fd8a2a8400365e" source="4910d91befde6d1db6ac4f25044e0893" target="bdcd002e88c445b1423912009ed3716b">
+    </attributeMappings>
+    <attributeMappings xmi:id="0e05e8342e4cb81f1443b985dfe4a1d2" source="09035277544f1bd9a3c6171c9d4ab6e3" target="6392bbc0ecbb59494473473c1acc3998">
+    </attributeMappings>
+    <attributeMappings xmi:id="67c9b7b6136318ece2ed9123de3e971e" source="9b6612e8b93e06b9e882688b6353483b" target="4eb9562b34af304dc108097c2c61f84a">
+    </attributeMappings>
+    <attributeMappings xmi:id="98d6e664c9c4aa939ebe46f7eb44a16c" source="19d35ad28d2d842d209fcc293502ecc7" target="6a5c63ab50eaa6bb0878cf12d0327c6a">
+    </attributeMappings>
+    <attributeMappings xmi:id="bc76341e6fbc793c9b8e394486d8abd5" source="b03a0c75e801c633b9973179ac5f7524" target="0843aecb8b66c7e734e5eb8937a44073">
+    </attributeMappings>
+    <attributeMappings xmi:id="7b98665cd56aa55ae680736650ff68e2" source="2f04bd30186853afd25becfd6323a57c" target="85bd869aabc143464359a5c6b9fadbbb">
+    </attributeMappings>
+    <attributeMappings xmi:id="ef495b133a5192dcf194c9dfb22a3374" source="7a5be0062c69a01ddb95ad1756a3ac64" target="7a6927b95cdaefae365be63a2abf9cfd">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="e5d634120f711ea433fded19df77fc21" source="e8503f43b3441d2df0ff953bdb975ac7" target="22039884cd13c85429fd0b0759cd0e29">
+    <attributeMappings xmi:id="f69dced9347e46376a524dddeb59a294" source="3a8ccdc50ca4b0e0f306dc86e2312d13" target="52927900ed971e308633218f68f3b464">
+    </attributeMappings>
+    <attributeMappings xmi:id="b562164b27355385b4838967e4385bad" source="77e71907db6bd5781820164b447446a1" target="662582fbafc831692aa13a41d1de1de3">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="67f6feae703dbd34b1ab9ba8e6ef9c5a" source="6c846be9c55bc4df4ec2aca4987855fb" target="3d2dca8b3d5ddd0d6176605338d0e01a">
+    <attributeMappings xmi:id="f549ca50b574d7cdbd3e8c21f4934315" source="9795d09fd1d833635701b35fd767d720" target="0f1240229c3c713422f7cbd39f0c18ed">
+    </attributeMappings>
+    <attributeMappings xmi:id="96f66d5606140104dfa4b4f50892e246" source="c0a504c5ebf56021d1ac42dac8e88fba" target="e11bf46ab7ae61dc4d318afdb15eccab">
+    </attributeMappings>
+    <attributeMappings xmi:id="0005315e70ee809d0a8e83bdcf4f6f0e" source="6b4536b09f61d86b9362f6be5c1ac0af" target="53a1dac66963ba88841e7663d6601c7a">
+    </attributeMappings>
+    <attributeMappings xmi:id="25a08c746917f9a27285c3931f86b40c" source="7cb22268a1c89b6493f009fee641c5d1" target="bc53d195d84267f391520df4fbe4ac83">
+    </attributeMappings>
+    <attributeMappings xmi:id="ca3c2a6a93b91087b965004190a164a0" source="4a7a7188761c0414b643dd445c6447a2" target="a8f00a2063c4b62ef368e1a241918db1">
+    </attributeMappings>
+    <attributeMappings xmi:id="731fe7d402b309b1441c3ebdaa4ffe45" source="08e9d54fb87b26d37ba0d7240868b0d4" target="2b7582e78bcbb226fa5287572309613b">
+    </attributeMappings>
+    <attributeMappings xmi:id="5223c8fa187e2534b9815c530d091888" source="b8de762b5db996e51c4dbb12e041055a" target="b34faf9e41321cc88284102c1841015b">
+    </attributeMappings>
+    <attributeMappings xmi:id="525ae97f4ea3eabc6e2af5fd0214d442" source="5f4c5762f47ca6179e20159bf40bba00" target="fcbfefa1b62f89a88bbcc76c6e64a957">
+    </attributeMappings>
+    <attributeMappings xmi:id="125e3c5a008df57ecb6de64c39d70ecc" source="a3b7ce07b9e10f41d64dd3ac4dfe13d6" target="37848d76ec9e01daa936fa975cbf8e3f">
+    </attributeMappings>
+    <attributeMappings xmi:id="525dc7688406dda1128a84e0b44177d8" source="eebd52f4b36515649d3158945c09f207" target="a396d6c67d8ff30adc45de8987139025">
+    </attributeMappings>
+    <attributeMappings xmi:id="19842eb59724dbe38bda0df5d5188394" source="2269220498adfa7e960718adff9c531d" target="6b0910590780e7e053f08b09499bbc46">
+    </attributeMappings>
+    <attributeMappings xmi:id="bf557056ede660f8ea96ea2f1899f1b0" source="33a67140da7456e3e894438985693a0b" target="a521cea10ff645fe3ffb74861bc7ec20">
+    </attributeMappings>
+    <attributeMappings xmi:id="5b96e62d76f2e3527c8c6a03a96858dd" source="9be9005df4569df447aae2f420af5a2c" target="6b918b9971682c3f3a96cc461ddc8fce">
+    </attributeMappings>
+    <attributeMappings xmi:id="0c3628f0e2561be2d1db22cb6e0267ab" source="cca3357c51cc21c5f0b939fae1ef1c06" target="00b48a409043615a87b5b75aba440b69">
+    </attributeMappings>
+    <attributeMappings xmi:id="b9b8715c6461460ccc3b4226fc91c9b6" source="09667dd0dd2875c0a8bbef6ff23afc35" target="d33ef912978eb8d9a50e9c72facfe61f">
+    </attributeMappings>
+    <attributeMappings xmi:id="4ff0891e21045a7a3aa217edefd5c857" source="6e104f6c5a8794a77f6c7b057fdecdea" target="e023086e60d7045d03b0f4c99fe2041f">
+    </attributeMappings>
+    <attributeMappings xmi:id="2fbe8363142b760348ed5d276a0d1898" source="6892ca91297198c38e0ddd0fc1551bce" target="3d50efa706029b8b6bc6c453ddad8298">
+    </attributeMappings>
+    <attributeMappings xmi:id="53981948f0eaa7c532beaf424bfe8b58" source="d16ad6fec7ab05e2d7e19f6d3f5bcd3f" target="d044c78e4fa3917c13c3cb526b56ffa4">
+    </attributeMappings>
+    <attributeMappings xmi:id="09c1d5d071972c8b371f25e2ad0a3163" source="aa247e6b9e95cace196d784c44ccf81c" target="122dc27206140c561b47bf26bd16e82e">
+    </attributeMappings>
+    <attributeMappings xmi:id="a1a6a605c706c6a6f8fa91e3740e1af6" source="f4890e41a34bd600e92193d903498835" target="d24ba9cae179fb927be7efba04a8e056">
+    </attributeMappings>
+    <attributeMappings xmi:id="ba3b41b70efdfbaf4b0c3bba3d870cd6" source="c021ecc65f58fc796b52ad0c74c7bf3a" target="1d6824f3987167394ed3c167ceeae3f1">
+    </attributeMappings>
+    <attributeMappings xmi:id="91a63cf0664b2da831b68f61f0c613ef" source="4234aa72f0b0d6502e975673a46e5ceb" target="90a72cb82c460f4fed1b0781b8b296dd">
+    </attributeMappings>
+    <attributeMappings xmi:id="6f5439b48196d49ddb95283d181b0c12" source="ebdb48ac9a4ac700b37cb04dd89638e8" target="785f1ea1ddd2a946bf4981b1a4d4f6e2">
+    </attributeMappings>
+    <attributeMappings xmi:id="1df8c48ca694a295f40118391fccbe6d" source="e9f3fafe1893b98c72566fd3244e4118" target="06572e69d65ca0ea880b8181954fccfa">
+    </attributeMappings>
+    <attributeMappings xmi:id="824b13c81bcc787d336947d71c2aaf87" source="0a6c2a5dedac4960926074c104cc80ac" target="b898a7e88343461dfc14855742efb704">
+    </attributeMappings>
+    <attributeMappings xmi:id="56b30eadf9d6f0ae16cc87955211b8d0" source="9397df086a20c4a09119f92d5541d08a" target="b1e7a8cbb3233aa9acb53f9dd118c8c6">
+    </attributeMappings>
+    <attributeMappings xmi:id="ca87ff8a45676e0a7707cb2e91b2d7b7" source="60ad17924fa143e57e611632c71d7167" target="0a11fe4f06865454287442bd252ce9f2">
+    </attributeMappings>
+    <attributeMappings xmi:id="fbcdaeed58383596bcd4b34d44e6c62f" source="033558ce9f7a9cc179545b5193d1f58b" target="bd50fac34595095d66a10ea728a99751">
+    </attributeMappings>
+    <attributeMappings xmi:id="01b714183272b100a796012dc5e2b32e" source="c24d5b1d0d2619b162a6bff2e2b025fe" target="ae20c58288dace0c0aeda82074c168de">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="63f8c7853d44af31e54a509c2bc93a3c" source="710131e7046cbb378f34d68a48271471" target="d8091c1df2697080919269888ef8ccf4">
+    <attributeMappings xmi:id="468f7b72e500b7c714af45280b0d99ae" source="a16e7c9d17f7ee04379c4c4bf416a728" target="29707fb504e3259c5dbc46bbb8d0279b">
+    </attributeMappings>
+    <attributeMappings xmi:id="473c317b9f7bb813ff25e3826d7178db" source="779e95a345c3f4f310eed1ddcab148ff" target="99b23d040d571254dfdc06b4c7b444a3">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="0febd97d16e28fa8ea94e3f6fce8fba5" source="985c6c5877f3235c131a20bf7e23706f" target="9120b163e0ae62434240d4b05d7eebde">
+    <attributeMappings xmi:id="3710bc8351f5f0f2d1f3d538a1ba20fb" source="0220629e1713d579eb7050f6a62df236" target="9ceeb32e06e875fbff970861d087fe18">
+    </attributeMappings>
+    <attributeMappings xmi:id="dd8966c5ba7136bfef54f37e4addb835" source="dc63e905e251c7fe1313ab52112557ce" target="757b407f5d2a32805d34501df254cc91">
+    </attributeMappings>
+    <attributeMappings xmi:id="35cb1a376e009efa3847c8fed5fdc0b7" source="43d18969c4ca3f8b30c096cb7a8f46cc" target="819481064a02da3d7c6ea88b5235ba66">
+    </attributeMappings>
+    <attributeMappings xmi:id="1e37e466c4f7de0191ad1db8c80fccd9" source="cd7aba5a156c211dccfd44e685906e72" target="36627ef2d3e13a06f46ce8bbd20faa37">
+    </attributeMappings>
+    <attributeMappings xmi:id="e0fe88cc34cad2f3ee0c1cc6c0459bad" source="a15621c0991db3583a8ad8c0a4ad0ce9" target="24be10ae4ec7221535acb561d6cf383c">
+    </attributeMappings>
+    <attributeMappings xmi:id="73beb91eac1410a67f037ece366d50d6" source="e5e7a043f172a922119fee20f02c0127" target="e68713015e5474eb92b13c80b694cba1">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="69345265fac7c8a2145d513ebc6eb908" source="8575de8372d1ad6ed47aa76683ad46df" target="e911186be589d00f64c99bcc64d2e0ff">
+    <attributeMappings xmi:id="92eef85e3614af82b9e5b49042508aec" source="bc7bd20df397cfca0567e53a52f59afe" target="6e5ce230c9eb1d97354665c7422ff3a3">
+    </attributeMappings>
+    <attributeMappings xmi:id="6aa793c1b12662fb5c3f1ef73e047210" source="07909ab6b04e56c9408521fbcd983b67" target="9f3c758d7f08140884ff16e3715ee58f">
+    </attributeMappings>
+    <attributeMappings xmi:id="1079c4e506ea122c4c278562ae1ca3d0" source="75c334d3bd8d53ae143b5fbda5ef8f5c" target="474c37d4c9d03beda6211569d37636e7">
+    </attributeMappings>
+    <attributeMappings xmi:id="2ef570792af4c724a64454489aeee33f" source="71084b9414fe5aedd221a31ba0a99b70" target="46d550db152e4ab3a71ed466eee3a60a">
+    </attributeMappings>
+    <attributeMappings xmi:id="5f6d7e494f0eaa833e9ee97f4efde158" source="15d48b0f8da60dcdc9b261b13a0177a2" target="03c4a4babb67c1995c35438ca2706bf9">
+    </attributeMappings>
+    <attributeMappings xmi:id="1de0ce04fd1417268dd067ea3b88c78c" source="d94b8092cdedfcf1fd260452f8bb4df4" target="108082c546452b974db2758c8d658586">
+    </attributeMappings>
+    <attributeMappings xmi:id="21fc39fe252b6aaa05588b78f7b9f33c" source="bfc8de6c93472fb8ec3ddf96175d52c8" target="fa0c8db7871af6f6590b59e3844e7406">
+    </attributeMappings>
+    <attributeMappings xmi:id="0c0d1e579ce26db2712823d9465de0a2" source="493ee900ea86c83e904a3ccbb53f8a8b" target="7acb3845762f50e03a665d363de3a1fa">
+    </attributeMappings>
+    <attributeMappings xmi:id="d676a43f359714b445219c4c71483101" source="bf28117c2559e01ad8c2919ebde71d44" target="eeb99762052af9a86a8b4c72c01e04b0">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="bf986784b57b5bfbdb176634d09c1886" source="710131e7046cbb378f34d68a48271471" target="256a6a6fbd708797ac2928a6258b24d6">
+    <attributeMappings xmi:id="132e116763bc7206460704813012d254" source="a16e7c9d17f7ee04379c4c4bf416a728" target="9857a0780af367eb939fab806b511178">
+    </attributeMappings>
+    <attributeMappings xmi:id="95c988632367c0f2b4759305bfe4c761" source="779e95a345c3f4f310eed1ddcab148ff" target="b1cb531b6ceb2662d9747d51b90c958a">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="788eecf70c8b84cac66316ee4ecb872d" source="4c78a91a6f65d78eb3c11d68327c5fd1" target="5fbc4937a35eda227b567808c40b634d">
+    <attributeMappings xmi:id="050535da623316e33bee7ea5dd5821cb" source="8753a5e9d8a8eca63b2f578073275ee5" target="01b62731219d14f91c631f5291f6b4ae">
+    </attributeMappings>
+    <attributeMappings xmi:id="783cc9fda5d9d81b9236b64c93ffcda4" source="97133623fefbbc242a55b899743445bf" target="470a0f2d2f4cfc475f316d111ed5dc75">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="409db67914ac3d8e40405185b0c51006" source="2994cf2e6b39dc292cea35ce6bf128c8" target="d2441198cd9fdd5c73379b7f1df0a2a8">
+    <attributeMappings xmi:id="edacdfcaa55cc302d7982e0f78408154" source="ceb50d9432be1af986b217fbf7957f59" target="383b590f55673bd503e89d46de36ed32">
+    </attributeMappings>
+    <attributeMappings xmi:id="143904664a17be1a140b720661b75bcb" source="bff5edb2112dbcff563fe9b34b43ce59" target="8f003adf4ed82d2753dd0a0921bc145b">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="8343cde2087af7b224fcdb6f2f786132" source="c142407eeda85cd23e15f0891c17b50e" target="e1ebeb69eca9a638a083525c077ee8a6">
+    <attributeMappings xmi:id="387841e7c59e4406752c41d5f0a1c76c" source="3fd93da39d5596c18e24f11be69de46a" target="d9c22afc3c7213df0d5e8f44a5b7274b">
+    </attributeMappings>
+    <attributeMappings xmi:id="0d4fa927e525fc5ad1be597835e24a03" source="ce5c1e073f33d08535b254d2b156c73e" target="f0a01f85c08974ef1a99ad231b920083">
+    </attributeMappings>
+    <attributeMappings xmi:id="b683bc97c393303882ce4c80d213900d" source="4ae895450591bc155fd46f13eb8cbf9a" target="06e6d6f823692349d84e1fcbca827952">
+    </attributeMappings>
+    <attributeMappings xmi:id="26228a05455da91f5f43cc5ef2fa7281" source="24a31e6a4704ccd16ad134284d840880" target="9a93f7f5f0e85c41f9012f753f8cdfcf">
+    </attributeMappings>
+    <attributeMappings xmi:id="3d20801feb5b682a3673283cf71a7a30" source="df1ac16b7433e11f1a185b711fbad0b7" target="5bcc5cd93401489ddf68ceb799955bd4">
+    </attributeMappings>
+    <attributeMappings xmi:id="092927ae5cdccbd9c6f2c2b9a14208f6" source="0f2fea55805c218062de8f4ffae7ac8f" target="ca634b13b76d622d5ec1ea2ec62c815d">
+    </attributeMappings>
+    <attributeMappings xmi:id="bc0ab6b60be16ef180e18d5e20f156db" source="0b8ab1912c9bc11f6c988b08849250ad" target="03efa2c0c19d119094931affd16ff38b">
+    </attributeMappings>
+    <attributeMappings xmi:id="29676186376f288d9e75f80d53d0b33c" source="255424d5ec20b4f5373985eaa0b8b7e4" target="642ac669fa1c8f61c54a8804f112e2e4">
+    </attributeMappings>
+    <attributeMappings xmi:id="887393822d4fa51a784c12bc3c024f14" source="3618d39de752d58a7d466441497e90f2" target="172227d9b0c878167ffda88ce9cd3801">
+    </attributeMappings>
+    <attributeMappings xmi:id="d854c430d813b69e6dc52a9506e6927a" source="9d234c09af3e47d04899f82ebaf69382" target="31da2b83e5e5c7211d87b1c4f86e8cb2">
+    </attributeMappings>
+    <attributeMappings xmi:id="f56ae48635654df3739ffca509664788" source="8f24d243da647914bc13b13aa31b41ac" target="c87bf129ff91821ba687f4cd7a342d4c">
+    </attributeMappings>
+    <attributeMappings xmi:id="7a9f8d528e5910b2c023f701d9c6886e" source="12b6930a4f85605b5a8b262e00169d10" target="4c93c40c1278253bb979238b7453c2cd">
+    </attributeMappings>
+    <attributeMappings xmi:id="52b70afe846b351fac606ed4b9c4fe6b" source="cd8bd6658454e55a68a0b245799f0749" target="68f5ee975e5434ccc41db39cae3cb014">
+    </attributeMappings>
+    <attributeMappings xmi:id="d0e9e1be672ea17e6fb8ff2a1c4dfd91" source="b1dcbf515dc8bcf3964333dafd661545" target="2d80c8869fe8f1af926a80da35715080">
+    </attributeMappings>
+    <attributeMappings xmi:id="abcf123dd25f68784a0f8b9715dbba9d" source="1bee4a88b8fed79200c3640218b0c560" target="2d3ae050d615ca5dae1e0fde8b337e87">
+    </attributeMappings>
+    <attributeMappings xmi:id="74a614030ffef91717c00ee0169b8363" source="c9808cfb2780789c129e065d95764848" target="29c6c201c040017e3c3432dd1ff001ff">
+    </attributeMappings>
+    <attributeMappings xmi:id="86fb8d6905ea29af2a90670f11df85ca" source="a5dfcf406f8a38591f0448ec7eb61880" target="0d0ea9d23c59b48264718d074328c399">
+    </attributeMappings>
+    <attributeMappings xmi:id="c8d7e66f42546629d73d3fda466219ca" source="2d1169cf511eba79301952ff306e4b95" target="741fdc3dbff8c74318f6e5cdf09f12e1">
+    </attributeMappings>
+    <attributeMappings xmi:id="92098e48ddfeda87685761165e941cd0" source="7cc0201f0db3ca0e9525a8f041afa76c" target="9055c3764f730d0750521a9087e275fa">
+    </attributeMappings>
+    <attributeMappings xmi:id="13bea605ac7bef317b51d130e28a31e6" source="fff268cb6dfbf2da3ba7d04339bf22f6" target="8d5efabc07c3a3e732d78fdb3b9bc50c">
+    </attributeMappings>
+    <attributeMappings xmi:id="c2f9b7dacfb52c8695689c74a4d11bad" source="0f64a34218f665a12cfac202f285492e" target="111db9de9fb428dca224ac86143d4c0e">
+    </attributeMappings>
+    <attributeMappings xmi:id="63edde2dc70bd05ee59a5e3e508665b3" source="5e7ff43d46f30060af0ea31f41db4025" target="884b7aa81d786de040488db9a6682e68">
+    </attributeMappings>
+    <attributeMappings xmi:id="b1c009b6bc6bb7bd75ea475aee76fd98" source="83ec5d5ac5cf34765cb6a5b1b74c0ed4" target="94d49d5c8ba157773d25d030fea68db8">
+    </attributeMappings>
+    <attributeMappings xmi:id="b5bfe24c91af71e5e81755485aeba450" source="276e424db94b503238b4bbbd9120747f" target="d688b3e87efbce71c566f05cb8e44558">
+    </attributeMappings>
+    <attributeMappings xmi:id="965e6868d3dc44ccf788aa92db68554e" source="6986104b0e6a8e0cc49df50f804bb942" target="337fb83114538975eedab29ef64447df">
+    </attributeMappings>
+    <attributeMappings xmi:id="5f9d0cb3f7563afd28d6c3bb2733886d" source="1611eb13a0eb4ea089ba36105fb998ab" target="f14e96c89d068854cb05695b28eeb112">
+    </attributeMappings>
+  </tableMappings>
+  <nodes xmi:id="74daa846ef0e64ba3571fd23b8c5b78a" xsi:type="flowgraph:FilterNode" name="P_DS">
+    <annotations key="sap.afm.layout" xmi:id="a09fae57bcaf40997d64df36bf78e1c4">
+      <annotations xmi:id="34c4700223a3b10b715ad191fd7756d2" key="x" value="201">
+      </annotations>
+      <annotations xmi:id="54c1123b2dd7c8d83278a0b9b901c26e" key="y" value="151.23806535916435">
+      </annotations>
+      <annotations xmi:id="169162ecc6d7963edec8f5401347e620" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="3ae5ed7797e376df876177de955afa8a" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="31b4d63e8da5e1f652514db555c4cc4c" name="P_DS_IN">
+      <attributes xmi:id="0767726c290e54858295794a3386f025" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="04eaf49ca4913dc9a9ffd8fd53aaaca2" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="5cf1ee9cf76106c53de75b7494793742" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="86ce48c53f6dad4e0034c64a556080f9" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="c4004f4287ffb61c27dd838dcd55ac34" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="ffe9b7d9cc94ee65731162af7c97ca43" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="add9434dc3a04bd776985fa0a77d852f" name="CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="b6ad0ac9e0e822b700e20a6f07010857" name="COUNT_LOW" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="e3b7582fa092483fc17ac0d89f6caa67" name="COUNT_HIGH" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="a56ef643a494fb4d534a06b59f39d572" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="b78dd47d408aff79d8fa66c7e87022dc" name="CALENDAR" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="1db68b693171f569b2d11b30eb16554c" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="0e58f8d654c2a5d5b1a6e3ce1d617830" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="3d412d4096bd78b9a7f6658b8cf96006" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="5e20d71204e8e636ea0af73fd4db32a1" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="ea59893e13c2b9ba9d76fc7c9f114ced" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="7dec0f0fc219c2c1e0caf68ad39dea42" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="64acd798249111a91ceca5fbb40b4392" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="7376ba0c0019cc6190d8cf761f70beee" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="b69dce1bfcddffce6382325aaf9010c3" name="NEW_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="bf092206d7f7ed6495f65288b7863488" name="REGISTRATOR" type="NVARCHAR" nullable="true" length="12">
+      </attributes>
+      <attributes xmi:id="2d908649bb45f05885ecd2a64c4c51e6" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="cec7388fbd1a1a6adab6a59664848654" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="d95d2b731d7650d7173d3c07c7449c89" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="c8b3773e383b08e23167f7ee416526ea" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="cfbfca830253d2631a9560e02d3ffc27" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="58c01db48f487a82724f93ac82600a36" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="83d0736161605f46713958368f1d959c" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="59c162eaba031a222333bb0fa8f94915" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="5bbfb84d8d4c8c1b71466d2bd8760fe4" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="c4bbb771434977520268e0969cc5ec7a" name="P_DS_OUT">
+      <attributes xmi:id="d16572fe59c57485cb41754181e949e1" name="CLIENT" type="NVARCHAR" nullable="false" expression="&quot;CLIENT&quot;" length="3">
+        <annotations xmi:id="47b8fd90350b9fe966995bd799fda9ab" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a2ef596eded691da7d82594100d3994d" name="DETERM_PROC" type="NVARCHAR" nullable="false" expression="&quot;DETERM_PROC&quot;" length="8">
+        <annotations xmi:id="fa030d7756ff5f071bac641cdc782f76" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="d1e78437e32b69799c20a622a4583a68" name="PARTNER_FCT" type="NVARCHAR" nullable="false" expression="&quot;PARTNER_FCT&quot;" length="8">
+        <annotations xmi:id="eaf043a8d9cf58e76f4be1296925e90a" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e4d2f1f29569d291d538a8e64ec8ad34" name="CHANGEABLE" type="NVARCHAR" nullable="true" expression="&quot;CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="b0cae8ad1354010fdea200a1d617c5f7" name="COUNT_LOW" type="NVARCHAR" nullable="true" expression="&quot;COUNT_LOW&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="7b027128af09117faa9678ee94c0655c" name="COUNT_HIGH" type="NVARCHAR" nullable="true" expression="&quot;COUNT_HIGH&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="e49cf7774c1174f99ababa28a73e0154" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" expression="&quot;COUNT_TO_POPUP&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="66a9faff0345be14b9525c11baac4792" name="CALENDAR" type="NVARCHAR" nullable="true" expression="&quot;CALENDAR&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="b13f4cd820ff233f4a5b4e477aea53ea" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" expression="&quot;ADDR_OPERATION&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="984fd5acbb07ab187746ca17c99e083f" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" expression="&quot;STD_ADDR_ONLY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="e76b26ea04dd35af8ff9d7d9065f3dfa" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" expression="&quot;ADDR_CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="4398745e6ef97480008d2acea8cd2199" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" expression="&quot;ADDR_DUPLICATE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="c071727ca4eae4d19634e60f432ef580" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" expression="&quot;ACCESS_SEQUENCE&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="c71aba80b872f64c651fce1a070f185b" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" expression="&quot;POINT_OF_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="043afa72f744d3f1c5ffb1091ce038b4" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" expression="&quot;MANUAL_FUNCTION&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="cdbc1aaf672363345b716228feca05e7" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" expression="&quot;NO_MANUAL_ENTRY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="183aaaebcf0338663f52c24896962318" name="NEW_DETERM" type="NVARCHAR" nullable="true" expression="&quot;NEW_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="9d88e4eb18a4336c9141e52d2df662f5" name="REGISTRATOR" type="NVARCHAR" nullable="true" expression="&quot;REGISTRATOR&quot;" length="12">
+      </attributes>
+      <attributes xmi:id="94b922bc64037dc3c6c7bddbc08c31f8" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" expression="&quot;ATTRIBUTE_GROUP&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="3b4ecf50a4898e93d8d6981352f6e46e" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" expression="&quot;NEW_DET_PART_REP&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="2e81cdfa467a2b0f90b470de6de903c7" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" expression="&quot;TERRITORY_CHECK&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="63d22f84a70146402c1c24c32ff6bb4e" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" expression="&quot;Z_CHANGE_TYPE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="80d95933aa39dda0599f4e93d425a2cb" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" expression="&quot;Z_CHANGE_TIME&quot;" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="9ef1b5096f00623ffd5b7019cf430d3e" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" expression="&quot;Z_SOURCE_SYS&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="332437ce7d2d270ae8a304c2fccfe368" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" expression="&quot;Z_RUN_ROW_NO&quot;" length="10">
+      </attributes>
+      <attributes xmi:id="535191aa25bf796d277987d8187ebbb0" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" expression="&quot;Z_RUN_SEQ_ID&quot;" length="10">
+        <annotations xmi:id="5742083059febe479553d62a72411f7b" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="9a7b3707c50adb5d198fd97430d43fc4" xsi:type="flowgraph:FilterNode" name="P_DS_REF">
+    <annotations key="sap.afm.layout" xmi:id="038b6cdee87b52bcc94172dbb23210b8">
+      <annotations xmi:id="79044f7f7a238821c52e56ce6640525c" key="x" value="201">
+      </annotations>
+      <annotations xmi:id="353efa233c4bfb59cac531e093c79e11" key="y" value="336.50420484711333">
+      </annotations>
+      <annotations xmi:id="b354dbd5790b4379ac2a7015190e8758" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="70c2ea488784793539a130b4517b88d9" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="4d8bd75fe7e8b64540ba8a7f778ad3c8" name="P_DS_REF_IN">
+      <attributes xmi:id="58495d2eef3eb5941120f3989fbd6df4" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="369e2811b84684175faacf4593854d23" name="P_DS_REF_OUT">
+      <attributes xmi:id="d77111c2e15f5e84e2fad9d2dba046ad" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" expression="IFNULL(MAX(&quot;Z_RUN_SEQ_ID&quot;),0)" length="10">
+        <annotations xmi:id="b72b17320225299d2f997039247b087f" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="3e47899300f5c8b5ded6ecb6d520c726" xsi:type="flowgraph:JoinNode" name="Join">
+    <annotations key="sap.afm.layout" xmi:id="838aee24fcfcbdbecb5a621f9ee3c51f">
+      <annotations xmi:id="c4d6e0654837086aa1724e0802644be5" key="x" value="405.9999985694885">
+      </annotations>
+      <annotations xmi:id="15cc15b2f053b94d51773c9744c383ac" key="y" value="308.50420484711333">
+      </annotations>
+      <annotations xmi:id="e9930d09bd545d9729472208de2f3e79" key="width" value="153.04833984375">
+      </annotations>
+      <annotations xmi:id="55c5bb16e17affa999151bc734550dea" key="height" value="171">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="9030e592ed1f16e2c22828b8366276b4" name="Join_IN" kind="TABLE">
+      <attributes xmi:id="9721bbf57812b90cd5032d33baf9abaf" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="b1de62e032058c26d83e85af787b6f08" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="058f612d0fc80e41759126e8c6d17c81" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="b41d368609a7ed260cc96ebd6f3b7162" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="64a40978bf89537a2d80c50adfc20091" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="4a233771887083001e750eb5161c8162" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="98a874180af22c0be844eb35d85f34ab" name="CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="2025d4effbe53a070b97cdefc0ac133a" name="COUNT_LOW" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="54ca1c6dbfd251cfb03a1e22e26baf95" name="COUNT_HIGH" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="8778451fe950842a1c2c457dc11b37d7" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="6042bef5c1221132ab1f57fed1fd4426" name="CALENDAR" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="eba7a21b685b5a5a9e0e94430da579ba" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="0b50bce6a81ba9050e17b34ebd87b617" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="3729b46a63db1176c1103e014e060c87" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="a20834f8a86e132c8e76993c737fae5a" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="1a05ae49047342b6c56027e405ea0f92" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="340b8660251c4e191156715c8278bf3d" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="982c67583f5b1addc15e64ce909e3b2b" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="b1b807cfbf8d967e354badc9ef206e83" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="38b95011ba8c9a63ddc197c88c5309a3" name="NEW_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="5b1a5dae69db4d8d72df8be10e690b4b" name="REGISTRATOR" type="NVARCHAR" nullable="true" length="12">
+      </attributes>
+      <attributes xmi:id="1dd297c85d84b00eb538593435db0c41" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="8f090e982429f0b03eea72da527ed3f5" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="b3eb42d44d23ecb81ae95380bf883d7c" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="31fec0dc1f6cb774e698b66b18168d2d" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="6fd1682de2ad7d41aa655ffa19490c0c" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="cb19dba2db0aaf4d3af90ac1fb151c86" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="92d11674626df57b99f385c69a506582" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="eb95c0bb11c140005cd1e68aad3d0cb3" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="69ab8e7b88699d5be943794cdaabedbb" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </inputs>
+    <inputs xmi:id="a6c07d0d53b7fece06ce60eb6099f6df" name="Join_IN_1">
+      <attributes xmi:id="73355f19b7d03bb8f012101f59da8315" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="1b0c7244430c12a2e5a32ddc948c983e" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="4694c8a113fda83b9c6cba777c981871" name="Join_OUT" kind="TABLE">
+      <attributes xmi:id="6002f269624182e7035731ccad93be2b" name="Z_RUN_SEQ_ID_1" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="cca2f31fc7dea3edc6a9e5208e8d5c81" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="b5175f212ca9f63eda11233a1da097dc" name="CLIENT" type="NVARCHAR" nullable="false" expression="&quot;CLIENT&quot;" length="3">
+        <annotations xmi:id="6665964ce1f7c921cbb8f95e590fd7b1" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="579db9c05cb908673ef9fc55f5b3a28d" name="DETERM_PROC" type="NVARCHAR" nullable="false" expression="&quot;DETERM_PROC&quot;" length="8">
+        <annotations xmi:id="7762325b4c47b9542c8cd9f8b1c5f6cf" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e088c9a9cb2659176af920dd375eaf67" name="PARTNER_FCT" type="NVARCHAR" nullable="false" expression="&quot;PARTNER_FCT&quot;" length="8">
+        <annotations xmi:id="2711ee273d81f187877f7c2880e22168" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="53a0ce3c90637e3f346cdfa170ece19c" name="CHANGEABLE" type="NVARCHAR" nullable="true" expression="&quot;CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="3d1198c9a568d729f8acf61164e2b5d9" name="COUNT_LOW" type="NVARCHAR" nullable="true" expression="&quot;COUNT_LOW&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="b54f1903eb0752237bb3658023a4da8b" name="COUNT_HIGH" type="NVARCHAR" nullable="true" expression="&quot;COUNT_HIGH&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="e1d6281bc145bfde76dd7eee557e0032" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" expression="&quot;COUNT_TO_POPUP&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="60eb702b71b8824a699c36c99497beb0" name="CALENDAR" type="NVARCHAR" nullable="true" expression="&quot;CALENDAR&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="73708bb0baea9df39e853131831dc6de" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" expression="&quot;ADDR_OPERATION&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="83af9ea5caf58b6803d9a140d50dc4b9" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" expression="&quot;STD_ADDR_ONLY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="6c9e9792aa558d2be01894428baf596b" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" expression="&quot;ADDR_CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="1c8cbffd68ffb0ad3af3284f72bd7757" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" expression="&quot;ADDR_DUPLICATE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="6cca0799a8d8136647b760e51a331881" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" expression="&quot;ACCESS_SEQUENCE&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="bbc9c1875443adaaf4cf0b174b22ca9e" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" expression="&quot;POINT_OF_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="ac3f450ef3f830308e7ecec9099e33a7" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" expression="&quot;MANUAL_FUNCTION&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="3784b2faf1310dc7baf6565fe2b4ffe8" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" expression="&quot;NO_MANUAL_ENTRY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="40a131092852a16af2846182955dda38" name="NEW_DETERM" type="NVARCHAR" nullable="true" expression="&quot;NEW_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="b6b8f34bfdc2ead2175a28d0de342e18" name="REGISTRATOR" type="NVARCHAR" nullable="true" expression="&quot;REGISTRATOR&quot;" length="12">
+      </attributes>
+      <attributes xmi:id="2d86122cb72a130de0f095541845272d" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" expression="&quot;ATTRIBUTE_GROUP&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="6a5027249f466c8fb7d2386ea5662b77" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" expression="&quot;NEW_DET_PART_REP&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="ec6ad8941ede38808e6cf89af1d6e9fe" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" expression="&quot;TERRITORY_CHECK&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="d1113bd05ce3d72852ce65f12ed2ad7f" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" expression="&quot;Z_CHANGE_TYPE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="987fb9d1e902edb781506c8983ae4f3f" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" expression="&quot;Z_CHANGE_TIME&quot;" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="134bbb1fdabef7e23b76518170b5a41d" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" expression="&quot;Z_SOURCE_SYS&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="f4889ea54546b2ba14e150cc70ae1f1a" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" expression="&quot;Z_RUN_ROW_NO&quot;" length="10">
+      </attributes>
+      <attributes xmi:id="56cdc541624b16072737eb531f87528b" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" expression="&quot;Z_RUN_SEQ_ID&quot;" length="10">
+        <annotations xmi:id="b77ad7e5f386c58db57fcfee73c48a23" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </outputs>
+    <tableMappings xmi:id="2c5445694d0612f7183ad790f6807bf7" source="9030e592ed1f16e2c22828b8366276b4" target="4694c8a113fda83b9c6cba777c981871">
+      <attributeMappings xmi:id="3aedfd7b656aa05b87fdb3e8a16a0c96" source="9721bbf57812b90cd5032d33baf9abaf" target="b5175f212ca9f63eda11233a1da097dc">
+      </attributeMappings>
+      <attributeMappings xmi:id="75e0d7373955a6740f231dc270dc40e2" source="058f612d0fc80e41759126e8c6d17c81" target="579db9c05cb908673ef9fc55f5b3a28d">
+      </attributeMappings>
+      <attributeMappings xmi:id="a1322c03a69b800c3e23d79ca041d9e0" source="64a40978bf89537a2d80c50adfc20091" target="e088c9a9cb2659176af920dd375eaf67">
+      </attributeMappings>
+      <attributeMappings xmi:id="296e5b613c2a1b146ec4f54955b263d3" source="98a874180af22c0be844eb35d85f34ab" target="53a0ce3c90637e3f346cdfa170ece19c">
+      </attributeMappings>
+      <attributeMappings xmi:id="0c7464615dcce7a67968a5ffeffc8301" source="2025d4effbe53a070b97cdefc0ac133a" target="3d1198c9a568d729f8acf61164e2b5d9">
+      </attributeMappings>
+      <attributeMappings xmi:id="4ce13356d2d994e36f705847246b38d0" source="54ca1c6dbfd251cfb03a1e22e26baf95" target="b54f1903eb0752237bb3658023a4da8b">
+      </attributeMappings>
+      <attributeMappings xmi:id="7b43fe3ffcaed20aa0ebc26907fd08df" source="8778451fe950842a1c2c457dc11b37d7" target="e1d6281bc145bfde76dd7eee557e0032">
+      </attributeMappings>
+      <attributeMappings xmi:id="385a0559cc1c3544c044610fe98b5918" source="6042bef5c1221132ab1f57fed1fd4426" target="60eb702b71b8824a699c36c99497beb0">
+      </attributeMappings>
+      <attributeMappings xmi:id="1d98bab150b4a46ac58480f9063a526d" source="eba7a21b685b5a5a9e0e94430da579ba" target="73708bb0baea9df39e853131831dc6de">
+      </attributeMappings>
+      <attributeMappings xmi:id="06fd22b394431b7b1a2bf79a5091612f" source="0b50bce6a81ba9050e17b34ebd87b617" target="83af9ea5caf58b6803d9a140d50dc4b9">
+      </attributeMappings>
+      <attributeMappings xmi:id="1c83b8909ef22c83846e50c6f2a34a2d" source="3729b46a63db1176c1103e014e060c87" target="6c9e9792aa558d2be01894428baf596b">
+      </attributeMappings>
+      <attributeMappings xmi:id="91700928731ce75ce92cbd9aa9c70fd1" source="a20834f8a86e132c8e76993c737fae5a" target="1c8cbffd68ffb0ad3af3284f72bd7757">
+      </attributeMappings>
+      <attributeMappings xmi:id="2a43f16f126562ff2f9b0c4c6286eba5" source="1a05ae49047342b6c56027e405ea0f92" target="6cca0799a8d8136647b760e51a331881">
+      </attributeMappings>
+      <attributeMappings xmi:id="52360bd8b203d7bf4e0f71ecd1fff62f" source="340b8660251c4e191156715c8278bf3d" target="bbc9c1875443adaaf4cf0b174b22ca9e">
+      </attributeMappings>
+      <attributeMappings xmi:id="8a40f6d73c0b277a2d03825cfd7ed4ba" source="982c67583f5b1addc15e64ce909e3b2b" target="ac3f450ef3f830308e7ecec9099e33a7">
+      </attributeMappings>
+      <attributeMappings xmi:id="7c7ee83663f2ecbb738e52798a155030" source="b1b807cfbf8d967e354badc9ef206e83" target="3784b2faf1310dc7baf6565fe2b4ffe8">
+      </attributeMappings>
+      <attributeMappings xmi:id="576e1b3e05e2949fa23cc1c1f97a6d53" source="38b95011ba8c9a63ddc197c88c5309a3" target="40a131092852a16af2846182955dda38">
+      </attributeMappings>
+      <attributeMappings xmi:id="532f1105cf3c75342ec7380b9bcaaffc" source="5b1a5dae69db4d8d72df8be10e690b4b" target="b6b8f34bfdc2ead2175a28d0de342e18">
+      </attributeMappings>
+      <attributeMappings xmi:id="b240c171b9ca0e264232882ff6a38d69" source="1dd297c85d84b00eb538593435db0c41" target="2d86122cb72a130de0f095541845272d">
+      </attributeMappings>
+      <attributeMappings xmi:id="37c4c7c9d14d3f3292b5bf6f0363493b" source="8f090e982429f0b03eea72da527ed3f5" target="6a5027249f466c8fb7d2386ea5662b77">
+      </attributeMappings>
+      <attributeMappings xmi:id="18486aa2a7eada3b2c6b68ee907a04f5" source="b3eb42d44d23ecb81ae95380bf883d7c" target="ec6ad8941ede38808e6cf89af1d6e9fe">
+      </attributeMappings>
+      <attributeMappings xmi:id="8d2d829f4f8c6aa061495015c8709c19" source="31fec0dc1f6cb774e698b66b18168d2d" target="d1113bd05ce3d72852ce65f12ed2ad7f">
+      </attributeMappings>
+      <attributeMappings xmi:id="4eb5c3b708499b355e4b3945752c8dc4" source="6fd1682de2ad7d41aa655ffa19490c0c" target="987fb9d1e902edb781506c8983ae4f3f">
+      </attributeMappings>
+      <attributeMappings xmi:id="b98b8aedc3342a6ca06b57933b36fa7e" source="cb19dba2db0aaf4d3af90ac1fb151c86" target="134bbb1fdabef7e23b76518170b5a41d">
+      </attributeMappings>
+      <attributeMappings xmi:id="b50b02dfd4d84907561252c9a9b5002d" source="92d11674626df57b99f385c69a506582" target="f4889ea54546b2ba14e150cc70ae1f1a">
+      </attributeMappings>
+      <attributeMappings xmi:id="38b5307296cb7f57c88c0d1454f7881c" source="eb95c0bb11c140005cd1e68aad3d0cb3" target="56cdc541624b16072737eb531f87528b">
+      </attributeMappings>
+    </tableMappings>
+    <tableMappings xmi:id="0026cc1c2f05000dd247f0423c2f150b" source="a6c07d0d53b7fece06ce60eb6099f6df" target="4694c8a113fda83b9c6cba777c981871">
+      <attributeMappings xmi:id="d9f562a5148586d2516f9c4dd69abe3c" source="73355f19b7d03bb8f012101f59da8315" target="6002f269624182e7035731ccad93be2b">
+      </attributeMappings>
+    </tableMappings>
+    <joinDefinitions left="9030e592ed1f16e2c22828b8366276b4" right="a6c07d0d53b7fece06ce60eb6099f6df" type="INNER" condition="&quot;Join_IN&quot;.&quot;Z_RUN_SEQ_ID&quot;&gt;&quot;Join_IN_1&quot;.&quot;Z_RUN_SEQ_ID&quot;">
+    </joinDefinitions>
+  </nodes>
+  <nodes xmi:id="3748100cc34aeaa29e3813ef992dd439" name="DS_TAB" catalogObjectName="osr.edw.source.md.crm::CDS_CRM.TAB.CRMCPARTNERPDP" type="DATABASE_TABLE" xsi:type="flowgraph:DataNode" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="57c95da6cc2814080b686920fa140865">
+      <annotations xmi:id="f19bea5f85ee037cf66cbb4e7d9fd072" key="x" value="20">
+      </annotations>
+      <annotations xmi:id="7c29fae9ce39baa225330d94ab3ee8fe" key="y" value="151.23806535916435">
+      </annotations>
+      <annotations xmi:id="cf3299f13fcd6276c860833f21cb97aa" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="586ea8d4aee166a26b04178df38a2494" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="e5b81e70de481584ef1a57f2c80ec80c" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="26cbdcc94f00aed3d1a39d472ebb2c5d" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="efab583d7ba4ab3ac8f5d2a8d6a1f041" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="be6ed61e5bedc3c7ecdf8f74e4371aba" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="e9e4c6d2cc659b0699350a288a6b4572" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="5584bd7bf8da2bdd3907694b4776c443" key="columns" value="[{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;DETERM_PROC&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;PARTNER_FCT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;CHANGEABLE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;COUNT_LOW&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;COUNT_HIGH&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;COUNT_TO_POPUP&quot;,&quot;type&quot;:&quot;SMALLINT&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;CALENDAR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;ADDR_OPERATION&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;STD_ADDR_ONLY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;ADDR_CHANGEABLE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;ADDR_DUPLICATE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;ACCESS_SEQUENCE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;POINT_OF_DETERM&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;MANUAL_FUNCTION&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;NO_MANUAL_ENTRY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;NEW_DETERM&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;REGISTRATOR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:12,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;ATTRIBUTE_GROUP&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;NEW_DET_PART_REP&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;TERRITORY_CHECK&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TYPE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TIME&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_SOURCE_SYS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_RUN_ROW_NO&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;},{&quot;name&quot;:&quot;Z_RUN_SEQ_ID&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true}]">
+    </annotations>
+    <outputs xmi:id="a7a9b91db9e7ce7f167b9d75c2b8e45d" name="DS_TAB">
+      <attributes xmi:id="0de987c319664319622c32cdcddbac9a" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="56993007ab4aa4491cab1f841fac22e3" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="6e0fbcad510a44285de0e93cf8bbdb16" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="90679798d3ca74af4ee36dbedf41e693" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e8a6d5f7d4bd488a69023acc2ce6dc01" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="6144900fbc14f5599395ae0d0217df0a" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="66ea8cdd2547f2bef9134c88084c65b3" name="CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="dfda24cc83cb605d286a4dcbc2bd351d" name="COUNT_LOW" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="183fcc97fb5bb73da7453efa0d7808a5" name="COUNT_HIGH" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="2432874f23662d9d74acf4de24cd1427" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="864e84b3dc64a6f9de796ddbe369191a" name="CALENDAR" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="b3796fe62758909bde155cbad6e5b584" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="46defcaa17e539554e75e1a7c21258ca" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="e599eb3c0be5ddb0a698d89d8d4e12c7" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="86f9f6a72d4b558bff32fffdf48d770b" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="49ef00cef6bcd2a3a961c8d937a762d9" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="42bff8f0e964f148708e4f14d0b0aedd" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="f1bcffe51cc34def0f8a429f6c327773" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="d4237bc11d4bd7804a07b0577a21c3b8" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="779faa686f2562bd68d0f150ce3f224e" name="NEW_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="3e83b6e23c309f5c27e4c20d0ceafa3b" name="REGISTRATOR" type="NVARCHAR" nullable="true" length="12">
+      </attributes>
+      <attributes xmi:id="1e31a5336ac37437e8cdafa8cf21ba6d" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="928380ce835d64f55a6c6d42bc56ab35" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="5cb8b96f06c593eefc70c0967bcab322" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="f0e152c919ba4083a3a18bc74004445b" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="6b48a2c404b795047143f7730994ab94" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="5cd2669f6540a7c5fa6dcc2a0425bf5a" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="7c5031f0b2f83cf19385ebe1aa9f3d8d" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="d18f49aa3aeee972615489ce5b621d8a" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="21dc9dd1eb1a972f576db25a0bbaacd2" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="23e0b34e2ea081d5a1bcdaceb886bb96" name="DS_REF" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.active_data" type="DATABASE_TABLE" xsi:type="flowgraph:DataNode" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="71c9fcd621d196896407bc24cafd601c">
+      <annotations xmi:id="6860601854ce056a652f2d7193c892c9" key="x" value="12">
+      </annotations>
+      <annotations xmi:id="100db6c014d26cea08212dc6120c450d" key="y" value="336.50420484711333">
+      </annotations>
+      <annotations xmi:id="56157e699db976abe90ce73323fc0c3c" key="width" value="128">
+      </annotations>
+      <annotations xmi:id="145e993703b49cddf81e4953ac256467" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="e35c0f7ab154dc3f5c21ad9341ebdd5a" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="41ae15980044fcf28847cf3fc15632c7" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="fea0d99bed018014d311978b20767f0e" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="892d6e07c047b84a800a65b3c93b13fd" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="73f7f45652a19a4a72a7ab9762ea38a9" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="dcef4bbccaeef51a9dd2d863028c0b1f" key="columns" value="[{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;DETERM_PROC&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;PARTNER_FCT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true},{&quot;name&quot;:&quot;CHANGEABLE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;COUNT_LOW&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;COUNT_HIGH&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;COUNT_TO_POPUP&quot;,&quot;type&quot;:&quot;SMALLINT&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;CALENDAR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;ADDR_OPERATION&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;STD_ADDR_ONLY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;ADDR_CHANGEABLE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;ADDR_DUPLICATE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;ACCESS_SEQUENCE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;POINT_OF_DETERM&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;MANUAL_FUNCTION&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;NO_MANUAL_ENTRY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;NEW_DETERM&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;REGISTRATOR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:12,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;ATTRIBUTE_GROUP&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;NEW_DET_PART_REP&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;TERRITORY_CHECK&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TYPE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TIME&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;Z_SOURCE_SYS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;Z_RUN_ROW_NO&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;},{&quot;name&quot;:&quot;Z_RUN_SEQ_ID&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;}]">
+    </annotations>
+    <outputs xmi:id="cfee8fce6f2620d73035742a423e0a38" name="DS_REF">
+      <attributes xmi:id="0ef5c95b6effad106478bc7f0f1f82cf" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="bbfadc544e6c0eac7a926254d874823e" xsi:type="flowgraph:FilterNode" name="P_JOIN">
+    <annotations key="sap.afm.layout" xmi:id="2ee6fce9f4033193e8569c2da8764842">
+      <annotations xmi:id="bbc2c655efb9dfaaf5422331e7042407" key="x" value="669.664792060852">
+      </annotations>
+      <annotations xmi:id="5bb92d034fbeb06ab01d1a80f546bd8c" key="y" value="518.3492808114491">
+      </annotations>
+      <annotations xmi:id="465c0d4274f6837579c672e06a0bc964" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="bd0d97c7a7adc5d341fc08e54b8d0057" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="59170297c1a16ddae724313bbb34302c" name="P_JOIN_IN">
+      <attributes xmi:id="9ca29ec7d174fd763f24e3c743b04103" name="Z_RUN_SEQ_ID_1" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="97d2f4be9b9cb2f80ff48b31ddab91c6" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="4f99d0353a7797d360a28bbfde865ff2" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="fb1ac184d333fcc85c5169a8c5594616" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="981d42ec3763f3d0ff024aef70461025" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="c7c0ddc36efcaf4daf8c664d9a51749b" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="4a697df1355d83192517a686444ce623" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="b1acad12097a6afff9b221cc08b3b287" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="79e239fdf26a960831c91a34af802d46" name="CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="eebb150a588209727d25ccac52b05965" name="COUNT_LOW" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="dbf03182b6ccb74f5f055f6cd9784420" name="COUNT_HIGH" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="4f80f06a2b7dd8807fb9b7a0b408ac78" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="e8a2e9fa9121d6d745c8a858f21f8344" name="CALENDAR" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="ae9076cc9b002c0e9dc72a9ce3413630" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="4190e94fc8a9d2c42e12547a242ed05d" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="31f5c3371a8fb3e6437a939f3145da1e" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="291f6ed0b53b80a33a9438c8088e6b5c" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="1b297fb56ab547cf1110b26b73ffcaaa" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" length="4">
+      </attributes>
+      <attributes xmi:id="e124e9b53ae112b0a753cb4b41a11290" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="83331b277609479606c182e3594de2d3" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="d44dbf6544eb9706818bd911ac4adcd3" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="c98f64c87c7df16d9974c8eb1a8104c7" name="NEW_DETERM" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="2608312b236a1b60954cc4d18f252aa0" name="REGISTRATOR" type="NVARCHAR" nullable="true" length="12">
+      </attributes>
+      <attributes xmi:id="275f03c7cb8a6cf81690a55c318a8124" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" length="6">
+      </attributes>
+      <attributes xmi:id="f69952f78e34cfb65a2012d8ec9962a2" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="33049b6b4bf46e99d5f47e60865275e7" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="bfa012b68ffa6a2efc779694346752f6" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1">
+      </attributes>
+      <attributes xmi:id="46f7822959afd760165f1aa200cde8ce" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="1ce3db65b5a5a98f3c80b377d6de839a" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+      </attributes>
+      <attributes xmi:id="f5233c57a0234de28ba2c61fd3677fba" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="b0479863738f713aa68039de51e9106e" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="4257dd9e1cab7754582063ff3bd50373" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="c142407eeda85cd23e15f0891c17b50e" name="P_JOIN_OUT">
+      <attributes xmi:id="255424d5ec20b4f5373985eaa0b8b7e4" name="CLIENT" type="NVARCHAR" nullable="true" expression="&quot;CLIENT&quot;" length="3">
+        <annotations xmi:id="7722cd00d9b4c35b245799d38d4a2d5c" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="12b6930a4f85605b5a8b262e00169d10" name="DETERM_PROC" type="NVARCHAR" nullable="true" expression="&quot;DETERM_PROC&quot;" length="8">
+        <annotations xmi:id="1289e4a146f94f7c6ae93300de51f561" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a5dfcf406f8a38591f0448ec7eb61880" name="PARTNER_FCT" type="NVARCHAR" nullable="true" expression="&quot;PARTNER_FCT&quot;" length="8">
+        <annotations xmi:id="31cc0783ab4b169f0db79844b5ac4a7d" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="0b8ab1912c9bc11f6c988b08849250ad" name="CHANGEABLE" type="NVARCHAR" nullable="true" expression="&quot;CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="9d234c09af3e47d04899f82ebaf69382" name="COUNT_LOW" type="NVARCHAR" nullable="true" expression="&quot;COUNT_LOW&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="3618d39de752d58a7d466441497e90f2" name="COUNT_HIGH" type="NVARCHAR" nullable="true" expression="&quot;COUNT_HIGH&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="8f24d243da647914bc13b13aa31b41ac" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" expression="&quot;COUNT_TO_POPUP&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="0f2fea55805c218062de8f4ffae7ac8f" name="CALENDAR" type="NVARCHAR" nullable="true" expression="&quot;CALENDAR&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="24a31e6a4704ccd16ad134284d840880" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" expression="&quot;ADDR_OPERATION&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="fff268cb6dfbf2da3ba7d04339bf22f6" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" expression="&quot;STD_ADDR_ONLY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="ce5c1e073f33d08535b254d2b156c73e" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" expression="&quot;ADDR_CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="4ae895450591bc155fd46f13eb8cbf9a" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" expression="&quot;ADDR_DUPLICATE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="3fd93da39d5596c18e24f11be69de46a" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" expression="&quot;ACCESS_SEQUENCE&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="2d1169cf511eba79301952ff306e4b95" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" expression="&quot;POINT_OF_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="cd8bd6658454e55a68a0b245799f0749" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" expression="&quot;MANUAL_FUNCTION&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="c9808cfb2780789c129e065d95764848" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" expression="&quot;NO_MANUAL_ENTRY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="b1dcbf515dc8bcf3964333dafd661545" name="NEW_DETERM" type="NVARCHAR" nullable="true" expression="&quot;NEW_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="7cc0201f0db3ca0e9525a8f041afa76c" name="REGISTRATOR" type="NVARCHAR" nullable="true" expression="&quot;REGISTRATOR&quot;" length="12">
+      </attributes>
+      <attributes xmi:id="df1ac16b7433e11f1a185b711fbad0b7" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" expression="&quot;ATTRIBUTE_GROUP&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="1bee4a88b8fed79200c3640218b0c560" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" expression="&quot;NEW_DET_PART_REP&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="0f64a34218f665a12cfac202f285492e" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" expression="&quot;TERRITORY_CHECK&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="83ec5d5ac5cf34765cb6a5b1b74c0ed4" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" expression="&quot;Z_CHANGE_TYPE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="5e7ff43d46f30060af0ea31f41db4025" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" expression="&quot;Z_CHANGE_TIME&quot;" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="1611eb13a0eb4ea089ba36105fb998ab" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" expression="&quot;Z_SOURCE_SYS&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="276e424db94b503238b4bbbd9120747f" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" expression="&quot;Z_RUN_ROW_NO&quot;" length="10">
+      </attributes>
+      <attributes xmi:id="6986104b0e6a8e0cc49df50f804bb942" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="true" expression="&quot;Z_RUN_SEQ_ID&quot;" length="10">
+        <annotations xmi:id="f61849515c60b27400dd83ec96401956" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="e93f77ed8bb483adb073beb41e310a47" xsi:type="flowgraph:DataNode" name="DataTarget_idGen" truncateTable="false" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.idGen" dataLayout="COLUMN" type="DATABASE_TABLE">
+    <annotations key="sap.afm.layout" xmi:id="149393c22fd77e74041a348cd0e95a52">
+      <annotations xmi:id="68ca55f4515367c95c8d5f5eda9ce5ab" key="x" value="1580.8002843856812">
+      </annotations>
+      <annotations xmi:id="c8d592361387a71f462a81954d9d045d" key="y" value="215">
+      </annotations>
+      <annotations xmi:id="88bbe267af38e30bdbabc80afd2dddc7" key="width" value="127.2783203125">
+      </annotations>
+      <annotations xmi:id="1c268de7f4b62deeee015145f2c0a3ae" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="b5c19000ac53e7bdedcb365bcf66ae3f" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="047fc5d38cc4b8cb137fccc62f380d9c" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="ba20f35ef070c02b2c597fef7671c6ed" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="ca31d3c3125b13eb3b417afe3789904f" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="b9c91ae3298d036374be532929461270" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="4aadb5f98b21b817aec82fab35cb9000" key="columns" value="[{&quot;name&quot;:&quot;technicalAttributes.type&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:30,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.id&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null}]">
+    </annotations>
+    <inputs xmi:id="876ca71f24a902cc780e773dc23a12cf" name="DataTarget_idGen" kind="TABLE">
+      <attributes xmi:id="2ebbd6388b5f709fa95540ea21889a53" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+        <annotations xmi:id="0105204f814d6e0120b1cd1cb64aa65e" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="b0d070deab982611b7227491f33a7526" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="8f681adfc16381c2c9eb01f161513d7d" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+  <nodes xmi:id="fdc81e9e8f96a5712a43b1402f07923d" xsi:type="flowgraph:DataNode" name="DataTarget_logMsg" truncateTable="false" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.logMessages" dataLayout="COLUMN" type="DATABASE_TABLE">
+    <annotations key="sap.afm.layout" xmi:id="21bb3e0386cb28eb2516da76506ee9ab">
+      <annotations xmi:id="b633087c8ea7b7adf11418b22a907633" key="x" value="1580.8002843856812">
+      </annotations>
+      <annotations xmi:id="cb8b35bf1ba09ef13241d346a1ce3f0d" key="y" value="593.5870079737264">
+      </annotations>
+      <annotations xmi:id="fb5d4d62ffbfb3434155b098b56802bf" key="width" value="133.38525390625">
+      </annotations>
+      <annotations xmi:id="978112c026f6c77142c39c1eb72cd33b" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="04b2304413497128f10b07a32c47cc90" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="d0b1eb5ef27707ee0d00c0dd8ac5300f" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="e80b96cf46d42b99ac627dccd88eeeba" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="ca6bdaafdebf3cff80a124a47fa98797" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="4631cd2585af6021387d829e06c6cd86" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="8ff372554b62ef55ce34ca6d372d7e29" key="columns" value="[{&quot;name&quot;:&quot;technicalAttributes.msgNumber&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.msgText&quot;,&quot;type&quot;:&quot;NCLOB&quot;,&quot;length&quot;:2147483647,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.msgType&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.timestamp&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.operationId&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.posit&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null}]">
+    </annotations>
+    <inputs xmi:id="9120b163e0ae62434240d4b05d7eebde" name="DataTarget_logMsg" kind="TABLE">
+      <attributes xmi:id="9ceeb32e06e875fbff970861d087fe18" name="technicalAttributes.msgNumber" type="INTEGER" nullable="false">
+        <annotations xmi:id="b148414f43c21daedc17df2c86eb70c8" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="757b407f5d2a32805d34501df254cc91" name="technicalAttributes.msgText" type="NCLOB" nullable="false">
+        <annotations xmi:id="01a37dd4942e7b02839fc629ab89ac5f" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="819481064a02da3d7c6ea88b5235ba66" name="technicalAttributes.msgType" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="a28a685c6aa70c720149af9eb9696f7c" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="36627ef2d3e13a06f46ce8bbd20faa37" name="technicalAttributes.timestamp" type="TIMESTAMP" nullable="false" length="1">
+        <annotations xmi:id="abf5fca7fbe1961becbd91de86336b49" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="24be10ae4ec7221535acb561d6cf383c" name="technicalKey.operationId" type="INTEGER" nullable="false">
+        <annotations xmi:id="da0eb3292b2689921e66ea1fa5673f22" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e68713015e5474eb92b13c80b694cba1" name="technicalKey.posit" type="INTEGER" nullable="false">
+        <annotations xmi:id="5459e7bfdf5b0480d97b9a4ce7298be6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+  <nodes xmi:id="7bfeac09781d977ec05e6c00a02ac270" xsi:type="flowgraph:DataNode" name="DataTarget_affectedReq" truncateTable="false" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.affectedRequests" dataLayout="COLUMN" type="DATABASE_TABLE">
+    <annotations key="sap.afm.layout" xmi:id="0668cdaafc4f84edcb440c9aa21cb63a">
+      <annotations xmi:id="1a39588df265d8aa820f4c8ba586ecd0" key="x" value="1318.2812428474426">
+      </annotations>
+      <annotations xmi:id="f2bb5d22869e48be4c5efe433ad830c2" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="d3613c92e159871c59c3830d3dc0fe8a" key="width" value="157.044921875">
+      </annotations>
+      <annotations xmi:id="7ecd5cfa48e4224c06b8eb9f87b1262f" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="7385c940639a09e8326f6c50751087f0" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="11b6ba0bc1b5ec23cac47c71ec304320" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="4fe90729da2843ccae58a24095ae653e" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="f0b4ef350dba654da7cb0082005806ec" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="1c13dfa22b8218bcaa3b6082e22c7948" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="01e2af668b78548e1057148aa84e4006" key="columns" value="[{&quot;name&quot;:&quot;technicalKey.operationId&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.requestId&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null}]">
+    </annotations>
+    <inputs xmi:id="d2441198cd9fdd5c73379b7f1df0a2a8" name="DataTarget_affectedReq" kind="TABLE">
+      <attributes xmi:id="383b590f55673bd503e89d46de36ed32" name="technicalKey.operationId" type="INTEGER" nullable="false">
+        <annotations xmi:id="7a8fc4c004fd823181e802740bfc5aa6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="8f003adf4ed82d2753dd0a0921bc145b" name="technicalKey.requestId" type="INTEGER" nullable="false">
+        <annotations xmi:id="28c3acbe6af2450d9bd8027801a8f806" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+  <nodes xmi:id="19c646051b74f15e243053aab681f0ab" xsi:type="flowgraph:DataNode" name="DataTarget_opHistory" truncateTable="false" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.operationHistory" dataLayout="COLUMN" type="DATABASE_TABLE">
+    <annotations key="sap.afm.layout" xmi:id="5ce0ed8fedae8f036139aef85f8c4517">
+      <annotations xmi:id="a271674eded34d5d05021ea7b7efc34a" key="x" value="1580.8002843856812">
+      </annotations>
+      <annotations xmi:id="0a663d7a9d7ba09da875ba43739484e6" key="y" value="418">
+      </annotations>
+      <annotations xmi:id="07ee37fa2560852a9d76fb884461ab2d" key="width" value="144.38525390625">
+      </annotations>
+      <annotations xmi:id="e2a2ad9b3b22be1084a87044017b2b1b" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="3df851c12054be837664a0c35c9e6d2a" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="ad2fe2680225fdf8f2f3eadd365e22f5" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="c1e25fe53084aeb7236df452669e0a1f" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="804e06ffcf190cc0a3ec833b4a7f8b3e" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="7ca3f59648811cca9469f144a0a184f7" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="d89824543008ca3be6fa6b4f3c75e827" key="columns" value="[{&quot;name&quot;:&quot;technicalAttributes.checksumAT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:256,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.checksumCL&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:256,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.lastTimestamp&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.operation&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:20,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.operationDetails&quot;,&quot;type&quot;:&quot;NCLOB&quot;,&quot;length&quot;:2147483647,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.startTimestamp&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.status&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.userName&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:256,&quot;nullable&quot;:&quot;true&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.operationId&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null}]">
+    </annotations>
+    <inputs xmi:id="e911186be589d00f64c99bcc64d2e0ff" name="DataTarget_opHistory" kind="TABLE">
+      <attributes xmi:id="6e5ce230c9eb1d97354665c7422ff3a3" name="technicalAttributes.checksumAT" type="NVARCHAR" nullable="false" length="256">
+        <annotations xmi:id="49ed00508c29b6f63204ec9b288623fe" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="9f3c758d7f08140884ff16e3715ee58f" name="technicalAttributes.checksumCL" type="NVARCHAR" nullable="false" length="256">
+        <annotations xmi:id="39e99617209b34bb9c43d42ece37c250" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="474c37d4c9d03beda6211569d37636e7" name="technicalAttributes.lastTimestamp" type="TIMESTAMP" nullable="false">
+        <annotations xmi:id="aa073da933110279e2f8b8d19bc5f1a5" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="46d550db152e4ab3a71ed466eee3a60a" name="technicalAttributes.operation" type="NVARCHAR" nullable="false" length="20">
+        <annotations xmi:id="f8e4bde242f40777dbe3da8f23814183" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="03c4a4babb67c1995c35438ca2706bf9" name="technicalAttributes.operationDetails" type="NCLOB" nullable="false">
+        <annotations xmi:id="fda5051b4e90580b83f58804f71e98b5" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="108082c546452b974db2758c8d658586" name="technicalAttributes.startTimestamp" type="TIMESTAMP" nullable="false">
+        <annotations xmi:id="d0ee48ccda7c1d95cc61d1ab45e2a61b" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="fa0c8db7871af6f6590b59e3844e7406" name="technicalAttributes.status" type="NVARCHAR" nullable="false" length="10">
+        <annotations xmi:id="ac8c35bd63ecdf03ba7212e1a61313bf" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="7acb3845762f50e03a665d363de3a1fa" name="technicalAttributes.userName" type="NVARCHAR" nullable="false" length="256">
+        <annotations xmi:id="227c46fbbc226f8f740e7b7d0b5d3420" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="eeb99762052af9a86a8b4c72c01e04b0" name="technicalKey.operationId" type="INTEGER" nullable="false">
+        <annotations xmi:id="702b284612cbc9369c8e0d733d0e4e84" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+  <nodes xmi:id="38b1dd00e4a1c2c07a8cd9cbe3d5f790" xsi:type="flowgraph:DataNode" name="DataTarget_source4Ids" truncateTable="false" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.idGen" dataLayout="COLUMN" type="DATABASE_TABLE">
+    <annotations key="sap.afm.layout" xmi:id="87912d67d19ee8f6a6933bf58e88535e">
+      <annotations xmi:id="324f07489a25d2ca071d95e9f1dbe12d" key="x" value="643.548336982727">
+      </annotations>
+      <annotations xmi:id="c1438975c49c699d3921b6414165291d" key="y" value="234.929645081535">
+      </annotations>
+      <annotations xmi:id="26ecc443ec72cd1a0d15704f6de4b860" key="width" value="171.73291015625">
+      </annotations>
+      <annotations xmi:id="52890826e82519debcc77bee7994545e" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="8fee341c57699520a9a166cdea7702ec" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="73984c8d7d6c9770dc2fd1dcac69a1e1" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="c5cebd9777783f153c782bb052e7fcca" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="90b388275a62ba07472a6da15c624d46" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="fee5a966505d79c46a7125c2cf7dd15b" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="96275947797f229138afb7db6da13df6" key="columns" value="[{&quot;name&quot;:&quot;technicalKey.id&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null}]">
+    </annotations>
+    <outputs xmi:id="7cad78f1413c9e21a4aa6e38e83ed3fe" name="DataTarget_source4Ids" kind="TABLE">
+      <attributes xmi:id="3d8201286547bfe54a634e4e9f9b9f14" name="technicalKey.id" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="e024f4184fc1911a209fec5a6b733db7" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="a672de8f1fa2c520f6d3997379afd249" xsi:type="flowgraph:FilterNode" name="Projection">
+    <annotations key="sap.afm.layout" xmi:id="bef3a51e86f4fa105fbcdada1fac2ef7">
+      <annotations xmi:id="45803568aca17b85890ad3337e5eaf35" key="x" value="900.2812457084656">
+      </annotations>
+      <annotations xmi:id="64df95fc28a3246eae89db8a9646315e" key="y" value="302.22912283771717">
+      </annotations>
+      <annotations xmi:id="6cf3a24e9dfbe4cf7549cbf5c3ff1e94" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="01642b9e9cfb9d5fbdfbbbe3593cbae1" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="180b4be33498be1ab624afd981f8b110" name="Projection_IN">
+      <attributes xmi:id="a739fe6f5ee84209d499643b960db2b0" name="technicalKey.id" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="16ba9edbd0ee0d270f93b94e2d781c5c" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="4c78a91a6f65d78eb3c11d68327c5fd1" name="Projection_OUT">
+      <attributes xmi:id="97133623fefbbc242a55b899743445bf" name="loadId" type="INTEGER" nullable="false" expression="IFNULL(max(&quot;technicalKey.id&quot;) + 2, 2)">
+      </attributes>
+      <attributes xmi:id="8753a5e9d8a8eca63b2f578073275ee5" name="operationId" type="INTEGER" nullable="false" expression="IFNULL(max(&quot;technicalKey.id&quot;) + 1, 1)">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="d29ed066dc46a725cac3f51b6b502313" xsi:type="flowgraph:FilterNode" name="DataTarget_new_load_id">
+    <annotations key="sap.afm.layout" xmi:id="94200b4c71fc54299441e173bd42facf">
+      <annotations xmi:id="334cd20235907844ac472c0cc43fb588" key="x" value="1085.281244277954">
+      </annotations>
+      <annotations xmi:id="71aa8f3e8022a15f9acac765c06cec5b" key="y" value="302.2291228377172">
+      </annotations>
+      <annotations xmi:id="72d394adfd5c8c00c809f0e31dfbcd83" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="ad6bb043015fb5b9a75a61dc085d6272" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="fac7f7eb7445fc88f70c152e653341ee" name="DataTarget_new_load_id_IN">
+      <attributes xmi:id="5c451131e14be70dc498c0276fe10400" name="loadId" type="INTEGER" nullable="false">
+        <annotations xmi:id="af7ffdde5add8dd446878dcc975be0c3" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="1d545f6c729df353c95c200f53fa98ed" name="operationId" type="INTEGER" nullable="false">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="e8503f43b3441d2df0ff953bdb975ac7" name="DataTarget_new_load_id_OUT">
+      <attributes xmi:id="3a8ccdc50ca4b0e0f306dc86e2312d13" name="technicalAttributes.type" type="NVARCHAR" nullable="false" expression="&#x27;LOAD_REQUEST&#x27;" length="30">
+      </attributes>
+      <attributes xmi:id="77e71907db6bd5781820164b447446a1" name="technicalKey.id" type="INTEGER" nullable="false" expression="&quot;loadId&quot;">
+        <annotations xmi:id="4bc882aff1c5c083b23b5d9cb96de97f" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="e890d6acb0e5546a2eeabd8947cd83fd" xsi:type="flowgraph:UnionNode" name="DataTarget_union_load_and_op_id">
+    <annotations key="sap.afm.layout" xmi:id="5be967be949e3d140bd660d25cfbef22">
+      <annotations xmi:id="d90265a74f328de6649b966ad521d244" key="x" value="1320.7304615974426">
+      </annotations>
+      <annotations xmi:id="22c92d94b0fd7a4ad399648666352eaf" key="y" value="187">
+      </annotations>
+      <annotations xmi:id="779faf5ba9b0aee673a97a1976c509fb" key="width" value="170.17138671875">
+      </annotations>
+      <annotations xmi:id="2aa3deeb44f86fe333b24a4a4cf0fbba" key="height" value="171">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="af6564afb05c99ed465befecd5d80cee" name="Union_IN" kind="TABLE">
+      <attributes xmi:id="a243da5e4564eca6bec1b66615fb6e4c" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+      <attributes xmi:id="23b0e9d40f6d2d4efe212e8324a60b4c" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="61e0f3598dfcb49fea1129d015c90453" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+    <inputs xmi:id="3995132317ed6a33dc19ce853b9587cb" name="Union_IN_1">
+      <attributes xmi:id="7ec800d708c4451b831800c45fd869b2" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+      <attributes xmi:id="480d540a966d3b116d5c7501a7579eb2" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="f6cdffabf2836b63e18a3368b0f776b4" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="300999ce9c40e64904177f8d19926ff2" name="Union_OUT" kind="TABLE">
+      <attributes xmi:id="99129a4d73567cbb8bdea717e9b7b752" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+      <attributes xmi:id="def254fdc76063222628d7f01e73b247" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="3f76cd91c771c5332a09be330fca516c" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+    <tableMappings xmi:id="ba735d08276d639a90aca1baef411fb9" source="af6564afb05c99ed465befecd5d80cee" target="300999ce9c40e64904177f8d19926ff2">
+      <attributeMappings xmi:id="49c85e6b6e876c1bfb38286e0760eccc" source="a243da5e4564eca6bec1b66615fb6e4c" target="99129a4d73567cbb8bdea717e9b7b752">
+      </attributeMappings>
+      <attributeMappings xmi:id="372b7be2cea4a0d917e4365bfcb97058" source="23b0e9d40f6d2d4efe212e8324a60b4c" target="def254fdc76063222628d7f01e73b247">
+      </attributeMappings>
+    </tableMappings>
+  </nodes>
+  <nodes xmi:id="cd8e7eaaed0489df9d06b778656df042" xsi:type="flowgraph:FilterNode" name="DataTarget_new_op_id">
+    <annotations key="sap.afm.layout" xmi:id="6e443891f1d7b8924872bdae6850b28d">
+      <annotations xmi:id="921d8cd3d2e60b51474706500ae6f059" key="x" value="1085.281244277954">
+      </annotations>
+      <annotations xmi:id="0b48ca47f3e7a47360f6ae0bec224445" key="y" value="477.2291228377172">
+      </annotations>
+      <annotations xmi:id="9bac160ab04b19e7f4460586a5d82255" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="65ad717baee54f276227b5288f7e9145" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="33bb022bf02db53d810eeef3ff90cafa" name="DataTarget_new_op_id_IN">
+      <attributes xmi:id="b7cb7df606bcbc373c29e98eb8dd4fbb" name="operationId" type="INTEGER" nullable="false">
+        <annotations xmi:id="9eaa10d5f23a135d704f7c0414d4b08d" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="6b8c4b4216f6720530007ba02647fa72" name="loadId" type="INTEGER" nullable="false">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="710131e7046cbb378f34d68a48271471" name="DataTarget_new_op_id_OUT">
+      <attributes xmi:id="779e95a345c3f4f310eed1ddcab148ff" name="technicalAttributes.type" type="NVARCHAR" nullable="false" expression="&#x27;LOAD&#x27;" length="30">
+      </attributes>
+      <attributes xmi:id="a16e7c9d17f7ee04379c4c4bf416a728" name="technicalKey.id" type="INTEGER" nullable="false" expression="&quot;operationId&quot;">
+        <annotations xmi:id="dfa4441606739c46e0671b03e71a2d0b" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="470539e60297330d0fb99cfa94a49665" name="DataTarget_inbound_table" catalogObjectName="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.inbound_queue" type="DATABASE_TABLE" xsi:type="flowgraph:DataNode">
+    <annotations key="sap.afm.layout" xmi:id="9a7273c1965ca22f24400222d3a664a3">
+      <annotations xmi:id="295dbe6a5a0a520fba79deacbd8d16a9" key="x" value="1580.8002843856812">
+      </annotations>
+      <annotations xmi:id="b76cd0710289571eea2a1891950551e5" key="y" value="796">
+      </annotations>
+      <annotations xmi:id="80ab3184f0b003bc3edc92297a3162a6" key="width" value="167.0458984375">
+      </annotations>
+      <annotations xmi:id="70030f1066257e520fd02dfe1f2de0c4" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="19ae7a99c2f2ef5ffebfd7589ee110e9" key="sap.afm.description" value="osr.edw.staging.md.crm::CDS_CRM.DSO.CRMCPARTNERPDP.inbound_queue">
+    </annotations>
+    <annotations xmi:id="c712b06f811e1c7548bb7cd2e8e24bdb" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="7f118c9f7583a136c45297ec7a8c26c6" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="e725a13d007b2b32e300d34f398e7803" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="c6272dd81fc64bf396662841c3a02393" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="d34d06449788b4461a90e807bcdef78f" key="columns" value="[{&quot;name&quot;:&quot;ACCESS_SEQUENCE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;ADDR_CHANGEABLE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;ADDR_DUPLICATE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;ADDR_OPERATION&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;ATTRIBUTE_GROUP&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;CALENDAR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;CHANGEABLE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;COUNT_HIGH&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;COUNT_LOW&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:4,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;COUNT_TO_POPUP&quot;,&quot;type&quot;:&quot;SMALLINT&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;DETERM_PROC&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;MANUAL_FUNCTION&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;NEW_DETERM&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;NEW_DET_PART_REP&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;NO_MANUAL_ENTRY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;PARTNER_FCT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;POINT_OF_DETERM&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;REGISTRATOR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:12,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;STD_ADDR_ONLY&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;TERRITORY_CHECK&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;Z_CHANGE_TIME&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:&quot;1900-01-01 23:59:59&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TYPE&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;Z_RUN_ROW_NO&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;Z_RUN_SEQ_ID&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;Z_SOURCE_SYS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalAttributes.recordMode&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1,&quot;nullable&quot;:&quot;false&quot;,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.loadId&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null},{&quot;name&quot;:&quot;technicalKey.recordNo&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;defaultValue&quot;:null}]">
+    </annotations>
+    <inputs xmi:id="3d2dca8b3d5ddd0d6176605338d0e01a" name="DataTarget_inbound_table">
+      <attributes xmi:id="0f1240229c3c713422f7cbd39f0c18ed" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="false" length="4">
+        <annotations xmi:id="fa92920da59ea685ed86a6e89206bd37" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e11bf46ab7ae61dc4d318afdb15eccab" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="0898eae0fb232b36b7cec0ebf32994a6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="53a1dac66963ba88841e7663d6601c7a" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="9b45d0074d7e2749fbb3fb02fb024e53" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="bc53d195d84267f391520df4fbe4ac83" name="ADDR_OPERATION" type="NVARCHAR" nullable="false" length="6">
+        <annotations xmi:id="7edbd041aafa1dccca99990fb8a917c3" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a8f00a2063c4b62ef368e1a241918db1" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="false" length="6">
+        <annotations xmi:id="50eea274ac673a17ceedbc85f967475c" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="2b7582e78bcbb226fa5287572309613b" name="CALENDAR" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="370d4339e95f2093d591270dd2944ced" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="b34faf9e41321cc88284102c1841015b" name="CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="03831574bf609bef4ce99beffa4ed606" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="fcbfefa1b62f89a88bbcc76c6e64a957" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+        <annotations xmi:id="2ef0b1a1e63652fb626ff7de9eff4e17" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="37848d76ec9e01daa936fa975cbf8e3f" name="COUNT_HIGH" type="NVARCHAR" nullable="false" length="4">
+        <annotations xmi:id="d18c46bba3a7a57958d1d823902e8910" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a396d6c67d8ff30adc45de8987139025" name="COUNT_LOW" type="NVARCHAR" nullable="false" length="4">
+        <annotations xmi:id="e9c6b44585d2a52debc99dc3872f5d4c" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="6b0910590780e7e053f08b09499bbc46" name="COUNT_TO_POPUP" type="SMALLINT" nullable="false" length="5">
+        <annotations xmi:id="fa8bde5bc57f6a80e832abe3147396bd" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a521cea10ff645fe3ffb74861bc7ec20" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="6b0fa636a6e78dda45d1431d8bd391f6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="6b918b9971682c3f3a96cc461ddc8fce" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="bedf0ba75eb8db2aae889b50b6d5739a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="00b48a409043615a87b5b75aba440b69" name="NEW_DETERM" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="4a511006111938a5cae8b971aa9f73d5" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="d33ef912978eb8d9a50e9c72facfe61f" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="daeef2f8d2fb3653deac8892057ca7c1" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e023086e60d7045d03b0f4c99fe2041f" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="1af215f377de7059e171cc1af090c233" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="3d50efa706029b8b6bc6c453ddad8298" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+        <annotations xmi:id="d784f11250c9db21ce2ff7f5c56ce74c" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="d044c78e4fa3917c13c3cb526b56ffa4" name="POINT_OF_DETERM" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="d96e07aa14af724f7736c6fa5880f71f" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="122dc27206140c561b47bf26bd16e82e" name="REGISTRATOR" type="NVARCHAR" nullable="false" length="12">
+        <annotations xmi:id="1b3a38ee7d23df9473e152692f5aa757" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="d24ba9cae179fb927be7efba04a8e056" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="7e5aade502122b00f86364c3e5832602" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="1d6824f3987167394ed3c167ceeae3f1" name="TERRITORY_CHECK" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="3173182d6b09228a71e30b100b2c9052" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="90a72cb82c460f4fed1b0781b8b296dd" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="false" length="27" scale="7">
+        <annotations xmi:id="e41682a24c3db6191c762f12a7772a76" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="785f1ea1ddd2a946bf4981b1a4d4f6e2" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="64e54978fe7c87e90111bcf4913288c8" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="06572e69d65ca0ea880b8181954fccfa" name="Z_RUN_ROW_NO" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="6fc3452d14e02fa8bead6e42ff8aae15" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="b898a7e88343461dfc14855742efb704" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="881b0d056417ee6f090930e480543685" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="b1e7a8cbb3233aa9acb53f9dd118c8c6" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" length="5">
+        <annotations xmi:id="7082724d5de42cecec63c3d4dd1cc9cc" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="0a11fe4f06865454287442bd252ce9f2" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" length="1">
+        <annotations xmi:id="ef52943c43db074ac7510abfce48bbdb" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ae20c58288dace0c0aeda82074c168de" name="technicalKey.loadId" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="ce5d9c33fdea4c05617d5355be83a3a0" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="bd50fac34595095d66a10ea728a99751" name="technicalKey.recordNo" type="INTEGER" nullable="false">
+        <annotations xmi:id="dc74f1ad1f03e981f7c45f2dc89c8c82" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+  <nodes xmi:id="b17bf70bad51c7580c7ca05fd882bbaf" xsi:type="flowgraph:FilterNode" name="DataTarget_import">
+    <annotations key="sap.afm.layout" xmi:id="491e3506dc911dcd46722754e21853b4">
+      <annotations xmi:id="42d8ac56323b66e454ffc82490cf1609" key="x" value="900.2812457084656">
+      </annotations>
+      <annotations xmi:id="0cc6bdc1a45a740a6173b6f9d969706b" key="y" value="518.3492808114491">
+      </annotations>
+      <annotations xmi:id="b59fc42fd17d9d6f0bd3ba9a1f184090" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="5632b2ed4c09df62857a18fd4514ad67" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="691b70c14c8c9136ef40941be9375ceb" key="fixedOutputStructure" value="true">
+    </annotations>
+    <inputs xmi:id="e1ebeb69eca9a638a083525c077ee8a6" name="DataTarget_import_IN">
+      <attributes xmi:id="d9c22afc3c7213df0d5e8f44a5b7274b" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="true" length="4">
+        <annotations xmi:id="d36c013a13ef263912c9ac6506e97956" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f0a01f85c08974ef1a99ad231b920083" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="ef8649b7c26138997b760eea1be3fbb0" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="06e6d6f823692349d84e1fcbca827952" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="9a6e88c8ba094c1080deee4b6064ec3b" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="9a93f7f5f0e85c41f9012f753f8cdfcf" name="ADDR_OPERATION" type="NVARCHAR" nullable="true" length="6">
+        <annotations xmi:id="2755cf51b553fc6f630c1f2b6f0c6821" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="5bcc5cd93401489ddf68ceb799955bd4" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="true" length="6">
+        <annotations xmi:id="0614a77a8c337f63f3a332e7bfdb4563" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ca634b13b76d622d5ec1ea2ec62c815d" name="CALENDAR" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="e14855c0cca041ee4234e74ddc9a11b2" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="03efa2c0c19d119094931affd16ff38b" name="CHANGEABLE" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="5c740209b8aa210eda3af60420aeee95" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="642ac669fa1c8f61c54a8804f112e2e4" name="CLIENT" type="NVARCHAR" nullable="true" length="3">
+        <annotations xmi:id="3d6eec27d985ee5fd91c126c612084e8" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="172227d9b0c878167ffda88ce9cd3801" name="COUNT_HIGH" type="NVARCHAR" nullable="true" length="4">
+        <annotations xmi:id="30f0f361cacdd8a2559404227b0c4ccc" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="31da2b83e5e5c7211d87b1c4f86e8cb2" name="COUNT_LOW" type="NVARCHAR" nullable="true" length="4">
+        <annotations xmi:id="0fbc4e7a461443eacf7a7c8f17e80cd9" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="c87bf129ff91821ba687f4cd7a342d4c" name="COUNT_TO_POPUP" type="SMALLINT" nullable="true" length="5">
+        <annotations xmi:id="6c18883e1055b6338db1cc0e558d8fd6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="4c93c40c1278253bb979238b7453c2cd" name="DETERM_PROC" type="NVARCHAR" nullable="true" length="8">
+        <annotations xmi:id="077eb2b6b0df96089ec939ecdc18afe2" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="68f5ee975e5434ccc41db39cae3cb014" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="ab0c8fa7572db0ff2826227d5defcfb1" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="2d80c8869fe8f1af926a80da35715080" name="NEW_DETERM" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="0aca9a8f0baa93b257550011f6f8b21a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="2d3ae050d615ca5dae1e0fde8b337e87" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="b5b7635acd96f84ebfdbc43e05f62e4e" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="29c6c201c040017e3c3432dd1ff001ff" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="99965dbccdbec4a3f403bc7ec2be3ca2" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="0d0ea9d23c59b48264718d074328c399" name="PARTNER_FCT" type="NVARCHAR" nullable="true" length="8">
+        <annotations xmi:id="ab1f3a1d0013b407cb34a997e718c2c4" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="741fdc3dbff8c74318f6e5cdf09f12e1" name="POINT_OF_DETERM" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="e01632ac985ec8abe3f5821bc91ef255" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="9055c3764f730d0750521a9087e275fa" name="REGISTRATOR" type="NVARCHAR" nullable="true" length="12">
+        <annotations xmi:id="8c04c33f7005aa502c383ca0169dd6f1" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="8d5efabc07c3a3e732d78fdb3b9bc50c" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="71cb99b31a5f3e787fc926a87d662777" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="111db9de9fb428dca224ac86143d4c0e" name="TERRITORY_CHECK" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="ad201f07425fb79877ea643f71765c22" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="884b7aa81d786de040488db9a6682e68" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+        <annotations xmi:id="a5dac2eba49aea486e120fea10445da4" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="94d49d5c8ba157773d25d030fea68db8" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="true" length="1">
+        <annotations xmi:id="b3ba0b62bf52e34a08c43c6f1f2e4d7e" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="d688b3e87efbce71c566f05cb8e44558" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="18b9dabf307621e3ce75465b6499293d" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="337fb83114538975eedab29ef64447df" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="37a14245bf48471c44e02c5edad1eb0a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f14e96c89d068854cb05695b28eeb112" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+        <annotations xmi:id="47a03725ae761aa785c03f933da225da" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="cc2bad5025066285ccf08163cd310c3b" name="DataTarget_import_OUT">
+      <attributes xmi:id="be2e6219f6830c41decbc358c2949fc0" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;ACCESS_SEQUENCE&quot;, &#x27;&#x27;)" length="4">
+      </attributes>
+      <attributes xmi:id="6583a9e86028f9ea006f90cd2896ff92" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;ADDR_CHANGEABLE&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="19a75c0fee74dc665cd89f3b3e135c36" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;ADDR_DUPLICATE&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="7f3317683b6a4090aefc143c459188d2" name="ADDR_OPERATION" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;ADDR_OPERATION&quot;, &#x27;&#x27;)" length="6">
+      </attributes>
+      <attributes xmi:id="445dc8131adf0ee55219553e06889d64" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;ATTRIBUTE_GROUP&quot;, &#x27;&#x27;)" length="6">
+      </attributes>
+      <attributes xmi:id="773c12e24cc704984fd4a3f56d9f5529" name="CALENDAR" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;CALENDAR&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="91c4bf99accaafd5216a2e89a424a91c" name="CHANGEABLE" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;CHANGEABLE&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="b249bdba6b01aebcc6e97cb45d624684" name="CLIENT" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;CLIENT&quot;, &#x27;&#x27;)" length="3">
+      </attributes>
+      <attributes xmi:id="aecce511b596c2adb202dec60aff6029" name="COUNT_HIGH" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;COUNT_HIGH&quot;, &#x27;&#x27;)" length="4">
+      </attributes>
+      <attributes xmi:id="50b1ea3f9115d36ab0fdf9851e257fa1" name="COUNT_LOW" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;COUNT_LOW&quot;, &#x27;&#x27;)" length="4">
+      </attributes>
+      <attributes xmi:id="056bf095ee2ee5600f5a3592fafcb97c" name="COUNT_TO_POPUP" type="SMALLINT" nullable="false" expression="IFNULL(&quot;COUNT_TO_POPUP&quot;, &#x27;0&#x27;)" length="5">
+      </attributes>
+      <attributes xmi:id="cb20d49d167d9df21cd9fc3f9c8da27f" name="DETERM_PROC" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;DETERM_PROC&quot;, &#x27;&#x27;)" length="8">
+      </attributes>
+      <attributes xmi:id="b62b50cb84100a52d3a5c2c0a98906af" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;MANUAL_FUNCTION&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="be3be04607c86dd06efbb6a2d2b6e367" name="NEW_DETERM" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;NEW_DETERM&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="0e0a5b0ceb052fb5386038d36fd3bfd6" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;NEW_DET_PART_REP&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="49f879ca58e4efd9a38f972aa63c2389" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;NO_MANUAL_ENTRY&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="70ce8ccdaabe3b0035243365176938f8" name="PARTNER_FCT" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;PARTNER_FCT&quot;, &#x27;&#x27;)" length="8">
+      </attributes>
+      <attributes xmi:id="96ee245c97e3963bdf699ac8d28f1450" name="POINT_OF_DETERM" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;POINT_OF_DETERM&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="e20bb9db4481b89f1893767449d4386c" name="REGISTRATOR" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;REGISTRATOR&quot;, &#x27;&#x27;)" length="12">
+      </attributes>
+      <attributes xmi:id="e3fcd701b5ef85f65b5eae00fd26e12b" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;STD_ADDR_ONLY&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="3d20c0aed75ea4e6134d42e7542dbc7a" name="TERRITORY_CHECK" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;TERRITORY_CHECK&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="9c0ac3fee40f59c6a8ce10e4c5e180c3" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="false" expression="IFNULL(&quot;Z_CHANGE_TIME&quot;, &#x27;1900-01-01 23:59:59&#x27;)" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="9d22a09d7453b77d3377da420f24037c" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;Z_CHANGE_TYPE&quot;, &#x27;&#x27;)" length="1">
+      </attributes>
+      <attributes xmi:id="5ccd56289468b481c7c52beb963f731e" name="Z_RUN_ROW_NO" type="INTEGER" nullable="false" expression="IFNULL(&quot;Z_RUN_ROW_NO&quot;, &#x27;0&#x27;)" length="10">
+      </attributes>
+      <attributes xmi:id="41c20053904b85d74b6a13bae9cceb41" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" expression="IFNULL(&quot;Z_RUN_SEQ_ID&quot;, &#x27;0&#x27;)" length="10">
+      </attributes>
+      <attributes xmi:id="619d68de4ee435ae7727bb7ca1349cf3" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;Z_SOURCE_SYS&quot;, &#x27;&#x27;)" length="5">
+      </attributes>
+      <attributes xmi:id="8fe53fdc4562bf51d6cd966d169ed56f" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" expression="CASE WHEN &quot;Z_CHANGE_TYPE&quot;=&#x27;I&#x27; THEN &#x27;N&#x27; ELSE &quot;Z_CHANGE_TYPE&quot; END" length="1">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="e49de58328c89ea8e1e4c246a154a892" xsi:type="flowgraph:FilterNode" name="DataTarget_addRecordNo">
+    <annotations key="sap.afm.layout" xmi:id="adddadd07876e1934f392300faef0429">
+      <annotations xmi:id="d4460338a5851860622a61829339823c" key="x" value="1085.281244277954">
+      </annotations>
+      <annotations xmi:id="9d35357aee18df99023fdd96e859dca6" key="y" value="768">
+      </annotations>
+      <annotations xmi:id="0b4e7d7a62ca3f09976075d2073f80e3" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="8c10023fea56694c8c7a5d72c568a767" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="447c43a32f61148cf07a282e788986cf" name="DataTarget_addRecordNo_IN">
+      <attributes xmi:id="0cb5ea07506ee4e582851c62c2ede387" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="c107cb93399811a49f77b1f491212e75" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="32022e7f60d446d83e7e6959d8645165" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="da70599de768f1c93003611c00ee29af" name="ADDR_OPERATION" type="NVARCHAR" nullable="false" length="6">
+      </attributes>
+      <attributes xmi:id="9cf8f64c3db6a5e408a5cbcc6af36b0b" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="false" length="6">
+      </attributes>
+      <attributes xmi:id="e69ae60694879ac0f322aacb86e084b4" name="CALENDAR" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="cd0ba9d7786e2d3df561e958c86ded1e" name="CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="efab79ede23ff9dab673b1e0b4e401fd" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+      </attributes>
+      <attributes xmi:id="38dcb21dd0e5fc2b2d977b8f183616d9" name="COUNT_HIGH" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="08ac4b0286c36b19c2dd30bfb9479449" name="COUNT_LOW" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="baf89db031afa425388fa17e9ba318ee" name="COUNT_TO_POPUP" type="SMALLINT" nullable="false" length="5">
+      </attributes>
+      <attributes xmi:id="9c1a0a20b1918b7cf63697b6b3bb0f3c" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+      </attributes>
+      <attributes xmi:id="6b9f15fc54283c36a496e780551b6738" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="0182c97b86f4c619c129112442cdae2d" name="NEW_DETERM" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="d30734ea5b0c691ae45f30a7a70cfff1" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="8c05657a1de99ea1073614a2c840171c" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="aca68e757fa5f505a81072f85eddbf9d" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+      </attributes>
+      <attributes xmi:id="e348c179f06ebf5044cc2a71dfc79f0d" name="POINT_OF_DETERM" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="75027516b02f081162dba991e6a56c30" name="REGISTRATOR" type="NVARCHAR" nullable="false" length="12">
+      </attributes>
+      <attributes xmi:id="63cd01fd1086d05598848dc7185490c4" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="cf32f4172a8c092ec91756ff8482671d" name="TERRITORY_CHECK" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="82f3877f315edde5676a72c2106e09e1" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="false" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="ac683b8429ffb24aad8cbc0be9637c55" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="cf1bc583b1beec89f61fe07e11175468" name="Z_RUN_ROW_NO" type="INTEGER" nullable="false" length="10">
+      </attributes>
+      <attributes xmi:id="bdc616dd87bdea7d7a11bf74bafdbcd9" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+      </attributes>
+      <attributes xmi:id="4b4ea279948b15818eee78db0767fabe" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" length="5">
+      </attributes>
+      <attributes xmi:id="a025fc6ff03ab01a99d7f42a8b7c390b" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="19d81d3184b77b14a5c1a21c6225eee9" name="DataTarget_addRecordNo_OUT">
+      <attributes xmi:id="af346e2a6588f2e51a0be6c573d7d903" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over ()">
+      </attributes>
+      <attributes xmi:id="9f9fca2d158cccbdb668f6d0deba6f97" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="false" expression="&quot;ACCESS_SEQUENCE&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="6a60977a88ff90aac2af7b9c8bef61c2" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="false" expression="&quot;ADDR_CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="43e3bda638b890583e82e5af275be480" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="false" expression="&quot;ADDR_DUPLICATE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="d9ab361f62a6f995765cc927e2b3027f" name="ADDR_OPERATION" type="NVARCHAR" nullable="false" expression="&quot;ADDR_OPERATION&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="36f209ddfa0f914b94f5497a1e2eddfe" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="false" expression="&quot;ATTRIBUTE_GROUP&quot;" length="6">
+      </attributes>
+      <attributes xmi:id="31ef929045970932b9d8e21b57b86707" name="CALENDAR" type="NVARCHAR" nullable="false" expression="&quot;CALENDAR&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="ea71880c3dc9e6e7644d2e0d3fc6320a" name="CHANGEABLE" type="NVARCHAR" nullable="false" expression="&quot;CHANGEABLE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="71672b463802f176c5c3d6be65d2becc" name="CLIENT" type="NVARCHAR" nullable="false" expression="&quot;CLIENT&quot;" length="3">
+      </attributes>
+      <attributes xmi:id="e10f75ea7c6e20b80f79996b0aa5e362" name="COUNT_HIGH" type="NVARCHAR" nullable="false" expression="&quot;COUNT_HIGH&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="b1b28c5c90216ef99b6a1aa8ee42bad2" name="COUNT_LOW" type="NVARCHAR" nullable="false" expression="&quot;COUNT_LOW&quot;" length="4">
+      </attributes>
+      <attributes xmi:id="adecf73f2698d74ffcb6db4a517c35ba" name="COUNT_TO_POPUP" type="SMALLINT" nullable="false" expression="&quot;COUNT_TO_POPUP&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="7f3d9929bc38835a3720af36682bc4a4" name="DETERM_PROC" type="NVARCHAR" nullable="false" expression="&quot;DETERM_PROC&quot;" length="8">
+      </attributes>
+      <attributes xmi:id="1e0570935ff64bfeffeaf0f07e596e87" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="false" expression="&quot;MANUAL_FUNCTION&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="6e954f906795c683e6acc33ca7ea26c0" name="NEW_DETERM" type="NVARCHAR" nullable="false" expression="&quot;NEW_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="7a741c669ffdf653e305f833b12bf7e1" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="false" expression="&quot;NEW_DET_PART_REP&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="0089c29515769c307c111029454c494e" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="false" expression="&quot;NO_MANUAL_ENTRY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="79838e81ff4cad5667359580a4a94a53" name="PARTNER_FCT" type="NVARCHAR" nullable="false" expression="&quot;PARTNER_FCT&quot;" length="8">
+      </attributes>
+      <attributes xmi:id="b9c955f9fb12eb33c817f7ccc6933d23" name="POINT_OF_DETERM" type="NVARCHAR" nullable="false" expression="&quot;POINT_OF_DETERM&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="44dfc081500c00694a00f434deacc3f5" name="REGISTRATOR" type="NVARCHAR" nullable="false" expression="&quot;REGISTRATOR&quot;" length="12">
+      </attributes>
+      <attributes xmi:id="98a9bd1dc2e323404f377d86a6720b69" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="false" expression="&quot;STD_ADDR_ONLY&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="4910d91befde6d1db6ac4f25044e0893" name="TERRITORY_CHECK" type="NVARCHAR" nullable="false" expression="&quot;TERRITORY_CHECK&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="09035277544f1bd9a3c6171c9d4ab6e3" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="false" expression="&quot;Z_CHANGE_TIME&quot;" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="9b6612e8b93e06b9e882688b6353483b" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="false" expression="&quot;Z_CHANGE_TYPE&quot;" length="1">
+      </attributes>
+      <attributes xmi:id="19d35ad28d2d842d209fcc293502ecc7" name="Z_RUN_ROW_NO" type="INTEGER" nullable="false" expression="&quot;Z_RUN_ROW_NO&quot;" length="10">
+      </attributes>
+      <attributes xmi:id="b03a0c75e801c633b9973179ac5f7524" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" expression="&quot;Z_RUN_SEQ_ID&quot;" length="10">
+      </attributes>
+      <attributes xmi:id="2f04bd30186853afd25becfd6323a57c" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" expression="&quot;Z_SOURCE_SYS&quot;" length="5">
+      </attributes>
+      <attributes xmi:id="7a5be0062c69a01ddb95ad1756a3ac64" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" expression="&quot;technicalAttributes.recordMode&quot;" length="1">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="13c28a09dd015a8e86ba095c1b08dbc1" xsi:type="flowgraph:JoinNode" name="DataTarget_Join_Load_Id_to_Inbound_Data">
+    <annotations key="sap.afm.layout" xmi:id="9378e2606228b3012393f9e3e6dfc48d">
+      <annotations xmi:id="e39dbfb9fcc9eb340a8f982cc7a74236" key="x" value="1318.2812428474426">
+      </annotations>
+      <annotations xmi:id="d534fa57af4fa65a0b01983403d72f16" key="y" value="768">
+      </annotations>
+      <annotations xmi:id="94b18e7a3d5008671d3e4a01858281df" key="width" value="177.51904296875">
+      </annotations>
+      <annotations xmi:id="aaebda98ff5a793489bf88f8b0cbe93c" key="height" value="171">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="d5a4406a26cdc2125f037ba09f081eb6" name="Join_1_IN" kind="TABLE">
+      <attributes xmi:id="69ac70cf64f387ae5de6a3f1115f1d2c" name="technicalKey.recordNo" type="INTEGER" nullable="false">
+      </attributes>
+      <attributes xmi:id="5ee479808b99ca905b7949de71e5dd68" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="738e97e2d60b38b4e264f814d1bff2e2" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="a7e9135bf364b6370f35cc6c24393321" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="7a6987c41c77b66663506af181bbf949" name="ADDR_OPERATION" type="NVARCHAR" nullable="false" length="6">
+      </attributes>
+      <attributes xmi:id="9b567fd4b0e722dc74de2b453daa7f82" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="false" length="6">
+      </attributes>
+      <attributes xmi:id="8b61365d23cbeed410e2c78acc82c5ea" name="CALENDAR" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="5f4381b798d62d3a4586ef0121411ef1" name="CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="3c313471d50f747d145f45698396fd35" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+      </attributes>
+      <attributes xmi:id="e8aa409bf742cc91acab8715f8541cb6" name="COUNT_HIGH" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="45f935713e69d6d592e62b3b267af0cb" name="COUNT_LOW" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="3c7c52f10afdfcb21b25a7c00bc697b8" name="COUNT_TO_POPUP" type="SMALLINT" nullable="false" length="5">
+      </attributes>
+      <attributes xmi:id="8d92532d0d8fe6691b20ddb1931c5f2a" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+      </attributes>
+      <attributes xmi:id="517dbb546cf79cf445e55def212a186f" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="7886a3f5a28efd288fa65bd9fe62985c" name="NEW_DETERM" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="858c7caa7080be53e63622edb8034169" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="a355ba535c64be14a0d5141e02b39fbe" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="f8c9b33cd93f429dcc1781c989d86025" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+      </attributes>
+      <attributes xmi:id="e0f2058951ccc24ae25565ea30f80277" name="POINT_OF_DETERM" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="70846cfcbad3d8f219616cad7600e42d" name="REGISTRATOR" type="NVARCHAR" nullable="false" length="12">
+      </attributes>
+      <attributes xmi:id="6e05f114cfd53d300ce9fff7df411458" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="bdcd002e88c445b1423912009ed3716b" name="TERRITORY_CHECK" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="6392bbc0ecbb59494473473c1acc3998" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="false" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="4eb9562b34af304dc108097c2c61f84a" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="6a5c63ab50eaa6bb0878cf12d0327c6a" name="Z_RUN_ROW_NO" type="INTEGER" nullable="false" length="10">
+      </attributes>
+      <attributes xmi:id="0843aecb8b66c7e734e5eb8937a44073" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+      </attributes>
+      <attributes xmi:id="85bd869aabc143464359a5c6b9fadbbb" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" length="5">
+      </attributes>
+      <attributes xmi:id="7a6927b95cdaefae365be63a2abf9cfd" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+    </inputs>
+    <inputs xmi:id="22039884cd13c85429fd0b0759cd0e29" name="Join_1_IN_1">
+      <attributes xmi:id="52927900ed971e308633218f68f3b464" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+      <attributes xmi:id="662582fbafc831692aa13a41d1de1de3" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="9bfbbab95532836d521822ec97ed9b15" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="6c846be9c55bc4df4ec2aca4987855fb" name="Join_1_OUT" kind="TABLE">
+      <attributes xmi:id="033558ce9f7a9cc179545b5193d1f58b" name="technicalKey.recordNo" type="INTEGER" nullable="false">
+      </attributes>
+      <attributes xmi:id="9795d09fd1d833635701b35fd767d720" name="ACCESS_SEQUENCE" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="c0a504c5ebf56021d1ac42dac8e88fba" name="ADDR_CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="6b4536b09f61d86b9362f6be5c1ac0af" name="ADDR_DUPLICATE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="7cb22268a1c89b6493f009fee641c5d1" name="ADDR_OPERATION" type="NVARCHAR" nullable="false" length="6">
+      </attributes>
+      <attributes xmi:id="4a7a7188761c0414b643dd445c6447a2" name="ATTRIBUTE_GROUP" type="NVARCHAR" nullable="false" length="6">
+      </attributes>
+      <attributes xmi:id="08e9d54fb87b26d37ba0d7240868b0d4" name="CALENDAR" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="b8de762b5db996e51c4dbb12e041055a" name="CHANGEABLE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="5f4c5762f47ca6179e20159bf40bba00" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
+      </attributes>
+      <attributes xmi:id="a3b7ce07b9e10f41d64dd3ac4dfe13d6" name="COUNT_HIGH" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="eebd52f4b36515649d3158945c09f207" name="COUNT_LOW" type="NVARCHAR" nullable="false" length="4">
+      </attributes>
+      <attributes xmi:id="2269220498adfa7e960718adff9c531d" name="COUNT_TO_POPUP" type="SMALLINT" nullable="false" length="5">
+      </attributes>
+      <attributes xmi:id="33a67140da7456e3e894438985693a0b" name="DETERM_PROC" type="NVARCHAR" nullable="false" length="8">
+      </attributes>
+      <attributes xmi:id="9be9005df4569df447aae2f420af5a2c" name="MANUAL_FUNCTION" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="cca3357c51cc21c5f0b939fae1ef1c06" name="NEW_DETERM" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="09667dd0dd2875c0a8bbef6ff23afc35" name="NEW_DET_PART_REP" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="6e104f6c5a8794a77f6c7b057fdecdea" name="NO_MANUAL_ENTRY" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="6892ca91297198c38e0ddd0fc1551bce" name="PARTNER_FCT" type="NVARCHAR" nullable="false" length="8">
+      </attributes>
+      <attributes xmi:id="d16ad6fec7ab05e2d7e19f6d3f5bcd3f" name="POINT_OF_DETERM" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="aa247e6b9e95cace196d784c44ccf81c" name="REGISTRATOR" type="NVARCHAR" nullable="false" length="12">
+      </attributes>
+      <attributes xmi:id="f4890e41a34bd600e92193d903498835" name="STD_ADDR_ONLY" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="c021ecc65f58fc796b52ad0c74c7bf3a" name="TERRITORY_CHECK" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="4234aa72f0b0d6502e975673a46e5ceb" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="false" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="ebdb48ac9a4ac700b37cb04dd89638e8" name="Z_CHANGE_TYPE" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="e9f3fafe1893b98c72566fd3244e4118" name="Z_RUN_ROW_NO" type="INTEGER" nullable="false" length="10">
+      </attributes>
+      <attributes xmi:id="0a6c2a5dedac4960926074c104cc80ac" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
+      </attributes>
+      <attributes xmi:id="9397df086a20c4a09119f92d5541d08a" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" length="5">
+      </attributes>
+      <attributes xmi:id="60ad17924fa143e57e611632c71d7167" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" length="1">
+      </attributes>
+      <attributes xmi:id="6622edcc4a1ae6d88135f7252590a4b4" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+      <attributes xmi:id="c24d5b1d0d2619b162a6bff2e2b025fe" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="a8a5a4d7583728c62045618e31fc10ae" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+    <tableMappings xmi:id="1f01f848aac3517a1bd7f9913f9c443d" source="d5a4406a26cdc2125f037ba09f081eb6" target="6c846be9c55bc4df4ec2aca4987855fb">
+      <attributeMappings xmi:id="510add0fcdf8aac73645b6a37778283a" source="69ac70cf64f387ae5de6a3f1115f1d2c" target="033558ce9f7a9cc179545b5193d1f58b">
+      </attributeMappings>
+      <attributeMappings xmi:id="696517f92502f71e7396cd26a2dfca6d" source="5ee479808b99ca905b7949de71e5dd68" target="9795d09fd1d833635701b35fd767d720">
+      </attributeMappings>
+      <attributeMappings xmi:id="64596d3524d21b9e3f60da1d9606cfce" source="738e97e2d60b38b4e264f814d1bff2e2" target="c0a504c5ebf56021d1ac42dac8e88fba">
+      </attributeMappings>
+      <attributeMappings xmi:id="a3fad5faf8c1653e92197d0b6a691144" source="a7e9135bf364b6370f35cc6c24393321" target="6b4536b09f61d86b9362f6be5c1ac0af">
+      </attributeMappings>
+      <attributeMappings xmi:id="2634ee9fc6812ec708eec6fd40d68388" source="7a6987c41c77b66663506af181bbf949" target="7cb22268a1c89b6493f009fee641c5d1">
+      </attributeMappings>
+      <attributeMappings xmi:id="a5c3b9d7450b74ef7804b1b26cecf265" source="9b567fd4b0e722dc74de2b453daa7f82" target="4a7a7188761c0414b643dd445c6447a2">
+      </attributeMappings>
+      <attributeMappings xmi:id="d7fb84929b4f4aab74b8938fc85bd8e3" source="8b61365d23cbeed410e2c78acc82c5ea" target="08e9d54fb87b26d37ba0d7240868b0d4">
+      </attributeMappings>
+      <attributeMappings xmi:id="06b4aaa867655e4c45a05adfc9770bb2" source="5f4381b798d62d3a4586ef0121411ef1" target="b8de762b5db996e51c4dbb12e041055a">
+      </attributeMappings>
+      <attributeMappings xmi:id="999fdcf07a52479de6711ce2bc44a1ba" source="3c313471d50f747d145f45698396fd35" target="5f4c5762f47ca6179e20159bf40bba00">
+      </attributeMappings>
+      <attributeMappings xmi:id="89027f9dcb5a2ec366c4d1b6d6ad0037" source="e8aa409bf742cc91acab8715f8541cb6" target="a3b7ce07b9e10f41d64dd3ac4dfe13d6">
+      </attributeMappings>
+      <attributeMappings xmi:id="a94613088b29c6763754d636fe9ee182" source="45f935713e69d6d592e62b3b267af0cb" target="eebd52f4b36515649d3158945c09f207">
+      </attributeMappings>
+      <attributeMappings xmi:id="2de8b6457225380ef2790c3080bd9310" source="3c7c52f10afdfcb21b25a7c00bc697b8" target="2269220498adfa7e960718adff9c531d">
+      </attributeMappings>
+      <attributeMappings xmi:id="80ff2a0664c9ac046ca553a6a62d7197" source="8d92532d0d8fe6691b20ddb1931c5f2a" target="33a67140da7456e3e894438985693a0b">
+      </attributeMappings>
+      <attributeMappings xmi:id="12aea49ec247c8c6c6bcb0ae1a96bfc8" source="517dbb546cf79cf445e55def212a186f" target="9be9005df4569df447aae2f420af5a2c">
+      </attributeMappings>
+      <attributeMappings xmi:id="e158de85213fdc04620511a551172f5d" source="7886a3f5a28efd288fa65bd9fe62985c" target="cca3357c51cc21c5f0b939fae1ef1c06">
+      </attributeMappings>
+      <attributeMappings xmi:id="62f278637d114fb3127332039665de25" source="858c7caa7080be53e63622edb8034169" target="09667dd0dd2875c0a8bbef6ff23afc35">
+      </attributeMappings>
+      <attributeMappings xmi:id="c56742d54e7cc78516c3caf996d7eb9d" source="a355ba535c64be14a0d5141e02b39fbe" target="6e104f6c5a8794a77f6c7b057fdecdea">
+      </attributeMappings>
+      <attributeMappings xmi:id="377c053c71bddb648320b8eb62533bb6" source="f8c9b33cd93f429dcc1781c989d86025" target="6892ca91297198c38e0ddd0fc1551bce">
+      </attributeMappings>
+      <attributeMappings xmi:id="e2a205a9c228bef0663f935b1e5d102c" source="e0f2058951ccc24ae25565ea30f80277" target="d16ad6fec7ab05e2d7e19f6d3f5bcd3f">
+      </attributeMappings>
+      <attributeMappings xmi:id="eeb58648bc78d2ecf5a58515cb679763" source="70846cfcbad3d8f219616cad7600e42d" target="aa247e6b9e95cace196d784c44ccf81c">
+      </attributeMappings>
+      <attributeMappings xmi:id="7027eb5feef54090f87467837f3be60e" source="6e05f114cfd53d300ce9fff7df411458" target="f4890e41a34bd600e92193d903498835">
+      </attributeMappings>
+      <attributeMappings xmi:id="e184caf829a04c706c2674b6bcf609dd" source="bdcd002e88c445b1423912009ed3716b" target="c021ecc65f58fc796b52ad0c74c7bf3a">
+      </attributeMappings>
+      <attributeMappings xmi:id="3e8d75ea298f94ba3ef6cc5c02776515" source="6392bbc0ecbb59494473473c1acc3998" target="4234aa72f0b0d6502e975673a46e5ceb">
+      </attributeMappings>
+      <attributeMappings xmi:id="2f3ea3eae0b64ddd2e97d7eeb18c8196" source="4eb9562b34af304dc108097c2c61f84a" target="ebdb48ac9a4ac700b37cb04dd89638e8">
+      </attributeMappings>
+      <attributeMappings xmi:id="b67957c2d03b33b2deb3793dbf3fd7c7" source="6a5c63ab50eaa6bb0878cf12d0327c6a" target="e9f3fafe1893b98c72566fd3244e4118">
+      </attributeMappings>
+      <attributeMappings xmi:id="7586878fc1a66443bfa68a3c13ee1e98" source="0843aecb8b66c7e734e5eb8937a44073" target="0a6c2a5dedac4960926074c104cc80ac">
+      </attributeMappings>
+      <attributeMappings xmi:id="ea7093af28324030a2ea76f4703fb400" source="85bd869aabc143464359a5c6b9fadbbb" target="9397df086a20c4a09119f92d5541d08a">
+      </attributeMappings>
+      <attributeMappings xmi:id="6c4574dbe606ad9b6d501eda6c3b9c57" source="7a6927b95cdaefae365be63a2abf9cfd" target="60ad17924fa143e57e611632c71d7167">
+      </attributeMappings>
+    </tableMappings>
+    <tableMappings xmi:id="b5470dee5b2da021c48b2f09e393277e" source="22039884cd13c85429fd0b0759cd0e29" target="6c846be9c55bc4df4ec2aca4987855fb">
+      <attributeMappings xmi:id="6e515ada8a6412db6b6498e249b00001" source="52927900ed971e308633218f68f3b464" target="6622edcc4a1ae6d88135f7252590a4b4">
+      </attributeMappings>
+      <attributeMappings xmi:id="74354250d771ce358cd42a20c3a0b29d" source="662582fbafc831692aa13a41d1de1de3" target="c24d5b1d0d2619b162a6bff2e2b025fe">
+      </attributeMappings>
+    </tableMappings>
+    <joinDefinitions left="d5a4406a26cdc2125f037ba09f081eb6" right="22039884cd13c85429fd0b0759cd0e29" type="CROSS" condition="">
+    </joinDefinitions>
+  </nodes>
+  <nodes xmi:id="9556d43bab0b270ec1bf7717c5959b32" xsi:type="flowgraph:FilterNode" name="DataTarget_Adjust_Msg">
+    <annotations key="sap.afm.layout" xmi:id="f5f68c037fbc4732a910120b75529ccb">
+      <annotations xmi:id="8beeeff68aac0dd4ccbf090b9b07e76c" key="x" value="1357.0407643318176">
+      </annotations>
+      <annotations xmi:id="b0f957420f0bb5c54224394b2a903483" key="y" value="592.9999999999999">
+      </annotations>
+      <annotations xmi:id="12412e22ef4158607b52cf8c5353366c" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="77531cd55c9655eba646428c7d3af3e2" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="d8091c1df2697080919269888ef8ccf4" name="DataTarget_Adjust_Msg_IN">
+      <attributes xmi:id="29707fb504e3259c5dbc46bbb8d0279b" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="90b145f67afca9996fab4ddd4c230bce" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="99b23d040d571254dfdc06b4c7b444a3" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="985c6c5877f3235c131a20bf7e23706f" name="DataTarget_Adjust_Msg_OUT">
+      <attributes xmi:id="0220629e1713d579eb7050f6a62df236" name="technicalAttributes.msgNumber" type="INTEGER" nullable="false" expression="1">
+      </attributes>
+      <attributes xmi:id="dc63e905e251c7fe1313ab52112557ce" name="technicalAttributes.msgText" type="NCLOB" nullable="false" expression="&#x27;Loading via flowgraph: FG_BT_LOAD_CRMCPARTNERPDP&#x27;">
+      </attributes>
+      <attributes xmi:id="43d18969c4ca3f8b30c096cb7a8f46cc" name="technicalAttributes.msgType" type="NVARCHAR" nullable="false" expression="&#x27;S&#x27;" length="1">
+      </attributes>
+      <attributes xmi:id="cd7aba5a156c211dccfd44e685906e72" name="technicalAttributes.timestamp" type="TIMESTAMP" nullable="false" expression="CURRENT_UTCTIMESTAMP" length="1">
+      </attributes>
+      <attributes xmi:id="e5e7a043f172a922119fee20f02c0127" name="technicalKey.posit" type="INTEGER" nullable="false" expression="1">
+      </attributes>
+      <attributes xmi:id="a15621c0991db3583a8ad8c0a4ad0ce9" name="technicalKey.operationId" type="INTEGER" nullable="false" expression="&quot;technicalKey.id&quot;">
+        <annotations xmi:id="18467e4b5e8de3b76c76d47134c0f695" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="11c393818224f1f79bca856ba4e027db" xsi:type="flowgraph:FilterNode" name="DataTarget_opHistProj">
+    <annotations key="sap.afm.layout" xmi:id="1b7b589ea78e70057f1892ecda1c22fe">
+      <annotations xmi:id="c4e6eac7cc3d1440097a34eb0fdba69e" key="x" value="1357.0407643318176">
+      </annotations>
+      <annotations xmi:id="484dab2c036f59974e126eb38a2fab62" key="y" value="418">
+      </annotations>
+      <annotations xmi:id="40017695c62bab133ff76aad0b6970b4" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="5e210fe83177b89d2e5963942464fae0" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="256a6a6fbd708797ac2928a6258b24d6" name="DataTarget_opHistProj_IN">
+      <attributes xmi:id="9857a0780af367eb939fab806b511178" name="technicalKey.id" type="INTEGER" nullable="false">
+        <annotations xmi:id="637a0a7af0a1f4cee03940b36e6770e9" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="b1cb531b6ceb2662d9747d51b90c958a" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="8575de8372d1ad6ed47aa76683ad46df" name="DataTarget_opHistProj_OUT">
+      <attributes xmi:id="bf28117c2559e01ad8c2919ebde71d44" name="technicalKey.operationId" type="INTEGER" nullable="false" expression="&quot;technicalKey.id&quot;">
+        <annotations xmi:id="ed711c9faf8c56db4651e6fb48ed1755" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="71084b9414fe5aedd221a31ba0a99b70" name="technicalAttributes.operation" type="NVARCHAR" nullable="false" expression="&#x27;LOAD&#x27;" length="20">
+      </attributes>
+      <attributes xmi:id="bfc8de6c93472fb8ec3ddf96175d52c8" name="technicalAttributes.status" type="NVARCHAR" nullable="false" expression="&#x27;FINISHED&#x27;" length="10">
+      </attributes>
+      <attributes xmi:id="d94b8092cdedfcf1fd260452f8bb4df4" name="technicalAttributes.startTimestamp" type="TIMESTAMP" nullable="false" expression="CURRENT_UTCTIMESTAMP">
+      </attributes>
+      <attributes xmi:id="75c334d3bd8d53ae143b5fbda5ef8f5c" name="technicalAttributes.lastTimestamp" type="TIMESTAMP" nullable="false" expression="CURRENT_UTCTIMESTAMP">
+      </attributes>
+      <attributes xmi:id="493ee900ea86c83e904a3ccbb53f8a8b" name="technicalAttributes.userName" type="NVARCHAR" nullable="false" expression="CURRENT_USER" length="256">
+      </attributes>
+      <attributes xmi:id="bc7bd20df397cfca0567e53a52f59afe" name="technicalAttributes.checksumAT" type="NVARCHAR" nullable="false" expression="&#x27;&#x27;" length="256">
+      </attributes>
+      <attributes xmi:id="07909ab6b04e56c9408521fbcd983b67" name="technicalAttributes.checksumCL" type="NVARCHAR" nullable="false" expression="&#x27;&#x27;" length="256">
+      </attributes>
+      <attributes xmi:id="15d48b0f8da60dcdc9b261b13a0177a2" name="technicalAttributes.operationDetails" type="NCLOB" nullable="false" expression="&#x27;&#x27;">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="fb88865ef0851949c5b2be681f177cfa" xsi:type="flowgraph:FilterNode" name="DataTarget_affReqProj">
+    <annotations key="sap.afm.layout" xmi:id="c3cdb4bcbe056ad937599a7bdc962410">
+      <annotations xmi:id="d6491e90779fa94f151cbcea011a1c6b" key="x" value="1085.281244277954">
+      </annotations>
+      <annotations xmi:id="0500420e36e6a8ddd3d761cb0c3bcfcd" key="y" value="125.9474007223348">
+      </annotations>
+      <annotations xmi:id="4e323fad04c81922eb989bbd4ab1b0f1" key="width" value="100">
+      </annotations>
+      <annotations xmi:id="58d21f50aadab1737abbb43b00b599dc" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="5fbc4937a35eda227b567808c40b634d" name="DataTarget_affReqProj_IN">
+      <attributes xmi:id="01b62731219d14f91c631f5291f6b4ae" name="operationId" type="INTEGER" nullable="false">
+        <annotations xmi:id="2ed36ec511f83315dbfd711601f26355" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="470a0f2d2f4cfc475f316d111ed5dc75" name="loadId" type="INTEGER" nullable="false">
+        <annotations xmi:id="e27785c3df7d7b3200ca0784ca031a5e" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="2994cf2e6b39dc292cea35ce6bf128c8" name="DataTarget_affReqProj_OUT">
+      <attributes xmi:id="ceb50d9432be1af986b217fbf7957f59" name="technicalKey.operationId" type="INTEGER" nullable="false" expression="&quot;operationId&quot;">
+        <annotations xmi:id="df847b5614a0bf9ae1d38d5af73a70ab" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="bff5edb2112dbcff563fe9b34b43ce59" name="technicalKey.requestId" type="INTEGER" nullable="false" expression="&quot;loadId&quot;">
+        <annotations xmi:id="7ada42f8ab5198ee38c7c715751440b5" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </outputs>
+  </nodes>
+</flowgraph:ContainerNode>

@@ -1,3 +1,0 @@
-SEQUENCE "osr.edw.source.md.crm::SEQ_CRMC_ACTOBJ"
-RESET BY SELECT IFNULL(MAX(Z_RUN_SEQ_ID), 0) +1 
-FROM "osr.edw.source.md.crm::CDS_CRM.TAB.CRMC_ACTOBJ"

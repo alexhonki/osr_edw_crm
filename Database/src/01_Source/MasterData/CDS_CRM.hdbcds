@@ -6,7 +6,7 @@ context CDS_CRM {
     context TAB {
 
         /*@@layout{"layoutInfo":{}}*/
-        entity CRMC_ACTOBJ {
+        entity CRMCACTOBJ {
             key CLIENT        : String(3);
             key OBJECTIVE     : String(3);
                 Z_CHANGE_TYPE : String(1);
@@ -17,7 +17,7 @@ context CDS_CRM {
         };
 
         /*@@layout{"layoutInfo":{}}*/
-        entity CRMC_ACTCATEGOR {
+        entity CRMCACTCATEGOR {
             key CLIENT        : String(3);
             key CATEGORY      : String(3);
                 CLASS         : String(1);
@@ -30,7 +30,7 @@ context CDS_CRM {
         };
 
         /*@@layout{"layoutInfo":{}}*/
-        entity CRMC_PROCTYPE {
+        entity CRMCPROCTYPE {
             key CLIENT           : String(3);
             key PROCESS_TYPE     : String(4);
                 PROCESS_BLOCKED  : String(1);
@@ -94,12 +94,12 @@ context CDS_CRM {
                 Z_CHANGE_TYPE    : String(1);
                 Z_SOURCE_SYS     : String(5);
                 Z_RUN_ROW_NO     : Integer;
-            key Z_RUN_SEQ_ID     : Integer;
                 Z_CHANGE_TIME    : UTCTimestamp;
+            key Z_RUN_SEQ_ID     : Integer;
         };
 
         /*@@layout{"layoutInfo":{}}*/
-        entity CRMC_PARTNERPDP {
+        entity CRMCPARTNERPDP {
             key CLIENT           : String(3);
             key DETERM_PROC      : String(8);
             key PARTNER_FCT      : String(8);
@@ -125,7 +125,7 @@ context CDS_CRM {
                 Z_CHANGE_TIME    : UTCTimestamp;
                 Z_SOURCE_SYS     : String(5);
                 Z_RUN_ROW_NO     : Integer;
-                Z_RUN_SEQ_ID     : Integer;
+            key Z_RUN_SEQ_ID     : Integer;
         };
     };
 };
