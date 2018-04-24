@@ -13,13 +13,13 @@
     },
     "2": {
       "inline": {
-        "type": "executeFlowGraph",
+        "type": "executeProcedure",
         "taskGroup": "hanaNative",
         "description": "Load CRMCPARTNERPDP",
         "parameterValues": [
           {
-            "id": "flowGraphName",
-            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCPARTNERPDP"
+            "id": "procName",
+            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCPARTNERPDP_SP"
           }
         ]
       },

@@ -1,5 +1,5 @@
 {
-  "description": "Load real time Source CRMC_PROCTYPE",
+  "description": "Load real time Source CRMCPROCTYPE",
   "responsible": {
     "email": "hanaalerts@gmail.com"
   },
@@ -13,13 +13,13 @@
     },
     "2": {
       "inline": {
-        "type": "executeFlowGraph",
+        "type": "executeProcedure",
         "taskGroup": "hanaNative",
         "description": "Load CRMCPROCTYPE",
         "parameterValues": [
           {
-            "id": "flowGraphName",
-            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCPROCTYPE"
+            "id": "procName",
+            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCPROCTYPE_SP"
           }
         ]
       },

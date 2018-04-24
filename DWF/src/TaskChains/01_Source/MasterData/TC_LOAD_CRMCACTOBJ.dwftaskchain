@@ -13,13 +13,13 @@
     },
     "2": {
       "inline": {
-        "type": "executeFlowGraph",
+        "type": "executeProcedure",
         "taskGroup": "hanaNative",
         "description": "Load CRMCACTOBJ",
         "parameterValues": [
           {
-            "id": "flowGraphName",
-            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCACTOBJ"
+            "id": "procName",
+            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCACTOBJ_SP"
           }
         ]
       },

@@ -13,13 +13,13 @@
     },
     "2": {
       "inline": {
-        "type": "executeFlowGraph",
+        "type": "executeProcedure",
         "taskGroup": "hanaNative",
         "description": "Load CRMCACTCATEGOR",
         "parameterValues": [
           {
-            "id": "flowGraphName",
-            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCACTCATEGOR"
+            "id": "procName",
+            "value": "osr.edw.source.md.crm::FG_RT_LOAD_CRMCACTCATEGOR_SP"
           }
         ]
       },
