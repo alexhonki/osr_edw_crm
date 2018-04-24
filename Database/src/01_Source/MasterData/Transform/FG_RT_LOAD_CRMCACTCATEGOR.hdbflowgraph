@@ -64,12 +64,10 @@
     </annotations>
     <inputs xmi:id="7a8426f0f6190811666c803d3bda1185" name="P_DS_IN">
       <attributes xmi:id="5df61aefe601b507171704779ccd8b79" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="96291e78ad98f5272168fa3ae15dd16b" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="96291e78ad98f5272168fa3ae15dd16b" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="61abe9c486669d41e83418700ec18231" name="CATEGORY" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="acb87e944c8497b1b2a8dd38f1320c2e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="acb87e944c8497b1b2a8dd38f1320c2e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="84775c5d1df976418d4006ad2f03a1d8" name="CLASS" type="NVARCHAR" nullable="false" length="1">
       </attributes>
@@ -78,12 +76,10 @@
     </inputs>
     <outputs xmi:id="4219481f2e03ed44c9f256ef6af1ec69" name="P_DS_OUT">
       <attributes xmi:id="69e439e147094d4088832e9ab6b52c51" name="CLIENT" type="NVARCHAR" nullable="true" expression="&quot;CLIENT&quot;" length="3">
-        <annotations xmi:id="42ce59f68a896cdb4aeb20f30da600b8" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="42ce59f68a896cdb4aeb20f30da600b8" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="7e2100c0d6fba0f5f07e7b7d79572d8a" name="CATEGORY" type="NVARCHAR" nullable="true" expression="&quot;CATEGORY&quot;" length="3">
-        <annotations xmi:id="aeffe9bd05c8742bc88785d14f2b2b46" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="aeffe9bd05c8742bc88785d14f2b2b46" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="ed1ac62e3860e04235d9d06431e9614e" name="CLASS" type="NVARCHAR" nullable="true" expression="&quot;CLASS&quot;" length="1">
       </attributes>
@@ -98,8 +94,7 @@
       <attributes xmi:id="1d4d4f676ebc8ae253ce326ee9ccbdd3" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" expression="ROW_NUMBER() over ()">
       </attributes>
       <attributes xmi:id="84d6ffc977967770adc82ba2a74dd450" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="true" expression="0">
-        <annotations xmi:id="f7c620f5a9a34568241ca260d22b6922" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="f7c620f5a9a34568241ca260d22b6922" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </outputs>
   </nodes>
@@ -176,10 +171,12 @@
     </annotations>
     <inputs xmi:id="9ce6ef584b4717523632469df91ada5c" name="DT_TAB">
       <attributes xmi:id="cdef9419be8a07dfe33269bef3f0da87" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="6c3c2dcb1ebf86d788ff8da8ef8c2105" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="6c3c2dcb1ebf86d788ff8da8ef8c2105" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="afada97959ed18588218c84e2a591a0c" name="CATEGORY" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="a4c4d279f0cdfcba5dcef1a52d709dae" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="a4c4d279f0cdfcba5dcef1a52d709dae" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="1cacfc7e8af86e1e1a8c89a2c2bb71f3" name="CLASS" type="NVARCHAR" nullable="true" length="1">
       </attributes>
