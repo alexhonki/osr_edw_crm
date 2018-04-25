@@ -1,8 +1,6 @@
 namespace osr.edw.source.md.crm;
 
 context CDS_CRM {
-
-    /*@@layout{"layoutInfo":{"x":417,"y":218.5}}*/
     context TAB {
 
         /*@@layout{"layoutInfo":{}}*/
@@ -126,6 +124,19 @@ context CDS_CRM {
                 Z_SOURCE_SYS     : String(5);
                 Z_RUN_ROW_NO     : Integer;
             key Z_RUN_SEQ_ID     : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity CRMCACTCATT {
+            key CLIENT        : String(3);
+            key LANGU         : String(1);
+            key CATEGORY      : String(3);
+                DESCRIPTION   : String(20);
+                Z_CHANGE_TYPE : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+                Z_RUN_ROW_NO  : Integer;
+            key Z_RUN_SEQ_ID  : Integer;
         };
     };
 };
