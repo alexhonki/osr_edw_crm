@@ -1157,7 +1157,7 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
-        context CRMDPARTNER {
+        context CRMD_PARTNER {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
                     @DataStore.aggregation : #NOP
@@ -1440,4 +1440,4 @@ context CDS_CRM {
             };
         };
     };
-}; 
+};
