@@ -1251,7 +1251,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO     : Integer      not null;
 
                     @DataStore.aggregation : #NOP
-                key Z_RUN_SEQ_ID     : Integer      not null;
+                    Z_RUN_SEQ_ID     : Integer      not null;
             }
             technical configuration {
                 group name DSO_1 group type "sap.dwf.dso" group subtype ACTIVE;
@@ -1440,4 +1440,4 @@ context CDS_CRM {
             };
         };
     };
-};
+}; 
