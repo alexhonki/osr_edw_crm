@@ -1200,7 +1200,7 @@ context CDS_CRM {
                     MAINPARTNER      : String(1)    not null;
 
                     @DataStore.aggregation : #NOP
-                    RELATION_PARTNER : Binary(16)   not null;
+                    RELATION_PARTNER : String(200)  not null;
 
                     @DataStore.aggregation : #NOP
                     ADDR_NR          : String(10)   not null;
@@ -1302,7 +1302,7 @@ context CDS_CRM {
                     MAINPARTNER         : String(1)              not null;
 
                     @DataStore.aggregation : #MOV
-                    RELATION_PARTNER    : Binary(16)             not null;
+                    RELATION_PARTNER    : String(200)            not null;
 
                     @DataStore.aggregation : #MOV
                     ADDR_NR             : String(10)             not null;
@@ -1376,7 +1376,7 @@ context CDS_CRM {
                     DISPLAY_TYPE        : String(2)           not null;
                     NO_TYPE             : String(2)           not null;
                     MAINPARTNER         : String(1)           not null;
-                    RELATION_PARTNER    : Binary(16)          not null;
+                    RELATION_PARTNER    : String(200)         not null;
                     ADDR_NR             : String(10)          not null;
                     ADDR_NP             : String(10)          not null;
                     ADDR_TYPE           : String(1)           not null;
