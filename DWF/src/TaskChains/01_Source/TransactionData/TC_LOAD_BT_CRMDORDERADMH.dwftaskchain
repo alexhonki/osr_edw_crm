@@ -1,0 +1,34 @@
+{
+  "description": "Load Batch Source CRMDORDERADMH",
+  "responsible": {
+    "email": "dwfalerts@gmail.com"
+  },
+  "taskTimeout": 432000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeProcedure",
+        "taskGroup": "hanaNative",
+        "description": "Load CRMDORDERADMH",
+        "parameterValues": [
+          {
+            "id": "procName",
+            "value": "osr.edw.source.td.crm::FG_BT_LOAD_CRMDORDERADMH_SP"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}

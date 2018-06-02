@@ -1,0 +1,34 @@
+{
+  "description": "Load Batch Source CRMDPARTNER",
+  "responsible": {
+    "email": "dwfalerts@gmail.com"
+  },
+  "taskTimeout": 4320000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeProcedure",
+        "taskGroup": "hanaNative",
+        "description": "Load CRMDPARTNER",
+        "parameterValues": [
+          {
+            "id": "procName",
+            "value": "osr.edw.source.td.crm::FG_BT_LOAD_CRMDPARTNER_SP"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}
