@@ -1,10 +1,10 @@
 {
-  "description": "1.2.2.1 Load Batch Subs Source CRM LAND TD",
+  "description": "1.2.1.1 Load Realtime Subs Source CRM LAND MD",
   "responsible": {
     "email": "dwfalerts@gmail.com"
   },
   "maxParallelExecution": 3,
-  "taskTimeout": 432000,
+  "taskTimeout": 4320000,
   "taskList": {
     "1": {
       "inline": {
@@ -16,11 +16,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMH",
+        "description": "TC LOAD CRMCACTCATEGOR",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.source.td.rms#TC_LOAD_BT_CRMDORDERADMH"
+            "value": "osr.edw.source.md.rms#TC_LOAD_CRMCACTCATEGOR"
           }
         ]
       },
@@ -35,11 +35,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMI",
+        "description": "TC LOAD CRMCACTOBJ",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.source.td.rms#TC_LOAD_BT_CRMDORDERADMI"
+            "value": "osr.edw.source.md.rms#TC_LOAD_CRMCACTOBJ"
           }
         ]
       },
@@ -54,11 +54,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDLINK",
+        "description": "TC LOAD CRMCPROCTYPE",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.source.td.rms#TC_LOAD_BT_CRMDLINK"
+            "value": "osr.edw.source.md.rms#TC_LOAD_CRMCPROCTYPE"
           }
         ]
       },
@@ -73,11 +73,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDPARTNER",
+        "description": "TC LOAD CRMCPARTNERPDP",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.source.td.rms#TC_LOAD_BT_CRMDPARTNER"
+            "value": "osr.edw.source.md.rms#TC_LOAD_CRMCPARTNERPDP"
           }
         ]
       },
@@ -92,11 +92,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDACTIVITYH",
+        "description": "TC LOAD CRMCACTCATT",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.source.td.rms#TC_LOAD_BT_CRMDACTIVITYH"
+            "value": "osr.edw.source.md.rms#TC_LOAD_CRMCACTCATT"
           }
         ]
       },
