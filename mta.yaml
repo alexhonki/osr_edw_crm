@@ -51,6 +51,8 @@ modules:
     - name: Services_api
       properties:
          url: ${default-url}
+         build-parameters:
+           timeout: 10m
 
 resources:
 # - name: OSR_EDW_SOURCE_CRM-uaa
