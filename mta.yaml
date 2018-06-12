@@ -22,6 +22,8 @@ modules:
 #      - name: OSR_EDW_SOURCE_CRM-uaa
       - name: OSR_EDW_SOURCE_CRM-container
       - name: OSR_EDW_SOURCE_CRM-dws
+   build-parameters:
+      timeout: 15m
    properties:
      API_END_POINT: "${xs-api-url}"
 #     SAP_JWT_TRUST_ACL: "[{\"clientid\":\"*\",\"identityzone\":\"*\"}]"
@@ -41,18 +43,17 @@ modules:
         TARGET_CONTAINER: '~{hdi-container-name}'    
     - name: edw-ext-access-grantor    
 
-
  - name: OSR_EDW_SOURCE_CRM-Services
    type: nodejs
    path: Services
    requires:
       - name: OSR_EDW_SOURCE_CRM-container
+   build-parameters:
+      timeout: 15m
    provides:
     - name: Services_api
       properties:
          url: ${default-url}
-         build-parameters:
-           timeout: 15m
 
 resources:
 # - name: OSR_EDW_SOURCE_CRM-uaa
