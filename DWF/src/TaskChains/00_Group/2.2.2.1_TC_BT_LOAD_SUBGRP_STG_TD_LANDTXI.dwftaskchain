@@ -35,11 +35,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMI",
+        "description": "TC LOAD CRMDACTIVITYH",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDORDERADMI"
+            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDACTIVITYH"
           }
         ]
       },
@@ -54,11 +54,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDACTIVITYH",
+        "description": "TC LOAD CRMD_LINK",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDACTIVITYH"
+            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDLINK"
           }
         ]
       },
@@ -73,25 +73,6 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMD_LINK",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMDLINK"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "4",
-          "status": "OK"
-        }
-      ]
-    },
-    "6": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
         "description": "TC LOAD CRMD_PARTNER",
         "parameterValues": [
           {
@@ -102,7 +83,7 @@
       },
       "preconditions": [
         {
-          "from": "5",
+          "from": "4",
           "status": "OK"
         }
       ]

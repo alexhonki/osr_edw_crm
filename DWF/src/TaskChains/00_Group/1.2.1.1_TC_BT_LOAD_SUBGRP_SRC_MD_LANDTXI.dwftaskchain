@@ -16,82 +16,6 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMCACTCATEGOR",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.source.md.rms#TC_LOAD_BT_CRMCACTCATEGOR"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "1",
-          "status": "NEUTRAL"
-        }
-      ]
-    },
-    "3": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMCACTOBJ",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.source.md.rms#TC_LOAD_BT_CRMCACTOBJ"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "2",
-          "status": "OK"
-        }
-      ]
-    },
-    "4": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMCPROCTYPE",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.source.md.rms#TC_LOAD_BT_CRMCPROCTYPE"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "3",
-          "status": "OK"
-        }
-      ]
-    },
-    "5": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMCPARTNERPDP",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.source.md.rms#TC_LOAD_BT_CRMCPARTNERPDP"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "4",
-          "status": "OK"
-        }
-      ]
-    },
-    "6": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
         "description": "TC LOAD CRMCACTCATT",
         "parameterValues": [
           {
@@ -102,8 +26,8 @@
       },
       "preconditions": [
         {
-          "from": "5",
-          "status": "OK"
+          "from": "1",
+          "status": "NEUTRAL"
         }
       ]
     }
