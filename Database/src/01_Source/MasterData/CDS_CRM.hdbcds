@@ -138,5 +138,53 @@ context CDS_CRM {
                 Z_RUN_ROW_NO  : Integer;
             key Z_RUN_SEQ_ID  : Integer;
         };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity SMCG_TCASE_ATTR {
+            key MANDT          : String(3);
+            key CASE_GUID      : String(32);
+                CASE_TYPE      : String(4);
+                EXT_KEY        : String(12);
+                EXT_REF        : String(30);
+                CREATED_BY     : String(12);
+                CREATE_TIME    : Decimal(15, 0);
+                CHANGED_BY     : String(12);
+                CHANGE_TIME    : Decimal(15, 0);
+                CLOSED_BY      : String(12);
+                CLOSING_TIME   : Decimal(15, 0);
+                PLAN_END_DATE  : String(8);
+                PROCESSOR      : String(12);
+                RESPONSIBLE    : String(12);
+                CASE_TITLE     : String(80);
+                ESCAL_REASON   : String(2);
+                CATEGORY       : String(4);
+                PRIORITY       : String(1);
+                SECURE_LEVEL   : String(1);
+                PROFILE_ID     : String(8);
+                STAT_ORDERNO   : String(2);
+                STAT_PARA      : String(3);
+                STAT_OBJNR     : String(32);
+                STAT_LINE      : String(40);
+                STAT_USER_LINE : String(40);
+                REASON_CODE    : String(4);
+                Z_CHANGE_TYPE  : String(1);
+                Z_CHANGE_TIME  : UTCTimestamp;
+                Z_SOURCE_SYS   : String(5);
+                Z_RUN_ROW_NO   : Integer;
+            key Z_RUN_SEQ_ID   : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{"x":-587,"y":-69.5}}*/
+        entity CMG_OUTC {
+            key CLIENT            : String(3);
+            key CLOSE_REASON_KEY  : String(10);
+                CLOSE_REASON_TEXT : String(40);
+                CASE_TYPE         : String(4);
+                Z_CHANGE_TYPE     : String(1);
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);
+                Z_RUN_ROW_NO      : Integer;
+                Z_RUN_SEQ_ID      : Integer;
+        };
     };
 };
