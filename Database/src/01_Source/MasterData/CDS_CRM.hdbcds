@@ -140,7 +140,7 @@ context CDS_CRM {
         };
 
         /*@@layout{"layoutInfo":{}}*/
-        entity SMCG_TCASE_ATTR {
+        entity SCMGTCASE_ATTR {
             key MANDT          : String(3);
             key CASE_GUID      : String(32);
                 CASE_TYPE      : String(4);
@@ -174,17 +174,12 @@ context CDS_CRM {
             key Z_RUN_SEQ_ID   : Integer;
         };
 
-        /*@@layout{"layoutInfo":{"x":-587,"y":-69.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity CMG_OUTC {
             key CLIENT            : String(3);
             key CLOSE_REASON_KEY  : String(10);
                 CLOSE_REASON_TEXT : String(40);
                 CASE_TYPE         : String(4);
-                Z_CHANGE_TYPE     : String(1);
-                Z_CHANGE_TIME     : UTCTimestamp;
-                Z_SOURCE_SYS      : String(5);
-                Z_RUN_ROW_NO      : Integer;
-                Z_RUN_SEQ_ID      : Integer;
         };
     };
 };
