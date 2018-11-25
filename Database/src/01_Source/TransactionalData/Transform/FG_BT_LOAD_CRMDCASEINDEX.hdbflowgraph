@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="d26941545968b578da77a73a4eb5678d" name="FG_BT_LOAD_CRMDCASEINDEX" runtimeBehavior="BATCH_TASK">
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:version="2.0" xmi:id="d26941545968b578da77a73a4eb5678d" name="FG_BT_LOAD_CRMDCASEINDEX" runtimeBehavior="BATCH_TASK">
   <annotations key="sap.afm.layout" xmi:id="397c631aa9d8c8cfc643b4fd663b727d">
     <annotations xmi:id="207dcf8b3e764e7b99acd75d3ae0678e" key="x" value="10">
     </annotations>
@@ -11,8 +11,7 @@
     </annotations>
   </annotations>
   <annotations xmi:id="718ab8bb0498139baeca720bd086faf8" key="sap.afm.palette">
-    <annotations xmi:id="3eed1cd77abee7497afb77301bcf1232" key="additions" value="">
-    </annotations>
+    <annotations xmi:id="3eed1cd77abee7497afb77301bcf1232" key="additions" value=""/>
   </annotations>
   <annotations xmi:id="745c6cd6d7f0b86009ac68f20ba0b813" key="sap.afm.nodeType" value="ContainerNode">
   </annotations>
@@ -149,12 +148,10 @@
     </annotations>
     <inputs xmi:id="2253af3eb6ff62d9296414691d5f4d8a" name="P_DS_IN">
       <attributes xmi:id="c778ed82f62849777c0a9cafde243089" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="b6d808d4baa63ae3d85ecfbb677d0069" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="b6d808d4baa63ae3d85ecfbb677d0069" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="780cce096c20ceb2edb73503817e1dcf" name="GUID" type="VARBINARY" nullable="false" length="16">
-        <annotations xmi:id="f70e9134f621f5a164519be9c2969e5e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="f70e9134f621f5a164519be9c2969e5e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="cdefa3c119797401e236d133764ec9ac" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
       </attributes>
@@ -185,12 +182,10 @@
     </inputs>
     <outputs xmi:id="0f84f64671427bf8199fe80256e05e06" name="P_DS_OUT">
       <attributes xmi:id="29e08de1c7f818a1705dbb4f1b3e7901" name="CLIENT" type="NVARCHAR" nullable="false" expression="&quot;CLIENT&quot;" length="3">
-        <annotations xmi:id="03d6d64ef3d77074e32e6ca373ff2ab7" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="03d6d64ef3d77074e32e6ca373ff2ab7" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="d7ffa243e495ac6fd4367a6fb427606e" name="GUID" type="VARBINARY" nullable="false" expression="&quot;GUID&quot;" length="16">
-        <annotations xmi:id="91e7441b6575d4ecf52dc04a6d262f72" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="91e7441b6575d4ecf52dc04a6d262f72" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="4e3ae718de974aa5dfedaff04a46ca47" name="CASE_GUID" type="NVARCHAR" nullable="false" expression="&quot;CASE_GUID&quot;" length="32">
       </attributes>
@@ -247,8 +242,7 @@
         </annotations>
       </attributes>
       <attributes xmi:id="12c332053a8cebfcac17d127e4be2aad" name="GUID" type="VARBINARY" nullable="false" length="16">
-        <annotations xmi:id="2758d987e1b3984dcae53a9328701a3e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="2758d987e1b3984dcae53a9328701a3e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="853efef1fd9ebddb1c994b784eaaca2e" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
       </attributes>
@@ -289,12 +283,10 @@
     </inputs>
     <outputs xmi:id="c80847079034ad1e215f8c7238f88c59" name="TC_OUT" kind="TABLE">
       <attributes xmi:id="2205dce989bf56f09f890b871ba4cb5e" name="CLIENT" type="NVARCHAR" nullable="false" mappedName="CLIENT" length="3">
-        <annotations xmi:id="288c3e468d5aa07711fa29641d86098e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="288c3e468d5aa07711fa29641d86098e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="2de3e0c5a47068bb8bf005afd372683f" name="GUID" type="NVARCHAR" nullable="false" mappedName="GUID" length="200">
-        <annotations xmi:id="4901e7cf1b41e2bcfa17d9987251766e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="4901e7cf1b41e2bcfa17d9987251766e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="9495fd8d77cab376641ca4042c9a2bc2" name="CASE_GUID" type="NVARCHAR" nullable="true" mappedName="CASE_GUID" length="32">
       </attributes>
@@ -334,7 +326,7 @@
       </attributes>
     </outputs>
   </nodes>
-  <nodes xmi:id="61b7c3a14586e84c638e0c8c634498ac" xsi:type="flowgraph:DataNode" name="DT_TAB" truncateTable="false" catalogObjectName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CASEINDEX" type="DATABASE_TABLE" dataLayout="COLUMN">
+  <nodes xmi:id="61b7c3a14586e84c638e0c8c634498ac" xsi:type="flowgraph:DataNode" name="DT_TAB" truncateTable="true" catalogObjectName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CASEINDEX" type="DATABASE_TABLE" dataLayout="COLUMN">
     <annotations key="sap.afm.layout" xmi:id="f56e22f0ac4bc8d5ac278c7b338eb4ad">
       <annotations xmi:id="ca388990e3e203c16e5c212c44e1a967" key="x" value="555">
       </annotations>
@@ -475,12 +467,10 @@
     </annotations>
     <outputs xmi:id="6e98cd505fa6b838ac1c8cd800fdba40" name="DS_VT">
       <attributes xmi:id="a66345d71761dde785696cd880cd2bca" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="215bff53e464aa8b0a561fcdbd845b92" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="215bff53e464aa8b0a561fcdbd845b92" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="3f8b4d08762e3445fddbc66e7038b6c2" name="GUID" type="VARBINARY" nullable="false" length="16">
-        <annotations xmi:id="5c3e709b1ea02f55d98db64e8a73b9fc" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="5c3e709b1ea02f55d98db64e8a73b9fc" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="4e7319bf2a981479ac7c90ff568ea482" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
       </attributes>
