@@ -30,6 +30,25 @@
           "status": "NEUTRAL"
         }
       ]
+    },
+    "3": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCMGCASEATTR",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.staging.md.rms#TC_LOAD_SCMGTCASEATTR"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
     }
   }
 }
