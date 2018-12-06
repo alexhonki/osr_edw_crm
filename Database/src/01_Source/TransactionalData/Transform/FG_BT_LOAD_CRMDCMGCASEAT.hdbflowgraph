@@ -32,10 +32,12 @@
     </annotations>
     <inputs xmi:id="0c05bc0019cc21a7e3e150f7000545b2" name="P_DS_IN">
       <attributes xmi:id="c38f13a6f59eca7b7322775a1c8afc3d" name="MANDT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="2f209e554d5aa2e6f9f138a8017c1f0e" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="2f209e554d5aa2e6f9f138a8017c1f0e" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="7f8459e9ecff8236e31f5518df96d683" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
-        <annotations xmi:id="d457d160b9a56ad2f9dcd9faf1e74680" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="d457d160b9a56ad2f9dcd9faf1e74680" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="951153dccf9d7f49b8f4ca4fa7e2fb08" name="CRM_CASE_TITLE" type="NVARCHAR" nullable="false" length="80">
       </attributes>
@@ -130,10 +132,12 @@
     </inputs>
     <outputs xmi:id="beae6065a30ba77261e3bd460c542760" name="P_DS_OUT">
       <attributes xmi:id="b499bdc6c98d223a596f61c703ce7770" name="MANDT" type="NVARCHAR" nullable="true" expression="&quot;MANDT&quot;" length="3">
-        <annotations xmi:id="3d41893707f533e1abab8829806638a0" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="3d41893707f533e1abab8829806638a0" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="a8ff036ba65c5e9b244a80ad60727e5d" name="CASE_GUID" type="NVARCHAR" nullable="true" expression="&quot;CASE_GUID&quot;" length="32">
-        <annotations xmi:id="cee5a409bbd14296a2d7ecd200fac582" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="cee5a409bbd14296a2d7ecd200fac582" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="dbc2b3bfb624c5d30ebb47dc819793f3" name="CRM_CASE_TITLE" type="NVARCHAR" nullable="true" expression="&quot;CRM_CASE_TITLE&quot;" length="80">
       </attributes>
@@ -219,9 +223,9 @@
       </attributes>
       <attributes xmi:id="2b377b34ff7edfef5a33a69e136ea2c8" name="ZZSUCCESS_EST" type="NVARCHAR" nullable="true" expression="&quot;ZZSUCCESS_EST&quot;" length="3">
       </attributes>
-      <attributes xmi:id="747919e193ced9c3a13f4de2ec9b629f" name="OSRQLD/F0005" type="NVARCHAR" nullable="true" expression="&quot;/OSRQLD/F0005&quot;" length="10">
+      <attributes xmi:id="747919e193ced9c3a13f4de2ec9b629f" name="OSRQLD_F0005" type="NVARCHAR" nullable="true" expression="&quot;/OSRQLD/F0005&quot;" length="10">
       </attributes>
-      <attributes xmi:id="d663c78b2de2024f8d38b058e3b8a962" name="OSRQLD/F0007" type="NVARCHAR" nullable="true" expression="&quot;/OSRQLD/F0007&quot;" length="10">
+      <attributes xmi:id="d663c78b2de2024f8d38b058e3b8a962" name="OSRQLD_F0007" type="NVARCHAR" nullable="true" expression="&quot;/OSRQLD/F0007&quot;" length="10">
       </attributes>
       <attributes xmi:id="4bcd3d7ce44300bdae1f6ddf9a3fe47e" name="ZZFLD00008I" type="NVARCHAR" nullable="true" expression="&quot;ZZFLD00008I&quot;" length="20">
       </attributes>
@@ -359,7 +363,7 @@
       </attributes>
     </outputs>
   </nodes>
-  <nodes xmi:id="c8ec6f828d7977784d76e0f2a2ff9b1a" xsi:type="flowgraph:TableComparisonNode" name="TC" compareTableName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CMGCASE_AT" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" compareAttributes="4bcbb497ecec599106061fc7f79571ea 1eac5f3a40f18968f3bfae01e3f082a5 43a279508c98175a01fadb3c6e848130 915a68b63267a1a28dc860166c3afe0e e914b8e34af322c63f2c7c844297a0be ef226534028211a5854f3d3c77a4430c 8a7f885eddff7ed2cb28841a750a4fa3 77a5690809a6b02b7ac362e48be23661 93c358c09e51542bde399a8837ac504a 0986ed04421e5a5e8bce020cf4f1d5c8 a1bda69fe8220c5cff4ac2385bb4aa21 ebb977dc45ddb833aeea2e750b67c24b a68961574c6663cd47c0a52fdb5af197 d3b3ad475164a12151a1d7cf554fc09f 9d293b5fd81aa429640d37a4ac9f679e f8e72bdfd702eca6049285c30cd5ac58 d92040dc9a5a01d1d0ac0183d51b4cb7 ef0fdc58135f29e3f7a6d98ff695458f 885dde1aac68b61723f9772041ef7c2b 2190741b73e2d940255b729ead361212 2891bf3a083c562c239c22731a92a18a 66d6b648c44d8281229c38e23286a5f7 dbecd791296d993cc04541d05489a0fe 0445564b6d8d1cc68e68458fc5222c96 440877b61a0816eea2e5eec99aed6c37 eafaa8508ae4d65b057d64d4bea43822 a787805e9bb75f76cc8289fa9fed1e69 adebd8d2913817f994a17002d6c068f6 703ae50b27a22a1a9ce336516352650d 1a90b72d26f909eb01f52dd0d94a4bed 078abca5e85da835eab67bba34085549 a88db09e87a0c932c68835c5f8f9f8d0 ba57b4106c8ca7116f29545ee4825d11 d026387400b8504cbfdd09dc4392f7a9 bd22da089706b446002b54bf59a5ec76 3830f8b162812da2773f17cf6a7e1e2c 04e0997b587777a575157b567463d16c 2b89e6080e2dfeff0cd0783d1709f605 24ca4cb8b266bc877903a512d09bd06e 0d5d2423a7675408938807cb90dec7fc ffc2330183bd84f9bbdf0e3534b292e3 0cd911bf2d37792981c473bfbe6804d1 6fc9e793169eb11b1480d6fb58c4a8a2 59d4c1b085f282344b77af31833c34aa 53afe7c1374f93c2c8d8cd4fd7e154a5" generatedKeyAttribute="6085b12ee72972432e46c04d10efe8ab">
+  <nodes xmi:id="c8ec6f828d7977784d76e0f2a2ff9b1a" xsi:type="flowgraph:TableComparisonNode" name="TC" compareTableName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CMGCASE_AT" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" compareAttributes="4bcbb497ecec599106061fc7f79571ea 1eac5f3a40f18968f3bfae01e3f082a5 43a279508c98175a01fadb3c6e848130 915a68b63267a1a28dc860166c3afe0e e914b8e34af322c63f2c7c844297a0be ef226534028211a5854f3d3c77a4430c 8a7f885eddff7ed2cb28841a750a4fa3 77a5690809a6b02b7ac362e48be23661 93c358c09e51542bde399a8837ac504a 0986ed04421e5a5e8bce020cf4f1d5c8 a1bda69fe8220c5cff4ac2385bb4aa21 ebb977dc45ddb833aeea2e750b67c24b a68961574c6663cd47c0a52fdb5af197 d3b3ad475164a12151a1d7cf554fc09f 9d293b5fd81aa429640d37a4ac9f679e f8e72bdfd702eca6049285c30cd5ac58 d92040dc9a5a01d1d0ac0183d51b4cb7 ef0fdc58135f29e3f7a6d98ff695458f 885dde1aac68b61723f9772041ef7c2b 2190741b73e2d940255b729ead361212 2891bf3a083c562c239c22731a92a18a 66d6b648c44d8281229c38e23286a5f7 dbecd791296d993cc04541d05489a0fe 0445564b6d8d1cc68e68458fc5222c96 440877b61a0816eea2e5eec99aed6c37 eafaa8508ae4d65b057d64d4bea43822 a787805e9bb75f76cc8289fa9fed1e69 adebd8d2913817f994a17002d6c068f6 703ae50b27a22a1a9ce336516352650d 1a90b72d26f909eb01f52dd0d94a4bed 078abca5e85da835eab67bba34085549 a88db09e87a0c932c68835c5f8f9f8d0 ba57b4106c8ca7116f29545ee4825d11 d026387400b8504cbfdd09dc4392f7a9 bd22da089706b446002b54bf59a5ec76 3830f8b162812da2773f17cf6a7e1e2c 04e0997b587777a575157b567463d16c 2b89e6080e2dfeff0cd0783d1709f605 24ca4cb8b266bc877903a512d09bd06e 0d5d2423a7675408938807cb90dec7fc ffc2330183bd84f9bbdf0e3534b292e3 0cd911bf2d37792981c473bfbe6804d1 6fc9e793169eb11b1480d6fb58c4a8a2 59d4c1b085f282344b77af31833c34aa 53afe7c1374f93c2c8d8cd4fd7e154a5 a8cf109626df374f7407a05962fbfbce a89df60741c0c9ac4d6fce409e02404f" generatedKeyAttribute="6085b12ee72972432e46c04d10efe8ab">
     <annotations key="sap.afm.layout" xmi:id="e19f5d7f63c2df795c326068a173a586">
       <annotations xmi:id="da644ea5ee55055b3f9881d717fea586" key="x" value="374">
       </annotations>
@@ -462,9 +466,9 @@
       </attributes>
       <attributes xmi:id="59d4c1b085f282344b77af31833c34aa" name="ZZSUCCESS_EST" type="NVARCHAR" nullable="true" length="3">
       </attributes>
-      <attributes xmi:id="a8cf109626df374f7407a05962fbfbce" name="OSRQLD/F0005" type="NVARCHAR" nullable="true" length="10">
+      <attributes xmi:id="a8cf109626df374f7407a05962fbfbce" name="OSRQLD_F0005" type="NVARCHAR" nullable="true" length="10">
       </attributes>
-      <attributes xmi:id="a89df60741c0c9ac4d6fce409e02404f" name="OSRQLD/F0007" type="NVARCHAR" nullable="true" length="10">
+      <attributes xmi:id="a89df60741c0c9ac4d6fce409e02404f" name="OSRQLD_F0007" type="NVARCHAR" nullable="true" length="10">
       </attributes>
       <attributes xmi:id="53afe7c1374f93c2c8d8cd4fd7e154a5" name="ZZFLD00008I" type="NVARCHAR" nullable="true" length="20">
       </attributes>
