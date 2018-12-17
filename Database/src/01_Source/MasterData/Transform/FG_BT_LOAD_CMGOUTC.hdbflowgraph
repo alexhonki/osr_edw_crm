@@ -57,7 +57,7 @@
       </attributes>
       <attributes xmi:id="07470da00e92fcd6b2ee85771e49cadc" name="CASE_TYPE" type="NVARCHAR" nullable="true" expression="&quot;CASE_TYPE&quot;" length="4">
       </attributes>
-      <attributes xmi:id="7c0629fdcd012a98c68fdfdfbc02e9e2" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" expression="&#x27;&#x27;">
+      <attributes xmi:id="7c0629fdcd012a98c68fdfdfbc02e9e2" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" expression="NOW()">
       </attributes>
       <attributes xmi:id="e3a1b54cd122a80777cbe32c7241e907" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5" expression="&#x27;CRM&#x27;">
       </attributes>
@@ -124,20 +124,16 @@
     </annotations>
     <inputs xmi:id="f4adada3373e7935a754bacb7a862f98" name="DT_TAB" kind="TABLE">
       <attributes xmi:id="89d18890e76cace45e916727d0126189" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="07a407ffece59bda49fef42aa9f706f9" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="07a407ffece59bda49fef42aa9f706f9" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="a7b031945f5bd6e0e9cfb56198db8081" name="CLOSE_REASON_KEY" type="NVARCHAR" nullable="false" length="10">
-        <annotations xmi:id="22790d16ba2ce21e1ea5064339b84c91" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="22790d16ba2ce21e1ea5064339b84c91" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="5cb19c8cff9d36f121dd9eed8d3d76b1" name="CLOSE_REASON_TEXT" type="NVARCHAR" nullable="true" length="40">
-        <annotations xmi:id="b29dea7d889bef3221c621170bd2c4ae" key="sap.im.primaryKey" value="false">
-        </annotations>
+        <annotations xmi:id="b29dea7d889bef3221c621170bd2c4ae" key="sap.im.primaryKey" value="false"/>
       </attributes>
       <attributes xmi:id="504a8990d075cafb1513015bf3e88367" name="CASE_TYPE" type="NVARCHAR" nullable="true" length="4">
-        <annotations xmi:id="6bab1855ea2a1b50fd2dee5513cb4641" key="sap.im.primaryKey" value="false">
-        </annotations>
+        <annotations xmi:id="6bab1855ea2a1b50fd2dee5513cb4641" key="sap.im.primaryKey" value="false"/>
       </attributes>
       <attributes xmi:id="7bdc58b9b26ec5e83600f3ef78bf208a" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
       </attributes>
