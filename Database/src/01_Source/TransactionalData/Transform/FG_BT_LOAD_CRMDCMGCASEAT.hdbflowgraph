@@ -32,12 +32,10 @@
     </annotations>
     <inputs xmi:id="0c05bc0019cc21a7e3e150f7000545b2" name="P_DS_IN">
       <attributes xmi:id="c38f13a6f59eca7b7322775a1c8afc3d" name="MANDT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="2f209e554d5aa2e6f9f138a8017c1f0e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="2f209e554d5aa2e6f9f138a8017c1f0e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="7f8459e9ecff8236e31f5518df96d683" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
-        <annotations xmi:id="d457d160b9a56ad2f9dcd9faf1e74680" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="d457d160b9a56ad2f9dcd9faf1e74680" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="951153dccf9d7f49b8f4ca4fa7e2fb08" name="CRM_CASE_TITLE" type="NVARCHAR" nullable="false" length="80">
       </attributes>
@@ -132,12 +130,10 @@
     </inputs>
     <outputs xmi:id="beae6065a30ba77261e3bd460c542760" name="P_DS_OUT">
       <attributes xmi:id="b499bdc6c98d223a596f61c703ce7770" name="MANDT" type="NVARCHAR" nullable="true" expression="&quot;MANDT&quot;" length="3">
-        <annotations xmi:id="3d41893707f533e1abab8829806638a0" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="3d41893707f533e1abab8829806638a0" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="a8ff036ba65c5e9b244a80ad60727e5d" name="CASE_GUID" type="NVARCHAR" nullable="true" expression="&quot;CASE_GUID&quot;" length="32">
-        <annotations xmi:id="cee5a409bbd14296a2d7ecd200fac582" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="cee5a409bbd14296a2d7ecd200fac582" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="dbc2b3bfb624c5d30ebb47dc819793f3" name="CRM_CASE_TITLE" type="NVARCHAR" nullable="true" expression="&quot;CRM_CASE_TITLE&quot;" length="80">
       </attributes>
@@ -593,7 +589,7 @@
       </attributes>
     </outputs>
   </nodes>
-  <nodes xmi:id="ce0486aaaf864b97964bb1427bea14f6" xsi:type="flowgraph:DataNode" name="DS_TAB" truncateTable="true" catalogObjectName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CMGCASE_AT" type="DATABASE_TABLE" dataLayout="COLUMN">
+  <nodes xmi:id="ce0486aaaf864b97964bb1427bea14f6" xsi:type="flowgraph:DataNode" name="DS_TAB" truncateTable="false" catalogObjectName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CMGCASE_AT" type="DATABASE_TABLE" dataLayout="COLUMN">
     <annotations key="sap.afm.layout" xmi:id="f3b88e97c016a6a4d932c82eb935a400">
       <annotations xmi:id="46700d10d853b96dd27da01b0e4b28e1" key="x" value="555">
       </annotations>

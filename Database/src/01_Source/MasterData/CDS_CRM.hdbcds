@@ -180,6 +180,8 @@ context CDS_CRM {
             key CLOSE_REASON_KEY  : String(10);
                 CLOSE_REASON_TEXT : String(40);
                 CASE_TYPE         : String(4);
+                Z_CHANGE_TIME  : UTCTimestamp;
+                Z_SOURCE_SYS   : String(5);                
         };
     };
 };
