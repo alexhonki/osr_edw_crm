@@ -180,8 +180,18 @@ context CDS_CRM {
             key CLOSE_REASON_KEY  : String(10);
                 CLOSE_REASON_TEXT : String(40);
                 CASE_TYPE         : String(4);
-                Z_CHANGE_TIME  : UTCTimestamp;
-                Z_SOURCE_SYS   : String(5);                
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":745,"y":-515.5}}*/
+        entity SCMGCASETYPET {
+            key CLIENT      : String(3);
+            key LANGU       : String(1);
+            key CASE_TYPE   : String(4);
+                DESCRIPTION : String(40);
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);                
         };
     };
 };
