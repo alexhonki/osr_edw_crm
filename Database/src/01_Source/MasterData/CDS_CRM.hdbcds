@@ -184,12 +184,77 @@ context CDS_CRM {
                 Z_SOURCE_SYS      : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":745,"y":-515.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity SCMGCASETYPET {
-            key CLIENT      : String(3);
+            key CLIENT        : String(3);
+            key LANGU         : String(1);
+            key CASE_TYPE     : String(4);
+                DESCRIPTION   : String(40);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TJ30T {
+            key MANDT : String(3);
+            key STSMA : String(8);
+            key ESTAT : String(5);
+            key SPRAS : String(1);
+                TXT04 : String(4);
+                TXT30 : String(30);
+                LTEXT : String(1);
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{"x":-710,"y":448.5}}*/
+        entity CRMC_PROC_TYPE_T {
+            key CLIENT           : String(3);
+            key PROCESS_TYPE     : String(4);
+            key LANGU            : String(1);
+                P_DESCRIPTION_20 : String(20);
+                P_DESCRIPTION    : String(40);
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{"x":-490,"y":447.5}}*/
+        entity SCMGSTAT {
+            key STAT_PARA       : String(3);
+                STAT_AUTO       : String(1);
+                STAT_CASE_DISP  : String(1);
+                STAT_CASE_CLOSE : String(1);
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{"x":-270,"y":448.5}}*/
+        entity SCMGATTR_CATEGOT {
+            key MANDT       : String(3);
             key LANGU       : String(1);
             key CASE_TYPE   : String(4);
-                DESCRIPTION : String(40);
+            key CATEGORY    : String(4);
+                DESCRIPTION : String(60);
+                Z_CHANGE_TIME     : UTCTimestamp;
+                Z_SOURCE_SYS      : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{"x":-33,"y":443.5}}*/
+        entity SCMGSTATPROFS {
+            key CLIENT         : String(3);
+            key PROFILE_ID     : String(8);
+            key STAT_ORDERNO   : String(2);
+                STAT_PARA      : String(3);
+                STAT_ORDERNO_L : String(2);
+                STAT_ORDERNO_H : String(2);
+                WF_EVENT       : String(32);
+        };
+
+        /*@@layout{"layoutInfo":{"x":227,"y":442.5}}*/
+        entity SCMGSTATT {
+            key LANGU           : String(1);
+            key STAT_PARA       : String(3);
+                STAT_PARA_DESCR : String(40);
                 Z_CHANGE_TIME     : UTCTimestamp;
                 Z_SOURCE_SYS      : String(5);                
         };

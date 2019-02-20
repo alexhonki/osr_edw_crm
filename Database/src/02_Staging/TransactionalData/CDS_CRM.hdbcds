@@ -1896,7 +1896,6 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
-        /*@@layout{"layoutInfo":{"x":970,"y":-519.5}}*/
         context CRMD_CASEINDEX {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
@@ -2060,6 +2059,747 @@ context CDS_CRM {
             }
             technical configuration {
                 group name CRMD_CASEINDEX group type "sap.dwf.dso" group subtype CHANGE_LOG;
+            };
+
+            @DataStore.entityCategory : #OPERATION_HISTORY
+            entity operationHistory {
+                key technicalKey        : operationHistoryKey;
+                    technicalAttributes : operationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AGGREGATION_HISTORY
+            entity aggregationHistory {
+                key technicalKey        : aggregationHistoryKey;
+                    technicalAttributes : aggregationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AFFECTED_REQUESTS
+            entity affectedRequests {
+                key technicalKey : affectedRequestsKey;
+            };
+
+            @DataStore.entityCategory : #LOG_MESSAGES
+            entity logMessages {
+                key technicalKey        : logMessagesKey;
+                    technicalAttributes : logMessagesAttributes;
+            };
+
+            @DataStore.entityCategory : #SUBSCRIBERS
+            entity subscribers {
+                key technicalKey        : subscribersKey;
+                    technicalAttributes : subscribersAttributes;
+            };
+
+            @DataStore.entityCategory : #RUNNING_OPERATIONS
+            entity runningOperations {
+                key technicalKey : runningOperationsKey;
+            };
+
+            @DataStore.entityCategory : #ID_GENERATOR
+            entity idGen {
+                key technicalKey        : idGeneratorKey;
+                    technicalAttributes : idGeneratorAttributes;
+            };
+        };
+
+        @DataStore.isDSO
+        @DataStore.entity.activeData         : 'active_data'
+        @DataStore.entity.changeLog          : 'change_log'
+        @DataStore.entity.activationQueue    : [ 'inbound_queue' ]
+        @DataStore.entity.operationHistory   : 'operationHistory'
+        @DataStore.entity.aggregationHistory : 'aggregationHistory'
+        @DataStore.entity.logMessages        : 'logMessages'
+        @DataStore.entity.affectedRequests   : 'affectedRequests'
+        @DataStore.entity.subscribers        : 'subscribers'
+        @DataStore.entity.runningOperations  : 'runningOperations'
+        @DataStore.entity.idGenerator        : 'idGen'
+        @DataStore.computeChecksum           : false
+        @DataStore.snapshotSupport           : false
+        context CRM_JEST {
+            @DataStore.entityCategory : #ACTIVE_DATA
+            entity active_data {
+                    @DataStore.aggregation : #NOP
+                key MANDT         : String(3)    not null;
+
+                    @DataStore.aggregation : #NOP
+                key OBJNR         : String(100)   not null;
+
+                    @DataStore.aggregation : #NOP
+                key STAT          : String(5)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    INACT         : String(1)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHGNR         : String(3)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TYPE : String(1)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TIME : UTCTimestamp not null default '1900-01-01 23:59:59';
+
+                    @DataStore.aggregation : #NOP
+                    Z_SOURCE_SYS  : String(5)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_ROW_NO  : Integer      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_SEQ_ID  : Integer      not null;
+            }
+            technical configuration {
+                group name CRM_JEST group type "sap.dwf.dso" group subtype ACTIVE;
+            };
+
+            @DataStore.entityCategory : #ACTIVATION_QUEUE
+            entity inbound_queue {
+                key technicalKey        : inboundQueueKey;
+                    technicalAttributes : inboundQueueAttributes not null;
+
+                    @DataStore.aggregation : #MOV
+                key MANDT               : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                key OBJNR               : String(100)             not null;
+
+                    @DataStore.aggregation : #MOV
+                key STAT                : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    INACT               : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHGNR               : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TYPE       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TIME       : UTCTimestamp           not null default '1900-01-01 23:59:59';
+
+                    @DataStore.aggregation : #MOV
+                    Z_SOURCE_SYS        : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_ROW_NO        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                key Z_RUN_SEQ_ID        : Integer                not null;
+            }
+            technical configuration {
+                group name CRM_JEST group type "sap.dwf.dso" group subtype QUEUE;
+            };
+
+            @DataStore.entityCategory : #CHANGE_LOG
+            entity change_log {
+                key technicalKey        : changeLogKey;
+                    technicalAttributes : changeLogAttributes not null;
+                key MANDT               : String(3)           not null;
+                key OBJNR               : String(100)          not null;
+                key STAT                : String(5)           not null;
+                    INACT               : String(1)           not null;
+                    CHGNR               : String(3)           not null;
+                    Z_CHANGE_TYPE       : String(1)           not null;
+                    Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 23:59:59';
+                    Z_SOURCE_SYS        : String(5)           not null;
+                    Z_RUN_ROW_NO        : Integer             not null;
+                key Z_RUN_SEQ_ID        : Integer             not null;
+            }
+            technical configuration {
+                group name CRM_JEST group type "sap.dwf.dso" group subtype CHANGE_LOG;
+            };
+
+            @DataStore.entityCategory : #OPERATION_HISTORY
+            entity operationHistory {
+                key technicalKey        : operationHistoryKey;
+                    technicalAttributes : operationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AGGREGATION_HISTORY
+            entity aggregationHistory {
+                key technicalKey        : aggregationHistoryKey;
+                    technicalAttributes : aggregationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AFFECTED_REQUESTS
+            entity affectedRequests {
+                key technicalKey : affectedRequestsKey;
+            };
+
+            @DataStore.entityCategory : #LOG_MESSAGES
+            entity logMessages {
+                key technicalKey        : logMessagesKey;
+                    technicalAttributes : logMessagesAttributes;
+            };
+
+            @DataStore.entityCategory : #SUBSCRIBERS
+            entity subscribers {
+                key technicalKey        : subscribersKey;
+                    technicalAttributes : subscribersAttributes;
+            };
+
+            @DataStore.entityCategory : #RUNNING_OPERATIONS
+            entity runningOperations {
+                key technicalKey : runningOperationsKey;
+            };
+
+            @DataStore.entityCategory : #ID_GENERATOR
+            entity idGen {
+                key technicalKey        : idGeneratorKey;
+                    technicalAttributes : idGeneratorAttributes;
+            };
+        };
+
+        @DataStore.isDSO
+        @DataStore.entity.activeData         : 'active_data'
+        @DataStore.entity.changeLog          : 'change_log'
+        @DataStore.entity.activationQueue    : [ 'inbound_queue' ]
+        @DataStore.entity.operationHistory   : 'operationHistory'
+        @DataStore.entity.aggregationHistory : 'aggregationHistory'
+        @DataStore.entity.logMessages        : 'logMessages'
+        @DataStore.entity.affectedRequests   : 'affectedRequests'
+        @DataStore.entity.subscribers        : 'subscribers'
+        @DataStore.entity.runningOperations  : 'runningOperations'
+        @DataStore.entity.idGenerator        : 'idGen'
+        @DataStore.computeChecksum           : false
+        @DataStore.snapshotSupport           : false
+        context CRM_JSTO {
+            @DataStore.entityCategory : #ACTIVE_DATA
+            entity active_data {
+                    @DataStore.aggregation : #NOP
+                key MANDT         : String(3)    not null;
+
+                    @DataStore.aggregation : #NOP
+                key OBJNR         : String(100)   not null;
+
+                    @DataStore.aggregation : #NOP
+                    OBTYP         : String(3)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    STSMA         : String(8)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHGKZ         : String(1)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHGNR         : String(3)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TYPE : String(1)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TIME : UTCTimestamp not null default '1900-01-01 23:59:59';
+
+                    @DataStore.aggregation : #NOP
+                    Z_SOURCE_SYS  : String(5)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_ROW_NO  : Integer      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_SEQ_ID  : Integer      not null;
+            }
+            technical configuration {
+                group name CRM_JSTO group type "sap.dwf.dso" group subtype ACTIVE;
+            };
+
+            @DataStore.entityCategory : #ACTIVATION_QUEUE
+            entity inbound_queue {
+                key technicalKey        : inboundQueueKey;
+                    technicalAttributes : inboundQueueAttributes not null;
+
+                    @DataStore.aggregation : #MOV
+                key MANDT               : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                key OBJNR               : String(100)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OBTYP               : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    STSMA               : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHGKZ               : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHGNR               : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TYPE       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TIME       : UTCTimestamp           not null default '1900-01-01 23:59:59';
+
+                    @DataStore.aggregation : #MOV
+                    Z_SOURCE_SYS        : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_ROW_NO        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                key Z_RUN_SEQ_ID        : Integer                not null;
+            }
+            technical configuration {
+                group name CRM_JSTO group type "sap.dwf.dso" group subtype QUEUE;
+            };
+
+            @DataStore.entityCategory : #CHANGE_LOG
+            entity change_log {
+                key technicalKey        : changeLogKey;
+                    technicalAttributes : changeLogAttributes not null;
+                key MANDT               : String(3)           not null;
+                key OBJNR               : String(100)          not null;
+                    OBTYP               : String(3)           not null;
+                    STSMA               : String(8)           not null;
+                    CHGKZ               : String(1)           not null;
+                    CHGNR               : String(3)           not null;
+                    Z_CHANGE_TYPE       : String(1)           not null;
+                    Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 23:59:59';
+                    Z_SOURCE_SYS        : String(5)           not null;
+                    Z_RUN_ROW_NO        : Integer             not null;
+                key Z_RUN_SEQ_ID        : Integer             not null;
+            }
+            technical configuration {
+                group name CRM_JSTO group type "sap.dwf.dso" group subtype CHANGE_LOG;
+            };
+
+            @DataStore.entityCategory : #OPERATION_HISTORY
+            entity operationHistory {
+                key technicalKey        : operationHistoryKey;
+                    technicalAttributes : operationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AGGREGATION_HISTORY
+            entity aggregationHistory {
+                key technicalKey        : aggregationHistoryKey;
+                    technicalAttributes : aggregationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AFFECTED_REQUESTS
+            entity affectedRequests {
+                key technicalKey : affectedRequestsKey;
+            };
+
+            @DataStore.entityCategory : #LOG_MESSAGES
+            entity logMessages {
+                key technicalKey        : logMessagesKey;
+                    technicalAttributes : logMessagesAttributes;
+            };
+
+            @DataStore.entityCategory : #SUBSCRIBERS
+            entity subscribers {
+                key technicalKey        : subscribersKey;
+                    technicalAttributes : subscribersAttributes;
+            };
+
+            @DataStore.entityCategory : #RUNNING_OPERATIONS
+            entity runningOperations {
+                key technicalKey : runningOperationsKey;
+            };
+
+            @DataStore.entityCategory : #ID_GENERATOR
+            entity idGen {
+                key technicalKey        : idGeneratorKey;
+                    technicalAttributes : idGeneratorAttributes;
+            };
+        };
+
+        @DataStore.isDSO
+        @DataStore.entity.activeData         : 'active_data'
+        @DataStore.entity.changeLog          : 'change_log'
+        @DataStore.entity.activationQueue    : [ 'inbound_queue' ]
+        @DataStore.entity.operationHistory   : 'operationHistory'
+        @DataStore.entity.aggregationHistory : 'aggregationHistory'
+        @DataStore.entity.logMessages        : 'logMessages'
+        @DataStore.entity.affectedRequests   : 'affectedRequests'
+        @DataStore.entity.subscribers        : 'subscribers'
+        @DataStore.entity.runningOperations  : 'runningOperations'
+        @DataStore.entity.idGenerator        : 'idGen'
+        @DataStore.computeChecksum           : false
+        @DataStore.snapshotSupport           : false
+        context SCAPPT {
+            @DataStore.entityCategory : #ACTIVE_DATA
+            entity active_data {
+                    @DataStore.aggregation : #NOP
+                key CLIENT        : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                key OWNER         : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                key APPT_ID       : String(25)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    GENAPPT_ID    : String(25)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    LOGSYS        : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    OBJTYPE       : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    OBJKEY        : String(70)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    APPT_TYPE     : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    ROOM          : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CUST_NO       : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    TXT_SHORT     : String(120)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    TXT_PUB_ID    : String(25)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    TXT_PRIVAT    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CLASS_ID      : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    BD_ACCS_ID    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    MAINT_ID      : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    STATUS        : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    PART_STAT     : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    PART_ROLE     : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    PART_SNDML    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    INFO_ID       : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ADMIN_ID      : String(40)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    PRIORITY      : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ENTRY_BY      : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHANGE_BY     : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    DOMINANT      : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    EXIT_INFO     : String(60)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    DATE_FROM     : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    TIME_FROM     : String(6)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZONE_FROM     : String(6)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    TST_FROM      : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    DATE_TO       : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    TIME_TO       : String(6)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZONE_TO       : String(6)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    TST_TO        : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ENTRY_DAT     : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ENTRY_TIM     : String(6)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ENTRY_TST     : Decimal(21, 7) not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHANGE_DAT    : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHANGE_TIM    : String(6)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHANGE_TST    : Decimal(21, 7) not null;
+
+                    @DataStore.aggregation : #NOP
+                    SHOW_LOCAL    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    BUSY          : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    SEQUENCE      : Integer        not null;
+
+                    @DataStore.aggregation : #NOP
+                    APPL_GUID     : Binary(16)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    APPT_GUID     : Binary(16)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TYPE : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TIME : UTCTimestamp   not null default '1900-01-01 23:59:59';
+
+                    @DataStore.aggregation : #NOP
+                    Z_SOURCE_SYS  : String(5)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_ROW_NO  : Integer        not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_SEQ_ID  : Integer        not null;
+            }
+            technical configuration {
+                group name SCAPPT group type "sap.dwf.dso" group subtype ACTIVE;
+            };
+
+            @DataStore.entityCategory : #ACTIVATION_QUEUE
+            entity inbound_queue {
+                key technicalKey        : inboundQueueKey;
+                    technicalAttributes : inboundQueueAttributes not null;
+
+                    @DataStore.aggregation : #MOV
+                key CLIENT              : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                key OWNER               : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                key APPT_ID             : String(25)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    GENAPPT_ID          : String(25)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    LOGSYS              : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OBJTYPE             : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OBJKEY              : String(70)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    APPT_TYPE           : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    ROOM                : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CUST_NO             : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    TXT_SHORT           : String(120)            not null;
+
+                    @DataStore.aggregation : #MOV
+                    TXT_PUB_ID          : String(25)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    TXT_PRIVAT          : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CLASS_ID            : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    BD_ACCS_ID          : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    MAINT_ID            : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    STATUS              : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    PART_STAT           : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    PART_ROLE           : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    PART_SNDML          : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    INFO_ID             : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ADMIN_ID            : String(40)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    PRIORITY            : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ENTRY_BY            : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHANGE_BY           : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    DOMINANT            : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    EXIT_INFO           : String(60)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    DATE_FROM           : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    TIME_FROM           : String(6)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZONE_FROM           : String(6)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    TST_FROM            : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    DATE_TO             : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    TIME_TO             : String(6)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZONE_TO             : String(6)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    TST_TO              : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ENTRY_DAT           : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ENTRY_TIM           : String(6)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ENTRY_TST           : Decimal(21, 7)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHANGE_DAT          : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHANGE_TIM          : String(6)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHANGE_TST          : Decimal(21, 7)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    SHOW_LOCAL          : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    BUSY                : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    SEQUENCE            : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    APPL_GUID           : Binary(16)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    APPT_GUID           : Binary(16)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TYPE       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TIME       : UTCTimestamp           not null default '1900-01-01 23:59:59';
+
+                    @DataStore.aggregation : #MOV
+                    Z_SOURCE_SYS        : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_ROW_NO        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                key Z_RUN_SEQ_ID        : Integer                not null;
+            }
+            technical configuration {
+                group name SCAPPT group type "sap.dwf.dso" group subtype QUEUE;
+            };
+
+            @DataStore.entityCategory : #CHANGE_LOG
+            entity change_log {
+                key technicalKey        : changeLogKey;
+                    technicalAttributes : changeLogAttributes not null;
+                key CLIENT              : String(3)           not null;
+                key OWNER               : String(12)          not null;
+                key APPT_ID             : String(25)          not null;
+                    GENAPPT_ID          : String(25)          not null;
+                    LOGSYS              : String(10)          not null;
+                    OBJTYPE             : String(10)          not null;
+                    OBJKEY              : String(70)          not null;
+                    APPT_TYPE           : String(12)          not null;
+                    ROOM                : String(12)          not null;
+                    CUST_NO             : String(10)          not null;
+                    TXT_SHORT           : String(120)         not null;
+                    TXT_PUB_ID          : String(25)          not null;
+                    TXT_PRIVAT          : String(1)           not null;
+                    CLASS_ID            : String(1)           not null;
+                    BD_ACCS_ID          : String(1)           not null;
+                    MAINT_ID            : String(1)           not null;
+                    STATUS              : String(1)           not null;
+                    PART_STAT           : String(1)           not null;
+                    PART_ROLE           : String(1)           not null;
+                    PART_SNDML          : String(1)           not null;
+                    INFO_ID             : String(1)           not null;
+                    ADMIN_ID            : String(40)          not null;
+                    PRIORITY            : String(1)           not null;
+                    ENTRY_BY            : String(12)          not null;
+                    CHANGE_BY           : String(12)          not null;
+                    DOMINANT            : String(1)           not null;
+                    EXIT_INFO           : String(60)          not null;
+                    DATE_FROM           : String(8)           not null;
+                    TIME_FROM           : String(6)           not null;
+                    ZONE_FROM           : String(6)           not null;
+                    TST_FROM            : Decimal(15, 0)      not null;
+                    DATE_TO             : String(8)           not null;
+                    TIME_TO             : String(6)           not null;
+                    ZONE_TO             : String(6)           not null;
+                    TST_TO              : Decimal(15, 0)      not null;
+                    ENTRY_DAT           : String(8)           not null;
+                    ENTRY_TIM           : String(6)           not null;
+                    ENTRY_TST           : Decimal(21, 7)      not null;
+                    CHANGE_DAT          : String(8)           not null;
+                    CHANGE_TIM          : String(6)           not null;
+                    CHANGE_TST          : Decimal(21, 7)      not null;
+                    SHOW_LOCAL          : String(1)           not null;
+                    BUSY                : String(1)           not null;
+                    SEQUENCE            : Integer             not null;
+                    APPL_GUID           : Binary(16)          not null;
+                    APPT_GUID           : Binary(16)          not null;
+                    Z_CHANGE_TYPE       : String(1)           not null;
+                    Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 23:59:59';
+                    Z_SOURCE_SYS        : String(5)           not null;
+                    Z_RUN_ROW_NO        : Integer             not null;
+                key Z_RUN_SEQ_ID        : Integer             not null;
+            }
+            technical configuration {
+                group name SCAPPT group type "sap.dwf.dso" group subtype CHANGE_LOG;
             };
 
             @DataStore.entityCategory : #OPERATION_HISTORY
