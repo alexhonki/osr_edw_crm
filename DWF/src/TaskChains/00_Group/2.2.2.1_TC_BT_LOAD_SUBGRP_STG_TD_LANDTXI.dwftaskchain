@@ -125,6 +125,63 @@
           "status": "OK"
         }
       ]
-    }
+    },
+    "8": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD CRM_JEST",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.staging.td.rms#TC_LOAD_CRM_JEST"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "7",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "9": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD CRM_JSTO",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.staging.td.rms#TC_LOAD_CRM_JSTO"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "8",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "10": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCAPPT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.staging.td.rms#TC_LOAD_SCAPPT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "9",
+          "status": "OK"
+        }
+      ]
+    }      
   }
 }
