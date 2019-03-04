@@ -196,15 +196,15 @@ context CDS_CRM {
 
         /*@@layout{"layoutInfo":{}}*/
         entity TJ30T {
-            key MANDT : String(3);
-            key STSMA : String(8);
-            key ESTAT : String(5);
-            key SPRAS : String(1);
-                TXT04 : String(4);
-                TXT30 : String(30);
-                LTEXT : String(1);
-                Z_CHANGE_TIME     : UTCTimestamp;
-                Z_SOURCE_SYS      : String(5);                
+            key MANDT         : String(3);
+            key STSMA         : String(8);
+            key ESTAT         : String(5);
+            key SPRAS         : String(1);
+                TXT04         : String(4);
+                TXT30         : String(30);
+                LTEXT         : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
         };
 
         /*@@layout{"layoutInfo":{"x":-710,"y":448.5}}*/
@@ -214,8 +214,8 @@ context CDS_CRM {
             key LANGU            : String(1);
                 P_DESCRIPTION_20 : String(20);
                 P_DESCRIPTION    : String(40);
-                Z_CHANGE_TIME     : UTCTimestamp;
-                Z_SOURCE_SYS      : String(5);                
+                Z_CHANGE_TIME    : UTCTimestamp;
+                Z_SOURCE_SYS     : String(5);
         };
 
         /*@@layout{"layoutInfo":{"x":-490,"y":447.5}}*/
@@ -224,19 +224,19 @@ context CDS_CRM {
                 STAT_AUTO       : String(1);
                 STAT_CASE_DISP  : String(1);
                 STAT_CASE_CLOSE : String(1);
-                Z_CHANGE_TIME     : UTCTimestamp;
-                Z_SOURCE_SYS      : String(5);                
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
         };
 
         /*@@layout{"layoutInfo":{"x":-270,"y":448.5}}*/
         entity SCMGATTR_CATEGOT {
-            key MANDT       : String(3);
-            key LANGU       : String(1);
-            key CASE_TYPE   : String(4);
-            key CATEGORY    : String(4);
-                DESCRIPTION : String(60);
-                Z_CHANGE_TIME     : UTCTimestamp;
-                Z_SOURCE_SYS      : String(5);                
+            key MANDT         : String(3);
+            key LANGU         : String(1);
+            key CASE_TYPE     : String(4);
+            key CATEGORY      : String(4);
+                DESCRIPTION   : String(60);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
         };
 
         /*@@layout{"layoutInfo":{"x":-33,"y":443.5}}*/
@@ -248,6 +248,8 @@ context CDS_CRM {
                 STAT_ORDERNO_L : String(2);
                 STAT_ORDERNO_H : String(2);
                 WF_EVENT       : String(32);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                
         };
 
         /*@@layout{"layoutInfo":{"x":227,"y":442.5}}*/
@@ -255,8 +257,42 @@ context CDS_CRM {
             key LANGU           : String(1);
             key STAT_PARA       : String(3);
                 STAT_PARA_DESCR : String(40);
-                Z_CHANGE_TIME     : UTCTimestamp;
-                Z_SOURCE_SYS      : String(5);                
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":499,"y":441.5}}*/
+        entity TB039A {
+            key CLIENT        : String(3);
+            key TYPE          : String(6);
+                CATEGORY      : String(6);
+                XPROPOSE      : String(1);
+                XPERSON       : String(1);
+                XORGANISATION : String(1);
+                XGROUP        : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{"x":729,"y":441.5}}*/
+        entity TB001 {
+            key MANDT     : String(3);
+            key BU_GROUP  : String(4);
+                NRRNG     : String(2);
+                XINST     : String(1);
+                XEXST     : String(1);
+                XSUPPRESS : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{"x":965,"y":440.5}}*/
+        entity TB037 {
+            key CLIENT : String(3);
+            key AUOBJ  : String(10);
+            key AUGRP  : String(4);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);            
         };
     };
 };

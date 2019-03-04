@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="d595cf42b0bbf10baa772e82262ff3a2" name="FG_BT_LOAD_SCMGSTATPROFS" runtimeBehavior="BATCH_TASK">
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:version="2.0" xmi:id="d595cf42b0bbf10baa772e82262ff3a2" name="FG_BT_LOAD_SCMGSTATPROFS" runtimeBehavior="BATCH_TASK">
   <annotations key="sap.afm.layout" xmi:id="777befac3f33e7f989b9174a89d2d32f">
     <annotations xmi:id="940115582d28456a418aa132c23d9ccc" key="x" value="10">
     </annotations>
@@ -11,8 +11,7 @@
     </annotations>
   </annotations>
   <annotations xmi:id="d07c4d22419283c170729f6219d3badf" key="sap.afm.palette">
-    <annotations xmi:id="51a3f4252ca020df404258565571347a" key="additions" value="">
-    </annotations>
+    <annotations xmi:id="51a3f4252ca020df404258565571347a" key="additions" value=""/>
   </annotations>
   <annotations xmi:id="5f8de27dbe72e4d08a080ade2acc2553" key="sap.afm.nodeType" value="ContainerNode">
   </annotations>
@@ -50,6 +49,10 @@
     <attributeMappings xmi:id="6d03d70864d2ff9fcbff3ed4b35903c4" source="371e694f29ad4c821258f2d5b7ca8e65" target="a5c2f4a785046a0a953089ac079e2396">
     </attributeMappings>
     <attributeMappings xmi:id="e6f5800ac6083dd08d7a69e05b604101" source="47bb497484320b971c373733a45a06c5" target="151f280a5872c42973e94d1f96caf367">
+    </attributeMappings>
+    <attributeMappings xmi:id="dbd2849d071dd8b117a88f3767f21165" source="162269b0bafcb365a76c794dc7a5aa44" target="828be5df7036c2ef4be03e740960350e">
+    </attributeMappings>
+    <attributeMappings xmi:id="7c2c803c21c369288e4cdf4438e18573" source="7f9726903cc8fc7584c0382541e93388" target="775b573925843374085d58903103b59f">
     </attributeMappings>
   </tableMappings>
   <nodes xmi:id="cfde3224d1cd098efce6d58a2485e252" xsi:type="flowgraph:FilterNode" name="P_DS" expression="&quot;CLIENT&quot;=&#x27;400&#x27;">
@@ -133,7 +136,7 @@
     </annotations>
     <annotations xmi:id="92d49f31e62d1fbc486622406f999346" key="sap.afm.displayName" value="Data Target">
     </annotations>
-    <annotations xmi:id="f2cc19bd37e0a9d013c9bbe9afc09295" key="columns" value="[{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;bb21add657d9c2a6239bba21cc6d9480&quot;},{&quot;name&quot;:&quot;PROFILE_ID&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;d81d3e58d68dc9b677d63372eb479c64&quot;},{&quot;name&quot;:&quot;STAT_ORDERNO&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:2,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;aaa07198538991b05e2c2dba2af9bbe2&quot;},{&quot;name&quot;:&quot;STAT_PARA&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;997eb9cb346392b844de2c4b61d635e8&quot;},{&quot;name&quot;:&quot;STAT_ORDERNO_L&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:2,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;bf99a6b41bfc3c6281149865c3981848&quot;},{&quot;name&quot;:&quot;STAT_ORDERNO_H&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:2,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;a5c2f4a785046a0a953089ac079e2396&quot;},{&quot;name&quot;:&quot;WF_EVENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:32,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;151f280a5872c42973e94d1f96caf367&quot;}]">
+    <annotations xmi:id="f2cc19bd37e0a9d013c9bbe9afc09295" key="columns" value="[{&quot;name&quot;:&quot;CLIENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;bb21add657d9c2a6239bba21cc6d9480&quot;},{&quot;name&quot;:&quot;PROFILE_ID&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:8,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;d81d3e58d68dc9b677d63372eb479c64&quot;},{&quot;name&quot;:&quot;STAT_ORDERNO&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:2,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;aaa07198538991b05e2c2dba2af9bbe2&quot;},{&quot;name&quot;:&quot;STAT_PARA&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:3,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;997eb9cb346392b844de2c4b61d635e8&quot;},{&quot;name&quot;:&quot;STAT_ORDERNO_L&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:2,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;bf99a6b41bfc3c6281149865c3981848&quot;},{&quot;name&quot;:&quot;STAT_ORDERNO_H&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:2,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;a5c2f4a785046a0a953089ac079e2396&quot;},{&quot;name&quot;:&quot;WF_EVENT&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:32,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;151f280a5872c42973e94d1f96caf367&quot;},{&quot;name&quot;:&quot;Z_CHANGE_TIME&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;828be5df7036c2ef4be03e740960350e&quot;},{&quot;name&quot;:&quot;Z_SOURCE_SYS&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;775b573925843374085d58903103b59f&quot;}]">
     </annotations>
     <inputs xmi:id="cb85fdbf4ae24818a9be50b6e0f7c3cf" name="DT_TAB" kind="TABLE">
       <attributes xmi:id="bb21add657d9c2a6239bba21cc6d9480" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
@@ -164,6 +167,10 @@
         <annotations xmi:id="938327ba7e067bc139e1036cc4886cc3" key="sap.im.primaryKey" value="false">
         </annotations>
       </attributes>
+      <attributes xmi:id="828be5df7036c2ef4be03e740960350e" name="Z_CHANGE_TIME" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="775b573925843374085d58903103b59f" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="true" length="5">
+      </attributes>
     </inputs>
   </nodes>
   <nodes xmi:id="1c38163f21dc531b8ead6b6944475a4c" name="DS_VT" catalogObjectName="osr.edw.source.md.crm::VT_SCMGSTATPROFS" type="VIRTUAL_TABLE" xsi:type="flowgraph:DataNode" dataLayout="ROW">
@@ -191,16 +198,13 @@
     </annotations>
     <outputs xmi:id="3a0523c5f99841412ae48fde079f5202" name="DS_VT">
       <attributes xmi:id="406818ece1822e9306816aa963ae3910" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="1691dd51e510ce5f874d9c7aefc6eb89" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="1691dd51e510ce5f874d9c7aefc6eb89" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="391b1e293e98bbc5466403d738bece11" name="PROFILE_ID" type="NVARCHAR" nullable="false" length="8">
-        <annotations xmi:id="ce6ccc6e8d5189339761433e0bbac24c" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="ce6ccc6e8d5189339761433e0bbac24c" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="d90e81dc1af2fed931828d17d1046d00" name="STAT_ORDERNO" type="NVARCHAR" nullable="false" length="2">
-        <annotations xmi:id="82c1ff37b19f67d0a894f34032b88719" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="82c1ff37b19f67d0a894f34032b88719" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="00a550a3e616ec77a8c09d4a453e13c1" name="STAT_PARA" type="NVARCHAR" nullable="false" length="3">
       </attributes>
