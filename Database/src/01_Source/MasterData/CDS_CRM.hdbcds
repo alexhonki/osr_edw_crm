@@ -248,8 +248,8 @@ context CDS_CRM {
                 STAT_ORDERNO_L : String(2);
                 STAT_ORDERNO_H : String(2);
                 WF_EVENT       : String(32);
-                Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
+                Z_CHANGE_TIME  : UTCTimestamp;
+                Z_SOURCE_SYS   : String(5);
         };
 
         /*@@layout{"layoutInfo":{"x":227,"y":442.5}}*/
@@ -259,40 +259,6 @@ context CDS_CRM {
                 STAT_PARA_DESCR : String(40);
                 Z_CHANGE_TIME   : UTCTimestamp;
                 Z_SOURCE_SYS    : String(5);
-        };
-
-        /*@@layout{"layoutInfo":{"x":499,"y":441.5}}*/
-        entity TB039A {
-            key CLIENT        : String(3);
-            key TYPE          : String(6);
-                CATEGORY      : String(6);
-                XPROPOSE      : String(1);
-                XPERSON       : String(1);
-                XORGANISATION : String(1);
-                XGROUP        : String(1);
-                Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
-        };
-
-        /*@@layout{"layoutInfo":{"x":729,"y":441.5}}*/
-        entity TB001 {
-            key MANDT     : String(3);
-            key BU_GROUP  : String(4);
-                NRRNG     : String(2);
-                XINST     : String(1);
-                XEXST     : String(1);
-                XSUPPRESS : String(1);
-                Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
-        };
-
-        /*@@layout{"layoutInfo":{"x":965,"y":440.5}}*/
-        entity TB037 {
-            key CLIENT : String(3);
-            key AUOBJ  : String(10);
-            key AUGRP  : String(4);
-                Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);            
         };
     };
 };
