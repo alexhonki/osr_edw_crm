@@ -239,6 +239,120 @@
           "status": "OK"
         }
       ]
-    }     
+    }, 
+    "14": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD TB039T",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.rms#TC_LOAD_BT_TB039T"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "13",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "15": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD TB002",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.rms#TC_LOAD_BT_TB002"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "14",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "16": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD TB037T",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.rms#TC_LOAD_BT_TB037T"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "15",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "17": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD TB010",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.rms#TC_LOAD_BT_TB010"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "16",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "18": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD TB003T",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.rms#TC_LOAD_BT_TB003T"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "17",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "19": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD TB038B",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.rms#TC_LOAD_BT_TB038B"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "18",
+          "status": "OK"
+        }
+      ]
+    }      
   }
 }

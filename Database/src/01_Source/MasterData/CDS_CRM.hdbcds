@@ -207,7 +207,7 @@ context CDS_CRM {
                 Z_SOURCE_SYS  : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":-710,"y":448.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity CRMC_PROC_TYPE_T {
             key CLIENT           : String(3);
             key PROCESS_TYPE     : String(4);
@@ -218,7 +218,7 @@ context CDS_CRM {
                 Z_SOURCE_SYS     : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":-490,"y":447.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity SCMGSTAT {
             key STAT_PARA       : String(3);
                 STAT_AUTO       : String(1);
@@ -228,7 +228,7 @@ context CDS_CRM {
                 Z_SOURCE_SYS    : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":-270,"y":448.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity SCMGATTR_CATEGOT {
             key MANDT         : String(3);
             key LANGU         : String(1);
@@ -239,7 +239,7 @@ context CDS_CRM {
                 Z_SOURCE_SYS  : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":-33,"y":443.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity SCMGSTATPROFS {
             key CLIENT         : String(3);
             key PROFILE_ID     : String(8);
@@ -248,11 +248,11 @@ context CDS_CRM {
                 STAT_ORDERNO_L : String(2);
                 STAT_ORDERNO_H : String(2);
                 WF_EVENT       : String(32);
-                Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
+                Z_CHANGE_TIME  : UTCTimestamp;
+                Z_SOURCE_SYS   : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":227,"y":442.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity SCMGSTATT {
             key LANGU           : String(1);
             key STAT_PARA       : String(3);
@@ -261,7 +261,7 @@ context CDS_CRM {
                 Z_SOURCE_SYS    : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":499,"y":441.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity TB039A {
             key CLIENT        : String(3);
             key TYPE          : String(6);
@@ -271,28 +271,93 @@ context CDS_CRM {
                 XORGANISATION : String(1);
                 XGROUP        : String(1);
                 Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
+                Z_SOURCE_SYS  : String(5);
         };
 
-        /*@@layout{"layoutInfo":{"x":729,"y":441.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity TB001 {
-            key MANDT     : String(3);
-            key BU_GROUP  : String(4);
-                NRRNG     : String(2);
-                XINST     : String(1);
-                XEXST     : String(1);
-                XSUPPRESS : String(1);
+            key MANDT         : String(3);
+            key BU_GROUP      : String(4);
+                NRRNG         : String(2);
+                XINST         : String(1);
+                XEXST         : String(1);
+                XSUPPRESS     : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB037 {
+            key CLIENT        : String(3);
+            key AUOBJ         : String(10);
+            key AUGRP         : String(4);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB039T {
+            key LANGU         : String(1);
+            key CATEGORY      : String(6);
+                TEXT          : String(40);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB002 {
+            key MANDT         : String(3);
+            key SPRAS         : String(1);
+            key BU_GROUP      : String(4);
+                TXT15         : String(15);
+                TXT40         : String(40);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB037T {
+            key CLIENT        : String(3);
+            key SPRAS         : String(1);
+            key AUOBJ         : String(10);
+            key AUGRP         : String(4);
+                BEZ50         : String(50);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB010 {
+            key CLIENT    : String(3);
+            key SPRAS     : String(1);
+            key ADR_KIND  : String(10);
+                TEXTSHORT : String(15);
+                TEXTLONG  : String(40);
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);                
         };
 
-        /*@@layout{"layoutInfo":{"x":965,"y":440.5}}*/
-        entity TB037 {
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB003T {
             key CLIENT : String(3);
-            key AUOBJ  : String(10);
-            key AUGRP  : String(4);
+            key SPRAS  : String(1);
+            key ROLE   : String(6);
+                RLTITL : String(25);
+                RLTXT  : String(50);
                 Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);            
+                Z_SOURCE_SYS  : String(5);                
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity TB038B {
+            key CLIENT     : String(3);
+            key SPRAS      : String(1);
+            key ISTYPE     : String(4);
+            key IND_SECTOR : String(10);
+                TEXT       : String(100);
+                TEXT_SHORT : String(20);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                
         };
     };
 };
