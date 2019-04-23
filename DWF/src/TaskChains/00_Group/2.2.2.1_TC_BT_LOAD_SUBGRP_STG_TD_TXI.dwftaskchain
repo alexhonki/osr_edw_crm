@@ -1,5 +1,5 @@
 {
-  "description": "Load batch Subs Staging TD CRM LAND",
+  "description": "Load batch Subs Staging TD CRM TXI",
   "responsible": {
     "email": "dwfalerts@gmail.com"
   },
@@ -198,6 +198,25 @@
       "preconditions": [
         {
           "from": "10",
+          "status": "OK"
+        }
+      ]
+    },
+    "12": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD CRMD_PSDMEA_H",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.staging.td.rms#TC_LOAD_CRMD_PSDMEA_H"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "11",
           "status": "OK"
         }
       ]

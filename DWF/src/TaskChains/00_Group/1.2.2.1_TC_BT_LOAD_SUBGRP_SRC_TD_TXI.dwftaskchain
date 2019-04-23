@@ -1,5 +1,5 @@
 {
-  "description": "1.2.2.1 Load Batch Subs Source CRM LAND TD",
+  "description": "1.2.2.1 Load Batch Subs Source CRM TXI TD",
   "responsible": {
     "email": "dwfalerts@gmail.com"
   },
@@ -198,6 +198,25 @@
       "preconditions": [
         {
           "from": "10",
+          "status": "OK"
+        }
+      ]
+    },
+    "12": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD CRMD_PSDMEA_H",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.td.rms#TC_LOAD_BT_CRMD_PSDMEA_H"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "11",
           "status": "OK"
         }
       ]
