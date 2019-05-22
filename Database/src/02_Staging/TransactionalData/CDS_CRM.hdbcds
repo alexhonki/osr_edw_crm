@@ -2864,10 +2864,10 @@ context CDS_CRM {
                 key CLIENT          : String(3)      not null;
 
                     @DataStore.aggregation : #NOP
-                key GUID            : Binary(16)     not null;
+                key GUID            : String(200)     not null;
 
                     @DataStore.aggregation : #NOP
-                key RECORD          : Binary(16)     not null;
+                key RECORD          : String(200)      not null;
 
                     @DataStore.aggregation : #NOP
                     ENF_ACT_TYPE    : String(4)      not null;
@@ -2939,10 +2939,10 @@ context CDS_CRM {
                 key CLIENT              : String(3)              not null;
 
                     @DataStore.aggregation : #MOV
-                key GUID                : Binary(16)             not null;
+                key GUID                : String(200)              not null;
 
                     @DataStore.aggregation : #MOV
-                key RECORD              : Binary(16)             not null;
+                key RECORD              : String(200)              not null;
 
                     @DataStore.aggregation : #MOV
                     ENF_ACT_TYPE        : String(4)              not null;
@@ -3010,8 +3010,8 @@ context CDS_CRM {
                 key technicalKey        : changeLogKey;
                     technicalAttributes : changeLogAttributes not null;
                 key CLIENT              : String(3)           not null;
-                key GUID                : Binary(16)          not null;
-                key RECORD              : Binary(16)          not null;
+                key GUID                : String(200)           not null;
+                key RECORD              : String(200)           not null;
                     ENF_ACT_TYPE        : String(4)           not null;
                     BY_DUNNING          : String(1)           not null;
                     BY_DUN_LAUFD        : String(8)           not null;

@@ -340,8 +340,8 @@ context CDS_CRM {
         /*@@layout{"layoutInfo":{"x":-385,"y":15.5}}*/
         entity CRMD_PSDMEA_H {
             key CLIENT          : String(3);
-            key GUID            : Binary(16);
-            key RECORD          : Binary(16);
+            key GUID            : String(200);
+            key RECORD          : String(200);
                 ENF_ACT_TYPE    : String(4);
                 BY_DUNNING      : String(1);
                 BY_DUN_LAUFD    : String(8);
