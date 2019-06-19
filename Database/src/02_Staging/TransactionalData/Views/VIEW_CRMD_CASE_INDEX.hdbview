@@ -1,8 +1,0 @@
-View "osr.edw.staging.td.crm::VIEW_CRMD_CASE_INDEX"
-as 
-select a.* from 
-"osr.edw.source.td.crm::CDS_CRM.TAB.CRMD_CASEINDEX" a 
-inner join 
-(select ifnull(max("Z_RUN_SEQ_ID"),0) as "Z_RUN_SEQ_ID" from "osr.edw.staging.td.crm::CDS_CRM.DSO.CRMD_CASEINDEX.active_data") b
-on a."Z_RUN_SEQ_ID" > b."Z_RUN_SEQ_ID"
-order by a."Z_CHANGE_TIME" asc
