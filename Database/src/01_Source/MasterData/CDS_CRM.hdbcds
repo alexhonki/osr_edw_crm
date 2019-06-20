@@ -328,34 +328,44 @@ context CDS_CRM {
 
         /*@@layout{"layoutInfo":{}}*/
         entity TB010 {
-            key CLIENT    : String(3);
-            key SPRAS     : String(1);
-            key ADR_KIND  : String(10);
-                TEXTSHORT : String(15);
-                TEXTLONG  : String(40);
+            key CLIENT        : String(3);
+            key SPRAS         : String(1);
+            key ADR_KIND      : String(10);
+                TEXTSHORT     : String(15);
+                TEXTLONG      : String(40);
                 Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
+                Z_SOURCE_SYS  : String(5);
         };
 
         /*@@layout{"layoutInfo":{}}*/
         entity TB003T {
-            key CLIENT : String(3);
-            key SPRAS  : String(1);
-            key ROLE   : String(6);
-                RLTITL : String(25);
-                RLTXT  : String(50);
+            key CLIENT        : String(3);
+            key SPRAS         : String(1);
+            key ROLE          : String(6);
+                RLTITL        : String(25);
+                RLTXT         : String(50);
                 Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
+                Z_SOURCE_SYS  : String(5);
         };
 
         /*@@layout{"layoutInfo":{}}*/
         entity TB038B {
-            key CLIENT     : String(3);
-            key SPRAS      : String(1);
-            key ISTYPE     : String(4);
-            key IND_SECTOR : String(10);
-                TEXT       : String(100);
-                TEXT_SHORT : String(20);
+            key CLIENT        : String(3);
+            key SPRAS         : String(1);
+            key ISTYPE        : String(4);
+            key IND_SECTOR    : String(10);
+                TEXT          : String(100);
+                TEXT_SHORT    : String(20);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":757,"y":563.5}}*/
+        entity CRMC_ACT_OBJ_T {
+            key CLIENT      : String(3);
+            key LANGU       : String(1);
+            key OBJECTIVE   : String(3);
+                DESCRIPTION : String(20);
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);                
         };
