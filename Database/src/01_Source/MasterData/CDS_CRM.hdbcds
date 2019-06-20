@@ -362,10 +362,25 @@ context CDS_CRM {
 
         /*@@layout{"layoutInfo":{"x":757,"y":563.5}}*/
         entity CRMC_ACT_OBJ_T {
-            key CLIENT      : String(3);
-            key LANGU       : String(1);
-            key OBJECTIVE   : String(3);
-                DESCRIPTION : String(20);
+            key CLIENT        : String(3);
+            key LANGU         : String(1);
+            key OBJECTIVE     : String(3);
+                DESCRIPTION   : String(20);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":-917,"y":802.5}}*/
+        entity CRMC_PARTNER_FCT {
+            key CLIENT        : String(3);
+            key PARTNER_FCT   : String(8);
+                PARTNER_PFT   : String(4);
+                PFT_SUBTYPE   : String(4);
+                NO_REFLECTION : String(1);
+                RELTYP        : String(6);
+                RELKIND       : String(4);
+                REGISTRATOR   : String(12);
+                HIDE          : String(1);
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);                
         };
