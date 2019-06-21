@@ -203,7 +203,7 @@
     <attributeMappings xmi:id="2a0c8a44b4a59621ee3f78c9cfe3432e" source="34551c73999680beec96e64d11ce4398" target="53ccc18f25c3a3b095b047976385539d">
     </attributeMappings>
   </tableMappings>
-  <nodes xmi:id="e9e9f1d4fb7dc2ad818b5da65c7058a6" xsi:type="flowgraph:FilterNode" name="P_DS">
+  <nodes xmi:id="e9e9f1d4fb7dc2ad818b5da65c7058a6" xsi:type="flowgraph:FilterNode" name="P_DS" expression="&quot;CLIENT&quot;=&#x27;400&#x27;">
     <annotations key="sap.afm.layout" xmi:id="6b0c0638549efda821b859d8bb236b4c">
       <annotations xmi:id="7c6614982306afddb533e79aba308336" key="x" value="193">
       </annotations>
@@ -216,10 +216,12 @@
     </annotations>
     <inputs xmi:id="8c36985feb6d72d605df93c935b285df" name="P_DS_IN">
       <attributes xmi:id="faedce2b50c11c1984beb9dda63faa8b" name="CLIENT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="f55ed1e49eb3cbece361f16d7e682d87" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="f55ed1e49eb3cbece361f16d7e682d87" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="7164c3af09d3f7a7f2d5fe20d82d932a" name="PARTNER_GUID" type="VARBINARY" nullable="false" length="16">
-        <annotations xmi:id="ca1b50a936856d6ae0a1eccbc7260ba5" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="ca1b50a936856d6ae0a1eccbc7260ba5" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="9c35717d36b9e1269ad0e7cec92ad744" name="GUID" type="VARBINARY" nullable="true" length="16">
       </attributes>
@@ -272,10 +274,12 @@
     </inputs>
     <outputs xmi:id="e1a33def5be7ea7f15b46d1d47e2c168" name="P_DS_OUT">
       <attributes xmi:id="73859772fcb3def4ef9fa429ff0798f6" name="CLIENT" type="NVARCHAR" nullable="true" expression="&quot;CLIENT&quot;" length="3">
-        <annotations xmi:id="d021d8624f80bdf76bdfe4b08767ae64" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="d021d8624f80bdf76bdfe4b08767ae64" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="bb670d622ceaf8f79211a3b64ad783b1" name="PARTNER_GUID" type="NVARCHAR" nullable="true" expression="&quot;PARTNER_GUID&quot;" length="200">
-        <annotations xmi:id="bc607ac29548bcbedc183081af0d3d57" key="sap.im.primaryKey" value="true"/>
+        <annotations xmi:id="bc607ac29548bcbedc183081af0d3d57" key="sap.im.primaryKey" value="true">
+        </annotations>
       </attributes>
       <attributes xmi:id="bff2bac51ec3b29e441067405f3f9e40" name="GUID" type="NVARCHAR" nullable="true" expression="&quot;GUID&quot;" length="200">
       </attributes>
@@ -579,7 +583,7 @@
       </attributes>
     </inputs>
   </nodes>
-  <nodes xmi:id="4173b6400563ee4516459e4fb7b982d1" xsi:type="flowgraph:TableComparisonNode" name="TC" compareTableName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMDPARTNER" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" generatedKeyAttribute="34551c73999680beec96e64d11ce4398" compareAttributes="8f375dd8b028737ca5ce55c1e01493cc 029e8d64250473ec62dce04a14f43f95 96024eae352e138cf0d0781f8b485124 ba7f5381985ee98ee63d41510cd17244 997a03c4e8721dc09eefbe51da4569a8 5cc7fe38a06e67080f1b09ba3052f17e ff72ccdfcd3060a212d9738359bdb3c0 4971acc94145f74ef3851596cd907608 3a8d0cb1ac683d3ec1fbabf79ae63cbc 76a3453e9a7f581afae401282e033319 65e7579483a0b12349d722a8e5b4e3bf 55e595d81f222a0c23434f256338e247 d38a13c603b071fa8767daa195d30415 71e7a492e8849a629d3a87d275f8ce27 f81e097bd5fd8a918bbbfa10995422ca 93824cb1ad37bf526034c15328a71a3b c0593df566036cdd53ac17ed2b6827dc a3c8c3c7abc9a6a73bdfd784203b7d0f 583bcd33be9c76503c6e30948fe53c95 0db4e4a08a80bc892d907cd57c9093cc f7722f4c7615ae92ad4dbad12715055f 3546d80bf98ba3bdec836531eb5d9808 cb9bc20982bcd52eb2e14ed8a12482b6 35c82318922f2b93356b85087f074de5 40b33c9d7b3ee7b2fb688f6c0aff3cc9 e718ad227c4054a579b09972de86eef3">
+  <nodes xmi:id="4173b6400563ee4516459e4fb7b982d1" xsi:type="flowgraph:TableComparisonNode" name="TC" compareTableName="osr.edw.source.td.crm::CDS_CRM.TAB.CRMDPARTNER" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" generatedKeyAttribute="34551c73999680beec96e64d11ce4398" compareAttributes="8f375dd8b028737ca5ce55c1e01493cc 029e8d64250473ec62dce04a14f43f95 96024eae352e138cf0d0781f8b485124 ba7f5381985ee98ee63d41510cd17244 997a03c4e8721dc09eefbe51da4569a8 5cc7fe38a06e67080f1b09ba3052f17e ff72ccdfcd3060a212d9738359bdb3c0 4971acc94145f74ef3851596cd907608 3a8d0cb1ac683d3ec1fbabf79ae63cbc 76a3453e9a7f581afae401282e033319 65e7579483a0b12349d722a8e5b4e3bf 55e595d81f222a0c23434f256338e247 d38a13c603b071fa8767daa195d30415 71e7a492e8849a629d3a87d275f8ce27 f81e097bd5fd8a918bbbfa10995422ca 93824cb1ad37bf526034c15328a71a3b c0593df566036cdd53ac17ed2b6827dc a3c8c3c7abc9a6a73bdfd784203b7d0f 583bcd33be9c76503c6e30948fe53c95 0db4e4a08a80bc892d907cd57c9093cc f7722f4c7615ae92ad4dbad12715055f 3546d80bf98ba3bdec836531eb5d9808 cb9bc20982bcd52eb2e14ed8a12482b6 35c82318922f2b93356b85087f074de5 40b33c9d7b3ee7b2fb688f6c0aff3cc9 e718ad227c4054a579b09972de86eef3" compareTableFilter="&quot;Z_CHANGE_TYPE&quot;&lt;&gt;&#x27;D&#x27;" detectDeletedRows="true">
     <annotations key="sap.afm.layout" xmi:id="630d381c38133883dad578b3d2aa987b">
       <annotations xmi:id="f13f4c60b38c713d26a3791893b6fbab" key="x" value="374">
       </annotations>
