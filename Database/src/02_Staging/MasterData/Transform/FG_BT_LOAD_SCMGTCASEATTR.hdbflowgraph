@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="e39bcc7424c8b079d610474fd0f38a64" name="FG_BT_LOAD_SCMGTCASEATTR" runtimeBehavior="BATCH_TASK">
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:version="2.0" xmi:id="e39bcc7424c8b079d610474fd0f38a64" name="FG_BT_LOAD_SCMGTCASEATTR" runtimeBehavior="BATCH_TASK">
   <annotations key="sap.afm.layout" xmi:id="85f3043c5814f5a20e1c9133444e53de">
     <annotations xmi:id="3666b157f0abe6f137413fe06dfa8643" key="x" value="10">
     </annotations>
@@ -11,8 +11,7 @@
     </annotations>
   </annotations>
   <annotations xmi:id="2c917dbe01324d5f41b18a8fa4f8e631" key="sap.afm.palette">
-    <annotations xmi:id="6c42869c225e7d9c3679469ed16785ce" key="additions" value="">
-    </annotations>
+    <annotations xmi:id="6c42869c225e7d9c3679469ed16785ce" key="additions" value=""/>
   </annotations>
   <annotations xmi:id="b1c1cad7814e336ab0c81874d92d70e4" key="sap.afm.nodeType" value="ContainerNode">
   </annotations>
@@ -549,12 +548,10 @@
     </annotations>
     <inputs xmi:id="71f579a1e5cd95d80f1055b2dbef6d64" name="P_DS_IN">
       <attributes xmi:id="6863215226072aa67fecdcbc684496aa" name="MANDT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="259f5bbf5699b84e87f817eb024dfcb0" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="259f5bbf5699b84e87f817eb024dfcb0" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="78204924adb4e2bfa034bb2faa61ecc4" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
-        <annotations xmi:id="e7961acf25d4c3de8b26a76768d82bf8" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="e7961acf25d4c3de8b26a76768d82bf8" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="843dd1767cc01c771e5e24f798201f54" name="CASE_TYPE" type="NVARCHAR" nullable="true" length="4">
       </attributes>
@@ -613,18 +610,15 @@
       <attributes xmi:id="f237bcf6fc563621803d3504ed576e8a" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
       </attributes>
       <attributes xmi:id="ebca997b284d3f049a7b6f0ba7e9cca8" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="74924452a3aec616dd1976d6358136c8" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="74924452a3aec616dd1976d6358136c8" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </inputs>
     <outputs xmi:id="d5193065069f143f6816c90358c019f8" name="P_DS_OUT">
       <attributes xmi:id="ea517261746b8c7048b316937454ab0e" name="MANDT" type="NVARCHAR" nullable="true" expression="&quot;MANDT&quot;" length="3">
-        <annotations xmi:id="0beda3b22f44cb4eda8ff842e03ff54c" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="0beda3b22f44cb4eda8ff842e03ff54c" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="d7cb2961ae10da519bb2a6257d369283" name="CASE_GUID" type="NVARCHAR" nullable="true" expression="&quot;CASE_GUID&quot;" length="32">
-        <annotations xmi:id="cbed6d86a380e69b4d305caad2a6c9d2" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="cbed6d86a380e69b4d305caad2a6c9d2" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="b464cc952b485c157f78b097bc45fb97" name="CASE_TYPE" type="NVARCHAR" nullable="true" expression="&quot;CASE_TYPE&quot;" length="4">
       </attributes>
@@ -683,8 +677,7 @@
       <attributes xmi:id="86e37e704fd1c9fbe4a946b8baa54318" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" expression="&quot;Z_RUN_ROW_NO&quot;" length="10">
       </attributes>
       <attributes xmi:id="456c5b228f3768c6f5fd4bfc0bafa35a" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" expression="&quot;Z_RUN_SEQ_ID&quot;" length="10">
-        <annotations xmi:id="552acb30db471a1956107557049d878e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="552acb30db471a1956107557049d878e" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </outputs>
   </nodes>
@@ -721,12 +714,10 @@
     </annotations>
     <inputs xmi:id="823e80b8990f6f90db5574258f50faad" name="Join_IN" kind="TABLE">
       <attributes xmi:id="53baab790ea2a8262f78c72379275517" name="MANDT" type="NVARCHAR" nullable="true" length="3">
-        <annotations xmi:id="587cd432c31f763450a3d277dc58c18c" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="587cd432c31f763450a3d277dc58c18c" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="540755baf05d0ed6c54c87111ecdd0ba" name="CASE_GUID" type="NVARCHAR" nullable="true" length="32">
-        <annotations xmi:id="01ebc9aa74fe7978cc2507aefe5fc17f" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="01ebc9aa74fe7978cc2507aefe5fc17f" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="16f7356bdcbb3b7ba216e45cb2b1f209" name="CASE_TYPE" type="NVARCHAR" nullable="true" length="4">
       </attributes>
@@ -785,8 +776,7 @@
       <attributes xmi:id="5f8b4756ebf125fccf14c2b568307bf5" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
       </attributes>
       <attributes xmi:id="a40153a001a62190a1242149ddd0c7d7" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="e3a98eb191acf2d658aba6d1c22c5039" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="e3a98eb191acf2d658aba6d1c22c5039" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </inputs>
     <inputs xmi:id="cb5a3be92d5f67b7ce7b22dd3995844c" name="Join_IN_1" kind="TABLE">
@@ -795,12 +785,10 @@
     </inputs>
     <outputs xmi:id="ca2dc979ed7ce425f9c42bd42c319417" name="Join_OUT" kind="TABLE">
       <attributes xmi:id="f4a7850972455562c325ad3f91255909" name="MANDT" type="NVARCHAR" nullable="true" length="3">
-        <annotations xmi:id="410d0fee8773c38d92050adbcaffcc8a" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="410d0fee8773c38d92050adbcaffcc8a" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="ea096faebd9298dc27a64a5414987ea8" name="CASE_GUID" type="NVARCHAR" nullable="true" length="32">
-        <annotations xmi:id="c2802b1837436ef63887c8806acb39f2" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="c2802b1837436ef63887c8806acb39f2" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="2a8ad3ae6a0b666b051e1c6e6af46b7a" name="CASE_TYPE" type="NVARCHAR" nullable="true" length="4">
       </attributes>
@@ -859,8 +847,7 @@
       <attributes xmi:id="f04398a3e1a4e8078c7d44fd20332e35" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
       </attributes>
       <attributes xmi:id="37b8f8c9b6837e79723ec02b2799847b" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="c99c8c64f235f61ff3d73c6d0e5e951f" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="c99c8c64f235f61ff3d73c6d0e5e951f" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="17aa9170123e03e765253a395349af09" name="Z_RUN_SEQ_ID_1" type="INTEGER" nullable="false" length="10">
       </attributes>
@@ -936,7 +923,7 @@
     <joinDefinitions left="823e80b8990f6f90db5574258f50faad" right="cb5a3be92d5f67b7ce7b22dd3995844c" type="INNER" condition="&quot;Join_IN&quot;.&quot;Z_RUN_SEQ_ID&quot;&gt;&quot;Join_IN_1&quot;.&quot;Z_RUN_SEQ_ID&quot;">
     </joinDefinitions>
   </nodes>
-  <nodes xmi:id="a62946f58f68d685d63fefa4bddf2a4a" xsi:type="flowgraph:FilterNode" name="P_JOIN">
+  <nodes xmi:id="a62946f58f68d685d63fefa4bddf2a4a" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="&quot;Z_RUN_SEQ_ID&quot; is not null order by &quot;Z_CHANGE_TIME&quot; asc">
     <annotations key="sap.afm.layout" xmi:id="f85df5db08f9c7758cacad0aa1641da1">
       <annotations xmi:id="de61b6337956b2d209cc2216d8d0eb11" key="x" value="1022.5795855522156">
       </annotations>
@@ -1277,12 +1264,10 @@
     </annotations>
     <outputs xmi:id="6c221222144e5e5b47755455670d3f33" name="DS_TAB">
       <attributes xmi:id="e8864909720d4f72bcc766fb4a94faf1" name="MANDT" type="NVARCHAR" nullable="false" length="3">
-        <annotations xmi:id="c9cb1ad1103f09d468497b2b4b4c05d3" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="c9cb1ad1103f09d468497b2b4b4c05d3" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="df2a6e12dfe27d43d84e85644fd0d38a" name="CASE_GUID" type="NVARCHAR" nullable="false" length="32">
-        <annotations xmi:id="9e71a621611c6afd1e1e5b6128f0e94e" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="9e71a621611c6afd1e1e5b6128f0e94e" key="sap.im.primaryKey" value="true"/>
       </attributes>
       <attributes xmi:id="53b4b0696d73b87ad456b3fb8b29e891" name="CASE_TYPE" type="NVARCHAR" nullable="true" length="4">
       </attributes>
@@ -1341,8 +1326,7 @@
       <attributes xmi:id="5016e6e8a25cd26e6831555f87c23235" name="Z_RUN_ROW_NO" type="INTEGER" nullable="true" length="10">
       </attributes>
       <attributes xmi:id="558a0fbbe5c48b803792801cb4ef01ac" name="Z_RUN_SEQ_ID" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="56f676a816a51f77c47ade172412a665" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="56f676a816a51f77c47ade172412a665" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </outputs>
   </nodes>
@@ -1577,8 +1561,7 @@
       <attributes xmi:id="9c1776307867357203203d9acbdefe43" name="technicalAttributes.type" type="NVARCHAR" nullable="true" length="30">
       </attributes>
       <attributes xmi:id="c1322f40d4f20f6ec572690efaae4265" name="technicalKey.id" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="2bab7bdbba1d7d4a999c0801a205d776" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="2bab7bdbba1d7d4a999c0801a205d776" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </outputs>
   </nodes>
@@ -1617,8 +1600,7 @@
       <attributes xmi:id="cc11a6a94c038c0736cdffff7ad32806" name="technicalAttributes.type" type="NVARCHAR" nullable="true" length="30">
       </attributes>
       <attributes xmi:id="aea98648eee1ac567b264c464f4449b8" name="technicalKey.id" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="e7831e06d09892b961c0dac7a383531b" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="e7831e06d09892b961c0dac7a383531b" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </inputs>
     <outputs xmi:id="bec6d04cb9902a0445fc12991d56d3a1" name="IdGen_join_1543126413791_OUT" kind="TABLE">
@@ -1627,8 +1609,7 @@
       <attributes xmi:id="1f646023a569d05c4f12a1c53f1b2e34" name="technicalAttributes.type" type="NVARCHAR" nullable="true" length="30">
       </attributes>
       <attributes xmi:id="c00e7c35a144b50ce4cbafdc0240b50b" name="technicalKey.id" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="a3bd9ef082f9d973e51edf8d16c65adf" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="a3bd9ef082f9d973e51edf8d16c65adf" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </outputs>
     <tableMappings xmi:id="1ee1f66fcf1962c6258b08515cf6d5a8" source="710a0f2abc1fae1134259891ed2ec95e" target="bec6d04cb9902a0445fc12991d56d3a1">
@@ -1661,8 +1642,7 @@
       <attributes xmi:id="40b8386ceaa62fbe0deff94b8ae85172" name="technicalAttributes.type" type="NVARCHAR" nullable="true" length="30">
       </attributes>
       <attributes xmi:id="01924337ef0290ed035538b38f66f83b" name="technicalKey.id" type="INTEGER" nullable="false" length="10">
-        <annotations xmi:id="428a931ac687f48e866bd65add28b9d8" key="sap.im.primaryKey" value="true">
-        </annotations>
+        <annotations xmi:id="428a931ac687f48e866bd65add28b9d8" key="sap.im.primaryKey" value="true"/>
       </attributes>
     </inputs>
     <outputs xmi:id="c14811faec09cfb7d4d45ee0dd3f4222" name="NewIds_proj_1543126413791_OUT">
@@ -1960,7 +1940,7 @@
       </attributes>
       <attributes xmi:id="ba338ecd897d7e88d59819f6fa30cdbb" name="Z_SOURCE_SYS" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;Z_SOURCE_SYS&quot;, &#x27;&#x27;)" length="5">
       </attributes>
-      <attributes xmi:id="6475630112003aa197b65296b6058a84" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" expression="&#x27; &#x27;" length="1">
+      <attributes xmi:id="6475630112003aa197b65296b6058a84" name="technicalAttributes.recordMode" type="NVARCHAR" nullable="false" expression="CASE WHEN &quot;Z_CHANGE_TYPE&quot;=&#x27;D&#x27; THEN &#x27;D&#x27; ELSE &#x27;&#x27; END" length="1">
       </attributes>
     </outputs>
   </nodes>
@@ -2227,8 +2207,7 @@
     </annotations>
     <inputs xmi:id="722e3c422f9cd4f6aa24df7ffbe59689" name="LogMsg_proj_1543126413791_IN">
       <attributes xmi:id="5fc9a10390627b9d1f01f30ee18d4d92" name="technicalKey.id" type="INTEGER" nullable="false">
-        <annotations xmi:id="2078ff3cc58bb1186e8f4226f96491a3" key="sap.im.primaryKey" value="false">
-        </annotations>
+        <annotations xmi:id="2078ff3cc58bb1186e8f4226f96491a3" key="sap.im.primaryKey" value="false"/>
       </attributes>
       <attributes xmi:id="1cd9d83b59a586756a447cd076b62344" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
       </attributes>
@@ -2245,8 +2224,7 @@
       <attributes xmi:id="9a41f939805380f389a1f954a087c1c4" name="technicalKey.posit" type="INTEGER" nullable="false" expression="1">
       </attributes>
       <attributes xmi:id="e4707c1703ac3e7582f2c1acb707c8dc" name="technicalKey.operationId" type="INTEGER" nullable="false" expression="&quot;technicalKey.id&quot;">
-        <annotations xmi:id="6a683c431d587cdb513be25679cdc9cc" key="sap.im.primaryKey" value="false">
-        </annotations>
+        <annotations xmi:id="6a683c431d587cdb513be25679cdc9cc" key="sap.im.primaryKey" value="false"/>
       </attributes>
     </outputs>
   </nodes>
@@ -2263,16 +2241,14 @@
     </annotations>
     <inputs xmi:id="f450e7b4a54b4db6162973f59cc172b5" name="OpHist_proj_1543126413791_IN">
       <attributes xmi:id="97c8bd51149cd4cac1fac24877662ed4" name="technicalKey.id" type="INTEGER" nullable="false">
-        <annotations xmi:id="65d227a6cfc1fce27a3c5338fe4aa9a2" key="sap.im.primaryKey" value="false">
-        </annotations>
+        <annotations xmi:id="65d227a6cfc1fce27a3c5338fe4aa9a2" key="sap.im.primaryKey" value="false"/>
       </attributes>
       <attributes xmi:id="978f8e1e522af6efa87de9b6dafb45b5" name="technicalAttributes.type" type="NVARCHAR" nullable="false" length="30">
       </attributes>
     </inputs>
     <outputs xmi:id="302ac9422900842ed42db76fe688d058" name="OpHist_proj_1543126413791_OUT">
       <attributes xmi:id="f9ef0849fddfb73c25b2c183ab93d529" name="technicalKey.operationId" type="INTEGER" nullable="false" expression="&quot;technicalKey.id&quot;">
-        <annotations xmi:id="27863dbfbf75bfc98190039470721661" key="sap.im.primaryKey" value="false">
-        </annotations>
+        <annotations xmi:id="27863dbfbf75bfc98190039470721661" key="sap.im.primaryKey" value="false"/>
       </attributes>
       <attributes xmi:id="945e9e6566c777b1fb170dd11a6bcd1a" name="technicalAttributes.operation" type="NVARCHAR" nullable="false" expression="&#x27;LOAD&#x27;" length="20">
       </attributes>
