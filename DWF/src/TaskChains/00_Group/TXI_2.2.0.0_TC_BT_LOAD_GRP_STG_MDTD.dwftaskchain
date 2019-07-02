@@ -1,5 +1,5 @@
 {
-  "description": "TXI_2.2.0.0 Load Group Staging RMS MD",
+  "description": "TXI_2.2.0.0 Load Group Staging CRM MD",
   "responsible": {
     "email": "dwfalerts@gmail.com"
   },
@@ -15,11 +15,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD BT GROUP MD RMS",
+        "description": "TC LOAD BT GROUP MD CRM",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.rms#TXI_2.2.1.0_TC_BT_LOAD_GRP_STG_MD"
+            "value": "osr.edw.crm#TXI_2.2.1.0_TC_BT_LOAD_GRP_STG_MD"
           }
         ]
       },
@@ -34,11 +34,11 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD BT GROUP TD RMS ",
+        "description": "TC LOAD BT GROUP TD CRM ",
         "parameterValues": [
           {
             "id": "taskChainId",
-            "value": "osr.edw.rms#TXI_2.2.2.0_TC_BT_LOAD_GRP_STG_TD"
+            "value": "osr.edw.crm#TXI_2.2.2.0_TC_BT_LOAD_GRP_STG_TD"
           }
         ]
       },
