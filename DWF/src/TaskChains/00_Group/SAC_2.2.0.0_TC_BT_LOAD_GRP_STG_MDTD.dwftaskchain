@@ -1,0 +1,34 @@
+{
+  "description": "SAC_2.2.0.0 Load Group Staging CRM MD TD",
+  "responsible": {
+    "email": "dwfalerts@gmail.com"
+  },
+  "taskTimeout": 4320000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD BT GROUP MD Staging SAC CRM",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.crm#SAC_2.2.1.0_TC_BT_LOAD_GRP_SRC_MD"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}
