@@ -28,10 +28,20 @@ context CDS_CASE {
 
         /*@@layout{"layoutInfo":{"x":-100,"y":-141.5}}*/
         entity SCMGATTR_SESCALT {
+            key MANDT         : String(3);
+            key LANGU         : String(1);
+            key ESCAL_REASON  : String(2);
+                DESCRIPTION   : String(60);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":128,"y":-142.5}}*/
+        entity SCMGAUT_SECLEVLT {
             key MANDT        : String(3);
             key LANGU        : String(1);
-            key ESCAL_REASON : String(2);
-                DESCRIPTION  : String(60);
+            key SECURE_LEVEL : String(1);
+                DESCRIPTION  : String(40);
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);                
         };
