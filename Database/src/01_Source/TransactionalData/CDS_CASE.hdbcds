@@ -1,0 +1,31 @@
+namespace osr.edw.source.td.crm;
+
+context CDS_CASE {
+
+    /*@@layout{"layoutInfo":{"x":-435,"y":-115.5}}*/
+    context TAB {
+
+        /*@@layout{"layoutInfo":{"x":-494,"y":-151.5}}*/
+        entity CMGALRT {
+            key CLIENT          : String(3);
+            key RECORD_ID       : String(200);
+            key Z_RUN_SEQ_ID    : Integer;
+                PARENT_ID       : String(32);
+                OBJECT_ID       : String(32);
+                OSRQLD_ALRTKEY  : String(32);
+                OSRQLD_ALRTID   : String(20);
+                OSRQLD_INVOBJTY : String(20);
+                OSRQLD_INVREAS  : String(10);
+                OSRQLD_TRNUSR   : String(12);
+                OSRQLD_DTTIME   : String(14);
+                OSRQLD_ALRT_CAT : String(10);
+                Z_CURR_FLAG     : String(1);
+                Z_VALID_FROM    : UTCTimestamp;
+                Z_VALID_TO      : UTCTimestamp;
+                Z_CHANGE_TYPE   : String(1);
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
+                Z_RUN_ROW_NO    : Integer;
+        };
+    };
+};
