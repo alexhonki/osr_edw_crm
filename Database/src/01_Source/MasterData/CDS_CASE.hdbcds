@@ -7,12 +7,23 @@ context CDS_CASE {
 
         /*@@layout{"layoutInfo":{"x":-546,"y":-137.5}}*/
         entity SCMGATTR_PRIOT {
-            key MANDT       : String(3);
-            key LANGU       : String(1);
-            key PRIORITY    : String(1);
-                DESCRIPTION : String(40);
+            key MANDT         : String(3);
+            key LANGU         : String(1);
+            key PRIORITY      : String(1);
+                DESCRIPTION   : String(40);
                 Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                          
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":-335,"y":-138.5}}*/
+        entity SCMGATTR_REASONT {
+            key MANDT         : String(3);
+            key LANGU         : String(1);
+            key CASE_TYPE     : String(4);
+            key REASON_CODE   : String(4);
+                DESCRIPTION   : String(60);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
         };
     };
 };
