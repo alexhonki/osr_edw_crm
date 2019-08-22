@@ -25,5 +25,15 @@ context CDS_CASE {
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);
         };
+
+        /*@@layout{"layoutInfo":{"x":-100,"y":-141.5}}*/
+        entity SCMGATTR_SESCALT {
+            key MANDT        : String(3);
+            key LANGU        : String(1);
+            key ESCAL_REASON : String(2);
+                DESCRIPTION  : String(60);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                
+        };
     };
 };
