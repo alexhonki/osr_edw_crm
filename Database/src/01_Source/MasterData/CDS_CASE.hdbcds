@@ -1,0 +1,18 @@
+namespace osr.edw.source.md.crm;
+
+context CDS_CASE {
+
+    /*@@layout{"layoutInfo":{"x":-368,"y":-108.5}}*/
+    context TAB {
+
+        /*@@layout{"layoutInfo":{"x":-546,"y":-137.5}}*/
+        entity SCMGATTR_PRIOT {
+            key MANDT       : String(3);
+            key LANGU       : String(1);
+            key PRIORITY    : String(1);
+                DESCRIPTION : String(40);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                          
+        };
+    };
+};
