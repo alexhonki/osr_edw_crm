@@ -38,10 +38,21 @@ context CDS_CASE {
 
         /*@@layout{"layoutInfo":{"x":128,"y":-142.5}}*/
         entity SCMGAUT_SECLEVLT {
-            key MANDT        : String(3);
-            key LANGU        : String(1);
-            key SECURE_LEVEL : String(1);
-                DESCRIPTION  : String(40);
+            key MANDT         : String(3);
+            key LANGU         : String(1);
+            key SECURE_LEVEL  : String(1);
+                DESCRIPTION   : String(40);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":367,"y":-143.5}}*/
+        entity SCMGSTATPROFST {
+            key CLIENT           : String(3);
+            key LANGU            : String(1);
+            key PROFILE_ID       : String(8);
+            key STAT_ORDERNO     : String(2);
+                STAT_ORDNO_DESCR : String(40);
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);                
         };
