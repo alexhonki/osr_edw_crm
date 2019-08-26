@@ -1,0 +1,35 @@
+{
+  "description": "2.2.2.2 Load Subs Staging CRM TD SAC payroll tax",
+  "responsible": {
+    "email": "dwfalerts@gmail.com"
+  },
+  "maxParallelExecution": 1,
+  "taskTimeout": 4320000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD /OSRQLD/CMGALRT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.staging.td.crm#TC_LOAD_CMGALRT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }    
+  }
+}

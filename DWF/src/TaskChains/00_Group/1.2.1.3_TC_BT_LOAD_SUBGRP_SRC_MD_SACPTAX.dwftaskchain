@@ -1,0 +1,111 @@
+{
+  "description": "1.2.1.3 Load Subs Source CRM MD SAC payroll tax",
+  "responsible": {
+    "email": "dwfalerts@gmail.com"
+  },
+  "maxParallelExecution": 1,
+  "taskTimeout": 4320000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCMGATTR_PRIOT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_SCMGATTR_PRIOT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    },
+    "3": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCMGATTR_REASONT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_SCMGATTR_REASONT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
+    },
+    "4": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCMGATTR_SESCALT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_SCMGATTR_SESCALT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "3",
+          "status": "OK"
+        }
+      ]
+    },
+    "5": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCMGAUT_SECLEVLT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_SCMGAUT_SECLEVLT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "4",
+          "status": "OK"
+        }
+      ]
+    }, 
+    "6": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCMGSTATPROFST",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_SCMGSTATPROFST"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "5",
+          "status": "OK"
+        }
+      ]
+    }    
+  }
+}
