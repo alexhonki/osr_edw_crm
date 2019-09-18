@@ -29,6 +29,25 @@
           "status": "NEUTRAL"
         }
       ]
-    }
+    },
+    "3": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD BT GROUP TD Source SAC CRM",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.crm#SAC_1.2.2.0_TC_BT_LOAD_GRP_SRC_TD"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
+    }    
   }
 }
