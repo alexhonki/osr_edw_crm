@@ -382,6 +382,18 @@ context CDS_CRM {
                 REGISTRATOR   : String(12);
                 HIDE          : String(1);
                 Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":-681,"y":801.5}}*/
+        entity CRMC_PARTNER_FT {
+            key CLIENT      : String(3);
+            key PARTNER_FCT : String(8);
+            key SPRAS       : String(1);
+                DESCRIPTION : String(30);
+                SHORT_DESC  : String(4);
+                REGISTRATOR : String(12);
+                Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);                
         };
     };
