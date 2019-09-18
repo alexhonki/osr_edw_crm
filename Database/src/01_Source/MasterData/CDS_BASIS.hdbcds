@@ -1,0 +1,23 @@
+namespace osr.edw.source.md.crm;
+
+context CDS_BASIS {
+
+    /*@@layout{"layoutInfo":{"x":-153,"y":-13.5}}*/
+    context TAB {
+
+        /*@@layout{"layoutInfo":{"x":-194,"y":-93.5}}*/
+        entity DD07T {
+            key DOMNAME    : String(30);
+            key DDLANGUAGE : String(1);
+            key AS4LOCAL   : String(1);
+            key VALPOS     : String(4);
+            key AS4VERS    : String(4);
+                DDTEXT     : String(60);
+                DOMVAL_LD  : String(10);
+                DOMVAL_HD  : String(10);
+                DOMVALUE_L : String(10);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                  
+        };
+    };
+};
