@@ -53,8 +53,18 @@ context CDS_CASE {
             key PROFILE_ID       : String(8);
             key STAT_ORDERNO     : String(2);
                 STAT_ORDNO_DESCR : String(40);
-                Z_CHANGE_TIME : UTCTimestamp;
-                Z_SOURCE_SYS  : String(5);                
+                Z_CHANGE_TIME    : UTCTimestamp;
+                Z_SOURCE_SYS     : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":-546,"y":88.5}}*/
+        entity CMG_DISC {
+            key CLIENT          : String(3);
+            key DISCLOSURE_KEY  : String(10);
+                DISCLOSURE_TEXT : String(40);
+                CASE_TYPE       : String(4);
+                Z_CHANGE_TIME    : UTCTimestamp;
+                Z_SOURCE_SYS     : String(5);                
         };
     };
 };
