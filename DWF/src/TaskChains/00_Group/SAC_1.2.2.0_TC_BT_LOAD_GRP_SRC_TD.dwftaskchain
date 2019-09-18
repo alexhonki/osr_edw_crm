@@ -1,0 +1,35 @@
+{
+  "description": "SAC_1.2.2.0 Load Batch Group Source CRM TD",
+  "responsible": {
+    "email": "dwfalerts@gmail.com"
+  },
+  "maxParallelExecution": 3,
+  "taskTimeout": 4320000,
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SUBS SOURCE CRM TD SAC payroll tax",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.crm#1.2.2.2_TC_BT_LOAD_SUBGRP_SRC_TD_SACPTAX"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}

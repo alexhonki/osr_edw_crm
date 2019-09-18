@@ -3,7 +3,7 @@
   "responsible": {
     "email": "dwfalerts@gmail.com"
   },
-  "maxParallelExecution": 1,
+  "maxParallelExecution": 3,
   "taskTimeout": 4320000,
   "taskList": {
     "1": {
@@ -16,11 +16,30 @@
       "inline": {
         "type": "SUB",
         "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD SUBS SOURCE CRM SAC landtax reporting MD",
+        "description": "TC LOAD SUBS SOURCE CRM MD SAC landtax reporting",
         "parameterValues": [
           {
             "id": "taskChainId",
             "value": "osr.edw.crm#1.2.1.2_TC_BT_LOAD_SUBGRP_SRC_MD_SACLAND"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    },
+    "3": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SUBS SOURCE CRM MD SAC payroll tax",        
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.crm#1.2.1.3_TC_BT_LOAD_SUBGRP_SRC_MD_SACPTAX"
           }
         ]
       },
