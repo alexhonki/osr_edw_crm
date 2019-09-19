@@ -63,8 +63,18 @@ context CDS_CASE {
             key DISCLOSURE_KEY  : String(10);
                 DISCLOSURE_TEXT : String(40);
                 CASE_TYPE       : String(4);
-                Z_CHANGE_TIME    : UTCTimestamp;
-                Z_SOURCE_SYS     : String(5);                
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
+        };
+
+        /*@@layout{"layoutInfo":{"x":-335,"y":87.5}}*/
+        entity CMG_RSNT {
+            key MANDT              : String(3);
+            key OUTCOME_REASN_KEY  : String(10);
+            key LANGU              : String(1);
+                OUTCOME_REASN_TEXT : String(100);
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);                
         };
     };
 };
