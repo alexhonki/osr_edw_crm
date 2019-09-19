@@ -1280,6 +1280,15 @@ context CDS_CRM {
 
                     @DataStore.aggregation : #NOP
                     Z_RUN_SEQ_ID     : Integer        not null;
+                    
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_ALRTID    : String(20)     not null default '';
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_F009L     : String(10)     not null default '';
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_REFUND    : Decimal(21, 2) not null default 0;                     
             }
             technical configuration {
                 group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype ACTIVE;
@@ -1445,6 +1454,15 @@ context CDS_CRM {
 
                     @DataStore.aggregation : #MOV
                     Z_RUN_SEQ_ID        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_ALRTID       : String(20)             not null default '';
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_F009L        : String(10)             not null default '';
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_REFUND       : Decimal(21, 2)         not null default 0;                    
             }
             technical configuration {
                 group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype QUEUE;
@@ -1506,6 +1524,9 @@ context CDS_CRM {
                     Z_SOURCE_SYS        : String(5)           not null;
                     Z_RUN_ROW_NO        : Integer             not null;
                     Z_RUN_SEQ_ID        : Integer             not null;
+                    OSRQLD_ALRTID       : String(20)          not null default '';
+                    OSRQLD_F009L        : String(10)          not null default '';
+                    OSRQLD_REFUND       : Decimal(21, 2)      not null default 0;                       
             }
             technical configuration {
                 group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype CHANGE_LOG;

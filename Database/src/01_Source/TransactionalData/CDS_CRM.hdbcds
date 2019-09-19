@@ -227,6 +227,9 @@ context CDS_CRM {
                 Z_SOURCE_SYS     : String(5);
                 Z_RUN_ROW_NO     : Integer;
             key Z_RUN_SEQ_ID     : Integer;
+                OSRQLD_ALRTID    : String(20);
+                OSRQLD_F009L     : String(10);
+                OSRQLD_REFUND    : Decimal(21, 2);
         };
 
         /*@@layout{"layoutInfo":{}}*/
