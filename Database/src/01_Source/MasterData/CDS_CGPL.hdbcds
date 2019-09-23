@@ -47,7 +47,19 @@ context CDS_CGPL {
                 Z_CHANGE_TYPE   : String(1);
                 Z_CHANGE_TIME   : UTCTimestamp;
                 Z_SOURCE_SYS    : String(5);
-                Z_RUN_ROW_NO    : Integer;                   
+                Z_RUN_ROW_NO    : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{"x":-243,"y":-87.5}}*/
+        entity CGPL_TEXT {
+            key CLIENT        : String(3);
+            key GUID          : Binary(16);
+            key LANGU         : String(1);
+                TEXT_GUID     : Binary(16);
+                TEXT1         : String(40);
+                TEXTU         : String(40);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);                
         };
     };
 };
