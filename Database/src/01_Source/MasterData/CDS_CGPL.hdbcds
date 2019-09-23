@@ -1,0 +1,53 @@
+namespace osr.edw.source.md.crm;
+
+context CDS_CGPL {
+
+    /*@@layout{"layoutInfo":{"x":-337,"y":-61.5}}*/
+    context TAB {
+
+        /*@@layout{"layoutInfo":{"x":-469,"y":-86.5}}*/
+        entity CGPL_PROJECT {
+            key CLIENT          : String(3);
+            key GUID            : Binary(16);
+            key Z_RUN_SEQ_ID    : Integer;
+                EXTERNAL_ID     : String(24);
+                PROJECT_GUID    : Binary(16);
+                OBJECT_TYPE     : String(3);
+                PRIORITY        : String(3);
+                ACTUALSTART     : Decimal(15, 0);
+                ACTUALFINISH    : Decimal(15, 0);
+                PLANSTART       : Decimal(15, 0);
+                PLANFINISH      : Decimal(15, 0);
+                COMPLETION      : String(3);
+                MILESTONE       : String(1);
+                CONSTRAINT_TYPE : String(1);
+                CONSTRAINT_TIME : Decimal(15, 0);
+                CREATED_BY      : String(12);
+                CREATED_ON      : String(8);
+                CREATED_IN_BW   : String(1);
+                CHANGED_BY      : String(12);
+                CHANGED_ON      : String(8);
+                UPDATED_IN_BW   : String(1);
+                BWIDENTIFIER    : String(8);
+                PLANGROUP       : String(4);
+                LATEST_START    : Decimal(15, 0);
+                LATEST_FINISH   : Decimal(15, 0);
+                TOTAL_FLOAT     : Decimal(8, 2);
+                DURATION        : Decimal(8, 2);
+                DURATION_UNIT   : String(3);
+                CALENDAR_ID     : String(2);
+                CONSTR_TYPE_FIN : String(1);
+                CONSTR_TIME_FIN : Decimal(15, 0);
+                APPLICATION     : String(3);
+                FORECAST_START  : Decimal(15, 0);
+                FORECAST_FINISH : Decimal(15, 0);
+                Z_CURR_FLAG     : String(1);
+                Z_VALID_FROM    : UTCTimestamp;
+                Z_VALID_TO      : UTCTimestamp;
+                Z_CHANGE_TYPE   : String(1);
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
+                Z_RUN_ROW_NO    : Integer;                   
+        };
+    };
+};

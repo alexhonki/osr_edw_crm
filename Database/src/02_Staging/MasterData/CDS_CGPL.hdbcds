@@ -1,0 +1,392 @@
+namespace osr.edw.staging.md.crm;
+
+using DataWarehouse.DataStore::Structures.inboundQueueKey;
+using DataWarehouse.DataStore::Structures.inboundQueueAttributes;
+using DataWarehouse.DataStore::Structures.changeLogKey;
+using DataWarehouse.DataStore::Structures.changeLogAttributes;
+using DataWarehouse.DataStore::Structures.operationHistoryKey;
+using DataWarehouse.DataStore::Structures.operationHistoryAttributes;
+using DataWarehouse.DataStore::Structures.aggregationHistoryKey;
+using DataWarehouse.DataStore::Structures.aggregationHistoryAttributes;
+using DataWarehouse.DataStore::Structures.affectedRequestsKey;
+using DataWarehouse.DataStore::Structures.logMessagesKey;
+using DataWarehouse.DataStore::Structures.logMessagesAttributes;
+using DataWarehouse.DataStore::Structures.subscribersKey;
+using DataWarehouse.DataStore::Structures.subscribersAttributes;
+using DataWarehouse.DataStore::Structures.runningOperationsKey;
+using DataWarehouse.DataStore::Structures.idGeneratorKey;
+using DataWarehouse.DataStore::Structures.idGeneratorAttributes;
+using DataWarehouse.DataStore::Annotations as DataStore;
+
+context CDS_CGPL {
+
+    /*@@layout{"layoutInfo":{"x":-238,"y":-40.5}}*/
+    context DSO {
+        @DataStore.isDSO
+        @DataStore.entity.activeData         : 'active_data'
+        @DataStore.entity.changeLog          : 'change_log'
+        @DataStore.entity.activationQueue    : [ 'inbound_queue' ]
+        @DataStore.entity.operationHistory   : 'operationHistory'
+        @DataStore.entity.aggregationHistory : 'aggregationHistory'
+        @DataStore.entity.logMessages        : 'logMessages'
+        @DataStore.entity.affectedRequests   : 'affectedRequests'
+        @DataStore.entity.subscribers        : 'subscribers'
+        @DataStore.entity.runningOperations  : 'runningOperations'
+        @DataStore.entity.idGenerator        : 'idGen'
+        @DataStore.computeChecksum           : false
+        @DataStore.snapshotSupport           : false
+        /*@@layout{"layoutInfo":{"x":-327,"y":-120.5}}*/
+        context CGPL_PROJECT {
+            @DataStore.entityCategory : #ACTIVE_DATA
+            entity active_data {
+                    @DataStore.aggregation : #NOP
+                key CLIENT          : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                key GUID            : Binary(16)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_SEQ_ID    : Integer        not null;
+
+                    @DataStore.aggregation : #NOP
+                    EXTERNAL_ID     : String(24)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    PROJECT_GUID    : Binary(16)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    OBJECT_TYPE     : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    PRIORITY        : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ACTUALSTART     : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ACTUALFINISH    : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    PLANSTART       : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    PLANFINISH      : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    COMPLETION      : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    MILESTONE       : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CONSTRAINT_TYPE : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CONSTRAINT_TIME : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    CREATED_BY      : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CREATED_ON      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CREATED_IN_BW   : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHANGED_BY      : String(12)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CHANGED_ON      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    UPDATED_IN_BW   : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    BWIDENTIFIER    : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    PLANGROUP       : String(4)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    LATEST_START    : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    LATEST_FINISH   : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    TOTAL_FLOAT     : Decimal(8, 2)  not null;
+
+                    @DataStore.aggregation : #NOP
+                    DURATION        : Decimal(8, 2)  not null;
+
+                    @DataStore.aggregation : #NOP
+                    DURATION_UNIT   : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CALENDAR_ID     : String(2)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CONSTR_TYPE_FIN : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    CONSTR_TIME_FIN : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    APPLICATION     : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    FORECAST_START  : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    FORECAST_FINISH : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CURR_FLAG     : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_VALID_FROM    : UTCTimestamp   not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #NOP
+                    Z_VALID_TO      : UTCTimestamp   not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TYPE   : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TIME   : UTCTimestamp   not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #NOP
+                    Z_SOURCE_SYS    : String(5)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_ROW_NO    : Integer        not null;
+            }
+            technical configuration {
+                group name CGPL_PROJECT group type "sap.dwf.dso" group subtype ACTIVE;
+            };
+
+            @DataStore.entityCategory : #ACTIVATION_QUEUE
+            entity inbound_queue {
+                key technicalKey        : inboundQueueKey;
+                    technicalAttributes : inboundQueueAttributes not null;
+
+                    @DataStore.aggregation : #MOV
+                key CLIENT              : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                key GUID                : Binary(16)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_SEQ_ID        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    EXTERNAL_ID         : String(24)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    PROJECT_GUID        : Binary(16)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OBJECT_TYPE         : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    PRIORITY            : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ACTUALSTART         : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ACTUALFINISH        : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    PLANSTART           : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    PLANFINISH          : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    COMPLETION          : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    MILESTONE           : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CONSTRAINT_TYPE     : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CONSTRAINT_TIME     : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    CREATED_BY          : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CREATED_ON          : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CREATED_IN_BW       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHANGED_BY          : String(12)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CHANGED_ON          : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    UPDATED_IN_BW       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    BWIDENTIFIER        : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    PLANGROUP           : String(4)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    LATEST_START        : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    LATEST_FINISH       : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    TOTAL_FLOAT         : Decimal(8, 2)          not null;
+
+                    @DataStore.aggregation : #MOV
+                    DURATION            : Decimal(8, 2)          not null;
+
+                    @DataStore.aggregation : #MOV
+                    DURATION_UNIT       : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CALENDAR_ID         : String(2)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CONSTR_TYPE_FIN     : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    CONSTR_TIME_FIN     : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    APPLICATION         : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    FORECAST_START      : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    FORECAST_FINISH     : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CURR_FLAG         : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_VALID_FROM        : UTCTimestamp           not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #MOV
+                    Z_VALID_TO          : UTCTimestamp           not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TYPE       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TIME       : UTCTimestamp           not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #MOV
+                    Z_SOURCE_SYS        : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_ROW_NO        : Integer                not null;
+            }
+            technical configuration {
+                group name CGPL_PROJECT group type "sap.dwf.dso" group subtype QUEUE;
+            };
+
+            @DataStore.entityCategory : #CHANGE_LOG
+            entity change_log {
+                key technicalKey        : changeLogKey;
+                    technicalAttributes : changeLogAttributes not null;
+                key CLIENT              : String(3)           not null;
+                key GUID                : Binary(16)          not null;
+                    Z_RUN_SEQ_ID        : Integer             not null;
+                    EXTERNAL_ID         : String(24)          not null;
+                    PROJECT_GUID        : Binary(16)          not null;
+                    OBJECT_TYPE         : String(3)           not null;
+                    PRIORITY            : String(3)           not null;
+                    ACTUALSTART         : Decimal(15, 0)      not null;
+                    ACTUALFINISH        : Decimal(15, 0)      not null;
+                    PLANSTART           : Decimal(15, 0)      not null;
+                    PLANFINISH          : Decimal(15, 0)      not null;
+                    COMPLETION          : String(3)           not null;
+                    MILESTONE           : String(1)           not null;
+                    CONSTRAINT_TYPE     : String(1)           not null;
+                    CONSTRAINT_TIME     : Decimal(15, 0)      not null;
+                    CREATED_BY          : String(12)          not null;
+                    CREATED_ON          : String(8)           not null;
+                    CREATED_IN_BW       : String(1)           not null;
+                    CHANGED_BY          : String(12)          not null;
+                    CHANGED_ON          : String(8)           not null;
+                    UPDATED_IN_BW       : String(1)           not null;
+                    BWIDENTIFIER        : String(8)           not null;
+                    PLANGROUP           : String(4)           not null;
+                    LATEST_START        : Decimal(15, 0)      not null;
+                    LATEST_FINISH       : Decimal(15, 0)      not null;
+                    TOTAL_FLOAT         : Decimal(8, 2)       not null;
+                    DURATION            : Decimal(8, 2)       not null;
+                    DURATION_UNIT       : String(3)           not null;
+                    CALENDAR_ID         : String(2)           not null;
+                    CONSTR_TYPE_FIN     : String(1)           not null;
+                    CONSTR_TIME_FIN     : Decimal(15, 0)      not null;
+                    APPLICATION         : String(3)           not null;
+                    FORECAST_START      : Decimal(15, 0)      not null;
+                    FORECAST_FINISH     : Decimal(15, 0)      not null;
+                    Z_CURR_FLAG         : String(1)           not null;
+                    Z_VALID_FROM        : UTCTimestamp        not null default '1900-01-01 00:00:00';
+                    Z_VALID_TO          : UTCTimestamp        not null default '1900-01-01 00:00:00';
+                    Z_CHANGE_TYPE       : String(1)           not null;
+                    Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 00:00:00';
+                    Z_SOURCE_SYS        : String(5)           not null;
+                    Z_RUN_ROW_NO        : Integer             not null;
+            }
+            technical configuration {
+                group name CGPL_PROJECT group type "sap.dwf.dso" group subtype CHANGE_LOG;
+            };
+
+            @DataStore.entityCategory : #OPERATION_HISTORY
+            entity operationHistory {
+                key technicalKey        : operationHistoryKey;
+                    technicalAttributes : operationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AGGREGATION_HISTORY
+            entity aggregationHistory {
+                key technicalKey        : aggregationHistoryKey;
+                    technicalAttributes : aggregationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AFFECTED_REQUESTS
+            entity affectedRequests {
+                key technicalKey : affectedRequestsKey;
+            };
+
+            @DataStore.entityCategory : #LOG_MESSAGES
+            entity logMessages {
+                key technicalKey        : logMessagesKey;
+                    technicalAttributes : logMessagesAttributes;
+            };
+
+            @DataStore.entityCategory : #SUBSCRIBERS
+            entity subscribers {
+                key technicalKey        : subscribersKey;
+                    technicalAttributes : subscribersAttributes;
+            };
+
+            @DataStore.entityCategory : #RUNNING_OPERATIONS
+            entity runningOperations {
+                key technicalKey : runningOperationsKey;
+            };
+
+            @DataStore.entityCategory : #ID_GENERATOR
+            entity idGen {
+                key technicalKey        : idGeneratorKey;
+                    technicalAttributes : idGeneratorAttributes;
+            };
+        };
+    };
+};
