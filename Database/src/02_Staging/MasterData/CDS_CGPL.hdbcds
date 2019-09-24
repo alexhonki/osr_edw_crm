@@ -43,7 +43,7 @@ context CDS_CGPL {
                 key CLIENT          : String(3)      not null;
 
                     @DataStore.aggregation : #NOP
-                key GUID            : Binary(16)     not null;
+                key GUID            : String(100)    not null;
 
                     @DataStore.aggregation : #NOP
                     Z_RUN_SEQ_ID    : Integer        not null;
@@ -52,7 +52,7 @@ context CDS_CGPL {
                     EXTERNAL_ID     : String(24)     not null;
 
                     @DataStore.aggregation : #NOP
-                    PROJECT_GUID    : Binary(16)     not null;
+                    PROJECT_GUID    : String(100)    not null;
 
                     @DataStore.aggregation : #NOP
                     OBJECT_TYPE     : String(3)      not null;
@@ -175,7 +175,7 @@ context CDS_CGPL {
                 key CLIENT              : String(3)              not null;
 
                     @DataStore.aggregation : #MOV
-                key GUID                : Binary(16)             not null;
+                key GUID                : String(100)            not null;
 
                     @DataStore.aggregation : #MOV
                     Z_RUN_SEQ_ID        : Integer                not null;
@@ -184,7 +184,7 @@ context CDS_CGPL {
                     EXTERNAL_ID         : String(24)             not null;
 
                     @DataStore.aggregation : #MOV
-                    PROJECT_GUID        : Binary(16)             not null;
+                    PROJECT_GUID        : String(100)            not null;
 
                     @DataStore.aggregation : #MOV
                     OBJECT_TYPE         : String(3)              not null;
@@ -303,10 +303,10 @@ context CDS_CGPL {
                 key technicalKey        : changeLogKey;
                     technicalAttributes : changeLogAttributes not null;
                 key CLIENT              : String(3)           not null;
-                key GUID                : Binary(16)          not null;
+                key GUID                : String(100)         not null;
                     Z_RUN_SEQ_ID        : Integer             not null;
                     EXTERNAL_ID         : String(24)          not null;
-                    PROJECT_GUID        : Binary(16)          not null;
+                    PROJECT_GUID        : String(100)         not null;
                     OBJECT_TYPE         : String(3)           not null;
                     PRIORITY            : String(3)           not null;
                     ACTUALSTART         : Decimal(15, 0)      not null;

@@ -8,10 +8,10 @@ context CDS_CGPL {
         /*@@layout{"layoutInfo":{"x":-469,"y":-86.5}}*/
         entity CGPL_PROJECT {
             key CLIENT          : String(3);
-            key GUID            : Binary(16);
+            key GUID            : String(100);
             key Z_RUN_SEQ_ID    : Integer;
                 EXTERNAL_ID     : String(24);
-                PROJECT_GUID    : Binary(16);
+                PROJECT_GUID    : String(100);
                 OBJECT_TYPE     : String(3);
                 PRIORITY        : String(3);
                 ACTUALSTART     : Decimal(15, 0);
