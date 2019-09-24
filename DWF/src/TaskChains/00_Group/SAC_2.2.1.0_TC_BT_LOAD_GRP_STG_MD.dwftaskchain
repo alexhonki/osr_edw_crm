@@ -30,6 +30,25 @@
           "status": "NEUTRAL"
         }
       ]
-    }
+    },
+    "3": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SUBS Staging CRM SAC payroll tax MD",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.crm#2.2.1.3_TC_BT_LOAD_SUBGRP_STG_MD_SACPTAX"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
+    }    
   }
 }

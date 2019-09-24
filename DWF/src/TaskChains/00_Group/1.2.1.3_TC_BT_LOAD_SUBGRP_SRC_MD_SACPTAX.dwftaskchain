@@ -1,5 +1,5 @@
 {
-  "description": "1.2.1.3 Load Subs Source CRM MD SAC payroll tax",
+  "description": "1.2.1.3 Load Subs Source CRM SAC payroll tax MD",
   "responsible": {
     "email": "dwfalerts@gmail.com"
   },
@@ -198,6 +198,44 @@
       "preconditions": [
         {
           "from": "10",
+          "status": "OK"
+        }
+      ]
+    },
+    "12": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD CGPL_PROJECT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_CGPL_PROJECT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "11",
+          "status": "OK"
+        }
+      ]
+    },
+    "13": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD CGPL_TEXT",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.md.crm#TC_LOAD_BT_CGPL_TEXT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "12",
           "status": "OK"
         }
       ]
