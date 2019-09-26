@@ -845,7 +845,7 @@
       </attributes>
     </outputs>
   </nodes>
-  <nodes xmi:id="6287f334627fa0ec01953abba942ae55" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="&quot;Z_RUN_SEQ_ID&quot; is not null order by &quot;Z_CHANGE_TIME&quot; asc">
+  <nodes xmi:id="6287f334627fa0ec01953abba942ae55" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="">
     <annotations key="sap.afm.layout" xmi:id="fe31dba373594e2be0ec34d0ee544450">
       <annotations xmi:id="05ecabeca92de810fd02e00930cb50c3" key="x" value="669.664792060852">
       </annotations>
@@ -2235,7 +2235,7 @@
       </attributes>
     </inputs>
     <outputs xmi:id="0671e7aeb89e4b81f0f16b49a51c214e" name="DataTarget_addRecordNo_OUT">
-      <attributes xmi:id="d08b55591707061ece735097c07eb69f" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over ()">
+      <attributes xmi:id="d08b55591707061ece735097c07eb69f" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over (order by &quot;Z_CHANGE_TIME&quot; asc)">
       </attributes>
       <attributes xmi:id="7a6a673284d132da234007f0822dd6cb" name="ARCHIVING_FLAG" type="NVARCHAR" nullable="false" expression="&quot;ARCHIVING_FLAG&quot;" length="1">
       </attributes>

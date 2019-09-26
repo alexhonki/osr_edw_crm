@@ -483,7 +483,7 @@
     <joinDefinitions left="208abf7ddb59fa93d7f44b4c35c9b7b1" right="75e450cc50c38bd4765133d9e083f5ed" type="INNER" condition="&quot;Join_IN&quot;.&quot;Z_RUN_SEQ_ID&quot;&gt;&quot;Join_IN_1&quot;.&quot;Z_RUN_SEQ_ID&quot;">
     </joinDefinitions>
   </nodes>
-  <nodes xmi:id="464e38b57dc9d8b25431716f5f57b7a1" xsi:type="flowgraph:FilterNode" name="Projection_2" expression="&quot;Z_RUN_SEQ_ID&quot; is not null order by &quot;Z_CHANGE_TIME&quot; asc">
+  <nodes xmi:id="464e38b57dc9d8b25431716f5f57b7a1" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="">
     <annotations key="sap.afm.layout" xmi:id="5d9d8e285d4a2682f453d11fec4e9d58">
       <annotations xmi:id="5a0475686293cf599b66f34cc9448ccc" key="x" value="1051.3149371147156">
       </annotations>
@@ -494,7 +494,7 @@
       <annotations xmi:id="7e7d2160247309811e3a613a98ab1dfc" key="height" value="115">
       </annotations>
     </annotations>
-    <inputs xmi:id="88ea6f0e3cf8eff7685c54f8f7e5c148" name="Projection_2_IN">
+    <inputs xmi:id="88ea6f0e3cf8eff7685c54f8f7e5c148" name="P_JOIN_IN">
       <attributes xmi:id="91e2b597e76df952c8cad9ab15396300" name="MANDT" type="NVARCHAR" nullable="false" length="3">
         <annotations xmi:id="8afc3b4654e94cdd8f30d4537fe90577" key="sap.im.primaryKey" value="true">
         </annotations>
@@ -526,7 +526,7 @@
       <attributes xmi:id="b2e07a172955bd98bf5250a22f945ec4" name="Z_RUN_SEQ_ID_1" type="INTEGER" nullable="false" length="10">
       </attributes>
     </inputs>
-    <outputs xmi:id="319f76de85876fd48d8ac5ae5f5ea35b" name="Projection_2_OUT">
+    <outputs xmi:id="319f76de85876fd48d8ac5ae5f5ea35b" name="P_JOIN_OUT">
       <attributes xmi:id="116a9e3229661dc297420817e0f9cde6" name="MANDT" type="NVARCHAR" nullable="false" expression="&quot;MANDT&quot;" length="3">
         <annotations xmi:id="ea65ec91171bc2d0848f263b5d44db83" key="sap.im.primaryKey" value="true">
         </annotations>
@@ -1156,7 +1156,7 @@
       </attributes>
     </inputs>
     <outputs xmi:id="12c08bfb988b404d845638a680a145c6" name="InboundQ_proj_1551233666656_OUT">
-      <attributes xmi:id="f39fd903e6d3f79c451381355e8842d9" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over ()">
+      <attributes xmi:id="f39fd903e6d3f79c451381355e8842d9" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over (order by &quot;Z_CHANGE_TIME&quot; asc)">
       </attributes>
       <attributes xmi:id="3d6da0cfad1fab9b06fb70081a760965" name="CHGKZ" type="NVARCHAR" nullable="false" expression="IFNULL(&quot;CHGKZ&quot;, &#x27;&#x27;)" length="1">
       </attributes>
