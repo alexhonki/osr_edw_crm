@@ -367,7 +367,7 @@
     <joinDefinitions left="57a301ef9f57efe2b6cab0fb4637b569" right="4f03712f3d53620f65094a23211ae473" type="INNER" condition="&quot;Join_IN&quot;.&quot;Z_RUN_SEQ_ID&quot;&gt;&quot;Join_IN_1&quot;.&quot;Z_RUN_SEQ_ID&quot;">
     </joinDefinitions>
   </nodes>
-  <nodes xmi:id="c3b0a7f370f405d9d483ecd6e14102af" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="&quot;Z_RUN_SEQ_ID&quot; is not null order by &quot;Z_CHANGE_TIME&quot; asc">
+  <nodes xmi:id="c3b0a7f370f405d9d483ecd6e14102af" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="">
     <annotations key="sap.afm.layout" xmi:id="f0729cbdec766e080eb9fa70629b1efe">
       <annotations xmi:id="3859c42601164f804fe338efd6b0f104" key="x" value="669.664792060852">
       </annotations>
@@ -1336,7 +1336,7 @@
       </attributes>
     </inputs>
     <outputs xmi:id="38d9b1426c87063ed1320207293fdcaa" name="DataTarget_addRecordNo_OUT">
-      <attributes xmi:id="b4abd3bd479deefcb8f3da1a2c967782" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over ()">
+      <attributes xmi:id="b4abd3bd479deefcb8f3da1a2c967782" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over (order by &quot;Z_CHANGE_TIME&quot; asc)">
       </attributes>
       <attributes xmi:id="0970738eb088dcd9ae539ba2ff457da5" name="ACTIVITY_H_DUMMY" type="NVARCHAR" nullable="false" expression="&quot;ACTIVITY_H_DUMMY&quot;" length="1">
       </attributes>

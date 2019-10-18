@@ -277,7 +277,7 @@ context CDS_CRM {
                     REVACC_RELEVANT_TYPE : String(1)              not null;
 
                     @DataStore.aggregation : #MOV
-                key Z_RUN_SEQ_ID         : Integer                not null;
+                    Z_RUN_SEQ_ID         : Integer                not null;
 
                     @DataStore.aggregation : #MOV
                     Z_CURR_FLAG          : String(1)              not null;
@@ -342,7 +342,7 @@ context CDS_CRM {
                     REVACC_REFID         : String(30)          not null;
                     REVACC_REFTYPE       : String(3)           not null;
                     REVACC_RELEVANT_TYPE : String(1)           not null;
-                key Z_RUN_SEQ_ID         : Integer             not null;
+                    Z_RUN_SEQ_ID         : Integer             not null;
                     Z_CURR_FLAG          : String(1)           not null;
                     Z_VALID_FROM         : LocalDate           not null default '1900-01-01';
                     Z_VALID_TO           : LocalDate           not null default '1900-01-01';
@@ -1066,470 +1066,6 @@ context CDS_CRM {
             }
             technical configuration {
                 group name DSO_1 group type "sap.dwf.dso" group subtype CHANGE_LOG;
-            };
-
-            @DataStore.entityCategory : #OPERATION_HISTORY
-            entity operationHistory {
-                key technicalKey        : operationHistoryKey;
-                    technicalAttributes : operationHistoryAttributes;
-            };
-
-            @DataStore.entityCategory : #AGGREGATION_HISTORY
-            entity aggregationHistory {
-                key technicalKey        : aggregationHistoryKey;
-                    technicalAttributes : aggregationHistoryAttributes;
-            };
-
-            @DataStore.entityCategory : #AFFECTED_REQUESTS
-            entity affectedRequests {
-                key technicalKey : affectedRequestsKey;
-            };
-
-            @DataStore.entityCategory : #LOG_MESSAGES
-            entity logMessages {
-                key technicalKey        : logMessagesKey;
-                    technicalAttributes : logMessagesAttributes;
-            };
-
-            @DataStore.entityCategory : #SUBSCRIBERS
-            entity subscribers {
-                key technicalKey        : subscribersKey;
-                    technicalAttributes : subscribersAttributes;
-            };
-
-            @DataStore.entityCategory : #RUNNING_OPERATIONS
-            entity runningOperations {
-                key technicalKey : runningOperationsKey;
-            };
-
-            @DataStore.entityCategory : #ID_GENERATOR
-            entity idGen {
-                key technicalKey        : idGeneratorKey;
-                    technicalAttributes : idGeneratorAttributes;
-            };
-        };
-
-        @DataStore.isDSO
-        @DataStore.entity.activeData         : 'active_data'
-        @DataStore.entity.changeLog          : 'change_log'
-        @DataStore.entity.activationQueue    : [ 'inbound_queue' ]
-        @DataStore.entity.operationHistory   : 'operationHistory'
-        @DataStore.entity.aggregationHistory : 'aggregationHistory'
-        @DataStore.entity.logMessages        : 'logMessages'
-        @DataStore.entity.affectedRequests   : 'affectedRequests'
-        @DataStore.entity.subscribers        : 'subscribers'
-        @DataStore.entity.runningOperations  : 'runningOperations'
-        @DataStore.entity.idGenerator        : 'idGen'
-        @DataStore.computeChecksum           : false
-        @DataStore.snapshotSupport           : false
-        context CRMD_CMGCASE_AT {
-            @DataStore.entityCategory : #ACTIVE_DATA
-            entity active_data {
-                    @DataStore.aggregation : #NOP
-                key MANDT            : String(3)      not null;
-
-                    @DataStore.aggregation : #NOP
-                key CASE_GUID        : String(32)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    CRM_CASE_TITLE   : String(80)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    CRM_SCH_REF_TIME : Decimal(15, 0) not null;
-
-                    @DataStore.aggregation : #NOP
-                    CRM_BUS_REF_TIME : Decimal(15, 0) not null;
-
-                    @DataStore.aggregation : #NOP
-                    CRM_SCHEMA_ID    : String(40)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    CRM_CATEGORY_ID  : String(40)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    PROD_CAT_ID      : String(20)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    CATEGORY_TEXT    : String(80)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    CMG_EEW_DUMMY    : String(1)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZQAREQ          : String(1)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZRECVDATE       : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_CROWN_DATE    : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_ACK_DATE      : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_ALL_INFO      : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_APB_DATE      : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_APPREF_DATE   : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_BUS_NOTIFY    : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_PLD_DATE      : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZJUDGEDATE      : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_HEAR_DATE     : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_INV_DEC       : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_PLNCLS_DATE   : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_REG_ISSUE     : String(8)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZDISCTYPE       : String(10)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_EXGRATIA_AMT  : Decimal(21, 2) not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_CONT_LIAB     : Decimal(19, 2) not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZ_JUDICAL       : String(1)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZCAMPAIGN       : String(24)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZCAMPTYPE       : String(4)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTASSMT       : Decimal(21, 2) not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTPRIMTAX     : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTUTI         : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTPENALTY     : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZCOURTCOSTS     : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTCASEDEPT    : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTCASEDEPT2   : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTCOLL        : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTWO          : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZTOTREC         : String(21)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZJUDGEAMT       : Decimal(21, 2) not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZFLD00003I      : String(5)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZCURRENT_ACTION : String(10)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZSUCCESS_EST    : String(3)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    OSRQLD_F0005     : String(10)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    OSRQLD_F0007     : String(10)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    ZZFLD00008I      : String(20)     not null;
-
-                    @DataStore.aggregation : #NOP
-                    Z_CHANGE_TYPE    : String(1)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    Z_CHANGE_TIME    : UTCTimestamp   not null default '1900-01-01 23:59:59';
-
-                    @DataStore.aggregation : #NOP
-                    Z_SOURCE_SYS     : String(5)      not null;
-
-                    @DataStore.aggregation : #NOP
-                    Z_RUN_ROW_NO     : Integer        not null;
-
-                    @DataStore.aggregation : #NOP
-                    Z_RUN_SEQ_ID     : Integer        not null;
-                    
-                    @DataStore.aggregation : #NOP
-                    OSRQLD_ALRTID    : String(20)     not null default '';
-
-                    @DataStore.aggregation : #NOP
-                    OSRQLD_F009L     : String(10)     not null default '';
-
-                    @DataStore.aggregation : #NOP
-                    OSRQLD_REFUND    : Decimal(21, 2) not null default 0;                     
-            }
-            technical configuration {
-                group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype ACTIVE;
-            };
-
-            @DataStore.entityCategory : #ACTIVATION_QUEUE
-            entity inbound_queue {
-                key technicalKey        : inboundQueueKey;
-                    technicalAttributes : inboundQueueAttributes not null;
-
-                    @DataStore.aggregation : #MOV
-                key MANDT               : String(3)              not null;
-
-                    @DataStore.aggregation : #MOV
-                key CASE_GUID           : String(32)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    CRM_CASE_TITLE      : String(80)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    CRM_SCH_REF_TIME    : Decimal(15, 0)         not null;
-
-                    @DataStore.aggregation : #MOV
-                    CRM_BUS_REF_TIME    : Decimal(15, 0)         not null;
-
-                    @DataStore.aggregation : #MOV
-                    CRM_SCHEMA_ID       : String(40)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    CRM_CATEGORY_ID     : String(40)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    PROD_CAT_ID         : String(20)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    CATEGORY_TEXT       : String(80)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    CMG_EEW_DUMMY       : String(1)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZQAREQ             : String(1)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZRECVDATE          : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_CROWN_DATE       : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_ACK_DATE         : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_ALL_INFO         : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_APB_DATE         : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_APPREF_DATE      : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_BUS_NOTIFY       : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_PLD_DATE         : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZJUDGEDATE         : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_HEAR_DATE        : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_INV_DEC          : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_PLNCLS_DATE      : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_REG_ISSUE        : String(8)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZDISCTYPE          : String(10)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_EXGRATIA_AMT     : Decimal(21, 2)         not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_CONT_LIAB        : Decimal(19, 2)         not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZ_JUDICAL          : String(1)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZCAMPAIGN          : String(24)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZCAMPTYPE          : String(4)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTASSMT          : Decimal(21, 2)         not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTPRIMTAX        : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTUTI            : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTPENALTY        : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZCOURTCOSTS        : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTCASEDEPT       : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTCASEDEPT2      : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTCOLL           : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTWO             : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZTOTREC            : String(21)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZJUDGEAMT          : Decimal(21, 2)         not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZFLD00003I         : String(5)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZCURRENT_ACTION    : String(10)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZSUCCESS_EST       : String(3)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    OSRQLD_F0005        : String(10)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    OSRQLD_F0007        : String(10)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    ZZFLD00008I         : String(20)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    Z_CHANGE_TYPE       : String(1)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    Z_CHANGE_TIME       : UTCTimestamp           not null default '1900-01-01 23:59:59';
-
-                    @DataStore.aggregation : #MOV
-                    Z_SOURCE_SYS        : String(5)              not null;
-
-                    @DataStore.aggregation : #MOV
-                    Z_RUN_ROW_NO        : Integer                not null;
-
-                    @DataStore.aggregation : #MOV
-                    Z_RUN_SEQ_ID        : Integer                not null;
-
-                    @DataStore.aggregation : #MOV
-                    OSRQLD_ALRTID       : String(20)             not null default '';
-
-                    @DataStore.aggregation : #MOV
-                    OSRQLD_F009L        : String(10)             not null default '';
-
-                    @DataStore.aggregation : #MOV
-                    OSRQLD_REFUND       : Decimal(21, 2)         not null default 0;                    
-            }
-            technical configuration {
-                group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype QUEUE;
-            };
-
-            @DataStore.entityCategory : #CHANGE_LOG
-            entity change_log {
-                key technicalKey        : changeLogKey;
-                    technicalAttributes : changeLogAttributes not null;
-                key MANDT               : String(3)           not null;
-                key CASE_GUID           : String(32)          not null;
-                    CRM_CASE_TITLE      : String(80)          not null;
-                    CRM_SCH_REF_TIME    : Decimal(15, 0)      not null;
-                    CRM_BUS_REF_TIME    : Decimal(15, 0)      not null;
-                    CRM_SCHEMA_ID       : String(40)          not null;
-                    CRM_CATEGORY_ID     : String(40)          not null;
-                    PROD_CAT_ID         : String(20)          not null;
-                    CATEGORY_TEXT       : String(80)          not null;
-                    CMG_EEW_DUMMY       : String(1)           not null;
-                    ZZQAREQ             : String(1)           not null;
-                    ZZRECVDATE          : String(8)           not null;
-                    ZZ_CROWN_DATE       : String(8)           not null;
-                    ZZ_ACK_DATE         : String(8)           not null;
-                    ZZ_ALL_INFO         : String(8)           not null;
-                    ZZ_APB_DATE         : String(8)           not null;
-                    ZZ_APPREF_DATE      : String(8)           not null;
-                    ZZ_BUS_NOTIFY       : String(8)           not null;
-                    ZZ_PLD_DATE         : String(8)           not null;
-                    ZZJUDGEDATE         : String(8)           not null;
-                    ZZ_HEAR_DATE        : String(8)           not null;
-                    ZZ_INV_DEC          : String(8)           not null;
-                    ZZ_PLNCLS_DATE      : String(8)           not null;
-                    ZZ_REG_ISSUE        : String(8)           not null;
-                    ZZDISCTYPE          : String(10)          not null;
-                    ZZ_EXGRATIA_AMT     : Decimal(21, 2)      not null;
-                    ZZ_CONT_LIAB        : Decimal(19, 2)      not null;
-                    ZZ_JUDICAL          : String(1)           not null;
-                    ZZCAMPAIGN          : String(24)          not null;
-                    ZZCAMPTYPE          : String(4)           not null;
-                    ZZTOTASSMT          : Decimal(21, 2)      not null;
-                    ZZTOTPRIMTAX        : String(21)          not null;
-                    ZZTOTUTI            : String(21)          not null;
-                    ZZTOTPENALTY        : String(21)          not null;
-                    ZZCOURTCOSTS        : String(21)          not null;
-                    ZZTOTCASEDEPT       : String(21)          not null;
-                    ZZTOTCASEDEPT2      : String(21)          not null;
-                    ZZTOTCOLL           : String(21)          not null;
-                    ZZTOTWO             : String(21)          not null;
-                    ZZTOTREC            : String(21)          not null;
-                    ZZJUDGEAMT          : Decimal(21, 2)      not null;
-                    ZZFLD00003I         : String(5)           not null;
-                    ZZCURRENT_ACTION    : String(10)          not null;
-                    ZZSUCCESS_EST       : String(3)           not null;
-                    OSRQLD_F0005        : String(10)          not null;
-                    OSRQLD_F0007        : String(10)          not null;
-                    ZZFLD00008I         : String(20)          not null;
-                    Z_CHANGE_TYPE       : String(1)           not null;
-                    Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 23:59:59';
-                    Z_SOURCE_SYS        : String(5)           not null;
-                    Z_RUN_ROW_NO        : Integer             not null;
-                    Z_RUN_SEQ_ID        : Integer             not null;
-                    OSRQLD_ALRTID       : String(20)          not null default '';
-                    OSRQLD_F009L        : String(10)          not null default '';
-                    OSRQLD_REFUND       : Decimal(21, 2)      not null default 0;                       
-            }
-            technical configuration {
-                group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype CHANGE_LOG;
             };
 
             @DataStore.entityCategory : #OPERATION_HISTORY
@@ -2426,7 +1962,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO        : Integer                not null;
 
                     @DataStore.aggregation : #MOV
-                key Z_RUN_SEQ_ID        : Integer                not null;
+                    Z_RUN_SEQ_ID        : Integer                not null;
             }
             technical configuration {
                 group name SCAPPT group type "sap.dwf.dso" group subtype QUEUE;
@@ -2486,7 +2022,7 @@ context CDS_CRM {
                     Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 23:59:59';
                     Z_SOURCE_SYS        : String(5)           not null;
                     Z_RUN_ROW_NO        : Integer             not null;
-                key Z_RUN_SEQ_ID        : Integer             not null;
+                    Z_RUN_SEQ_ID        : Integer             not null;
             }
             technical configuration {
                 group name SCAPPT group type "sap.dwf.dso" group subtype CHANGE_LOG;
@@ -2689,7 +2225,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO        : Integer                not null;
 
                     @DataStore.aggregation : #MOV
-                key Z_RUN_SEQ_ID        : Integer                not null;
+                    Z_RUN_SEQ_ID        : Integer                not null;
             }
             technical configuration {
                 group name CRMD_PSDMEA_H group type "sap.dwf.dso" group subtype QUEUE;
@@ -2720,7 +2256,7 @@ context CDS_CRM {
                     Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 23:59:59';
                     Z_SOURCE_SYS        : String(5)           not null;
                     Z_RUN_ROW_NO        : Integer             not null;
-                key Z_RUN_SEQ_ID        : Integer             not null;
+                    Z_RUN_SEQ_ID        : Integer             not null;
             }
             technical configuration {
                 group name CRMD_PSDMEA_H group type "sap.dwf.dso" group subtype CHANGE_LOG;
@@ -3056,6 +2592,485 @@ context CDS_CRM {
             }
             technical configuration {
                 group name CRMDORDERADMH group type "sap.dwf.dso" group subtype CHANGE_LOG;
+            };
+
+            @DataStore.entityCategory : #OPERATION_HISTORY
+            entity operationHistory {
+                key technicalKey        : operationHistoryKey;
+                    technicalAttributes : operationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AGGREGATION_HISTORY
+            entity aggregationHistory {
+                key technicalKey        : aggregationHistoryKey;
+                    technicalAttributes : aggregationHistoryAttributes;
+            };
+
+            @DataStore.entityCategory : #AFFECTED_REQUESTS
+            entity affectedRequests {
+                key technicalKey : affectedRequestsKey;
+            };
+
+            @DataStore.entityCategory : #LOG_MESSAGES
+            entity logMessages {
+                key technicalKey        : logMessagesKey;
+                    technicalAttributes : logMessagesAttributes;
+            };
+
+            @DataStore.entityCategory : #SUBSCRIBERS
+            entity subscribers {
+                key technicalKey        : subscribersKey;
+                    technicalAttributes : subscribersAttributes;
+            };
+
+            @DataStore.entityCategory : #RUNNING_OPERATIONS
+            entity runningOperations {
+                key technicalKey : runningOperationsKey;
+            };
+
+            @DataStore.entityCategory : #ID_GENERATOR
+            entity idGen {
+                key technicalKey        : idGeneratorKey;
+                    technicalAttributes : idGeneratorAttributes;
+            };
+        };
+
+        @DataStore.isDSO
+        @DataStore.entity.activeData         : 'active_data'
+        @DataStore.entity.changeLog          : 'change_log'
+        @DataStore.entity.activationQueue    : [ 'inbound_queue' ]
+        @DataStore.entity.operationHistory   : 'operationHistory'
+        @DataStore.entity.aggregationHistory : 'aggregationHistory'
+        @DataStore.entity.logMessages        : 'logMessages'
+        @DataStore.entity.affectedRequests   : 'affectedRequests'
+        @DataStore.entity.subscribers        : 'subscribers'
+        @DataStore.entity.runningOperations  : 'runningOperations'
+        @DataStore.entity.idGenerator        : 'idGen'
+        @DataStore.computeChecksum           : false
+        @DataStore.snapshotSupport           : false
+        /*@@layout{"layoutInfo":{"x":30,"y":-1052.5}}*/
+        context CRMD_CMGCASE_AT {
+            @DataStore.entityCategory : #ACTIVE_DATA
+            entity active_data {
+                    @DataStore.aggregation : #NOP
+                key MANDT            : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                key CASE_GUID        : String(32)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CRM_CASE_TITLE   : String(80)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CRM_SCH_REF_TIME : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    CRM_BUS_REF_TIME : Decimal(15, 0) not null;
+
+                    @DataStore.aggregation : #NOP
+                    CRM_SCHEMA_ID    : String(40)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CRM_CATEGORY_ID  : String(40)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    PROD_CAT_ID      : String(20)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CATEGORY_TEXT    : String(80)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    CMG_EEW_DUMMY    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZQAREQ          : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZRECVDATE       : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_CROWN_DATE    : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_ACK_DATE      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_ALL_INFO      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_APB_DATE      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_APPREF_DATE   : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_BUS_NOTIFY    : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_PLD_DATE      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZJUDGEDATE      : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_HEAR_DATE     : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_INV_DEC       : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_PLNCLS_DATE   : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_REG_ISSUE     : String(8)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZDISCTYPE       : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_EXGRATIA_AMT  : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_CONT_LIAB     : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZ_JUDICAL       : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZCAMPAIGN       : String(24)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZCAMPTYPE       : String(4)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTASSMT       : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTPRIMTAX     : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTUTI         : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTPENALTY     : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZCOURTCOSTS     : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTCASEDEPT    : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTCASEDEPT2   : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTCOLL        : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTWO          : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZTOTREC         : Decimal(19, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZJUDGEAMT       : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZFLD00003I      : String(5)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZCURRENT_ACTION : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZSUCCESS_EST    : String(3)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_F0005     : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_F0007     : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    ZZFLD00008I      : String(20)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TYPE    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CHANGE_TIME    : UTCTimestamp   not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #NOP
+                    Z_SOURCE_SYS     : String(5)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_ROW_NO     : Integer        not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_RUN_SEQ_ID     : Integer        not null;
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_ALRTID    : String(20)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_F009L     : String(10)     not null;
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_REFUND    : Decimal(21, 2) not null;
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_CATEGORY  : String(50)     not null default '';
+
+                    @DataStore.aggregation : #NOP
+                    OSRQLD_YEAR      : String(4)      not null default '0000';
+            }
+            technical configuration {
+                group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype ACTIVE;
+            };
+
+            @DataStore.entityCategory : #ACTIVATION_QUEUE
+            entity inbound_queue {
+                key technicalKey        : inboundQueueKey;
+                    technicalAttributes : inboundQueueAttributes not null;
+
+                    @DataStore.aggregation : #MOV
+                key MANDT               : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                key CASE_GUID           : String(32)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CRM_CASE_TITLE      : String(80)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CRM_SCH_REF_TIME    : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    CRM_BUS_REF_TIME    : Decimal(15, 0)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    CRM_SCHEMA_ID       : String(40)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CRM_CATEGORY_ID     : String(40)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    PROD_CAT_ID         : String(20)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CATEGORY_TEXT       : String(80)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    CMG_EEW_DUMMY       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZQAREQ             : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZRECVDATE          : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_CROWN_DATE       : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_ACK_DATE         : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_ALL_INFO         : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_APB_DATE         : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_APPREF_DATE      : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_BUS_NOTIFY       : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_PLD_DATE         : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZJUDGEDATE         : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_HEAR_DATE        : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_INV_DEC          : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_PLNCLS_DATE      : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_REG_ISSUE        : String(8)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZDISCTYPE          : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_EXGRATIA_AMT     : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_CONT_LIAB        : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZ_JUDICAL          : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZCAMPAIGN          : String(24)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZCAMPTYPE          : String(4)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTASSMT          : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTPRIMTAX        : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTUTI            : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTPENALTY        : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZCOURTCOSTS        : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTCASEDEPT       : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTCASEDEPT2      : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTCOLL           : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTWO             : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZTOTREC            : Decimal(19, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZJUDGEAMT          : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZFLD00003I         : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZCURRENT_ACTION    : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZSUCCESS_EST       : String(3)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_F0005        : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_F0007        : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    ZZFLD00008I         : String(20)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TYPE       : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CHANGE_TIME       : UTCTimestamp           not null default '1900-01-01 00:00:00';
+
+                    @DataStore.aggregation : #MOV
+                    Z_SOURCE_SYS        : String(5)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_ROW_NO        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_RUN_SEQ_ID        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_ALRTID       : String(20)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_F009L        : String(10)             not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_REFUND       : Decimal(21, 2)         not null;
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_CATEGORY     : String(50)             not null default '';
+
+                    @DataStore.aggregation : #MOV
+                    OSRQLD_YEAR         : String(4)              not null default '0000';
+            }
+            technical configuration {
+                group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype QUEUE;
+            };
+
+            @DataStore.entityCategory : #CHANGE_LOG
+            entity change_log {
+                key technicalKey        : changeLogKey;
+                    technicalAttributes : changeLogAttributes not null;
+                key MANDT               : String(3)           not null;
+                key CASE_GUID           : String(32)          not null;
+                    CRM_CASE_TITLE      : String(80)          not null;
+                    CRM_SCH_REF_TIME    : Decimal(15, 0)      not null;
+                    CRM_BUS_REF_TIME    : Decimal(15, 0)      not null;
+                    CRM_SCHEMA_ID       : String(40)          not null;
+                    CRM_CATEGORY_ID     : String(40)          not null;
+                    PROD_CAT_ID         : String(20)          not null;
+                    CATEGORY_TEXT       : String(80)          not null;
+                    CMG_EEW_DUMMY       : String(1)           not null;
+                    ZZQAREQ             : String(1)           not null;
+                    ZZRECVDATE          : String(8)           not null;
+                    ZZ_CROWN_DATE       : String(8)           not null;
+                    ZZ_ACK_DATE         : String(8)           not null;
+                    ZZ_ALL_INFO         : String(8)           not null;
+                    ZZ_APB_DATE         : String(8)           not null;
+                    ZZ_APPREF_DATE      : String(8)           not null;
+                    ZZ_BUS_NOTIFY       : String(8)           not null;
+                    ZZ_PLD_DATE         : String(8)           not null;
+                    ZZJUDGEDATE         : String(8)           not null;
+                    ZZ_HEAR_DATE        : String(8)           not null;
+                    ZZ_INV_DEC          : String(8)           not null;
+                    ZZ_PLNCLS_DATE      : String(8)           not null;
+                    ZZ_REG_ISSUE        : String(8)           not null;
+                    ZZDISCTYPE          : String(10)          not null;
+                    ZZ_EXGRATIA_AMT     : Decimal(21, 2)      not null;
+                    ZZ_CONT_LIAB        : Decimal(19, 2)      not null;
+                    ZZ_JUDICAL          : String(1)           not null;
+                    ZZCAMPAIGN          : String(24)          not null;
+                    ZZCAMPTYPE          : String(4)           not null;
+                    ZZTOTASSMT          : Decimal(21, 2)      not null;
+                    ZZTOTPRIMTAX        : Decimal(21, 2)      not null;
+                    ZZTOTUTI            : Decimal(21, 2)      not null;
+                    ZZTOTPENALTY        : Decimal(21, 2)      not null;
+                    ZZCOURTCOSTS        : Decimal(19, 2)      not null;
+                    ZZTOTCASEDEPT       : Decimal(19, 2)      not null;
+                    ZZTOTCASEDEPT2      : Decimal(19, 2)      not null;
+                    ZZTOTCOLL           : Decimal(19, 2)      not null;
+                    ZZTOTWO             : Decimal(19, 2)      not null;
+                    ZZTOTREC            : Decimal(19, 2)      not null;
+                    ZZJUDGEAMT          : Decimal(21, 2)      not null;
+                    ZZFLD00003I         : String(5)           not null;
+                    ZZCURRENT_ACTION    : String(10)          not null;
+                    ZZSUCCESS_EST       : String(3)           not null;
+                    OSRQLD_F0005        : String(10)          not null;
+                    OSRQLD_F0007        : String(10)          not null;
+                    ZZFLD00008I         : String(20)          not null;
+                    Z_CHANGE_TYPE       : String(1)           not null;
+                    Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 00:00:00';
+                    Z_SOURCE_SYS        : String(5)           not null;
+                    Z_RUN_ROW_NO        : Integer             not null;
+                    Z_RUN_SEQ_ID        : Integer             not null;
+                    OSRQLD_ALRTID       : String(20)          not null;
+                    OSRQLD_F009L        : String(10)          not null;
+                    OSRQLD_REFUND       : Decimal(21, 2)      not null;
+                    OSRQLD_CATEGORY     : String(50)          not null default '';
+                    OSRQLD_YEAR         : String(4)           not null default '0000';
+            }
+            technical configuration {
+                group name CRMD_CMGCASE_AT group type "sap.dwf.dso" group subtype CHANGE_LOG;
             };
 
             @DataStore.entityCategory : #OPERATION_HISTORY

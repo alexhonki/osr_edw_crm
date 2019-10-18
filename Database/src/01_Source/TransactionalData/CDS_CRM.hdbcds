@@ -206,15 +206,15 @@ context CDS_CRM {
                 ZZCAMPAIGN       : String(24);
                 ZZCAMPTYPE       : String(4);
                 ZZTOTASSMT       : Decimal(21, 2);
-                ZZTOTPRIMTAX     : String(21);
-                ZZTOTUTI         : String(21);
-                ZZTOTPENALTY     : String(21);
-                ZZCOURTCOSTS     : String(21);
-                ZZTOTCASEDEPT    : String(21);
-                ZZTOTCASEDEPT2   : String(21);
-                ZZTOTCOLL        : String(21);
-                ZZTOTWO          : String(21);
-                ZZTOTREC         : String(21);
+                ZZTOTPRIMTAX     : Decimal(21, 2);
+                ZZTOTUTI         : Decimal(21, 2);
+                ZZTOTPENALTY     : Decimal(21, 2);
+                ZZCOURTCOSTS     : Decimal(19,2);
+                ZZTOTCASEDEPT    : Decimal(19,2);
+                ZZTOTCASEDEPT2   : Decimal(19,2);
+                ZZTOTCOLL        : Decimal(19,2);
+                ZZTOTWO          : Decimal(19,2);
+                ZZTOTREC         : Decimal(19,2);
                 ZZJUDGEAMT       : Decimal(21, 2);
                 ZZFLD00003I      : String(5);
                 ZZCURRENT_ACTION : String(10);
@@ -223,13 +223,15 @@ context CDS_CRM {
                 OSRQLD_F0007     : String(10);
                 ZZFLD00008I      : String(20);
                 Z_CHANGE_TYPE    : String(1);
-                Z_CHANGE_TIME    : UTCTimestamp default '1900-01-01 23:59:59';
+                Z_CHANGE_TIME    : UTCTimestamp;
                 Z_SOURCE_SYS     : String(5);
                 Z_RUN_ROW_NO     : Integer;
             key Z_RUN_SEQ_ID     : Integer;
                 OSRQLD_ALRTID    : String(20);
                 OSRQLD_F009L     : String(10);
                 OSRQLD_REFUND    : Decimal(21, 2);
+                OSRQLD_CATEGORY  : String(50);
+                OSRQLD_YEAR      : String(4);
         };
 
         /*@@layout{"layoutInfo":{}}*/

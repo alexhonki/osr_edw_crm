@@ -526,7 +526,7 @@
       </attributes>
     </outputs>
   </nodes>
-  <nodes xmi:id="d7938bfc8f872ec9270085efde8ab0eb" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="&quot;Z_RUN_SEQ_ID&quot; is not null order by &quot;Z_CHANGE_TIME&quot; asc">
+  <nodes xmi:id="d7938bfc8f872ec9270085efde8ab0eb" xsi:type="flowgraph:FilterNode" name="P_JOIN" expression="">
     <annotations key="sap.afm.layout" xmi:id="4b293f8b49a5e5f3c4b8047c99e4bf46">
       <annotations xmi:id="95a5bb7329d416afa79fd931697144b8" key="x" value="669.664792060852">
       </annotations>
@@ -1448,7 +1448,7 @@
       </attributes>
     </inputs>
     <outputs xmi:id="3fdd0cf5967d239184d14002dc54294f" name="DataTarget_addRecordNo_OUT">
-      <attributes xmi:id="2dc113f1d9be3e7d8f72b216b5720f73" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over ()">
+      <attributes xmi:id="2dc113f1d9be3e7d8f72b216b5720f73" name="technicalKey.recordNo" type="INTEGER" nullable="false" expression="ROW_NUMBER() over (order by &quot;Z_CHANGE_TIME&quot; asc)">
       </attributes>
       <attributes xmi:id="8b5c6fc6578b3c5af65098ee39a7cc61" name="ADDR_NP" type="NVARCHAR" nullable="false" expression="&quot;ADDR_NP&quot;" length="10">
       </attributes>
