@@ -209,12 +209,12 @@ context CDS_CRM {
                 ZZTOTPRIMTAX     : Decimal(21, 2);
                 ZZTOTUTI         : Decimal(21, 2);
                 ZZTOTPENALTY     : Decimal(21, 2);
-                ZZCOURTCOSTS     : Decimal(19,2);
-                ZZTOTCASEDEPT    : Decimal(19,2);
-                ZZTOTCASEDEPT2   : Decimal(19,2);
-                ZZTOTCOLL        : Decimal(19,2);
-                ZZTOTWO          : Decimal(19,2);
-                ZZTOTREC         : Decimal(19,2);
+                ZZCOURTCOSTS     : Decimal(19, 2);
+                ZZTOTCASEDEPT    : Decimal(19, 2);
+                ZZTOTCASEDEPT2   : Decimal(19, 2);
+                ZZTOTCOLL        : Decimal(19, 2);
+                ZZTOTWO          : Decimal(19, 2);
+                ZZTOTREC         : Decimal(19, 2);
                 ZZJUDGEAMT       : Decimal(21, 2);
                 ZZFLD00003I      : String(5);
                 ZZCURRENT_ACTION : String(10);
@@ -342,7 +342,7 @@ context CDS_CRM {
             key Z_RUN_SEQ_ID  : Integer;
         };
 
-        /*@@layout{"layoutInfo":{"x":-385,"y":15.5}}*/
+        /*@@layout{"layoutInfo":{}}*/
         entity CRMD_PSDMEA_H {
             key CLIENT          : String(3);
             key GUID            : String(200);
@@ -361,11 +361,33 @@ context CDS_CRM {
                 EXT_STATUS      : String(5);
                 EA_AMOUNT       : Decimal(15, 2);
                 EA_CURRENCY     : String(5);
+                Z_CHANGE_TYPE   : String(1);
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
+                Z_RUN_ROW_NO    : Integer;
+            key Z_RUN_SEQ_ID    : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity SCAPPTSEG {
+            key CLIENT        : String(3);
+            key APPT_GUID     : Binary(16);
+                APPL_GUID     : Binary(16);
+                TST_FROM      : Decimal(15, 0);
+                ZONE_FROM     : String(6);
+                TST_TO        : Decimal(15, 0);
+                ZONE_TO       : String(6);
+                APPT_TYPE     : String(12);
+                TXT_PUB_ID    : String(25);
+                ENTRY_BY      : String(12);
+                ENTRY_TST     : Decimal(21, 7);
+                CHANGE_BY     : String(12);
+                CHANGE_TST    : Decimal(21, 7);
                 Z_CHANGE_TYPE : String(1);
                 Z_CHANGE_TIME : UTCTimestamp;
                 Z_SOURCE_SYS  : String(5);
                 Z_RUN_ROW_NO  : Integer;
-            key Z_RUN_SEQ_ID  : Integer;                
+            key Z_RUN_SEQ_ID  : Integer;
         };
     };
 };
