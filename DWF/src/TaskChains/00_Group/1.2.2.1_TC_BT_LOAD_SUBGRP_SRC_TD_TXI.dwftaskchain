@@ -144,7 +144,7 @@
           "status": "OK"
         }
       ]
-    },  
+    },
     "9": {
       "inline": {
         "type": "SUB",
@@ -163,7 +163,7 @@
           "status": "OK"
         }
       ]
-    },  
+    },
     "10": {
       "inline": {
         "type": "SUB",
@@ -220,6 +220,25 @@
           "status": "OK"
         }
       ]
-    }    
+    },
+    "13": {
+      "inline": {
+        "type": "SUB",
+        "taskGroup": "com.sap.dwf.toe.executionControl",
+        "description": "TC LOAD SCAPPTSEG",
+        "parameterValues": [
+          {
+            "id": "taskChainId",
+            "value": "osr.edw.source.td.crm#TC_LOAD_BT_SCAPPTSEG"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "12",
+          "status": "OK"
+        }
+      ]
+    }
   }
 }
