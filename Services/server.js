@@ -1,13 +1,13 @@
-/*eslint no-console: 0, no-unused-vars:  0*/
+/*eslint no-console: 0, no-unused-vars: 0*/
 "use strict";
 
 var xsjs  = require("@sap/xsjs");
 var xsenv = require("@sap/xsenv");
-var xsHDBConn = require("@sap/hdbext");
 var port  = process.env.PORT || 3000;
 
 var options = {
 	anonymous : true, // remove to authenticate calls
+	auditLog : { logToConsole: true }, // change to auditlog service for productive scenarios
 	redirectUrl : "/index.xsjs"
 };
 
