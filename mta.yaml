@@ -28,7 +28,7 @@ modules:
      API_END_POINT: "${xs-api-url}"
 #     SAP_JWT_TRUST_ACL: "[{\"clientid\":\"*\",\"identityzone\":\"*\"}]"
    provides:
-    - name:  OSR_EDW_SOURCE_CRM-Backend
+    - name:  OSR_EDW_SOURCE_CRM-Backend-API
       properties:
        service_url: ${default-url}
 
