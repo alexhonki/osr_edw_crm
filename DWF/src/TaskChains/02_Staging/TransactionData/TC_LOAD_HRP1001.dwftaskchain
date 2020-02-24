@@ -1,0 +1,49 @@
+{
+  "description": "FG_BT_LOAD_PPFTTRIGG",
+  "resumeBehavior": "NO_RESUME",
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_HRP1001",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_HRP1001"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    },
+    "3": {
+      "inline": {
+        "type": "activate",
+        "taskGroup": "ndso",
+        "parameterValues": [
+          {
+            "id": "dataStoreName",
+            "value": "osr.edw.staging.td.crm::CDS_CRM.DSO.HRP1001"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "2",
+          "status": "OK"
+        }
+      ]
+    }
+  }
+}

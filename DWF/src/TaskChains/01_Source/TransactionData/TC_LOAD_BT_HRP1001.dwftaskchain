@@ -1,0 +1,31 @@
+{
+  "description": "FG_BT_LOAD_HRP1001",
+  "resumeBehavior": "NO_RESUME",
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_HRP1001",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.source.td.crm::FG_BT_LOAD_HRP1001"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}
