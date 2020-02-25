@@ -471,5 +471,43 @@ context CDS_CRM {
                 Z_VALID_FROM  : LocalDate;
                 Z_VALID_TO    : LocalDate;
         };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity SCMGPDIR_CLNT {
+            key MANDT         : String(3);
+            key POIDID        : String(32);
+                CONTREP       : String(30);
+                SKEY          : String(32);
+                STATE         : String(1);
+                ARCHIVE       : String(1);
+                POIDSTR       : String(255);
+                Z_CHANGE_TYPE : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+                Z_RUN_ROW_NO  : Integer;
+            key Z_RUN_SEQ_ID  : Integer;
+                Z_CURR_FLAG   : String(1);
+                Z_VALID_FROM  : LocalDate;
+                Z_VALID_TO    : LocalDate;
+        };
+
+        /*@@layout{"layoutInfo":{}}*/
+        entity SCMGPREL_CLNT {
+            key MANDT         : String(3);
+            key POIDID        : String(32);
+                CONTREP       : String(30);
+                SKEY          : String(32);
+                STATE         : String(1);
+                ARCHIVE       : String(1);
+                POIDSTR       : String(255);
+                Z_CHANGE_TYPE : String(1);
+                Z_CHANGE_TIME : UTCTimestamp;
+                Z_SOURCE_SYS  : String(5);
+                Z_RUN_ROW_NO  : Integer;
+            key Z_RUN_SEQ_ID  : Integer;
+                Z_CURR_FLAG   : String(1);
+                Z_VALID_FROM  : LocalDate;
+                Z_VALID_TO    : LocalDate;
+        };
     };
 };

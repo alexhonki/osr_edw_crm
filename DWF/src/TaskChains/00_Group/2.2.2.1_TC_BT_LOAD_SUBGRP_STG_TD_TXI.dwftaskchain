@@ -239,6 +239,44 @@
           "status": "OK"
         }
       ]
+    },
+    "14": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_SCMGPREL_CLNT",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_SCMGPREL_CLNT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "13",
+          "status": "OK"
+        }
+      ]
+    },
+    "15": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_SCMGPDIR_CLNT",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_SCMGPDIR_CLNT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "14",
+          "status": "OK"
+        }
+      ]
     }
   }
 }
