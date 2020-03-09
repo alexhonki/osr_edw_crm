@@ -4005,7 +4005,6 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
-        /*@@layout{"layoutInfo":{"x":378.9931640625,"y":265.5}}*/
         context SCMGPDIR_CLNT {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
@@ -4190,7 +4189,6 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
-        /*@@layout{"layoutInfo":{"x":921.9931640625,"y":359.5}}*/
         context SCMGPREL_CLNT {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
@@ -4198,22 +4196,19 @@ context CDS_CRM {
                 key MANDT         : String(3)    not null;
 
                     @DataStore.aggregation : #NOP
-                key POIDID        : String(32)   not null;
+                key POIDID1       : String(32)   not null;
 
                     @DataStore.aggregation : #NOP
-                    CONTREP       : String(30)   not null;
+                key POIDID2       : String(32)   not null;
 
                     @DataStore.aggregation : #NOP
-                    SKEY          : String(32)   not null;
-
-                    @DataStore.aggregation : #NOP
-                    STATE         : String(1)    not null;
+                key PPRETYP       : String(2)    not null;
 
                     @DataStore.aggregation : #NOP
                     ARCHIVE       : String(1)    not null;
 
                     @DataStore.aggregation : #NOP
-                    POIDSTR       : String(255)  not null;
+                    RELATTR       : String(64)   not null;
 
                     @DataStore.aggregation : #NOP
                     Z_CHANGE_TYPE : String(1)    not null;
@@ -4252,22 +4247,19 @@ context CDS_CRM {
                 key MANDT               : String(3)              not null;
 
                     @DataStore.aggregation : #MOV
-                key POIDID              : String(32)             not null;
+                key POIDID1             : String(32)             not null;
 
                     @DataStore.aggregation : #MOV
-                    CONTREP             : String(30)             not null;
+                key POIDID2             : String(32)             not null;
 
                     @DataStore.aggregation : #MOV
-                    SKEY                : String(32)             not null;
-
-                    @DataStore.aggregation : #MOV
-                    STATE               : String(1)              not null;
+                key PPRETYP             : String(2)              not null;
 
                     @DataStore.aggregation : #MOV
                     ARCHIVE             : String(1)              not null;
 
                     @DataStore.aggregation : #MOV
-                    POIDSTR             : String(255)            not null;
+                    RELATTR             : String(64)             not null;
 
                     @DataStore.aggregation : #MOV
                     Z_CHANGE_TYPE       : String(1)              not null;
@@ -4302,12 +4294,11 @@ context CDS_CRM {
                 key technicalKey        : changeLogKey;
                     technicalAttributes : changeLogAttributes not null;
                 key MANDT               : String(3)           not null;
-                key POIDID              : String(32)          not null;
-                    CONTREP             : String(30)          not null;
-                    SKEY                : String(32)          not null;
-                    STATE               : String(1)           not null;
+                key POIDID1             : String(32)          not null;
+                key POIDID2             : String(32)          not null;
+                key PPRETYP             : String(2)           not null;
                     ARCHIVE             : String(1)           not null;
-                    POIDSTR             : String(255)         not null;
+                    RELATTR             : String(64)          not null;
                     Z_CHANGE_TYPE       : String(1)           not null;
                     Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 00:00:00';
                     Z_SOURCE_SYS        : String(5)           not null;
