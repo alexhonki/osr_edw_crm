@@ -2159,6 +2159,7 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
+        /*@@layout{"layoutInfo":{"x":-971.6650390625,"y":29}}*/
         context CRMDORDERADMH {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
@@ -3023,7 +3024,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO  : Integer        not null;
 
                     @DataStore.aggregation : #NOP
-                key Z_RUN_SEQ_ID  : Integer        not null;
+                    Z_RUN_SEQ_ID  : Integer        not null;
             }
             technical configuration {
                 group name SCAPPTSEG group type "sap.dwf.dso" group subtype ACTIVE;
@@ -3086,7 +3087,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO        : Integer                not null;
 
                     @DataStore.aggregation : #MOV
-                key Z_RUN_SEQ_ID        : Integer                not null;
+                    Z_RUN_SEQ_ID        : Integer                not null;
             }
             technical configuration {
                 group name SCAPPTSEG group type "sap.dwf.dso" group subtype QUEUE;
@@ -3113,7 +3114,7 @@ context CDS_CRM {
                     Z_CHANGE_TIME       : UTCTimestamp        not null default '1900-01-01 00:00:00';
                     Z_SOURCE_SYS        : String(5)           not null;
                     Z_RUN_ROW_NO        : Integer             not null;
-                key Z_RUN_SEQ_ID        : Integer             not null;
+                    Z_RUN_SEQ_ID        : Integer             not null;
             }
             technical configuration {
                 group name SCAPPTSEG group type "sap.dwf.dso" group subtype CHANGE_LOG;
@@ -3291,7 +3292,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO  : Integer        not null;
 
                     @DataStore.aggregation : #NOP
-                key Z_RUN_SEQ_ID  : Integer        not null;
+                    Z_RUN_SEQ_ID  : Integer        not null;
 
                     @DataStore.aggregation : #NOP
                     Z_CURR_FLAG   : String(1)      not null;
@@ -3634,7 +3635,7 @@ context CDS_CRM {
                     Z_RUN_ROW_NO  : Integer       not null;
 
                     @DataStore.aggregation : #NOP
-                key Z_RUN_SEQ_ID  : Integer       not null;
+                    Z_RUN_SEQ_ID  : Integer       not null;
 
                     @DataStore.aggregation : #NOP
                     Z_CURR_FLAG   : String(1)     not null;
