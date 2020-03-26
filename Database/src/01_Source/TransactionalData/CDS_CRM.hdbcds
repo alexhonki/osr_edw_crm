@@ -511,5 +511,45 @@ context CDS_CRM {
                 Z_VALID_FROM  : LocalDate;
                 Z_VALID_TO    : LocalDate;
         };
+
+        /*@@layout{"layoutInfo":{"x":1007,"y":-5.5}}*/
+        entity CRMD_SRV_SUBJECT {
+            key CLIENT         : String(3);
+            key GUID           : Binary(16);
+                GUID_REF       : Binary(16);
+                USERNAME       : String(12);
+                TIMESTAMP      : Decimal(15, 0);
+                KATALOGART     : String(2);
+                CODEGRUPPE     : String(8);
+                CODE           : String(4);
+                DEFECTCLASS    : String(2);
+                QUALITY        : String(1);
+                DEFQUANTITY    : Integer;
+                GUID_HIERARCHY : Binary(16);
+                SORT           : hana.SMALLINT;
+                EXT_CODE       : String(40);
+                ASP_ID         : String(40);
+                CAT_ID         : String(40);
+                KATALOG_TYPE   : String(1);
+                Z_CHANGE_TYPE  : String(1);
+                Z_CHANGE_TIME  : UTCTimestamp;
+                Z_SOURCE_SYS   : String(5);
+                Z_RUN_ROW_NO   : Integer;
+            key Z_RUN_SEQ_ID   : Integer;
+        };
+
+        /*@@layout{"layoutInfo":{"x":819,"y":-21.5}}*/
+        entity CRMD_SRV_OSSET {
+            key CLIENT          : String(3);
+            key GUID            : Binary(16);
+                GUID_SET        : Binary(16);
+                SUBJECT_PROFILE : String(9);
+                PROFILE_TYPE    : String(2);
+                Z_CHANGE_TYPE   : String(1);
+                Z_CHANGE_TIME	: UTCTimestamp;
+                Z_SOURCE_SYS	: String(5);
+                Z_RUN_ROW_NO	: Integer;
+            key Z_RUN_SEQ_ID	: Integer;
+        };
     };
 };
