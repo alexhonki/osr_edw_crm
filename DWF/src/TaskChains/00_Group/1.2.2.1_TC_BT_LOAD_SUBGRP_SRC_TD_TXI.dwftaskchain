@@ -315,6 +315,44 @@
           "status": "OK"
         }
       ]
+    },
+    "18": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_CRMD_SRV_OSSET",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.source.td.crm::FG_BT_LOAD_CRMD_SRV_OSSET"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "17",
+          "status": "OK"
+        }
+      ]
+    },
+    "19": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_CRMD_SRV_SUBJECT",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.source.td.crm::FG_BT_LOAD_CRMD_SRV_SUBJECT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "18",
+          "status": "OK"
+        }
+      ]
     }
   }
 }

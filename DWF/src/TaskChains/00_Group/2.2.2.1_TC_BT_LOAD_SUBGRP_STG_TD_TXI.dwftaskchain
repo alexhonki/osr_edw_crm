@@ -1,320 +1,286 @@
 {
-  "description": "Load batch Subs Staging TD CRM TXI",
-  "responsible": {
-    "email": "dwfalerts@gmail.com"
-  },
-  "maxParallelExecution": 1,
-  "taskTimeout": 4320000,
-  "taskList": {
-    "1": {
-      "inline": {
-        "type": "START",
-        "taskGroup": "com.sap.dwf.toe.executionControl"
-      }
-    },
-    "2": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMH",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDORDERADMH"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "1",
-          "status": "NEUTRAL"
-        }
-      ]
-    },
-    "3": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDACTIVITYH",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDACTIVITYH"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "2",
-          "status": "OK"
-        }
-      ]
-    },
-    "4": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMD_LINK",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDLINK"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "3",
-          "status": "OK"
-        }
-      ]
-    },
-    "5": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMD_PARTNER",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDPARTNER"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "4",
-          "status": "OK"
-        }
-      ]
-    },
-    "6": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDCASEINDEX",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDCASEINDEX"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "5",
-          "status": "OK"
-        }
-      ]
-    },
-    "7": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDCMGCASEAT",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDCMGCASEAT"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "6",
-          "status": "OK"
-        }
-      ]
-    },
-    "8": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRM_JEST",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRM_JEST"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "7",
-          "status": "OK"
-        }
-      ]
-    },
-    "9": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRM_JSTO",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRM_JSTO"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "8",
-          "status": "OK"
-        }
-      ]
-    },
-    "10": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD SCAPPT",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_SCAPPT"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "9",
-          "status": "OK"
-        }
-      ]
-    },
-    "11": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMDORDERADMI",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMDORDERADMI"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "10",
-          "status": "OK"
-        }
-      ]
-    },
-    "12": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD CRMD_PSDMEA_H",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_CRMD_PSDMEA_H"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "11",
-          "status": "OK"
-        }
-      ]
-    },
-    "13": {
-      "inline": {
-        "type": "SUB",
-        "taskGroup": "com.sap.dwf.toe.executionControl",
-        "description": "TC LOAD SCAPPTSEG",
-        "parameterValues": [
-          {
-            "id": "taskChainId",
-            "value": "osr.edw.staging.td.crm#TC_LOAD_SCAPPTSEG"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "12",
-          "status": "OK"
-        }
-      ]
-    },
-    "14": {
-      "inline": {
-        "type": "executeFlowGraph",
-        "taskGroup": "hanaNative",
-        "description": "FG_BT_LOAD_SCMGPREL_CLNT",
-        "parameterValues": [
-          {
-            "id": "flowGraphName",
-            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_SCMGPREL_CLNT"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "13",
-          "status": "OK"
-        }
-      ]
-    },
-    "15": {
-      "inline": {
-        "type": "executeFlowGraph",
-        "taskGroup": "hanaNative",
-        "description": "FG_BT_LOAD_SCMGPDIR_CLNT",
-        "parameterValues": [
-          {
-            "id": "flowGraphName",
-            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_SCMGPDIR_CLNT"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "14",
-          "status": "OK"
-        }
-      ]
-    },
-    "16": {
-      "inline": {
-        "type": "executeFlowGraph",
-        "taskGroup": "hanaNative",
-        "description": "FG_BT_LOAD_PPFTTRIGG",
-        "parameterValues": [
-          {
-            "id": "flowGraphName",
-            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_PPFTTRIGG"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "15",
-          "status": "OK"
-        }
-      ]
-    },
-    "17": {
-      "inline": {
-        "type": "executeFlowGraph",
-        "taskGroup": "hanaNative",
-        "description": "FG_BT_LOAD_HRP1001",
-        "parameterValues": [
-          {
-            "id": "flowGraphName",
-            "value": "osr.edw.staging.td.crm::FG_BT_LOAD_HRP1001"
-          }
-        ]
-      },
-      "preconditions": [
-        {
-          "from": "16",
-          "status": "OK"
-        }
-      ]
-    }
-  }
+	"description": "Load batch Subs Staging TD CRM TXI",
+	"responsible": {
+		"email": "dwfalerts@gmail.com"
+	},
+	"maxParallelExecution": 1,
+	"taskTimeout": 4320000,
+	"taskList": {
+		"1": {
+			"inline": {
+				"type": "START",
+				"taskGroup": "com.sap.dwf.toe.executionControl"
+			}
+		},
+		"2": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMDORDERADMH",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDORDERADMH"
+				}]
+			},
+			"preconditions": [{
+				"from": "1",
+				"status": "NEUTRAL"
+			}]
+		},
+		"3": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMDACTIVITYH",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDACTIVITYH"
+				}]
+			},
+			"preconditions": [{
+				"from": "2",
+				"status": "OK"
+			}]
+		},
+		"4": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMD_LINK",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDLINK"
+				}]
+			},
+			"preconditions": [{
+				"from": "3",
+				"status": "OK"
+			}]
+		},
+		"5": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMD_PARTNER",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDPARTNER"
+				}]
+			},
+			"preconditions": [{
+				"from": "4",
+				"status": "OK"
+			}]
+		},
+		"6": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMDCASEINDEX",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDCASEINDEX"
+				}]
+			},
+			"preconditions": [{
+				"from": "5",
+				"status": "OK"
+			}]
+		},
+		"7": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMDCMGCASEAT",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDCMGCASEAT"
+				}]
+			},
+			"preconditions": [{
+				"from": "6",
+				"status": "OK"
+			}]
+		},
+		"8": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRM_JEST",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRM_JEST"
+				}]
+			},
+			"preconditions": [{
+				"from": "7",
+				"status": "OK"
+			}]
+		},
+		"9": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRM_JSTO",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRM_JSTO"
+				}]
+			},
+			"preconditions": [{
+				"from": "8",
+				"status": "OK"
+			}]
+		},
+		"10": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD SCAPPT",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_SCAPPT"
+				}]
+			},
+			"preconditions": [{
+				"from": "9",
+				"status": "OK"
+			}]
+		},
+		"11": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMDORDERADMI",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMDORDERADMI"
+				}]
+			},
+			"preconditions": [{
+				"from": "10",
+				"status": "OK"
+			}]
+		},
+		"12": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD CRMD_PSDMEA_H",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMD_PSDMEA_H"
+				}]
+			},
+			"preconditions": [{
+				"from": "11",
+				"status": "OK"
+			}]
+		},
+		"13": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC LOAD SCAPPTSEG",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_SCAPPTSEG"
+				}]
+			},
+			"preconditions": [{
+				"from": "12",
+				"status": "OK"
+			}]
+		},
+		"14": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC_LOAD_SCMGPREL_CLNT",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_SCMGPREL_CLNT"
+				}]
+			},
+			"preconditions": [{
+				"from": "13",
+				"status": "OK"
+			}]
+		},
+		"15": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC_LOAD_SCMGPDIR_CLNT",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_SCMGPDIR_CLNT"
+				}]
+			},
+			"preconditions": [{
+				"from": "14",
+				"status": "OK"
+			}]
+		},
+		"16": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC_LOAD_PPFTTRIGG",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_PPFTTRIGG"
+				}]
+			},
+			"preconditions": [{
+				"from": "15",
+				"status": "OK"
+			}]
+		},
+		"17": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC_LOAD_HRP1001",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_HRP1001"
+				}]
+			},
+			"preconditions": [{
+				"from": "16",
+				"status": "OK"
+			}]
+		},
+		"18": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC_LOAD_CRMD_SRV_OSSET",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMD_SRV_OSSET"
+				}]
+			},
+			"preconditions": [{
+				"from": "17",
+				"status": "OK"
+			}]
+		},
+		"19": {
+			"inline": {
+				"type": "SUB",
+				"taskGroup": "com.sap.dwf.toe.executionControl",
+				"description": "TC_LOAD_CRMD_SRV_SUBJECT",
+				"parameterValues": [{
+					"id": "taskChainId",
+					"value": "osr.edw.staging.td.crm#TC_LOAD_CRMD_SRV_SUBJECT"
+				}]
+			},
+			"preconditions": [{
+				"from": "18",
+				"status": "OK"
+			}]
+		}
+	}
 }

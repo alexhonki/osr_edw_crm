@@ -2159,7 +2159,6 @@ context CDS_CRM {
         @DataStore.entity.idGenerator        : 'idGen'
         @DataStore.computeChecksum           : false
         @DataStore.snapshotSupport           : false
-        /*@@layout{"layoutInfo":{"x":-971.6650390625,"y":29}}*/
         context CRMDORDERADMH {
             @DataStore.entityCategory : #ACTIVE_DATA
             entity active_data {
@@ -4395,10 +4394,10 @@ context CDS_CRM {
                 key CLIENT         : String(3)      not null;
 
                     @DataStore.aggregation : #NOP
-                key GUID           : Binary(16)     not null;
+                key GUID           : String(500)    not null default '';
 
                     @DataStore.aggregation : #NOP
-                    GUID_REF       : Binary(16)     not null;
+                    GUID_REF       : String(500)    not null default '';
 
                     @DataStore.aggregation : #NOP
                     USERNAME       : String(12)     not null;
@@ -4425,7 +4424,7 @@ context CDS_CRM {
                     DEFQUANTITY    : Integer        not null;
 
                     @DataStore.aggregation : #NOP
-                    GUID_HIERARCHY : Binary(16)     not null;
+                    GUID_HIERARCHY : String(500)    not null default '';
 
                     @DataStore.aggregation : #NOP
                     SORT           : hana.SMALLINT  not null;
@@ -4455,7 +4454,16 @@ context CDS_CRM {
                     Z_RUN_ROW_NO   : Integer        not null;
 
                     @DataStore.aggregation : #NOP
-                key Z_RUN_SEQ_ID   : Integer        not null;
+                    Z_RUN_SEQ_ID   : Integer        not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CURR_FLAG    : String(1)      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_VALID_FROM   : LocalDate      not null default '1900-01-01';
+
+                    @DataStore.aggregation : #NOP
+                    Z_VALID_TO     : LocalDate      not null default '1900-01-01';
             }
             technical configuration {
                 group name CRMD_SRV_SUBJECT group type "sap.dwf.dso" group subtype ACTIVE;
@@ -4470,10 +4478,10 @@ context CDS_CRM {
                 key CLIENT              : String(3)              not null;
 
                     @DataStore.aggregation : #MOV
-                key GUID                : Binary(16)             not null;
+                key GUID                : String(500)            not null default '';
 
                     @DataStore.aggregation : #MOV
-                    GUID_REF            : Binary(16)             not null;
+                    GUID_REF            : String(500)            not null default '';
 
                     @DataStore.aggregation : #MOV
                     USERNAME            : String(12)             not null;
@@ -4500,7 +4508,7 @@ context CDS_CRM {
                     DEFQUANTITY         : Integer                not null;
 
                     @DataStore.aggregation : #MOV
-                    GUID_HIERARCHY      : Binary(16)             not null;
+                    GUID_HIERARCHY      : String(500)            not null default '';
 
                     @DataStore.aggregation : #MOV
                     SORT                : hana.SMALLINT          not null;
@@ -4531,6 +4539,15 @@ context CDS_CRM {
 
                     @DataStore.aggregation : #MOV
                 key Z_RUN_SEQ_ID        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CURR_FLAG         : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_VALID_FROM        : LocalDate              not null default '1900-01-01';
+
+                    @DataStore.aggregation : #MOV
+                    Z_VALID_TO          : LocalDate              not null default '1900-01-01';
             }
             technical configuration {
                 group name CRMD_SRV_SUBJECT group type "sap.dwf.dso" group subtype QUEUE;
@@ -4541,8 +4558,8 @@ context CDS_CRM {
                 key technicalKey        : changeLogKey;
                     technicalAttributes : changeLogAttributes not null;
                 key CLIENT              : String(3)           not null;
-                key GUID                : Binary(16)          not null;
-                    GUID_REF            : Binary(16)          not null;
+                key GUID                : String(500)         not null default '';
+                    GUID_REF            : String(500)         not null default '';
                     USERNAME            : String(12)          not null;
                     TIMESTAMP           : Decimal(15, 0)      not null;
                     KATALOGART          : String(2)           not null;
@@ -4551,7 +4568,7 @@ context CDS_CRM {
                     DEFECTCLASS         : String(2)           not null;
                     QUALITY             : String(1)           not null;
                     DEFQUANTITY         : Integer             not null;
-                    GUID_HIERARCHY      : Binary(16)          not null;
+                    GUID_HIERARCHY      : String(500)         not null default '';
                     SORT                : hana.SMALLINT       not null;
                     EXT_CODE            : String(40)          not null;
                     ASP_ID              : String(40)          not null;
@@ -4562,6 +4579,9 @@ context CDS_CRM {
                     Z_SOURCE_SYS        : String(5)           not null;
                     Z_RUN_ROW_NO        : Integer             not null;
                 key Z_RUN_SEQ_ID        : Integer             not null;
+                    Z_CURR_FLAG         : String(1)           not null;
+                    Z_VALID_FROM        : LocalDate           not null default '1900-01-01';
+                    Z_VALID_TO          : LocalDate           not null default '1900-01-01';
             }
             technical configuration {
                 group name CRMD_SRV_SUBJECT group type "sap.dwf.dso" group subtype CHANGE_LOG;
@@ -4628,10 +4648,10 @@ context CDS_CRM {
                 key CLIENT          : String(3)    not null;
 
                     @DataStore.aggregation : #NOP
-                key GUID            : Binary(16)   not null;
+                key GUID            : String(500)  not null default '';
 
                     @DataStore.aggregation : #NOP
-                    GUID_SET        : Binary(16)   not null;
+                    GUID_SET        : String(500)  not null default '';
 
                     @DataStore.aggregation : #NOP
                     SUBJECT_PROFILE : String(9)    not null;
@@ -4652,7 +4672,16 @@ context CDS_CRM {
                     Z_RUN_ROW_NO    : Integer      not null;
 
                     @DataStore.aggregation : #NOP
-                key Z_RUN_SEQ_ID    : Integer      not null;
+                    Z_RUN_SEQ_ID    : Integer      not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_CURR_FLAG     : String(1)    not null;
+
+                    @DataStore.aggregation : #NOP
+                    Z_VALID_FROM    : LocalDate    not null default '1900-01-01';
+
+                    @DataStore.aggregation : #NOP
+                    Z_VALID_TO      : LocalDate    not null default '1900-01-01';
             }
             technical configuration {
                 group name CRMD_SRV_OSSET group type "sap.dwf.dso" group subtype ACTIVE;
@@ -4667,10 +4696,10 @@ context CDS_CRM {
                 key CLIENT              : String(3)              not null;
 
                     @DataStore.aggregation : #MOV
-                key GUID                : Binary(16)             not null;
+                key GUID                : String(500)            not null default '';
 
                     @DataStore.aggregation : #MOV
-                    GUID_SET            : Binary(16)             not null;
+                    GUID_SET            : String(500)            not null default '';
 
                     @DataStore.aggregation : #MOV
                     SUBJECT_PROFILE     : String(9)              not null;
@@ -4692,6 +4721,15 @@ context CDS_CRM {
 
                     @DataStore.aggregation : #MOV
                 key Z_RUN_SEQ_ID        : Integer                not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_CURR_FLAG         : String(1)              not null;
+
+                    @DataStore.aggregation : #MOV
+                    Z_VALID_FROM        : LocalDate              not null default '1900-01-01';
+
+                    @DataStore.aggregation : #MOV
+                    Z_VALID_TO          : LocalDate              not null default '1900-01-01';
             }
             technical configuration {
                 group name CRMD_SRV_OSSET group type "sap.dwf.dso" group subtype QUEUE;
@@ -4702,8 +4740,8 @@ context CDS_CRM {
                 key technicalKey        : changeLogKey;
                     technicalAttributes : changeLogAttributes not null;
                 key CLIENT              : String(3)           not null;
-                key GUID                : Binary(16)          not null;
-                    GUID_SET            : Binary(16)          not null;
+                key GUID                : String(500)         not null default '';
+                    GUID_SET            : String(500)         not null default '';
                     SUBJECT_PROFILE     : String(9)           not null;
                     PROFILE_TYPE        : String(2)           not null;
                     Z_CHANGE_TYPE       : String(1)           not null;
@@ -4711,6 +4749,9 @@ context CDS_CRM {
                     Z_SOURCE_SYS        : String(5)           not null;
                     Z_RUN_ROW_NO        : Integer             not null;
                 key Z_RUN_SEQ_ID        : Integer             not null;
+                    Z_CURR_FLAG         : String(1)           not null;
+                    Z_VALID_FROM        : LocalDate           not null default '1900-01-01';
+                    Z_VALID_TO          : LocalDate           not null default '1900-01-01';
             }
             technical configuration {
                 group name CRMD_SRV_OSSET group type "sap.dwf.dso" group subtype CHANGE_LOG;

@@ -1,0 +1,29 @@
+{
+  "taskList": {
+    "1": {
+      "inline": {
+        "type": "START",
+        "taskGroup": "com.sap.dwf.toe.executionControl"
+      }
+    },
+    "2": {
+      "inline": {
+        "type": "executeFlowGraph",
+        "taskGroup": "hanaNative",
+        "description": "FG_BT_LOAD_CRMD_SRV_SUBJECT",
+        "parameterValues": [
+          {
+            "id": "flowGraphName",
+            "value": "osr.edw.source.td.crm::FG_BT_LOAD_CRMD_SRV_SUBJECT"
+          }
+        ]
+      },
+      "preconditions": [
+        {
+          "from": "1",
+          "status": "NEUTRAL"
+        }
+      ]
+    }
+  }
+}

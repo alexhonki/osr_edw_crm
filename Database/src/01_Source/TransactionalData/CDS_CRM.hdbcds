@@ -536,6 +536,9 @@ context CDS_CRM {
                 Z_SOURCE_SYS   : String(5);
                 Z_RUN_ROW_NO   : Integer;
             key Z_RUN_SEQ_ID   : Integer;
+                Z_CURR_FLAG    : String(1);
+                Z_VALID_FROM   : LocalDate;
+                Z_VALID_TO     : LocalDate;
         };
 
         /*@@layout{"layoutInfo":{"x":819,"y":-21.5}}*/
@@ -546,10 +549,13 @@ context CDS_CRM {
                 SUBJECT_PROFILE : String(9);
                 PROFILE_TYPE    : String(2);
                 Z_CHANGE_TYPE   : String(1);
-                Z_CHANGE_TIME	: UTCTimestamp;
-                Z_SOURCE_SYS	: String(5);
-                Z_RUN_ROW_NO	: Integer;
-            key Z_RUN_SEQ_ID	: Integer;
+                Z_CHANGE_TIME   : UTCTimestamp;
+                Z_SOURCE_SYS    : String(5);
+                Z_RUN_ROW_NO    : Integer;
+            key Z_RUN_SEQ_ID    : Integer;
+                Z_CURR_FLAG     : String(1);
+                Z_VALID_FROM    : LocalDate;
+                Z_VALID_TO      : LocalDate;
         };
     };
 };
